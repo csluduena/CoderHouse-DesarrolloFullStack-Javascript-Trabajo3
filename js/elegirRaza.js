@@ -148,68 +148,24 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-let clases = {
-    "Elfo": {
-        1: "Mago", //🧙‍♂️
-        2: "Druida", //🌿
-        3: "Bardo" //🎵
-    },
-    "Enano": {
-        1: "Guerrero", //⚔️
-        2: "Herrero", //🔨
-        3: "Paladin" //🛡️
-    },
-    "Humano": {
-        1: "Caballero", //🏇
-        2: "Picaro", //🗡️
-        3: "Clerigo" //✨
-    },
-    "Orco": {
-        1: "Berserker", //🪓
-        2: "Chaman", //🔮
-        3: "Cazador" //🏹
-    }
-};
 
-// Descripciones de las clases para cada raza
-let descripcionesClases = {
-    "Elfo": {
-        1: "Usuarios de magia poderosa y destructiva.",
-        2: "Capaces de manipular la magia de la naturaleza.",
-        3: "Artistas talentosos con habilidades mágicas únicas."
-    },
-    "Enano": {
-        1: "Combatientes fuertes y resistentes.",
-        2: "Maestros de la creación y mejora de armas y armaduras.",
-        3: "Defensores valientes con habilidades de curación."
-    },
-    "Humano": {
-        1: "Protectores leales con una gran habilidad en el combate cuerpo a cuerpo.",
-        2: "Maestros del sigilo y la astucia, expertos en trampas y robos.",
-        3: "Sanadores y protectores con habilidades mágicas divinas."
-    },
-    "Orco": {
-        1: "Combatientes salvajes que entran en frenesí en la batalla.",
-        2: "Conectados con los espíritus y capaces de usar magia elemental.",
-        3: "Expertos en rastreo y combate a distancia."
-    }
-};
 
-//Array con los atributos base
-let atributosBase = {
-    "Mago": [8, 1, 5], //🧙‍♂️
-    "Druida": [6, 2, 6], //🌿
-    "Bardo": [10, 1, 7], //🎵
-    "Guerrero": [5, 15, 5], //⚔️
-    "Herrero": [3, 18, 3], //🔨
-    "Paladin": [8, 12, 5], //🛡️
-    "Caballero": [2, 20, 4], //🏇
-    "Picaro": [6, 7, 12], //🗡️
-    "Clerigo": [8, 10, 5], //✨
-    "Berserker": [1, 25, 3], //🪓
-    "Chaman": [10, 8, 5], //🔮
-    "Cazador": [8, 10, 10], //🏹
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -232,3 +188,70 @@ let atributosBase = {
 //         // podemos seguir codeando con la variable saludoInicial
 //     });
 // });
+
+
+
+
+
+// let clases = {
+//     "Elfo": {
+//         1: "Mago", //🧙‍♂️
+//         2: "Druida", //🌿
+//         3: "Bardo" //🎵
+//     },
+//     "Enano": {
+//         1: "Guerrero", //⚔️
+//         2: "Herrero", //🔨
+//         3: "Paladin" //🛡️
+//     },
+//     "Humano": {
+//         1: "Caballero", //🏇
+//         2: "Picaro", //🗡️
+//         3: "Clerigo" //✨
+//     },
+//     "Orco": {
+//         1: "Berserker", //🪓
+//         2: "Chaman", //🔮
+//         3: "Cazador" //🏹
+//     }
+// };
+
+// // Descripciones de las clases para cada raza
+// let descripcionesClases = {
+//     "Elfo": {
+//         1: "Usuarios de magia poderosa y destructiva.",
+//         2: "Capaces de manipular la magia de la naturaleza.",
+//         3: "Artistas talentosos con habilidades mágicas únicas."
+//     },
+//     "Enano": {
+//         1: "Combatientes fuertes y resistentes.",
+//         2: "Maestros de la creación y mejora de armas y armaduras.",
+//         3: "Defensores valientes con habilidades de curación."
+//     },
+//     "Humano": {
+//         1: "Protectores leales con una gran habilidad en el combate cuerpo a cuerpo.",
+//         2: "Maestros del sigilo y la astucia, expertos en trampas y robos.",
+//         3: "Sanadores y protectores con habilidades mágicas divinas."
+//     },
+//     "Orco": {
+//         1: "Combatientes salvajes que entran en frenesí en la batalla.",
+//         2: "Conectados con los espíritus y capaces de usar magia elemental.",
+//         3: "Expertos en rastreo y combate a distancia."
+//     }
+// };
+
+// //Array con los atributos base
+// let atributosBase = {
+//     "Mago": [8, 1, 5], //🧙‍♂️
+//     "Druida": [6, 2, 6], //🌿
+//     "Bardo": [10, 1, 7], //🎵
+//     "Guerrero": [5, 15, 5], //⚔️
+//     "Herrero": [3, 18, 3], //🔨
+//     "Paladin": [8, 12, 5], //🛡️
+//     "Caballero": [2, 20, 4], //🏇
+//     "Picaro": [6, 7, 12], //🗡️
+//     "Clerigo": [8, 10, 5], //✨
+//     "Berserker": [1, 25, 3], //🪓
+//     "Chaman": [10, 8, 5], //🔮
+//     "Cazador": [8, 10, 10], //🏹
+// }
