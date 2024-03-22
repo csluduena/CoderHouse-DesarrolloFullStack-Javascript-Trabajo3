@@ -33,15 +33,89 @@
             <h1>Bienvenidos a Legend Builder!</h1>
         </div>
         <hr>
-        <h2 class="textSolapa">Legend Builder - ¡Donde tus personajes cobran vida!<br>Sumérgete en un mundo de fantasía y crea tu propio héroe.<br>Elige su raza, género, clase y atributos. <br>¡Conviértete en el arquitecto de tu propia leyenda!<br>¡Comencemos! </h2>
+        <h2 class="textSolapa">Legend Builder ¡Donde tus personajes cobran vida! Sumérgete en un mundo de fantasía y crea tu propio héroe.<br>Elige su raza, género, clase y atributos. ¡Conviértete en el arquitecto de tu propia leyenda!</h2>
+        <hr>
     <br><!--Pregunta Nombre-->
-        <p class="configTextBase">¿Cómo te llamas?</p>
-        <input class="inputTextStyle" type="text" id="saludoInicialInput" placeholder="Ingresa tu nombre">
+        <div class="comenzarBtn" id="botonStart"></div>
+        <div class="preguntaUno" style="display:none;">
+            <p class="configTextBase">¿Cómo te llamas?</p>
+            <input class="inputTextStyleIndex" type="text" id="saludoInicialInput" placeholder="Ingresa tu nombre">
+            <button id="buttonSend1" type="button">Enviar</button>
+        </div>
     <br><!--Pregunta Nick-->
-        <p class="configTextBase">¿Cómo quieres que se llame tu Personaje?</p>
-        <input class="inputTextStyle" type="text" id="nickNameInput" placeholder="Ingresa un nick">
+        <div class="preguntaDos" style="display:none;">
+            <p class="configTextBase">¿Cómo quieres que se llame tu Personaje?</p>
+            <input class="inputTextStyleIndex" type="text" id="nickNameInput" placeholder="Ingresa un nick">
+            <button id="buttonSend2" type="button">Enviar</button>
+        </div>
     <br><!--Pregunta Razas-->
-        <p class="configTextBase">Elige una Raza:<br>🧝Elfos: <br>Son conocidos por su gracia y conexión con la naturaleza.<br><br>🧔🏾Enanos:<br>Son famosos por su resistencia y habilidades de artesanía.<br><br>🦸🏻‍♂️Humanos:<br>Son versátiles y ambiciosos, con una gran diversidad de habilidades.<br><br>🧟‍♀️Orcos:<br>Son conocidos por su fuerza bruta y su ferocidad en el combate."</p>
+        <div class="botonElegirRaza" style="display:none;">
+            <p class="btnRazaCfg">Elije una raza</p>
+        </div>
+    <br>
+        <div class="razasElegir" id="elegirRazas">
+
+            <div class="opcionElfos flex" id="elfosOption">
+                <p class="textRaza">Son conocidos por su gracia y conexión con la naturaleza.</p>
+                <p class="razaNombre">Elfos</p>
+            </div>
+
+            <div class="opcionEnanos flex" id="enanosOption">
+                <p class="textRaza">Son famosos por su resistencia y habilidades de artesanía.</p>
+                <p class="razaNombre">Enanos</p>
+            </div>
+
+            <div class="opcionHumanos flex" id="humanosOption">
+                <p class="textRaza">Son versátiles y ambiciosos, con una gran diversidad de habilidades.</p>
+                <p class="razaNombre">Humanos</p>
+            </div>
+
+            <div class="opcionOrcos flex" id="orcosOption">
+                <p class="textRaza">Son conocidos por su fuerza bruta y su ferocidad en el combate.</p>
+                <p class="razaNombre">Orcos</p>
+            </div>
+
+        </div>
+        <!--! Pregunta genero -->
+        <div class="opcionGenero" id="generosOpcion" style="display:none;">
+            <INPUT TYPE="Radio" Name="Hombre" class="inputCFG" Value="CC"> Hombre
+            <INPUT TYPE="Radio" Name="Mujer" class="inputCFG" Value="DC"> Mujer
+            <button id="buttonSend3" type="button">Enviar</button>
+        </div>
+        <!--! Elegir Clase-->
+        <div class="elegirClase" id="eleccionClase">
+            <div class="claseElfos">
+                <div class="magoElfo" id="magoElfo"></div>
+                <div class="driuidaElfo" id="elfoDruida"></div>
+                <div class="bardoElfo" id="elfoBardo"> </div>
+            </div>
+
+            <button id="buttonSend4" type="button">Enviar</button>
+        </div>
+
+
+
+
+
+        <!-- <p class="configTextBase">
+            🧝Elfos: 
+            <br>Son conocidos por su gracia y conexión con la naturaleza.
+            
+            
+            <br><br>
+            🧔🏾Enanos:
+            <br>Son famosos por su resistencia y habilidades de artesanía.
+            
+            
+            <br><br>
+            🦸🏻‍♂️Humanos:
+            <br>Son versátiles y ambiciosos, con una gran diversidad de habilidades.
+            
+            
+            <br><br>
+            🧟‍♀️Orcos:
+            <br>Son conocidos por su fuerza bruta y su ferocidad en el combate."
+        </p> -->
 
 
     <br>
@@ -52,19 +126,19 @@
     <br>
 
 
-        <div class="inputSelec">
+        <!-- <div class="inputSelec">
             <INPUT TYPE="Radio" Name="payment" class="inputCFG" Value="CC"> Credit Card
             <INPUT TYPE="Radio" Name="payment" class="inputCFG" Value="DC"> Debit Card
             <INPUT TYPE="Radio" Name="payment" class="inputCFG" Value="PP"> PayPal
-        </div>
-        <button id="buttonSend" type="button">Enviar</button>
+        </div> -->
+        
 
         <!--! ********************************************************** -->
         <!--! ********************END DOM OUPUT CODE******************** -->
         <!--! ********************************************************** -->
 
 
-            <table id="tabla" class="configTabla" style="display:none;">  
+            <!-- <table id="tabla" class="configTabla" style="display:none;">  
                 <tr>
                     <th class="columna1">
                     <div class="titulos">
@@ -109,7 +183,7 @@
                         <div id="mensajePostPj" class="configMensajitoPj"></div>
                     </th>
                 </tr>
-            </table>            
+            </table>             -->
             <div id="cartaPersonaje"></div>
         </div>
     </main>
@@ -119,5 +193,6 @@
     
     <!--Script-->
     <script src="./js/welcome.js"></script>
+    <script src="./js/elegirRaza.js"></script>
 </body>
 </html>

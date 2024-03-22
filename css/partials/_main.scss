@@ -30,21 +30,22 @@
 
 .bodyIndex img {
     z-index: -1;
-    position: absolute;
+    position: fixed;
+    background-size: cover;
     background-repeat: no-repeat;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    
 }
 
 .img {
     filter: blur(5px);
+    filter: opacity(80%);
 }
 
 .colorRojo {
-    color:red;
+    color:#ff0000;
 }
 
 .colorCian {
@@ -181,7 +182,6 @@ hr {
     filter: opacity(50%);
 }
 
-
 //TODO TEST MODIFICAR ALERTAS Y PROMPTS POR PAPITO JUGO AL DOM.
 .bienvenida {
     color: white;
@@ -194,16 +194,184 @@ hr {
     color: white;
     font-style: italic;
     margin-bottom:2rem;
-    text-shadow: -3px 3px 0px #f2170d;
+    text-shadow: -2px 2px 0px #a40df2;
 }
 
 .configTextBase {
     color:white;
     font-size: 20px;
     text-shadow: -2px 1px 0px #870df2;
+    margin-bottom: 5px;
+}
+
+.inputTextStyleIndex {
+    font-size: 15px;
+    padding: 5px;
+    text-align: center;
 }
 
 .inputSelec {
     color: white;
     cursor:pointer;
+}
+
+//! Botones Index
+
+.botonElegirRaza {
+    background-image: url(../../img/btnas.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: 2px solid #00ffff;
+    border-radius: 1rem;
+    padding: 30px;
+    width: 400px;
+    cursor: pointer;
+    margin-bottom: 5px;
+    
+}
+
+.botonElegirRaza:hover {
+    box-shadow: 2px 2px 4px #f7f7f7;
+}
+
+.btnRazaCfg {
+    text-shadow: -1px 2px 4px #000000;
+    font-weight: bold;
+    color: #ff00ea;
+    font-size: 40px;
+}
+
+//! Opciones Raza
+
+.razasElegir {
+    display:flex;
+}
+
+// .razasElegir:hover ~ *:not(.razasElegir) {
+//     filter: blur(5px);
+// }
+
+.comenzarBtn {
+    background-image: url(../../img/startBTN.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-top:10px;
+    width: 435px;
+    height: 412px;
+    cursor: pointer;
+}
+
+.comenzarBtn:hover {
+    transform: scale(1.03);
+    text-shadow: 0 0 5px 5px rgba(255, 255, 255, 10);
+    transition: transform 0.2s ease, box-shadow 0.03s ease;
+}
+
+.opcionElfos {
+    background-image: url(../../img/elfosImg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 358px;
+    height: 412px;
+    margin-right: 2rem;
+    cursor: pointer;
+    border-radius: 2rem;
+}
+
+.opcionEnanos {
+    background-image: url(../../img/enanosImg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 358px;
+    height: 412px;
+    margin-right: 2rem;
+    cursor: pointer;
+    border-radius: 2rem;
+}
+
+.opcionHumanos {
+    background-image: url(../../img/humanosImg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 358px;
+    height: 412px;
+    margin-right: 2rem;
+    cursor: pointer;
+    border-radius: 2rem;
+}
+
+.opcionOrcos {
+    background-image: url(../../img/orcosImg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 358px;
+    height: 412px;
+    cursor: pointer;
+    border-radius: 2rem;
+}
+
+.opcionElfos:hover, 
+.opcionEnanos:hover, 
+.opcionHumanos:hover, 
+.opcionOrcos:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 20px 5px rgba(255, 255, 255, 3);
+    transition: transform 0.3s ease, box-shadow 0.03s ease;
+}
+
+.flex {
+    display:flex;
+    align-items: flex-end;
+    color: white;
+    font-size: 20px;
+    
+}
+
+.textRaza { 
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 5px;
+    background-color: gray;
+    filter: opacity(80%);
+    text-shadow: -3px 2px 2px #000000;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+}
+
+.razaNombre {
+    font-family: "theBlowarRegular";
+    color: black;
+    display: none;
+    position: absolute;
+    top: 8%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    //background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 44px;
+    text-shadow: -2px 2px 2px #383c21;
+}
+
+.opcionElfos:hover .razaNombre {
+    display: block;
+}
+
+.opcionEnanos:hover .razaNombre {
+    display: block;
+}
+
+.opcionHumanos:hover .razaNombre {
+    display: block;
+}
+
+.opcionOrcos:hover .razaNombre {
+    display: block;
 }
