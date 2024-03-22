@@ -1,0 +1,209 @@
+#content {
+    display: none;      //! C A M B I A R    A    N O N E
+    text-align: center;
+}
+
+.centerContent {
+    margin-top: 1rem;
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.start-buttonCFG {
+    background-image: url(../img/botonStart.gif);
+    width: 984px;
+    height: 472px;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+
+.start-buttonCFG:hover {
+    background-image: url(../img/botonStart2.png);
+}
+
+.bodyIndex img {
+    z-index: -1;
+    position: absolute;
+    background-repeat: no-repeat;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+}
+
+.img {
+    filter: blur(5px);
+}
+
+.colorRojo {
+    color:red;
+}
+
+.colorCian {
+    color:aqua;
+}
+
+.colorVerde {
+    color:rgb(14, 239, 14)
+}
+
+.configAtrI {
+    margin-top: 2rem;
+    font-size: 28px; 
+    font-weight: bold;
+    text-shadow: -3px 0px 2px #000000, 0px 2px 2px black, 0px -1px 2px black, 2px 0 0 black;
+    
+}
+
+hr {
+    width: 100%;
+}
+
+.otrasConfigs {
+    margin-top: 2rem;
+    font-size: 26px;
+    color: white; 
+}
+
+.titulosIndex{
+    color:#be2ab6;
+    //text-shadow: -3px 0px 2px #ffffff, 0px 2px 2px #ffffff, 0px -1px 2px #ffffff, 2px 0 0 #ffffff;
+    text-shadow: -3px 0px 2px black, 0px 2px 2px black, 0px -1px 2px black, 2px 0 0 black;
+}
+
+.fila {
+    display: flex;
+    align-items: center;
+    font-size: 22px;
+    margin-left:2.1rem;
+    margin-top: 10px;
+    color:  #00ffff;
+    font-weight: bold;
+    // -webkit-text-stroke: 2px #00ffff;
+    // -webkit-text-stroke: 4px black;
+    text-shadow: -3px 0px 2px black, 0px 2px 2px black, 0px -1px 2px black, 2px 0 0 black;
+    margin-bottom: 18px;
+}
+
+.space {
+    margin-right: 10px;
+    font-size: 22px;
+    display:flex;
+    align-items: center;
+    
+}
+
+.titulos {
+    display: flex;
+    align-items: center;
+    margin-left: 1.1rem;
+    color:#7407cd;
+    margin-top: -13px;
+    margin-bottom: 10px;
+    text-shadow: 1px 0px 2px black, 1px -1px 2px black, 0px -1px 2px black, 2px 0 0 black;
+}
+
+.textoDescriptivo {
+    font-family: 'Courier New', monospace;
+    white-space: pre;
+    color: white;
+    font-size: 22px;
+    text-shadow: -3px 0px 2px black, 0px 2px 2px black, 0px -1px 2px black, 2px 0 0 black;
+}
+
+.configMensajitoPj {
+    font-family: sans-serif;
+    color: #f7f7f7;
+    margin-top: 2rem;
+    width: 16rem;
+    margin-bottom: 2rem;
+    border-radius: 10px;
+    font-size: 16px;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    font-weight: bold;
+    line-height: 2rem;
+    text-shadow: -3px 0px 2px black, 0px 2px 2px black, 0px -1px 2px black, 2px 0 0 black;
+}
+
+.configTabla {
+    background-color: rgb(113 96 212 / 86%);
+    display: flex;
+    border-radius: 1rem;
+    padding: 3rem;
+    border: 4px solid rgba(15, 15, 15, 0.686);
+}
+
+.columna1 {
+    width: 10rem;
+}
+
+.tituloLegendCFGIndex { 
+    display:flex;
+    justify-content: center;
+    text-shadow: 5px 3px 2px #b852ffc7, -4px 1px 2px rgb(134 38 59), -3px -3px 2px rgb(255, 255, 255), 4px -2px 0 rgb(232 101 84);
+
+}
+
+.configLegendIndex {
+    display:flex;
+}
+
+.configBuilderIndex {
+    display:flex;
+}
+
+.legend1 {
+    justify-content: center;
+    font-family: "pamela";
+    font-size: 200px;
+    display:flex;
+    //margin-left: 2rem;
+    margin-right: 4rem;
+    filter: opacity(50%);
+}
+
+.builder2 {
+    font-family: "pamela";
+    font-size: 200px;
+    display:flex;
+    justify-content: center;
+    //margin-right: 2rem;
+    margin-left: 4rem;
+    filter: opacity(50%);
+}
+
+
+//TODO TEST MODIFICAR ALERTAS Y PROMPTS POR PAPITO JUGO AL DOM.
+.bienvenida {
+    color: white;
+    font-size: 30px;
+    text-shadow: -3px 3px 0px #f2170d;
+}
+
+.textSolapa {
+    margin-top:2rem;
+    color: white;
+    font-style: italic;
+    margin-bottom:2rem;
+    text-shadow: -3px 3px 0px #f2170d;
+}
+
+.configTextBase {
+    color:white;
+    font-size: 20px;
+    text-shadow: -2px 1px 0px #870df2;
+}
+
+.inputSelec {
+    color: white;
+    cursor:pointer;
+}

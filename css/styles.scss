@@ -1,0 +1,21 @@
+@import "./partials/variables";
+@import "./partials/reset";
+@import "./partials/main";
+@import "./partials/header";
+@import "./partials/footer";
+@import "./partials/personaje";
+
+@font-face {
+    font-family: "pamela";
+    src: url(../fonts/Pamela.ttf);
+}
+
+@font-face {
+    font-family: "whiteStorm";
+    src: url(../fonts/whiteStorm.otf);
+}
+
+@font-face {
+    font-family: "robotoRegular";
+    src: url(../fonts/robotoRegular.ttf);
+}
