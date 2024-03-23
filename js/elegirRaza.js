@@ -148,20 +148,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-//! ELEGIR CLASE
-
-//Animación
-document.addEventListener('DOMContentLoaded', function() {
-    const buttonSend3 = document.getElementById('buttonSend3');elijeTuClase
-    const opcionGenero = document.querySelector('.opcionGenero');
-    const elijeTuClase = document.querySelector('.elijeTuClase');
-
-    buttonSend3.addEventListener('click', function() {
-        opcionGenero.style.display = 'none'; // Oculta la sección de opción de género
-        elijeTuClase.style.display = 'flex'; // Muestra la sección para elegir la clase
-    });
-});
-
+//! Animación CLASES
 document.addEventListener('DOMContentLoaded', function() {
     const enviar4Btn = document.getElementById('enviar4');
     const elijeTuClase = document.querySelector('.elijeTuClase');
@@ -177,17 +164,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-document.addEventListener('DOMContentLoaded', function() {
-    const buttonSend4 = document.getElementById('buttonSend4');
-    const elegirClase = document.getElementById('eleccionClase');
-
-    buttonSend4.addEventListener('click', function() {
-        // Oculta el botón Enviar
-        buttonSend4.style.display = 'none';
-        // Muestra el contenedor de clases
-        elegirClase.style.display = 'flex';
-    });
-});
 
 
 

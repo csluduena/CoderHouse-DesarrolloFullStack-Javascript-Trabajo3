@@ -407,11 +407,11 @@ hr {
 //     display:flex;
 // }
 
-.claseElfos {
-    display:flex;
-    flex-direction: column;
-    margin: 5px;
-}
+// .claseElfos {
+//     display:flex;
+//     flex-direction: column;
+//     margin: 5px;
+// }
 
 .claseEnanos {
     display:flex;
@@ -603,6 +603,94 @@ hr {
 .caballeroHumanos:hover, .picaroHumanos:hover, .clerigoHumanos:hover,
 .berserkerOrco:hover, .chamanOrco:hover, .cazadorOrco:hover {
     // box-shadow: inset -11px -9px 2px 0px rgb(0 0 0 / 50%);
-    box-shadow: inset -11px -9px 2px 0px rgba(0, 0, 0, 0.5), inset 9px 11px 2px 0px rgba(0, 0, 0, 0.5);
-    box-shadow: 3px 2px 6px 9px rgba(255, 255, 255, 0.5), -3px -2px 6px 9px rgba(255, 255, 255, 0.5);
+    //box-shadow: inset -11px -9px 2px 0px rgba(0, 0, 0, 0.5), inset 9px 11px 2px 0px rgba(0, 0, 0, 0.5);
+    box-shadow: -8px -5px 2px 2222px rgba(0, 0, 0, 0.183), 9px 11px 2px 2222px rgba(0, 0, 0, 0.183), 3px 2px 6px 9px rgba(255, 255, 255, 0.5), -3px -2px 6px 9px rgba(255, 255, 255, 0.5);
+}
+
+.magoElfo:focus-visible, .druidaElfo:focus-visible, .bardoElfo:focus-visible,
+.guerreroEnano:focus-visible, .herreroEnano:focus-visible, .paladinEnano:focus-visible,
+.caballeroHumanos:focus-visible, .picaroHumanos:focus-visible, .clerigoHumanos:focus-visible,
+.berserkerOrco:focus-visible, .chamanOrco:focus-visible, .cazadorOrco:focus-visible, .elegirClase:focus-visible {
+    outline: -webkit-focus-ring-color none 0px;
+}
+
+.magoElfo, .druidaElfo, .bardoElfo, .guerreroEnano, 
+.herreroEnano, .paladinEnano, .caballeroHumanos, .picaroHumanos,
+.clerigoHumanos, .berserkerOrco, .chamanOrco, .cazadorOrco {
+    border-radius: 1rem;
+}
+
+//! Estilo para las descripciones de las clases
+.grupoClasesElfo, .grupoClasesEnanos, .grupoClasesHumanos, .grupoClasesOrcos {
+    position: relative;
+}
+
+.nombreClase, .descripcion, .nombreClase1, .descripcion1, 
+.nombreClase2, .descripcion2, .nombreClase3, .descripcion3, 
+.nombreClase4, .descripcion4, .nombreClase5, .descripcion5, 
+.nombreClase6, .descripcion6, .nombreClase7, .descripcion7, 
+.nombreClase8, .descripcion8, .nombreClase9, .descripcion9, 
+.nombreClase10, .descripcion10, .nombreClase11, .descripcion11 {
+    position: absolute;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 5px;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    margin-left: -7.58rem;
+}
+
+.nombreClase, .nombreClase1,
+.nombreClase2, .nombreClase3,  
+.nombreClase4, .nombreClase5,  
+.nombreClase6, .nombreClase7,  
+.nombreClase8, .nombreClase9,  
+.nombreClase10, .nombreClase11  {
+    top: 0;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.descripcion, .descripcion1, 
+.descripcion2, .descripcion3, 
+.descripcion4, .descripcion5, 
+.descripcion6, .descripcion7, 
+.descripcion8, .descripcion9, 
+.descripcion10, .descripcion11 {
+    bottom: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+
+.magoElfo:hover .nombreClase,
+.magoElfo:hover .descripcion,
+.druidaElfo:hover .nombreClase1,
+.druidaElfo:hover .descripcion1,
+.bardoElfo:hover .nombreClase2,
+.bardoElfo:hover .descripcion2,
+.guerreroEnano:hover .nombreClase3,
+.guerreroEnano:hover .descripcion3,
+.herreroEnano:hover .nombreClase4,
+.herreroEnano:hover .descripcion4,
+.paladinEnano:hover .nombreClase5,
+.paladinEnano:hover .descripcion5,
+.caballeroHumanos:hover .nombreClase6,
+.caballeroHumanos:hover .descripcion6,
+.picaroHumanos:hover .nombreClase7,
+.picaroHumanos:hover .descripcion7,
+.clerigoHumanos:hover .nombreClase8,
+.clerigoHumanos:hover .descripcion8,
+.berserkerOrco:hover .nombreClase9,
+.berserkerOrco:hover .descripcion9,
+.chamanOrco:hover .nombreClase10,
+.chamanOrco:hover .descripcion10,
+.cazadorOrco:hover .nombreClase11,
+.cazadorOrco:hover .descripcion11 {
+    opacity: 1;
 }
