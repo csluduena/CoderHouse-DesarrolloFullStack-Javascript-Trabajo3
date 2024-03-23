@@ -378,62 +378,231 @@ hr {
 
 //! ELECCIÓN DE PERSONAJES (LINKS)
 
-.magoElfo {
-    background-image: url(../../img/clases/elfoMago.jpg);
-
+.elijeTuClase {
+    justify-content: center;
+    background-image: url(../../img/btnCls.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: 2px solid #00ffff;
+    border-radius: 1rem;
+    padding: 30px;
+    width: 400px;
+    cursor: pointer;
+    margin-bottom: 5px;
 }
 
-.driuidaElfo {
-    background-image: url(../../img/clases/elfoDruida.jpg);
+.elijeTuClase:hover {
+    box-shadow: 2px 2px 4px #f7f7f7;
+}
 
+.btnEleCla {
+    text-shadow: -1px 2px 4px #000000;
+    font-weight: bold;
+    color: #ff00ea;
+    font-size: 40px;
+}
+
+
+// .elegirClase {
+//     display:flex;
+// }
+
+.claseElfos {
+    display:flex;
+    flex-direction: column;
+    margin: 5px;
+}
+
+.claseEnanos {
+    display:flex;
+    flex-direction: column;
+    margin: 5px;
+}
+
+.claseHumanos {
+    display:flex;
+    flex-direction: column;
+    margin: 5px;
+}
+
+.claseOrcos {
+    display:flex;
+    flex-direction: column;
+    margin: 5px;
+}
+
+.magoElfo {
+    background-image: url(../../img/clases/elfoMago.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    // width: 258px;
+    // height: 312px;
+}
+
+.druidaElfo {
+    background-image: url(../../img/clases/elfoDruida.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    // width: 258px;
+    // height: 312px;
+    margin-top: 20px;
+    margin-bottom: 26px;
 }
 
 .bardoElfo {
     background-image: url(../../img/clases/elfoBardo.jpg);
-
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    // width: 258px;
+    // height: 312px;
 }
 
 .guerreroEnano {
     background-image: url(../../img/clases/enanoGuerrero.jpg);
-
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    // width: 258px;
+    // height: 312px;
 }
 
 .herreroEnano {
     background-image: url(../../img/clases/enanoHerrero.jpg);
-
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    // width: 258px;
+    // height: 312px;
+    margin-top: 20px;
+    margin-bottom: 26px;
 }
 
 .paladinEnano {
     background-image: url(../../img/clases/enanoPaladin.jpg);
-
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    // width: 258px;
+    // height: 312px;
 }
 
 .caballeroHumanos {
     background-image: url(../../img/clases/humanoCaballero.jpg);
-
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    // width: 258px;
+    // height: 312px;
 }
 
 .picaroHumanos {
     background-image: url(../../img/clases/humanoPicaro.jpg);
-
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    // width: 258px;
+    // height: 312px;
+    margin-top: 20px;
+    margin-bottom: 26px;
 }
 
 .clerigoHumanos {
     background-image: url(../../img/clases/humanoClerigo.jpg);
-
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    // width: 258px;
+    // height: 312px;
 }
 
 .berserkerOrco {
     background-image: url(../../img/clases/orcoBerserker.jpg);
-
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    // width: 258px;
+    // height: 312px;
 }
 
 .chamanOrco {
     background-image: url(../../img/clases/orcoChaman.jpg);
-
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    // width: 258px;
+    // height: 312px;
+    margin-top: 20px;
+    margin-bottom: 26px;
 }
 
-.cazcazadorOrcoadorOrco {
+.cazadorOrco {
     background-image: url(../../img/clases/orcoCazador.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    // width: 258px;
+    // height: 312px;
+}
 
+.tituloClase {
+    font-family: "theBlowarRegular";
+    font-size: 25px;
+    color: White;
+    margin-top: -3rem;
+}
+
+//animacion Elegir Clase
+/* Estilos para el contenedor de clases */
+.elegirClase {
+    position: fixed;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    gap: 22px;
+    z-index: 999; /* Asegura que esté en la parte superior */
+    // box-shadow: 1px 1px 2px rgba(15, 15, 15, 0.686);
+}
+
+/* Estilos para las clases */
+.claseElfos,
+.claseEnanos,
+.claseHumanos,
+.claseOrcos {
+    display: flex;
+    justify-content: center;
+    gap: 50px; /* Espacio entre elementos */
+}
+
+/* Estilos para las opciones */
+.claseElfos div,
+.claseEnanos div,
+.claseHumanos div,
+.claseOrcos div {
+    width: 242px;
+    height: 217px;
+    // background-color: lightblue;
+    cursor: pointer;
+    transition: transform 0.3s ease; /* Transición suave al pasar el mouse */
+}
+
+/* Estilos de animación al pasar el mouse */
+.claseElfos div:hover,
+.claseEnanos div:hover,
+.claseHumanos div:hover,
+.claseOrcos div:hover {
+    transform: scale(1.1); /* Escala aumentada al pasar el mouse */
+    
+}
+
+.magoElfo:hover, .druidaElfo:hover, .bardoElfo:hover,
+.guerreroEnano:hover, .herreroEnano:hover, .paladinEnano:hover,
+.caballeroHumanos:hover, .picaroHumanos:hover, .clerigoHumanos:hover,
+.berserkerOrco:hover, .chamanOrco:hover, .cazadorOrco:hover {
+    // box-shadow: inset -11px -9px 2px 0px rgb(0 0 0 / 50%);
+    box-shadow: inset -11px -9px 2px 0px rgba(0, 0, 0, 0.5), inset 9px 11px 2px 0px rgba(0, 0, 0, 0.5);
+    box-shadow: 3px 2px 6px 9px rgba(255, 255, 255, 0.5), -3px -2px 6px 9px rgba(255, 255, 255, 0.5);
 }
