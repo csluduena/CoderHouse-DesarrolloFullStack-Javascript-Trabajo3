@@ -22,48 +22,62 @@ document.getElementById('start-button').addEventListener('click', function() {
     
     
     
-    //TODO MOSTRAR PREGUNTA UNO
+    //almacenar nombre de usuario
+    let nombreUsuario = '';
+
+    //!activar pregunta Uno
     document.addEventListener('DOMContentLoaded', function() {
-        // Aquí va tu código existente
-    
         // Agrega el código para manejar el evento click en el botón comenzarBtn
         const comenzarBtn = document.querySelector('.comenzarBtn');
         const preguntaUno = document.querySelector('.preguntaUno');
-    
+
         comenzarBtn.addEventListener('click', function() {
             comenzarBtn.style.display = 'none'; // Oculta el botón
             preguntaUno.style.display = 'block'; // Muestra el text box de la segunda pregunta
         });
     });
-        //TODO MOSTRAR PREGUNTA DOS
-    document.addEventListener('DOMContentLoaded', function() {
-        // Aquí va tu código existente
-    
-        // Agrega el código para manejar el evento click en el botón buttonSend1
+
         const buttonSend1 = document.getElementById('buttonSend1');
+        const saludoInicialInput = document.getElementById('saludoInicialInput');
         const preguntaUno = document.querySelector('.preguntaUno');
         const preguntaDos = document.querySelector('.preguntaDos');
-    
+
         buttonSend1.addEventListener('click', function() {
-            preguntaUno.style.display = 'none'; // Oculta la preguntaUno
-            preguntaDos.style.display = 'block'; // Muestra la preguntaDos
-        });
+            // Almacena el nombre del usuario en la variable nombreUsuario
+            nombreUsuario = saludoInicialInput.value;
+            console.log('Nombre del usuario:', nombreUsuario);
+
+        // Oculta la preguntaUno y muestra la preguntaDos
+        preguntaUno.style.display = 'none';
+        preguntaDos.style.display = 'block';
     });
-    //TODO MOSTRAR PREGUNTA TRES (ELEGIR RAZA)
+
+// Puedes acceder a la variable nombreUsuario desde cualquier parte del código
+console.log('Nombre del usuario:', nombreUsuario);
+
+
+    //TODO OCULTAR PREGUNTA DOS Y MOSTRAR PREGUNTA TRES (ELEGIR RAZA)
+    let nombrePersonaje = '';
+
     document.addEventListener('DOMContentLoaded', function() {
-        // Aquí va tu código existente
-    
-        // Agrega el código para manejar el evento click en el botón buttonSend2
+        // Obtén referencia a los elementos relevantes
         const buttonSend2 = document.getElementById('buttonSend2');
         const preguntaDos = document.querySelector('.preguntaDos');
         const botonElegirRaza = document.querySelector('.botonElegirRaza');
-    
+        const nickNameInput = document.getElementById('nickNameInput');
+
+        // Agrega un event listener para el botón de "Siguiente" en la pregunta dos
         buttonSend2.addEventListener('click', function() {
-            preguntaDos.style.display = 'none'; // Oculta la preguntaDos
-            botonElegirRaza.style.display = 'block'; // Muestra botonElegirRaza
+            // Almacena el nombre del personaje ingresado por el usuario
+            nombrePersonaje = nickNameInput.value;
+            console.log('Nombre del personaje:', nombrePersonaje);
+
+            // Oculta la pregunta dos y muestra la pregunta tres (elegir raza)
+            preguntaDos.style.display = 'none';
+            botonElegirRaza.style.display = 'block';
         });
     });
-    //TODO MOSTRAR PREGUNTA TRES (ELEGIR RAZA)
+    //TODO ESTILOS BOTON PREGUNTA TRES (ELEGIR RAZA)
     document.addEventListener('DOMContentLoaded', function() {
         
         let botonElegirRaza = document.querySelector('.botonElegirRaza');
@@ -87,9 +101,12 @@ document.getElementById('start-button').addEventListener('click', function() {
     });
 
 //! PICK RAZA
+
+let eleccionUsuario = '';
+
 document.addEventListener('DOMContentLoaded', function() {
     // Variables para almacenar la elección del usuario
-    let eleccionUsuario = '';
+
 
     // Obtener el contenedor de opciones
     const elegirRazas = document.getElementById('elegirRazas');
@@ -136,7 +153,8 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-//! Boton Elejir Clase
+
+//! Boton Elejir genero
 document.addEventListener('DOMContentLoaded', function() {
     const buttonSend3 = document.getElementById('buttonSend3');
     const opcionGenero = document.querySelector('.opcionGenero');
@@ -148,7 +166,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-//! Animación CLASES
+//! Animación CLASES (mostrar Elegir Clase)
 document.addEventListener('DOMContentLoaded', function() {
     const enviar4Btn = document.getElementById('enviar4');
     const elijeTuClase = document.querySelector('.elijeTuClase');
@@ -160,41 +178,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// //TODO - DOM SECTION - RETORNO DE INFO
-// document.addEventListener('DOMContentLoaded', function() {
-//     let buttonSend = document.getElementById('buttonSend');
-
-//         buttonSend.addEventListener('click', function() {
-    
-//             //! Obtener los valores de campo ↓↓↓
-//         let saludoInicial = document.getElementById('saludoInicialInput').value;
-//         let nickName = document.getElementById('nickNameInput').value;
-
-//         console.log('Respuesta:', saludoInicial);
-//         console.log('Nick:', nickName);
-//         // podemos seguir codeando con la variable saludoInicial
-//     });
-// });
 
 
 
@@ -223,29 +206,13 @@ document.addEventListener('DOMContentLoaded', function() {
 //     }
 // };
 
-// // Descripciones de las clases para cada raza
-// let descripcionesClases = {
-//     "Elfo": {
-//         1: "Usuarios de magia poderosa y destructiva.",
-//         2: "Capaces de manipular la magia de la naturaleza.",
-//         3: "Artistas talentosos con habilidades mágicas únicas."
-//     },
-//     "Enano": {
-//         1: "Combatientes fuertes y resistentes.",
-//         2: "Maestros de la creación y mejora de armas y armaduras.",
-//         3: "Defensores valientes con habilidades de curación."
-//     },
-//     "Humano": {
-//         1: "Protectores leales con una gran habilidad en el combate cuerpo a cuerpo.",
-//         2: "Maestros del sigilo y la astucia, expertos en trampas y robos.",
-//         3: "Sanadores y protectores con habilidades mágicas divinas."
-//     },
-//     "Orco": {
-//         1: "Combatientes salvajes que entran en frenesí en la batalla.",
-//         2: "Conectados con los espíritus y capaces de usar magia elemental.",
-//         3: "Expertos en rastreo y combate a distancia."
-//     }
-// };
+
+
+
+
+//! Elección de Clase y mostrar parcialmente todo lo elegido
+
+
 
 // //Array con los atributos base
 // let atributosBase = {
