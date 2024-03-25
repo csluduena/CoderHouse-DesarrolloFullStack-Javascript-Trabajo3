@@ -52,8 +52,29 @@ document.getElementById('start-button').addEventListener('click', function() {
         preguntaDos.style.display = 'block';
     });
 
+    //!Config Boton Siguiente con Enter, Espacio y focus.
+    document.addEventListener("DOMContentLoaded", function() {
+        var inputs = document.querySelectorAll('input[type="text"]'); // Obtener todos los campos de entrada de tipo texto
+        var buttons = document.querySelectorAll('button[type="button"]'); // Obtener todos los botones de tipo botón
+    
+        inputs.forEach(function(input, index) {
+            input.addEventListener("keydown", function(event) {
+                if (event.key === "Enter") {
+                    event.preventDefault(); // Evitar el comportamiento predeterminado del Enter (como enviar un formulario)
+                    var nextButton = buttons[index]; // Obtener el siguiente botón correspondiente al índice del campo de entrada
+                    nextButton.click(); // Simular un clic en el siguiente botón
+                }
+            });
+        });
+    
+        // Establecer el foco en el primer campo de entrada cuando la página se carga
+        if (inputs.length > 0) {
+            inputs[0].focus();
+        }
+    });
+
 // Puedes acceder a la variable nombreUsuario desde cualquier parte del código
-console.log('Nombre del usuario:', nombreUsuario);
+//console.log('Nombre del usuario:', nombreUsuario);
 
 
     //TODO OCULTAR PREGUNTA DOS Y MOSTRAR PREGUNTA TRES (ELEGIR RAZA)
@@ -89,14 +110,8 @@ console.log('Nombre del usuario:', nombreUsuario);
             //Estilos:
             elegirRazas.style.display = 'flex';
             elegirRazas.style.position = "absolute";
-            elegirRazas.style.top = "20rem";
+            elegirRazas.style.top = "10rem";
             elegirRazas.style.left = "50%";
-            elegirRazas.style.transform = "translate(-50%, -50%)";
-
-            // let bodyContent = document.querySelectorAll('body > *:not(#elegirRazas)');
-            // bodyContent.forEach(function(element) {
-            //     element.style.filter = 'blur(5px)';
-            // });
         });
     });
 
@@ -120,7 +135,7 @@ console.log('Nombre del usuario:', nombreUsuario);
         });
     });
 
-
+//Ocultar botón Razas
     const botonElegirRaza = document.querySelector('.botonElegirRaza');
     
         document.addEventListener('DOMContentLoaded', function() {
@@ -132,163 +147,106 @@ console.log('Nombre del usuario:', nombreUsuario);
         });
     });
 
-    
-    // document.addEventListener('DOMContentLoaded', function() {
-    //     //Otras cosas:
-    //     const botonElegirRaza = document.querySelector('.botonElegirRaza');
-    //     const continuarBtn = document.getElementById('continuar');
-    //     //Parte para Razas:
-    //     const elfosOption = document.getElementById('elfosOption');
-    //     const enanosOption = document.getElementById('claseEnanos');
-    //     const humanosOption = document.getElementById('claseHumanos');
-    //     const orcosOption = document.getElementById('claseOrcos');
-    //     //Parte para Clases:
-    //     const eleccionClase = document.querySelector('eleccionClase');
-
-    
-    //     elfosOption.addEventListener('click', function() {
-    //         //BLOQUEADOS
-    //         botonElegirRaza.style.display = 'none'
-    //         //OCULTAR RAZAS
-    //         elfosOption.style.display = 'none';
-    //         //MOSTRAR CLASES SEGUN RAZA ELEGIDA
-    //         //!claseElfos.style.display = 'block';
-    //         eleccionClase.style.display = 'block';
-    //         enanosOption.style.display = 'none';
-    //         humanosOption.style.display = 'none';
-    //         orcosOption.style.display = 'none';
-
-            
-
-
-            // Ocultar textRaza y razaNombre
-            // textRaza.style.display = 'none';
-            // razaNombre.style.display = 'none';
-            // elfo.style.dysplay = 'none';
-            // enanosOption.style.dysplay = 'none';
-            // humanosOption.style.dysplay = 'none';
-            // orcosOption.style.dysplay = 'none';
-            // opcionElfos.style.display = 'none';
-    
-    
-            // Mostrar botones de volver y continuar
-            // botonesRaza.style.display = 'flex';
-
-            
-//        });
-//    });
-
-
-
-
-
-
-
-
-
-
-
-
-
-//         botonElegirRaza.style.display = 'none'; // Oculta el boton elegir raza si clickeamos Elfos
-
-
-
-
-
-
-
 
     
 
-//! PICK RAZA
-//let eleccionUsuario = '';
-
-//document.addEventListener('DOMContentLoaded', function() {
-//     // Variables para almacenar la elección del usuario
-
-
-//     // Obtener el contenedor de opciones
-//     const elegirRazas = document.getElementById('elegirRazas');
-//     const botonElegirRaza = document.querySelector('.botonElegirRaza');
-//     const opcionGenero = document.querySelector('.opcionGenero');
-
-//     // Obtener las cuatro opciones
-//     const elfosOption = document.getElementById('elfosOption');
-//     const enanosOption = document.getElementById('enanosOption');
-//     const humanosOption = document.getElementById('humanosOption');
-//     const orcosOption = document.getElementById('orcosOption');
-
-//     // Agregar controladores de eventos clic a cada opción
-//     elfosOption.addEventListener('click', function() {
-//         eleccionUsuario = 'Elfos';
-//         console.log('Elección del usuario:', eleccionUsuario);
-//         const elijeTuClase = document.querySelector('.elijeTuClase');
-//         const elegirClase = document.getElementById('eleccionClase');
-//         elegirRazas.style.display = 'none'; // Ocultar el contenedor de opciones
-//         botonElegirRaza.style.display = 'none'; // Oculta el boton elegir raza si clickeamos Elfos
-//         elegirClase.style.display = 'flex'; // Muestra elegirClase
-//     });
-
-//     enanosOption.addEventListener('click', function() {
-//         eleccionUsuario = 'Enanos';
-//         console.log('Elección del usuario:', eleccionUsuario);
-//         const elijeTuClase = document.querySelector('.elijeTuClase');
-//         const elegirClase = document.getElementById('eleccionClase');
-//         elegirRazas.style.display = 'none'; // Ocultar el contenedor de opciones
-//         botonElegirRaza.style.display = 'none'; // Oculta el boton elegir raza si clickeamos Enanos
-//         elegirClase.style.display = 'flex'; // Muestra elegirClase
-//     });
-
-//     humanosOption.addEventListener('click', function() {
-//         eleccionUsuario = 'Humanos';
-//         console.log('Elección del usuario:', eleccionUsuario);
-//         const elijeTuClase = document.querySelector('.elijeTuClase');
-//         const elegirClase = document.getElementById('eleccionClase');
-//         elegirRazas.style.display = 'none'; // Ocultar el contenedor de opciones
-//         botonElegirRaza.style.display = 'none'; // Oculta el boton elegir raza si clickeamos humanos
-//         elegirClase.style.display = 'flex'; // Muestra elegirClase
-//     });
-
-//     orcosOption.addEventListener('click', function() {
-//         eleccionUsuario = 'Orcos';
-//         console.log('Elección del usuario:', eleccionUsuario);
-//         const elijeTuClase = document.querySelector('.elijeTuClase');
-//         const elegirClase = document.getElementById('eleccionClase');
-//         elegirRazas.style.display = 'none'; // Ocultar el contenedor de opciones
-//         botonElegirRaza.style.display = 'none'; //Oculta el boton elegir raza si clickeamos Orcos
-//         elegirClase.style.display = 'flex'; // Muestra elegirClase
-//     });
-// });
 
 
 
 
-//(mostrar Elegir Clase)
-// document.addEventListener('DOMContentLoaded', function() {
-//     const enviar4Btn = document.getElementById('enviar4');
-//     const elijeTuClase = document.querySelector('.elijeTuClase');
-//     const elegirClase = document.getElementById('eleccionClase');
 
-//     enviar4Btn.addEventListener('click', function() {
-//         elijeTuClase.style.display = 'flex'; // Muestra la sección para elegir la clase
-//     });
-// });
 
-//opcionGenero.style.display = 'block'; // Mostrar el botón de opción de género
-//elijeTuClase.style.display = 'none'; // Oculta elijeTuClase
 
-// Boton Elejir genero
-// document.addEventListener('DOMContentLoaded', function() {
-//     const buttonSend3 = document.getElementById('buttonSend3');
-//     const opcionGenero = document.querySelector('.opcionGenero');
-//     const elijeTuClase = document.querySelector('.elijeTuClase');
 
-//     buttonSend3.addEventListener('click', function() {
-//         opcionGenero.style.display = 'none'; // Oculta la sección de opción de género
-        
-//     });
-// });
+
+
+
+
+    // Almacena la selección de raza y clase
+    let seleccion = {
+        raza: "",
+        clase: ""
+    };
+
+    // Función para mostrar el botón "Continuar"
+    function mostrarBotonContinuar() {
+        document.getElementById("continuarBtn").style.display = "block";
+    }
+
+    // Función para manejar la selección de clase
+    function seleccionarClase(event) {
+        const claseSeleccionada = event.target.textContent.trim();
+        seleccion.clase = claseSeleccionada;
+        mostrarBotonContinuar();
+    }
+
+    // Manejar eventos de clic en las clases
+    const clases = document.querySelectorAll('.clase-pick');
+    clases.forEach(clase => {
+        clase.addEventListener('click', seleccionarClase);
+    });
+
+    // Función para manejar la selección de raza
+    function seleccionarRaza(event) {
+        const razaSeleccionada = event.target.textContent.trim();
+        seleccion.raza = razaSeleccionada;
+    }
+
+    // Manejar eventos de clic en las razas
+    const razas = document.querySelectorAll('.raza-option');
+    razas.forEach(raza => {
+        raza.addEventListener('click', seleccionarRaza);
+    });
+
+    // Función para continuar
+    document.getElementById("continuarBtn").addEventListener("click", function() {
+        if (seleccion.raza !== "" && seleccion.clase !== "") {
+            // Aquí puedes realizar acciones adicionales o redireccionar a otra página
+            console.log("Raza seleccionada:", seleccion.raza);
+            console.log("Clase seleccionada:", seleccion.clase);
+            alert("Has seleccionado la raza " + seleccion.raza + " y la clase " + seleccion.clase);
+        } else {
+            alert("Por favor, selecciona una raza y una clase antes de continuar.");
+        }
+    });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
 
 
 

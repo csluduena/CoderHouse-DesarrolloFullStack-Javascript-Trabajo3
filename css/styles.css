@@ -18,17 +18,18 @@
   align-items: center;
 }
 
+.SBConten {
+  display: flex; /* Usa flexbox */
+  justify-content: center; /* Centra horizontalmente el contenido */
+}
+
 .start-buttonCFG {
   background-image: url(../img/botonStart.gif);
   width: 984px;
   height: 472px;
-  display: flex;
   justify-content: center;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   cursor: pointer;
+  margin: 0 auto; /* Centra horizontalmente el elemento dentro del contenedor */
 }
 
 .start-buttonCFG:hover {
@@ -248,7 +249,6 @@ hr {
 }
 
 .comenzarBtn:hover {
-  transform: scale(1.03);
   text-shadow: 0 0 5px 5px rgb(255, 255, 255);
   transition: transform 0.2s ease, box-shadow 0.03s ease;
 }
@@ -311,18 +311,23 @@ hr {
 
 .flex {
   display: flex;
-  align-items: flex-end;
-  color: white;
+  align-content: stretch;
   font-size: 20px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  align-content: space-between;
+  justify-content: space-around;
 }
 
 .textRaza {
   padding-left: 15px;
   padding-right: 15px;
   padding-bottom: 5px;
+  font-weight: bold;
   background-color: gray;
   filter: opacity(80%);
-  text-shadow: -3px 2px 2px #000000;
+  text-shadow: -3px -2px 4px rgba(189, 189, 189, 0);
   border-top-left-radius: 0;
   border-top-right-radius: 0;
   border-bottom-left-radius: 2rem;
@@ -330,33 +335,28 @@ hr {
 }
 
 .razaNombre {
-  font-family: "theBlowarRegular";
   color: black;
+  font-weight: bold;
+  font-family: "theBlowarRegular";
+  font-size: 30px;
+  letter-spacing: 2px;
+}
+
+.razaNombre .opcionElfos {
+  display: flex;
+  font-family: "theBlowarRegular";
+  margin-top: -1rem;
+  margin-left: 5rem;
+  color: black;
+  text-align: center;
   display: none;
-  position: absolute;
+  position: static;
   top: 8%;
   left: 50%;
-  transform: translate(-50%, -50%);
   padding: 10px;
   border-radius: 5px;
   font-size: 44px;
-  text-shadow: -2px 2px 2px #383c21;
-}
-
-.opcionElfos:hover .razaNombre {
-  display: block;
-}
-
-.opcionEnanos:hover .razaNombre {
-  display: block;
-}
-
-.opcionHumanos:hover .razaNombre {
-  display: block;
-}
-
-.opcionOrcos:hover .razaNombre {
-  display: block;
+  text-shadow: -2px 2px 2px #ffffff;
 }
 
 .elijeTuClase {
@@ -413,7 +413,6 @@ hr {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  margin-bottom: 26px;
 }
 
 .bardoElfo {
@@ -436,7 +435,6 @@ hr {
   background-repeat: no-repeat;
   background-position: center;
   margin-top: 20px;
-  margin-bottom: 26px;
 }
 
 .paladinEnano {
@@ -459,7 +457,6 @@ hr {
   background-repeat: no-repeat;
   background-position: center;
   margin-top: 20px;
-  margin-bottom: 26px;
 }
 
 .clerigoHumanos {
@@ -482,7 +479,6 @@ hr {
   background-repeat: no-repeat;
   background-position: center;
   margin-top: 20px;
-  margin-bottom: 26px;
 }
 
 .cazadorOrco {
@@ -501,12 +497,6 @@ hr {
 
 /* Estilos para el contenedor de clases */
 .elegirClase {
-  position: fixed;
-  top: 25%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  display: none;
-  gap: 22px;
   z-index: 999; /* Asegura que esté en la parte superior */
 }
 
@@ -526,24 +516,18 @@ hr {
 .claseHumanos div,
 .claseOrcos div {
   display: flex;
-  flex-wrap: nowrap;
-  align-content: center;
-  justify-content: center;
-  width: 624px;
-  height: 292px;
+  justify-content: space-between;
+  align-items: center;
+  width: 254px;
+  height: 392px;
   cursor: pointer;
-  transition: transform 0.3s ease; /* Transición suave al pasar el mouse */
   margin-top: 3rem;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-content: center;
 }
 
 /* Estilos de animación al pasar el mouse */
-.claseElfos div:hover,
-.claseEnanos div:hover,
-.claseHumanos div:hover,
-.claseOrcos div:hover {
-  transform: scale(1.1); /* Escala aumentada al pasar el mouse */
-}
-
 .magoElfo:hover, .druidaElfo:hover, .bardoElfo:hover,
 .guerreroEnano:hover, .herreroEnano:hover, .paladinEnano:hover,
 .caballeroHumanos:hover, .picaroHumanos:hover, .clerigoHumanos:hover,
@@ -574,7 +558,7 @@ hr {
 .nombreClase6, .descripcion6, .nombreClase7, .descripcion7,
 .nombreClase8, .descripcion8, .nombreClase9, .descripcion9,
 .nombreClase10, .descripcion10, .nombreClase11, .descripcion11 {
-  position: absolute;
+  display: flex;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   color: white;
@@ -582,6 +566,7 @@ hr {
   text-align: center;
   opacity: 0;
   transition: opacity 0.3s ease;
+  justify-content: center;
 }
 
 .nombreClase, .nombreClase1,
@@ -668,6 +653,10 @@ hr {
 }
 
 /* Estilos para las razas */
+#razas {
+  margin-left: -45rem;
+}
+
 /* Estilos para las clases */
 #clases {
   margin-top: -3rem;
@@ -676,6 +665,20 @@ hr {
 .centerMove {
   margin-left: 3rem;
   margin-right: 3rem;
+}
+
+#continuarBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 .bodyIndexp img {

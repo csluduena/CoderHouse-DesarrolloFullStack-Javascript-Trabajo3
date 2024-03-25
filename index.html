@@ -15,7 +15,9 @@
                 <p class="builder2">Builder</p>
             </div>
         </div>
-        <div class="start-buttonCFG" id="start-button"></div>
+        <div class="SBConten">
+            <div class="start-buttonCFG" id="start-button"></div>
+        </div>
 
     <header>
         <!--Header Area-->
@@ -39,13 +41,13 @@
         <div class="comenzarBtn" id="botonStart"></div>
         <div class="preguntaUno" style="display:none;">
             <p class="configTextBase">¿Cómo te llamas?</p>
-            <input class="inputTextStyleIndex" type="text" id="saludoInicialInput" placeholder="Ingresa tu nombre">
+            <input class="inputTextStyleIndex" type="text" id="saludoInicialInput" placeholder="Ingresa tu nombre"><br>
             <button id="buttonSend1" type="button">Siguiente</button>
         </div>
     <br><!--Pregunta Nick-->
         <div class="preguntaDos" style="display:none;">
             <p class="configTextBase">¿Cómo quieres que se llame tu Personaje?</p>
-            <input class="inputTextStyleIndex" type="text" id="nickNameInput" placeholder="Ingresa un nick">
+            <input class="inputTextStyleIndex" type="text" id="nickNameInput" placeholder="Ingresa un nick"><br>
             <button id="buttonSend2" type="button">Siguiente</button>
         </div>
     <br><!--!Pregunta Razas-->
@@ -54,28 +56,32 @@
         </div>
     <br>
 
-    
-<div class="razasElegir" id="elegirRazas">
-    <div id="razas">
-		<div class="raza-option opcionElfos flex" id="elfosOption">
-            <p class="textRaza">Son conocidos por su gracia y conexión con la naturaleza.</p>
-            <p class="razaNombre">Elfos</p>
+    <!--! Razas -->
+    <div class="razasElegir" id="elegirRazas">
+        <div id="razas">
+            <div class="raza-option opcionElfos flex" id="elfosOption">
+                <p class="razaNombre">Elfos</p>
+                <p class="textRaza">Son conocidos por su gracia y conexión con la naturaleza.</p>
+                
+            </div>
+            <div class="raza-option opcionEnanos flex" id="enanosOption">
+                <p class="razaNombre">Enanos</p>
+                <p class="textRaza">Son famosos por su resistencia y habilidades de artesanía.</p>
+                
+            </div>
+            <div class="raza-option opcionHumanos flex" id="humanosOption">
+                <p class="razaNombre">Humanos</p>
+                <p class="textRaza">Son versátiles y ambiciosos, gran diversidad de habilidades.</p>
+                
+            </div>
+            <div class="raza-option opcionOrcos flex" id="orcosOption">
+                <p class="razaNombre">Orcos</p>
+                <p class="textRaza">Conocidos por su fuerza bruta y su ferocidad en el combate.</p>
+                
+            </div>
         </div>
-		<div class="raza-option opcionEnanos flex" id="enanosOption">
-            <p class="textRaza">Son famosos por su resistencia y habilidades de artesanía.</p>
-            <p class="razaNombre">Enanos</p>
-        </div>
-		<div class="raza-option opcionHumanos flex" id="humanosOption">
-            <p class="textRaza">Son versátiles y ambiciosos, con una gran diversidad de habilidades.</p>
-            <p class="razaNombre">Humanos</p>
-        </div>
-		<div class="raza-option opcionOrcos flex" id="orcosOption">
-            <p class="textRaza">Son conocidos por su fuerza bruta y su ferocidad en el combate.</p>
-            <p class="razaNombre">Orcos</p>
-        </div>
-	</div>
-</div>	
-
+    </div>	
+    <!--! Clases -->
     <div id="clases">
         <div class="clase-pick" id="elfosClasesPick">
             <div class="claseElfos" id="cElf1">
@@ -95,10 +101,8 @@
 				</div>
 			</div>
         </div>
-        <!-- Aquí irían las clases para Enanos, Humanos y Orcos -->
-		<div class="clase-pick" id="enanosClasesPick">
+		<div class="clase-pick elegirClase" id="enanosClasesPick">
             <div class="claseEnanos">
-                <!-- <p class="tituloClase">Enanos</p>  -->
                 <div class="grupoClasesEnano" id="grupoClasesEnanos">
                     <div class="guerreroEnano enanosClasesPick" id="Guerrero">
                         <span class="nombreClase3">Guerrero Enano</span>
@@ -115,10 +119,8 @@
                 </div>
             </div>
         </div>
-        <!-- Aquí irían las clases para Enanos, Humanos y Orcos -->
-		<div class="clase-pick" id="humanosClasesPick">
+		<div class="clase-pick elegirClase" id="humanosClasesPick">
             <div class="claseHumanos">
-                <!-- <p class="tituloClase">Humanos</p> -->
                 <div class="grupoClasesHumano humanosClasesPick" id="grupoClasesHumanos">
                     <div class="caballeroHumanos" id="Caballero">
                         <span class="nombreClase6">Caballero Humano</span>
@@ -135,10 +137,8 @@
                 </div>
             </div>
         </div>
-        <!-- Aquí irían las clases para Enanos, Humanos y Orcos -->
-		<div class="clase-pick" id="orcosClasesPick">
+		<div class="clase-pick elegirClase" id="orcosClasesPick">
             <div class="claseOrcos">
-                <!-- <p class="tituloClase">Orcos</p> -->
                 <div class="grupoClasesOrco orcosClasesPick" id="grupoClasesOrcos">
                     <div class="berserkerOrco" id="Berserker">
                         <span class="nombreClase9">Berserker Orco</span>
@@ -157,18 +157,16 @@
         </div>
         <!-- Aquí irían las clases para Enanos, Humanos y Orcos -->
     </div>    
-    
-            <br>
-            
+    <button id="continuarBtn">Continuar</button>    
+    <br>
 
-        <!-- <div class="elegirClase" id="eleccionClase">        </div> -->
         
-        <!--! Pregunta genero -->
-        <div class="opcionGenero" id="generosOpcion" style="display:none;">
-            <INPUT TYPE="Radio" Name="Hombre" class="inputCFG" Value="CC"> Hombre
-            <INPUT TYPE="Radio" Name="Mujer" class="inputCFG" Value="DC"> Mujer
-            <button id="buttonSend3" type="button">Enviar</button>
-        </div>
+    <!--! Pregunta genero -->
+    <div class="opcionGenero" id="generosOpcion" style="display:none;">
+        <INPUT TYPE="Radio" Name="Hombre" class="inputCFG" Value="CC"> Hombre
+        <INPUT TYPE="Radio" Name="Mujer" class="inputCFG" Value="DC"> Mujer
+        <button id="buttonSend3" type="button">Enviar</button>
+    </div>
             
 
         
