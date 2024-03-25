@@ -236,10 +236,6 @@ hr {
   font-size: 40px;
 }
 
-.razasElegir {
-  display: flex;
-}
-
 .comenzarBtn {
   background-image: url(../img/startBTN.png);
   background-size: cover;
@@ -262,8 +258,8 @@ hr {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  width: 358px;
-  height: 412px;
+  width: 320px;
+  height: 350px;
   margin-right: 2rem;
   cursor: pointer;
   border-radius: 2rem;
@@ -274,8 +270,8 @@ hr {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  width: 358px;
-  height: 412px;
+  width: 320px;
+  height: 350px;
   margin-right: 2rem;
   cursor: pointer;
   border-radius: 2rem;
@@ -286,8 +282,8 @@ hr {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  width: 358px;
-  height: 412px;
+  width: 320px;
+  height: 350px;
   margin-right: 2rem;
   cursor: pointer;
   border-radius: 2rem;
@@ -298,8 +294,8 @@ hr {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  width: 358px;
-  height: 412px;
+  width: 320px;
+  height: 350px;
   cursor: pointer;
   border-radius: 2rem;
 }
@@ -417,7 +413,6 @@ hr {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  margin-top: 20px;
   margin-bottom: 26px;
 }
 
@@ -530,10 +525,15 @@ hr {
 .claseEnanos div,
 .claseHumanos div,
 .claseOrcos div {
-  width: 242px;
-  height: 217px;
+  display: flex;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: center;
+  width: 624px;
+  height: 292px;
   cursor: pointer;
   transition: transform 0.3s ease; /* Transición suave al pasar el mouse */
+  margin-top: 3rem;
 }
 
 /* Estilos de animación al pasar el mouse */
@@ -582,7 +582,6 @@ hr {
   text-align: center;
   opacity: 0;
   transition: opacity 0.3s ease;
-  margin-left: -7.58rem;
 }
 
 .nombreClase, .nombreClase1,
@@ -636,6 +635,47 @@ hr {
 .cazadorOrco:hover .nombreClase11,
 .cazadorOrco:hover .descripcion11 {
   opacity: 1;
+}
+
+.botones {
+  display: flex;
+}
+
+.raza-option {
+  cursor: pointer;
+}
+
+.clase-pick {
+  display: none;
+}
+
+#razasElegir {
+  display: flex;
+}
+
+.meme {
+  display: flex;
+  flex-direction: row; /* Mostrar las razas y las clases en una fila */
+  justify-content: space-between; /* Espacio entre las razas y las clases */
+}
+
+#razas,
+#clases {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center; /* Centrar elementos horizontalmente */
+}
+
+/* Estilos para las razas */
+/* Estilos para las clases */
+#clases {
+  margin-top: -3rem;
+}
+
+.centerMove {
+  margin-left: 3rem;
+  margin-right: 3rem;
 }
 
 .bodyIndexp img {

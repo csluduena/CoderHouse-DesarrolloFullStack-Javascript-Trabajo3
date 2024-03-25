@@ -48,118 +48,127 @@
             <input class="inputTextStyleIndex" type="text" id="nickNameInput" placeholder="Ingresa un nick">
             <button id="buttonSend2" type="button">Siguiente</button>
         </div>
-    <br><!--Pregunta Razas-->
+    <br><!--!Pregunta Razas-->
         <div class="botonElegirRaza" style="display:none;">
             <p class="btnRazaCfg">Elije una raza</p>
         </div>
     <br>
-        <div class="razasElegir" id="elegirRazas">
 
-            <div class="opcionElfos flex" id="elfosOption">
-                <p class="textRaza">Son conocidos por su gracia y conexión con la naturaleza.</p>
-                <p class="razaNombre">Elfos</p>
-            </div>
-
-            <div class="opcionEnanos flex" id="enanosOption">
-                <p class="textRaza">Son famosos por su resistencia y habilidades de artesanía.</p>
-                <p class="razaNombre">Enanos</p>
-            </div>
-
-            <div class="opcionHumanos flex" id="humanosOption">
-                <p class="textRaza">Son versátiles y ambiciosos, con una gran diversidad de habilidades.</p>
-                <p class="razaNombre">Humanos</p>
-            </div>
-
-            <div class="opcionOrcos flex" id="orcosOption">
-                <p class="textRaza">Son conocidos por su fuerza bruta y su ferocidad en el combate.</p>
-                <p class="razaNombre">Orcos</p>
-            </div>
-
+    
+<div class="razasElegir" id="elegirRazas">
+    <div id="razas">
+		<div class="raza-option opcionElfos flex" id="elfosOption">
+            <p class="textRaza">Son conocidos por su gracia y conexión con la naturaleza.</p>
+            <p class="razaNombre">Elfos</p>
         </div>
+		<div class="raza-option opcionEnanos flex" id="enanosOption">
+            <p class="textRaza">Son famosos por su resistencia y habilidades de artesanía.</p>
+            <p class="razaNombre">Enanos</p>
+        </div>
+		<div class="raza-option opcionHumanos flex" id="humanosOption">
+            <p class="textRaza">Son versátiles y ambiciosos, con una gran diversidad de habilidades.</p>
+            <p class="razaNombre">Humanos</p>
+        </div>
+		<div class="raza-option opcionOrcos flex" id="orcosOption">
+            <p class="textRaza">Son conocidos por su fuerza bruta y su ferocidad en el combate.</p>
+            <p class="razaNombre">Orcos</p>
+        </div>
+	</div>
+</div>	
+
+    <div id="clases">
+        <div class="clase-pick" id="elfosClasesPick">
+            <div class="claseElfos" id="cElf1">
+				<div class="grupoClasesElfo" id="grupoClasesElfos">
+					<div class="magoElfo elfosClasesPick" >
+						<span class="nombreClase">Mago Elfo</span>
+						<span class="descripcion">Usuarios de magia poderosa y destructiva.</span>
+					</div>
+					<div class="druidaElfo elfosClasesPick centerMove" id="Druida">
+						<span class="nombreClase1">Druida Elfo</span>
+						<span class="descripcion1">Capaces de manipular la magia de la naturaleza.</span>
+					</div>
+					<div class="bardoElfo elfosClasesPick" id="Bardo">
+						<span class="nombreClase2">Bardo Elfo</span>
+						<span class="descripcion2">Artistas talentosos con habilidades mágicas únicas.</span>
+					</div>
+				</div>
+			</div>
+        </div>
+        <!-- Aquí irían las clases para Enanos, Humanos y Orcos -->
+		<div class="clase-pick" id="enanosClasesPick">
+            <div class="claseEnanos">
+                <!-- <p class="tituloClase">Enanos</p>  -->
+                <div class="grupoClasesEnano" id="grupoClasesEnanos">
+                    <div class="guerreroEnano enanosClasesPick" id="Guerrero">
+                        <span class="nombreClase3">Guerrero Enano</span>
+                        <span class="descripcion3">Combatientes fuertes y resistentes.</span>
+                    </div>
+                    <div class="herreroEnano enanosClasesPick centerMove" id="Herrero">
+                        <span class="nombreClase4">Herrero Enano</span>
+                        <span class="descripcion4">Maestros de la creación y mejora de armas y armaduras.</span>
+                    </div>
+                    <div class="paladinEnano enanosClasesPick" id="Paladin">
+                        <span class="nombreClase5">Paladin Enano</span>
+                        <span class="descripcion5">Defensores valientes con habilidades de curación.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Aquí irían las clases para Enanos, Humanos y Orcos -->
+		<div class="clase-pick" id="humanosClasesPick">
+            <div class="claseHumanos">
+                <!-- <p class="tituloClase">Humanos</p> -->
+                <div class="grupoClasesHumano humanosClasesPick" id="grupoClasesHumanos">
+                    <div class="caballeroHumanos" id="Caballero">
+                        <span class="nombreClase6">Caballero Humano</span>
+                        <span class="descripcion6">Protectores leales, habilidosos en combate cuerpo a cuerpo.</span>
+                    </div>
+                    <div class="picaroHumanos humanosClasesPick centerMove" id="Picaro">
+                        <span class="nombreClase7">Picaro Humano</span>
+                        <span class="descripcion7">Maestros del sigilo y la astucia, expertos en trampas y robos.</span>
+                    </div>
+                    <div class="clerigoHumanos humanosClasesPick" id="Clerigo">
+                        <span class="nombreClase8">Clerigo Humano</span>
+                        <span class="descripcion8">Sanadores y protectores con habilidades mágicas divinas.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Aquí irían las clases para Enanos, Humanos y Orcos -->
+		<div class="clase-pick" id="orcosClasesPick">
+            <div class="claseOrcos">
+                <!-- <p class="tituloClase">Orcos</p> -->
+                <div class="grupoClasesOrco orcosClasesPick" id="grupoClasesOrcos">
+                    <div class="berserkerOrco" id="Berserker">
+                        <span class="nombreClase9">Berserker Orco</span>
+                        <span class="descripcion9">Combatientes salvajes que entran en frenesí en la batalla.</span>
+                    </div>
+                    <div class="chamanOrco orcosClasesPick centerMove" id="Chaman">
+                        <span class="nombreClase10">Chaman Orco</span>
+                        <span class="descripcion10">Conectados con los espíritus y capaces de usar magia elemental.</span>
+                    </div>
+                    <div class="cazadorOrco orcosClasesPick" id="Cazador">
+                        <span class="nombreClase11">Cazador Orco</span>
+                        <span class="descripcion11">Expertos en rastreo y combate a distancia.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Aquí irían las clases para Enanos, Humanos y Orcos -->
+    </div>    
+    
+            <br>
+            
+
+        <!-- <div class="elegirClase" id="eleccionClase">        </div> -->
+        
         <!--! Pregunta genero -->
         <div class="opcionGenero" id="generosOpcion" style="display:none;">
             <INPUT TYPE="Radio" Name="Hombre" class="inputCFG" Value="CC"> Hombre
             <INPUT TYPE="Radio" Name="Mujer" class="inputCFG" Value="DC"> Mujer
             <button id="buttonSend3" type="button">Enviar</button>
         </div>
-
-        <div class="elijeTuClase" style="display:none;">
-            <p class="btnEleCla" id="enviar4">Elije una clase</p>
-        </div>
-        <!--! Elegir Clase-->
-        <div class="elegirClase" id="eleccionClase" style="display:none;">
-            <div class="claseElfos"> 
-                <div class="grupoClasesElfo" id="grupoClasesElfos">
-                    <div class="magoElfo" id="Mago">
-                        <span class="nombreClase">Mago Elfo</span>
-                        <span class="descripcion">Usuarios de magia poderosa y destructiva.</span>
-                    </div>
-                    <div class="druidaElfo" id="Druida">
-                        <span class="nombreClase1">Druida Elfo</span>
-                        <span class="descripcion1">Capaces de manipular la magia de la naturaleza.</span>
-                    </div>
-                    <div class="bardoElfo" id="Bardo">
-                        <span class="nombreClase2">Bardo Elfo</span>
-                        <span class="descripcion2">Artistas talentosos con habilidades mágicas únicas.</span>
-                    </div>
-                </div>
-            </div>
-            <div class="claseEnanos">
-                <!-- <p class="tituloClase">Enanos</p>  -->
-                <div class="grupoClasesEnano" id="grupoClasesEnanos">
-                    <div class="guerreroEnano" id="Guerrero">
-                        <span class="nombreClase3">Guerrero Enano</span>
-                        <span class="descripcion3">Combatientes fuertes y resistentes.</span>
-                    </div>
-                    <div class="herreroEnano" id="Herrero">
-                        <span class="nombreClase4">Herrero Enano</span>
-                        <span class="descripcion4">Maestros de la creación y mejora de armas y armaduras.</span>
-                    </div>
-                    <div class="paladinEnano" id="Paladin">
-                        <span class="nombreClase5">Paladin Enano</span>
-                        <span class="descripcion5">Defensores valientes con habilidades de curación.</span>
-                    </div>
-                </div>
-            </div>
-            <div class="claseHumanos">
-                <!-- <p class="tituloClase">Humanos</p> -->
-                <div class="grupoClasesHumano" id="grupoClasesHumanos">
-                    <div class="caballeroHumanos" id="Caballero">
-                        <span class="nombreClase6">Caballero Humano</span>
-                        <span class="descripcion6">Protectores leales, habilidosos en combate cuerpo a cuerpo.</span>
-                    </div>
-                    <div class="picaroHumanos" id="Picaro">
-                        <span class="nombreClase7">Picaro Humano</span>
-                        <span class="descripcion7">Maestros del sigilo y la astucia, expertos en trampas y robos.</span>
-                    </div>
-                    <div class="clerigoHumanos" id="Clerigo">
-                        <span class="nombreClase8">Clerigo Humano</span>
-                        <span class="descripcion8">Sanadores y protectores con habilidades mágicas divinas.</span>
-                    </div>
-                </div>
-            </div>
-            <div class="claseOrcos">
-                <!-- <p class="tituloClase">Orcos</p> -->
-                <div class="grupoClasesOrco" id="grupoClasesOrcos">
-                    <div class="berserkerOrco" id="Berserker">
-                        <span class="nombreClase9">Berserker Orco</span>
-                        <span class="descripcion9">Combatientes salvajes que entran en frenesí en la batalla.</span>
-                    </div>
-                    <div class="chamanOrco" id="Chaman">
-                        <span class="nombreClase10">Chaman Orco</span>
-                        <span class="descripcion10">Conectados con los espíritus y capaces de usar magia elemental.</span>
-                    </div>
-                    <div class="cazadorOrco" id="Cazador">
-                        <span class="nombreClase11">Cazador Orco</span>
-                        <span class="descripcion11">Expertos en rastreo y combate a distancia.</span>
-                    </div>
-                </div>
-            </div>
-            <br>
-        </div>
-        
-
-
             
 
         
