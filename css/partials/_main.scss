@@ -263,6 +263,7 @@ hr {
 
 .comenzarBtn:hover {
     //transform: scale(1.03);
+    background-image: url(../img/startBTNUp.png);
     text-shadow: 0 0 5px 5px rgba(255, 255, 255, 10);
     transition: transform 0.2s ease, box-shadow 0.03s ease;
 }
@@ -733,7 +734,7 @@ hr {
 
 /* Estilos para las clases */
 #clases {
-    margin-top: -3rem;
+    margin-top: -7rem;
 }
 
 .centerMove {
@@ -741,7 +742,7 @@ hr {
     margin-right: 3rem;
 }
 
-#continuarBtn {
+#continuarBtn, #continuarBtn2 {
     display: none;
     position: fixed;
     bottom: 20px;
@@ -753,4 +754,74 @@ hr {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+}
+
+.textGeneroCfg {
+    color: white;
+    font-weight: bold;
+    font-family: "theBlowarRegular";
+    font-size: 30px;
+    letter-spacing: 2px;
+}
+
+.hLeft {
+    margin-right: 13rem;
+    margin-left: -1rem;
+}
+
+.mRight {
+    margin-left: 0rem;
+}
+
+#hombre {
+    background-image: url(../../img/man.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-top:10px;
+    width: 250px;
+    height: 250px;
+    cursor: pointer;
+    margin-right: 1rem;
+}
+
+#hombre:hover {
+    background-image: url(../../img/manUp.png);
+}
+
+#mujer {
+    background-image: url(../../img/woman.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-top:10px;
+    width: 250px;
+    height: 250px;
+    cursor: pointer;
+    margin-left: 1rem;
+}
+
+#mujer:hover {
+    background-image: url(../../img/womanUp.png);
+}
+
+.tituloGenero {
+    color: white;
+    font-weight: bold;
+    font-family: "theBlowarRegular";
+    font-size: 30px;
+    letter-spacing: 6px;
+    margin-top: -4rem;
+    margin-bottom: 2rem;
+    text-shadow: -1px 2px 4px #000000;
+}
+
+.hLeft {
+    color: white; /* Color base para Hombre */
+    background-color: transparent; /* Fondo base para Hombre */
+}
+
+.mRight {
+    color: white; /* Color base para Mujer */
+    background-color: transparent; /* Fondo base para Mujer */
 }
