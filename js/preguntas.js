@@ -55,6 +55,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 //TODO OCULTAR PREGUNTA DOS Y MOSTRAR PREGUNTA TRES (ELEGIR RAZA)
+// Almacena el nombre del personaje ingresado por el usuario
 let nombrePersonaje = '';
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -73,5 +74,10 @@ document.addEventListener('DOMContentLoaded', function() {
         // Oculta la pregunta dos y muestra la pregunta tres (elegir raza)
         preguntaDos.style.display = 'none';
         botonElegirRaza.style.display = 'block';
+
+        // Guardar el nombre del personaje en la variable seleccion.nick
+        seleccion.nick = nombrePersonaje;
     });
 });
+
+

@@ -329,9 +329,7 @@ document.getElementById("continuarBtn2").addEventListener("click", function() {
         continuarBtn2.style.display = "none";
 
         // Obtener y mostrar los atributos base
-        obtenerAtributosBase();
-    } else {
-        console.log("Por favor, selecciona una raza y una clase antes de continuar.");
+        //obtenerAtributosBase();
     }
 });
 
@@ -342,11 +340,6 @@ function seleccionarClaseSegunRaza() {
 
     // Obtener las clases disponibles para la raza seleccionada
     let clasesDisponibles = clases[razaSeleccionada];
-
-    // Mostrar las clases disponibles en la consola
-    console.log("Clases disponibles para la raza", razaSeleccionada + ":", clasesDisponibles);
-
-    // Aquí podrías hacer algo más con las clases disponibles, como mostrarlas en la interfaz de usuario
 }
 
 
