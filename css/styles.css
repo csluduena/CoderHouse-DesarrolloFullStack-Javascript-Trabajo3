@@ -700,7 +700,7 @@ hr {
 }
 
 #hombre {
-  background-image: url(../../img/man.png);
+  background-image: url(../img/man.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -712,11 +712,11 @@ hr {
 }
 
 #hombre:hover {
-  background-image: url(../../img/manUp.png);
+  background-image: url(../img/manUp.png);
 }
 
 #mujer {
-  background-image: url(../../img/woman.png);
+  background-image: url(../img/woman.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -728,7 +728,7 @@ hr {
 }
 
 #mujer:hover {
-  background-image: url(../../img/womanUp.png);
+  background-image: url(../img/womanUp.png);
 }
 
 .tituloGenero {
