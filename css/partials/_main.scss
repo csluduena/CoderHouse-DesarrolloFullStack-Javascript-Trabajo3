@@ -198,13 +198,29 @@ hr {
 }
 
 .configTextBase {
-    color:white;
-    font-size: 20px;
-    text-shadow: -2px 1px 0px #870df2;
+    background-image: url(../img/primerPreg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 30px;
+    width: 400px;
+    border: 2px solid #00ffff;
+    margin-top: 2rem;
     margin-bottom: 5px;
+    color:white;
+    font-size: 30px;
+    text-shadow: 5px 3px 2px #9600ffc7, -4px 1px 2px #9600ffc7, -3px -3px 2px #9600ffc7, -4px 3px 6px #9600ffc7;
+    // text-shadow: -1px 2px 4px 0px #000000;
+    // font-weight: bold;
+    // color: #ff00ea;
+    font-size: 40px;
+}
+
+.configTextBase:hover {
+    box-shadow: 2px 2px 4px #f7f7f7;
 }
 
 .inputTextStyleIndex {
+    margin-top: 2rem;
     font-size: 15px;
     padding: 5px;
     text-align: center;
@@ -841,4 +857,14 @@ hr {
 
 .cfgBtn {
     margin-bottom: 4rem;
+}
+
+.buttonCFGSend {
+    margin-top: 2rem;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
