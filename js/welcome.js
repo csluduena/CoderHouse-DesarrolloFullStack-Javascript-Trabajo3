@@ -19,3 +19,18 @@ document.getElementById('start-button').addEventListener('click', function() {
         img.style.filter = "blur(5px) brightness(40%) opacity(1) contrast(100%)";
         });
     });
+
+    document.addEventListener('DOMContentLoaded', function() {
+        // Obtén el elemento del botón de inicio
+        const botonStart = document.getElementById('botonStart');
+        
+        // Agrega un evento de clic al botón de inicio
+        botonStart.addEventListener('click', function() {
+            // Oculta los elementos "bienvenida", "textSolapa" y los HR
+            document.querySelector('.bienvenida').style.display = 'none';
+            document.querySelector('.textSolapa').style.display = 'none';
+            document.querySelectorAll('hr').forEach(hr => {
+                hr.style.display = 'none';
+            });
+        });
+    });

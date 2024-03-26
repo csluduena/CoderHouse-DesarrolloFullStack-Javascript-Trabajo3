@@ -37,7 +37,7 @@
         <hr>
         <h2 class="textSolapa">Legend Builder ¡Donde tus personajes cobran vida! Sumérgete en un mundo de fantasía y crea tu propio héroe.<br>Elige su raza, género, clase y atributos. ¡Conviértete en el arquitecto de tu propia leyenda!</h2>
         <hr>
-        <br><!--Pregunta Nombre-->
+        <!--Pregunta Nombre-->
         <div class="comenzarBtn" id="botonStart"></div>
             <div class="preguntaUno" style="display:none;">
                 <p class="configTextBase">¿Cómo te llamas?</p>
@@ -160,17 +160,21 @@
         <button id="continuarBtn">Continuar</button>    
         <br>
     <!--! Pregunta genero -->
-    <div class="tituloGenero" id="textoGeneroTitulo" style="display:none;">¡Elije el género de tu Leyenda!</div>
+    <div class="contentGen">
+        <div class="tituloGenero" id="textoGeneroTitulo" style="display:none;">¡Elije el género de tu Leyenda!</div>
+        <br>
         <div class="textG" id="textGCfg" style="display:none;">
             <p class="textGeneroCfg hLeft" id:"hTitle">Hombre</p>
+            <div class="justASpace"></div>
             <p class="textGeneroCfg mRight" id:"mTitle">Mujer</p>
         </div>
         <div class="opcionDeGenero" id="generosOpcion" style="display:none;">
             <div class="leftHombre" id="hombre"></div> 
             <div class="rightMujer" id="mujer"></div> 
         </div>    
-        <button id="continuarBtn2" type="button" style="display:none;">Continuar</button>
-    
+    </div>
+    <button class="cfgBtn" id="continuarBtn2" type="button" style="display:none;">Continuar</button>
+
             
 
 

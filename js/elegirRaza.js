@@ -164,7 +164,7 @@ document.getElementById("continuarBtn").addEventListener("click", function() {
 
         opcionGenero.style.display = "flex";
         textogenerin.style.display = "flex";
-        tituloGenero.style.display = "flex";
+        tituloGenero.style.display = "block";
 
     } else {
         console.log("Por favor, selecciona género antes de continuar.");

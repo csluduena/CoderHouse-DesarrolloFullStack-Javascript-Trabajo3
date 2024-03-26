@@ -5,10 +5,9 @@
 
 .centerContent {
     margin-top: 1rem;
-    display:flex;
-    flex-direction: column;
+    display: flex;
     flex-wrap: wrap;
-    align-items: center;
+    justify-content: center;
 }
 
 .SBConten {
@@ -585,7 +584,7 @@ hr {
     width: 254px;
     height: 392px;
     cursor: pointer;
-    margin-top: 3rem;
+    margin-top: 5rem;
     flex-wrap: wrap;
     flex-direction: column;
     align-content: center;
@@ -734,7 +733,7 @@ hr {
 
 /* Estilos para las clases */
 #clases {
-    margin-top: -7rem;
+    margin-top: 6rem;
 }
 
 .centerMove {
@@ -756,22 +755,20 @@ hr {
     cursor: pointer;
 }
 
+.textG {
+    display: flex;
+    margin-top: 3rem;
+}
+
 .textGeneroCfg {
     color: white;
     font-weight: bold;
     font-family: "theBlowarRegular";
     font-size: 30px;
     letter-spacing: 2px;
+    //margin-top: 5rem;
 }
 
-.hLeft {
-    margin-right: 13rem;
-    margin-left: -1rem;
-}
-
-.mRight {
-    margin-left: 0rem;
-}
 
 #hombre {
     background-image: url(../img/man.png);
@@ -811,17 +808,37 @@ hr {
     font-family: "theBlowarRegular";
     font-size: 30px;
     letter-spacing: 6px;
-    margin-top: -4rem;
-    margin-bottom: 2rem;
+    margin-top: 1rem;
+    //margin-bottom: 12rem;
     text-shadow: -1px 2px 4px #000000;
+    text-align: center;
 }
 
 .hLeft {
+    // margin-right: 13rem;
+    // margin-left: -1rem;
     color: white; /* Color base para Hombre */
     background-color: transparent; /* Fondo base para Hombre */
+    margin-left: -0.8rem;
 }
 
 .mRight {
     color: white; /* Color base para Mujer */
     background-color: transparent; /* Fondo base para Mujer */
+    margin-left: 3px;
+}
+
+
+.contentGen {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.justASpace {
+    margin-left: 12.5rem;
+}
+
+.cfgBtn {
+    margin-bottom: 4rem;
 }
