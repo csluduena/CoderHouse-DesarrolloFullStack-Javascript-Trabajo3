@@ -325,6 +325,8 @@ document.getElementById("continuarBtn2").addEventListener("click", function() {
         // Mostrar la siguiente sección (atributos)
         const atributosTab = document.getElementById("tabAtri");
         const continuarBtn2 = document.getElementById("continuarBtn2");
+        const activarResumenParcial = document.getElementById("contenedorParcialId");
+        contenedorParcialId.style.display = "flex";
         atributosTab.style.display = "block";
         continuarBtn2.style.display = "none";
 

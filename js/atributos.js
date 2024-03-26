@@ -1,6 +1,5 @@
-// Función para mostrar los datos del personaje elegido
+//!Mostrar los datos del personaje elegido
 function mostrarDatosPersonaje() {
-    // Obtener los elementos HTML donde se mostrarán los datos del personaje y sus atributos
     const nickElegido = document.getElementById("eleccionNick");
     const razaElegida = document.getElementById("eleccionRaza");
     const claseElegida = document.getElementById("eleccionClase");
@@ -9,22 +8,20 @@ function mostrarDatosPersonaje() {
     const fuerzaBase = document.getElementById("fuerzaBase");
     const agilidadBase = document.getElementById("agilidadBase");
 
-    // Actualizar el contenido de los elementos con los datos elegidos por el usuario
-    nickElegido.textContent = "Nick: " + seleccion.nick;
-    razaElegida.textContent = "Raza: " + seleccion.raza;
-    claseElegida.textContent = "Clase: " + seleccion.clase;
-    generoElegido.textContent = "Género: " + seleccionGenero;
+    //!Obtenemos la info acorde a lo ingresado por el user
+    nickElegido.innerHTML = "Nick: <span class='valor' style='color: white'>" + seleccion.nick + "</span>";
+    razaElegida.innerHTML = "Raza: <span class='valor' style='color: white'>" + seleccion.raza + "</span>";
+    claseElegida.innerHTML = "Clase: <span class='valor' style='color: white'>" + seleccion.clase + "</span>";
+    generoElegido.innerHTML = "Género: <span class='valor' style='color: white'>" + seleccionGenero + "</span>";
 
-    // Obtener los atributos de la clase seleccionada por el usuario
     const atributosClase = atributosBase[seleccion.clase];
 
-    // Mostrar los atributos de la clase seleccionada
-    inteligenciaBase.textContent = "Inteligencia: " + atributosClase[0];
-    fuerzaBase.textContent = "Fuerza: " + atributosClase[1];
-    agilidadBase.textContent = "Agilidad: " + atributosClase[2];
+    inteligenciaBase.innerHTML = "Inteligencia: <span class='valor' style='color: white'>" + atributosClase[0] + "</span>";
+    fuerzaBase.innerHTML = "Fuerza: <span class='valor' style='color: white'>" + atributosClase[1] + "</span>";
+    agilidadBase.innerHTML = "Agilidad: <span class='valor' style='color: white'>" + atributosClase[2] + "</span>";
 }
 
-// Llama a la función para mostrar los datos del personaje al hacer clic en el botón "Continuar" en la sección de género
+//! En la sección de "Género", al "Continuar" mostramos los datos del personaje 
 document.getElementById("continuarBtn2").addEventListener("click", function() {
     if (seleccion.raza !== "" && seleccion.clase !== "") {
         // Ocultar la sección de género
@@ -33,8 +30,13 @@ document.getElementById("continuarBtn2").addEventListener("click", function() {
         // Mostrar la siguiente sección (atributos)
         const atributosTab = document.getElementById("tabAtri");
         const continuarBtn2 = document.getElementById("continuarBtn2");
+        const textoDone = document.getElementById("textDoneBase");
+        const botoncito = document.getElementById("buttonSend3");
+
         atributosTab.style.display = "block";
         continuarBtn2.style.display = "none";
+        textoDone.style.display = "flex";
+        botoncito.style.display = "block";
 
         // Obtener y mostrar los atributos base
         obtenerAtributosBase();

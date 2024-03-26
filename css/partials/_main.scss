@@ -867,27 +867,68 @@ hr {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    border: 2px solid #00ffff;
 }
 
-//Clases para Atributos
+.spaceButt {
+    margin-bottom: -3rem;
+}
+
+.buttonCFGSend:hover {
+    border: 2px solid #e5eded;
+}
+
+//!Clases para Atributos
 
 .contenedorParcial {
-    display: flex;
-    flex-direction: column;
-}
-
-.perfilElegido, .atributosDelPj {
-    display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 0rem;
+    background-image: url(../img/bgndStats.jpg);
+    border-radius: 5rem;
+    padding: 6rem;
+    border: 2px solid #00ffff;
+}
+
+.contenedorParcial:hover {
+    box-shadow: 0px 0px 10px 5px #00ffff;
+}
+
+.perfilElegido {
+    color: rgb(250, 156, 172);
+
+}
+
+.atributosDelPj {
+    margin-right: 1.5rem;
+    margin-top:3rem;
+    .intBase {
+        color: #00FFFF
+    }
+    .strBase {
+        color: red;
+    }
+    .agiBase {
+        color: green;
+    }
 }
 
 .nickElegido, .razaElegida, .claseElegida, .generoElegido,
 .intBase, .strBase, .agiBase {
-    display: flex;
-    flex-direction: column;
     width: 100%;
-    text-align: right;
-    padding-right: 10px;
+    text-align: left;
+    font-size: 30px;
+}
+
+.valor {
+    // margin-left: 9rem;
+    // text-align: right;
+}
+
+.textPjsParcial {
     color: white;
+    font-size: 30px;
+    margin-top: 2rem;
+    margin-left: 6rem;
+    margin-right:6rem;
 }
