@@ -131,8 +131,8 @@ function seleccionarClase(event) {
 }
 
 // Manejar eventos de clic en las clases
-const clases = document.querySelectorAll('.clase-pick');
-clases.forEach(clase => {
+const elementosClase = document.querySelectorAll('.clase-pick');
+elementosClase.forEach(clase => {
     clase.addEventListener('click', seleccionarClase);
 });
 
@@ -190,6 +190,7 @@ function activarContinuar() {
     }
 }
 
+//!CAMBIO DE COLOR PARA EL TEXTO DE HOMBRE
 // Evento clic para Hombre
 hombre.addEventListener("click", function() {
     // Cambiamos el color de texto para Hombre
@@ -204,6 +205,7 @@ hombre.addEventListener("click", function() {
     activarContinuar();
 });
 
+//!CAMBIO DE COLOR PARA EL TEXTO DE MUJER
 // Evento clic para Mujer
 mujer.addEventListener("click", function() {
     // Cambiamos el color de texto para Mujer
@@ -218,88 +220,136 @@ mujer.addEventListener("click", function() {
     activarContinuar();
 });
 
-// Evento clic para el botón "Continuar"
-continuarBtn.addEventListener("click", function() {
-    // Aquí puedes realizar acciones adicionales o redireccionar a otra página
-    console.log("Continuar");
+
+
+//!Declarar Atributos
+// Definir los atributos base para cada clase
+let atributosBase = {
+    "Mago": [8, 1, 5],       //🧙‍♂️
+    "Druida": [6, 2, 6],     //🌿
+    "Bardo": [10, 1, 7],     //🎵
+    "Guerrero": [5, 15, 5],  //⚔️
+    "Herrero": [3, 18, 3],   //🔨
+    "Paladin": [8, 12, 5],   //🛡️
+    "Caballero": [2, 20, 4], //🏇
+    "Picaro": [6, 7, 12],    //🗡️
+    "Clerigo": [8, 10, 5],   //✨
+    "Berserker": [1, 25, 3], //🪓
+    "Chaman": [10, 8, 5],    //🔮
+    "Cazador": [8, 10, 10],  //🏹
+};
+
+//! Clases (con Raza y Atributos)
+let clases = {
+    "Elfo": {
+        1: {
+            nombre: "Mago",       //🧙‍♂️
+            atributos: [8, 1, 5]  // Atributos: [Inteligencia, Fuerza, Agilidad]
+        },
+        2: {
+            nombre: "Druida",     //🌿
+            atributos: [6, 2, 6]  // Atributos: [Inteligencia, Fuerza, Agilidad]
+        },
+        3: {
+            nombre: "Bardo",      //🎵
+            atributos: [10, 1, 7] // Atributos: [Inteligencia, Fuerza, Agilidad]
+        }
+    },
+    "Enano": {
+        1: {
+            nombre: "Guerrero",   //⚔️
+            atributos: [5, 15, 5] // Atributos: [Inteligencia, Fuerza, Agilidad]
+        },
+        2: {
+            nombre: "Herrero",    //🔨
+            atributos: [3, 18, 3] // Atributos: [Inteligencia, Fuerza, Agilidad]
+        },
+        3: {
+            nombre: "Paladin",    //🛡️
+            atributos: [8, 12, 5] // Atributos: [Inteligencia, Fuerza, Agilidad]
+        }
+    },
+    "Humano": {
+        1: {
+            nombre: "Caballero",  //🏇
+            atributos: [2, 20, 4] // Atributos: [Inteligencia, Fuerza, Agilidad]
+        },
+        2: {
+            nombre: "Picaro",     //🗡️
+            atributos: [6, 7, 12] // Atributos: [Inteligencia, Fuerza, Agilidad]
+        },
+        3: {
+            nombre: "Clerigo",    //✨
+            atributos: [8, 10, 5] // Atributos: [Inteligencia, Fuerza, Agilidad]
+        }
+    },
+    "Orco": {
+        1: {
+            nombre: "Berserker",  //🪓
+            atributos: [1, 25, 3] // Atributos: [Inteligencia, Fuerza, Agilidad]
+        },
+        2: {
+            nombre: "Chaman",      //🔮
+            atributos: [10, 8, 5] // Atributos: [Inteligencia, Fuerza, Agilidad]
+        },
+        3: {
+            nombre: "Cazador",     //🏹
+            atributos: [8, 10, 10] // Atributos: [Inteligencia, Fuerza, Agilidad]
+        }
+    }
+};
+
+//!Obtener ATRIBUTOS
+// Función para obtener los atributos base según la clase seleccionada y la raza
+function obtenerAtributosBase() {
+    // Obtener la raza y clase seleccionadas
+    let razaSeleccionada = seleccion.raza;
+    let claseSeleccionada = seleccion.clase;
+
+    // Obtener los atributos base de la clase seleccionada
+    let atributos = atributosBase[claseSeleccionada];
+
+    // Mostrar los atributos base en la consola
+    console.log("Atributos base para la clase", claseSeleccionada + ":", atributos);
+
+    // Aquí podrías hacer algo más con los atributos base, como asignarlos a una variable global para su posterior uso
+}
+
+//!CONTINAR A ATRIBUTOS
+// Evento clic para el botón "Continuar" en la sección de género
+document.getElementById("continuarBtn2").addEventListener("click", function() {
+    if (seleccion.raza !== "" && seleccion.clase !== "") {
+        // Ocultar la sección de género
+        document.querySelector(".contentGen").style.display = "none";
+
+        // Mostrar la siguiente sección (atributos)
+        const atributosTab = document.getElementById("tabAtri");
+        const continuarBtn2 = document.getElementById("continuarBtn2");
+        atributosTab.style.display = "block";
+        continuarBtn2.style.display = "none";
+
+        // Obtener y mostrar los atributos base
+        obtenerAtributosBase();
+    } else {
+        console.log("Por favor, selecciona una raza y una clase antes de continuar.");
+    }
 });
 
+// Función para seleccionar la clase según la raza
+function seleccionarClaseSegunRaza() {
+    // Obtener la raza seleccionada
+    let razaSeleccionada = seleccion.raza;
+
+    // Obtener las clases disponibles para la raza seleccionada
+    let clasesDisponibles = clases[razaSeleccionada];
+
+    // Mostrar las clases disponibles en la consola
+    console.log("Clases disponibles para la raza", razaSeleccionada + ":", clasesDisponibles);
+
+    // Aquí podrías hacer algo más con las clases disponibles, como mostrarlas en la interfaz de usuario
+}
 
 
 
 
 
-// color: #0015ff; /* Color para Hombre */
-// }
-
-// .mRight {
-//     color: #d500ff; /* Color para Mujer */
-
-
-
-
-    
-
-
-
-
-// //! Boton Elejir genero
-// document.addEventListener('DOMContentLoaded', function() {
-//     const buttonSend3 = document.getElementById('buttonSend3');
-//     const opcionGenero = document.querySelector('.opcionGenero');
-//     const elijeTuClase = document.querySelector('.elijeTuClase');
-
-//     buttonSend3.addEventListener('click', function() {
-//         opcionGenero.style.display = 'none'; // Oculta la sección de opción de género
-//         elijeTuClase.style.display = 'flex'; // Muestra la sección para elegir la clase
-//     });
-// });
-
-
-
-// let clases = {
-//     "Elfo": {
-//         1: "Mago", //🧙‍♂️
-//         2: "Druida", //🌿
-//         3: "Bardo" //🎵
-//     },
-//     "Enano": {
-//         1: "Guerrero", //⚔️
-//         2: "Herrero", //🔨
-//         3: "Paladin" //🛡️
-//     },
-//     "Humano": {
-//         1: "Caballero", //🏇
-//         2: "Picaro", //🗡️
-//         3: "Clerigo" //✨
-//     },
-//     "Orco": {
-//         1: "Berserker", //🪓
-//         2: "Chaman", //🔮
-//         3: "Cazador" //🏹
-//     }
-// };
-
-
-
-
-
-//! Elección de Clase y mostrar parcialmente todo lo elegido
-
-
-
-// //Array con los atributos base
-// let atributosBase = {
-//     "Mago": [8, 1, 5], //🧙‍♂️
-//     "Druida": [6, 2, 6], //🌿
-//     "Bardo": [10, 1, 7], //🎵
-//     "Guerrero": [5, 15, 5], //⚔️
-//     "Herrero": [3, 18, 3], //🔨
-//     "Paladin": [8, 12, 5], //🛡️
-//     "Caballero": [2, 20, 4], //🏇
-//     "Picaro": [6, 7, 12], //🗡️
-//     "Clerigo": [8, 10, 5], //✨
-//     "Berserker": [1, 25, 3], //🪓
-//     "Chaman": [10, 8, 5], //🔮
-//     "Cazador": [8, 10, 10], //🏹
-// }
