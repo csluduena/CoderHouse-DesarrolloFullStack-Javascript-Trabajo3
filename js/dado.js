@@ -34,6 +34,11 @@ buttonRoolDice.addEventListener( 'click', rollDice, false );
 }, false);
 
 
+let totalInteligencia;
+let totalFuerza;
+let totalAgilidad;
+
+
 window.addEventListener('DOMContentLoaded', function() {
     const diceRollButton = document.getElementById('buttonDice');
     const continueButton = document.getElementById('buttonContinue');
@@ -44,9 +49,6 @@ window.addEventListener('DOMContentLoaded', function() {
     parseInt(inteligenciaBase.textContent);
 
     let tiradasRealizadas = 0;
-    let totalInteligencia;
-    let totalFuerza;
-    let totalAgilidad;
 
     diceRollButton.addEventListener('click', function() {
         if (tiradasRealizadas < 3) { // Verificar si aún se pueden realizar más tiradas
@@ -130,14 +132,6 @@ window.addEventListener('DOMContentLoaded', function() {
         contenedorFinal.style.display = 'block';
         botonFinalIndex.style.display = 'block';
     });
-
-//! Ir a la página Personaje.HTML
-
-const continueButton = document.getElementById('continuarBtn3');
-
-continueButton.addEventListener('click', function() {
-    window.location.href = '../pages/personaje.html';
-});
 
 
 
