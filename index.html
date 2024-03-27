@@ -193,77 +193,42 @@
             </div>
             <button class="buttonCFGSend buttonCFGSend2" id="buttonSend3" style="display:none;">Siguiente</button>
         </div>
-        <!--!Dados-->
+        <!-- Sección de Dados -->
         <div class="wrapper" id="dadosTirada" style="display:none;">
+            <div class="atributosDelPj">
+                <div class="intBase" id="inteligenciaBase"></div>
+                <div class="strBase" id="fuerzaBase"></div>
+                <div class="agiBase" id="agilidadBase"></div>
+            </div>
+            <div id="resultado1">Tu bonus para Inteligencia es: </div>
+            <div id="resultado2">Tu bonus para Fuerza es: </div>
+            <div id="resultado3">Tu bonus para Agilidad es: </div>
             <div class="column">
-                    <div id="dice-side-1" class="dice"></div>
-                    <div id="dice-side-2" class="dice"></div>
+                <div id="dice-side-1" class="dice"></div>
+                <div id="dice-side-2" class="dice"></div>
             </div>
             <div class="column">
-                    <button type="button" class="dice-roll">roll dice</button>
-                    <h2 id="status"></h2>
+                <button type="button" id="buttonDice" class="dice-roll continuarBtn">Lanzar dados</button>
+                <button type="button" id="buttonContinue" class="continuarBtn" style="display: none;">Continuar</button>
+                <h2 id="status"></h2>
             </div>
         </div>
-    
-        
+        <!--! Contenedor Final -->
+        <div class="contenedorFinalClss" id="contenedorFinalIdF" style="display:none;">
+            <div class="msgFinal">
+                <p class="textFinal">Ahora si! todo listo para conocer a tu leyenda!</p>
+            </div>
+        </div>
+        <button class="cfgBtn" id="continuarBtn3" type="button" style="display:none;">Continuar</button>
 
 
-
-
-    
+    <!-- <button class="buttonCFGSend buttonCFGSend2" id="buttonSend3" style="display:none;">Siguiente</button> -->
         
 
         <!--! ********************************************************** -->
         <!--! ********************END DOM OUPUT CODE******************** -->
         <!--! ********************************************************** -->
 
-
-            <!-- <table id="tabla" class="configTabla" style="display:none;">  
-                <tr>
-                    <th class="columna1">
-                    <div class="titulos">
-                        <label for="userName" class="space, configAtrI">Nombre:&nbsp</label>
-                        <div id="userName" class="textoDescriptivo, otrasConfigs"></div>
-                    </div>
-                    
-                    <div class="tablaDePersonaje"></div>
-                    <div class="fila">
-                        <label for="nick" class="space, titulosIndex">Nick:&nbsp</label>
-                        <div id="nick" class="textoDescriptivo "></div>
-                    </div>
-                    <div class="fila">
-                        <label for="personaje" class="space, titulosIndex">Origen:&nbsp</label>
-                        <div id="personaje" class="textoDescriptivo"></div>
-                    </div>
-                    <div class="fila">
-                        <label for="genero" class="space, titulosIndex">Genero:&nbsp</label>
-                        <div id="genero" class="textoDescriptivo"></div>
-                    </div>
-                    <div class="fila">
-                        <label for="clase" class="space, titulosIndex">Clase:&nbsp</label>
-                        <div id="clase" class="textoDescriptivo"></div>
-                    </div>
-                    <div class="titulos">
-                        <label for="Atributos, atributos" class="space, configAtrI">Atributos</label>
-                    </div>
-                    <div class="fila">
-                        <label for="Inteligencia" class="space, colorCian">Inteligencia:&nbsp</label>
-                        <div id="Inteligencia" class="textoDescriptivo"></div>
-                    </div>
-                    <div class="fila">
-                        <label for="Fuerza" class="space, colorRojo">Fuerza:&nbsp</label>
-                        <div id="Fuerza" class="textoDescriptivo"></div>
-                    </div>
-                    <div class="fila">
-                        <label for="Agilidad" class="space, colorVerde">Agilidad:&nbsp</label>
-                        <div id="Agilidad" class="textoDescriptivo"></div>
-                    </div>
-                    </th>
-                    <th>
-                        <div id="mensajePostPj" class="configMensajitoPj"></div>
-                    </th>
-                </tr>
-            </table>             -->
         <div id="cartaPersonaje"></div>
     </div>
     </main>

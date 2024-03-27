@@ -8,16 +8,15 @@
 }
 
 .wrapper {
-    width: 400px;
+    width: 730px;
     margin: 0 auto;
-    display: flex;
     justify-content: space-between;
-    display: flex;
 }
 
 .column {
     display: flex;
-    align-items: center;
+    justify-content: space-around;
+    padding: 6rem;
 }
 
 #status {
@@ -30,9 +29,17 @@
     text-align: center;
 }
 
+.dice-side-1 {
+    margin-right: 5rem;
+}
+
+.dice-side-2 {
+    margin-left: 5rem;
+}
+
 .dice {
-    width: 74px;
-    height: 71px;
+    width: 155px;
+    height: 150px;
     float: left;
     //background-color: lightcoral;
     border: 1px solid black;
@@ -47,10 +54,29 @@
 }
 
 .dice-roll {
-    cursor: pointer;
     text-transform: capitalize;
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    margin-bottom: 14rem;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: 2px solid #00ffff;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
+.resultado {
+    color: white;
+    font-family: "theBlowarRegular";
+    font-size: 30px;
+}
+
+#eleccionNick {
+    color:red;
+}
 
 
 

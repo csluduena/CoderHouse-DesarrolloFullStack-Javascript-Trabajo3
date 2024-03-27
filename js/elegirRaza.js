@@ -39,8 +39,6 @@
     const botonElegirRaza = document.querySelector('.botonElegirRaza');
     
         document.addEventListener('DOMContentLoaded', function() {
-        
-        const botonElegirRaza = document.querySelector('.botonElegirRaza');
 
         botonElegirRaza.addEventListener('click', function() {
             botonElegirRaza.style.display = 'none'
@@ -220,8 +218,6 @@ mujer.addEventListener("click", function() {
     activarContinuar();
 });
 
-
-
 //!Declarar Atributos
 // Definir los atributos base para cada clase
 let atributosBase = {
@@ -329,9 +325,6 @@ document.getElementById("continuarBtn2").addEventListener("click", function() {
         contenedorParcialId.style.display = "flex";
         atributosTab.style.display = "block";
         continuarBtn2.style.display = "none";
-
-        // Obtener y mostrar los atributos base
-        //obtenerAtributosBase();
     }
 });
 
@@ -343,8 +336,4 @@ function seleccionarClaseSegunRaza() {
     // Obtener las clases disponibles para la raza seleccionada
     let clasesDisponibles = clases[razaSeleccionada];
 }
-
-
-
-
 

@@ -1,3 +1,11 @@
+    const nickElegido = document.getElementById("eleccionNick");
+    const razaElegida = document.getElementById("eleccionRaza");
+    const claseElegida = document.getElementById("eleccionClase");
+    const generoElegido = document.getElementById("eleccionGenero");
+    const inteligenciaBase = document.getElementById("inteligenciaBase");
+    const fuerzaBase = document.getElementById("fuerzaBase");
+    const agilidadBase = document.getElementById("agilidadBase");
+
 //!Mostrar los datos del personaje elegido
 function mostrarDatosPersonaje() {
     const nickElegido = document.getElementById("eleccionNick");

@@ -12,52 +12,8 @@ buttonSend3.addEventListener("click", function() {
 });
 
 
-//!Animación Dados
-window.addEventListener('DOMContentLoaded', function() {
-    const diceRollButton = document.querySelector('.dice-roll');
 
-    diceRollButton.addEventListener('click', function() {
-        const result1 = rollDice('dice-side-1');
-        const result2 = rollDice('dice-side-2');
-        
-        // Mostrar los resultados en la consola
-        console.log('Resultado del primer dado:', result1);
-        console.log('Resultado del segundo dado:', result2);
-        console.log('Resultado total:', result1 + result2);
-    });
-
-    function rollDice(diceId) {
-        const dice = document.getElementById(diceId);
-        const result = Math.floor(Math.random() * 6) + 1;
-    
-        // Declara las imágenes para cada cara del dado
-        const diceImages = {
-            1: "../img/dado1.png",
-            2: "../img/dado2.png",
-            3: "../img/dado3.png",
-            4: "../img/dado4.png",
-            5: "../img/dado5.png",
-            6: "../img/dado6.png"
-        };
-
-        // Obtiene la imagen correspondiente al resultado
-        const diceImage = diceImages[result];
-    
-        // Aplica la imagen al dado
-        dice.style.backgroundImage = "url('" + diceImage + "')";
-    
-        dice.style.animation = 'rotate 0.6s ease-in-out';
-    
-        setTimeout(function() {
-            dice.style.animation = '';
-        }, 600);
-    
-        return result;
-    }
-});
-
-
-//!Codigo Dados
+//!Animación y código Dados
 window.addEventListener( 'DOMContentLoaded', function () {
 	
     const buttonRoolDice = document.querySelector( '.dice-roll' );
@@ -66,25 +22,136 @@ function rollDice () {
 
     const diceSide1 = document.getElementById( 'dice-side-1' );
     const diceSide2 = document.getElementById( 'dice-side-2' );
-    const status = document.getElementById( 'status' );
+    //const status = document.getElementById( 'status' );
 
     const side1 = Math.floor( Math.random() * 6 ) + 1;
     const side2 = Math.floor( Math.random() * 6 ) + 1;
     const diceTotal = side1 + side2;
-
-    //diceSide1.innerHTML = side1;
-    //diceSide2.innerHTML = side2;
-
-    //status.innerHTML = 'You rolled ' + diceTotal + '.';
-
-    if ( side1 === side2 ) {
-        status.innerHTML += ' Doubles! You get a free turn!';
     }
-}
 
 buttonRoolDice.addEventListener( 'click', rollDice, false );
 
 }, false);
+
+
+window.addEventListener('DOMContentLoaded', function() {
+    const diceRollButton = document.getElementById('buttonDice');
+    const continueButton = document.getElementById('buttonContinue');
+    const resultado1 = document.getElementById("resultado1");
+    const resultado2 = document.getElementById("resultado2");
+    const resultado3 = document.getElementById("resultado3");
+    
+    parseInt(inteligenciaBase.textContent);
+
+    let tiradasRealizadas = 0;
+    let totalInteligencia;
+    let totalFuerza;
+    let totalAgilidad;
+
+    diceRollButton.addEventListener('click', function() {
+        if (tiradasRealizadas < 3) { // Verificar si aún se pueden realizar más tiradas
+            tiradasRealizadas++; // Incrementar el contador de tiradas realizadas
+
+            const result1 = rollDice('dice-side-1');
+            const result2 = rollDice('dice-side-2');
+
+            // Mostrar los resultados en la consola
+            console.log('Resultado del primer dado:', result1);
+            console.log('Resultado del segundo dado:', result2);
+            console.log('Resultado total:', result1 + result2);
+
+            // Almacenar los resultados en las variables correspondientes
+            if (tiradasRealizadas === 1) {
+                totalInteligencia = result1 + result2 + parseInt(inteligenciaBase.textContent.replace(/\D/g,''));
+                resultado1.textContent = 'Tu bonus para Inteligencia es: ' + (result1 + result2) + ' 🎲 + ' + parseInt(inteligenciaBase.textContent.replace(/\D/g,'')) + ' atributo base = ' + totalInteligencia;
+            } else if (tiradasRealizadas === 2) {
+                totalFuerza = result1 + result2 + parseInt(fuerzaBase.textContent.replace(/\D/g,''));
+                resultado2.textContent = 'Tu bonus para Fuerza es: ' + (result1 + result2) + ' 🎲 + ' + parseInt(fuerzaBase.textContent.replace(/\D/g,'')) + ' atributo base = ' + totalFuerza;
+            } else if (tiradasRealizadas === 3) {
+                totalAgilidad = result1 + result2 + parseInt(agilidadBase.textContent.replace(/\D/g,''));
+                resultado3.textContent = 'Tu bonus para Agilidad es: ' + (result1 + result2) + ' 🎲 + ' + parseInt(agilidadBase.textContent.replace(/\D/g,'')) + ' atributo base = ' + totalAgilidad;
+            }
+        }  
+        if (tiradasRealizadas === 3) {
+            diceRollButton.style.display = 'none'; // Ocultar el botón de "Lanzar dados"
+            continueButton.style.display = 'block'; // Mostrar el botón de "Continuar"
+        }
+    });
+    
+
+    continueButton.addEventListener('click', function() {
+        // Aquí puedes agregar la lógica para continuar con la siguiente parte de tu aplicación
+        // Por ejemplo, mostrar la siguiente sección o ejecutar alguna otra acción
+        //console.log('Continuar con la siguiente parte de la aplicación');
+    });
+
+    function rollDice(diceId) {
+        const dice = document.getElementById(diceId);
+        const result = Math.floor(Math.random() * 6) + 1;
+
+        // Declara las imágenes para cada cara del dado
+        const diceImages = {
+            1: "img/dado1.png",
+            2: "img/dado2.png",
+            3: "img/dado3.png",
+            4: "img/dado4.png",
+            5: "img/dado5.png",
+            6: "img/dado6.png"
+        };
+
+        // Obtiene la imagen correspondiente al resultado
+        const diceImage = diceImages[result];
+
+        // Aplica la imagen al dado
+        dice.style.backgroundImage = "url('" + diceImage + "')";
+
+        dice.style.animation = 'rotate 0.6s ease-in-out';
+
+        setTimeout(function() {
+            dice.style.animation = '';
+        }, 600);
+
+        return result;
+    }
+});
+
+    const buttonContinue = document.getElementById('buttonContinue');
+    const contenedorFinal = document.getElementById('contenedorFinalIdF');
+    const dadosTirada = document.getElementById('dadosTirada');
+    const botonFinalIndex = document.getElementById('continuarBtn3')
+
+    buttonContinue.addEventListener('click', function() {
+        // Ocultar el botón Continuar y el contenedor dadosTirada
+        buttonContinue.style.display = 'none';
+        dadosTirada.style.display = 'none';
+        
+        
+        // Mostrar el contenedor final
+        contenedorFinal.style.display = 'block';
+        botonFinalIndex.style.display = 'block';
+    });
+
+//! Ir a la página Personaje.HTML
+
+const continueButton = document.getElementById('continuarBtn3');
+
+continueButton.addEventListener('click', function() {
+    window.location.href = '../pages/personaje.html';
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
