@@ -155,7 +155,7 @@
                 </div>
             </div>
             <!-- Aquí irían las clases para Enanos, Humanos y Orcos -->
-        </div>    
+        </div>
         <button id="continuarBtn">Continuar</button>    
         <br>
     <!--! Pregunta genero -->
@@ -191,11 +191,21 @@
             <div class="textPjsParcial" id="textDoneBase" style="display:none;">
                 <p>Excelente!<br>Ya tenemos la base de tu personaje.<br>Ahora vamos a tirar los dados para aumentar<br>esos atributos base!</p>
             </div>
-            <button class="buttonCFGSend spaceButt" id="buttonSend3" style="display:none;">Siguiente</button>
+            <button class="buttonCFGSend buttonCFGSend2" id="buttonSend3" style="display:none;">Siguiente</button>
         </div>
-
-        <button id="buttonSend5" type="button" style="display:none;">Enviar</button>
-
+        <!--!Dados-->
+        <div class="wrapper" id="dadosTirada" style="display:none;">
+            <div class="column">
+                    <div id="dice-side-1" class="dice"></div>
+                    <div id="dice-side-2" class="dice"></div>
+            </div>
+            <div class="column">
+                    <button type="button" class="dice-roll">roll dice</button>
+                    <h2 id="status"></h2>
+            </div>
+        </div>
+    
+        
 
 
 
@@ -266,5 +276,6 @@
     <script src="./js/preguntas.js"></script>
     <script src="./js/elegirRaza.js"></script>
     <script src="./js/atributos.js"></script>
+    <script src="./js/dado.js"></script>
 </body>
 </html>
