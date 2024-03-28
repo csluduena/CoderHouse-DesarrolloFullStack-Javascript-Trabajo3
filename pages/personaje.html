@@ -21,12 +21,11 @@
             </div>
                 <div class="configCompartidaDeInfoDePersonaje">
                     <div class="info-personaje">
-                        <!-- <p class="spaceInfoTop">Nombre del usuario: <span id="nombreUsuario"></span></p> -->
                         <div class="alinearInformacion">
                             <p class="spaceInfoTop, colorTitulos">Nombre: <span id="nickPersonaje"></span></p>
                             <p class="spaceEntreInfo, colorTitulos">Origen: <span id="origen"></span></p>
-                            <p class="spaceEntreInfo, colorTitulos">Género: <span id="genero"></span></p>
-                            <p class="spaceEntreInfo, colorTitulos">Clase: <span id="clase"></span></p>
+                            <p class="spaceEntreInfo, colorTitulos">Clase: <span id="genero"></span></p>
+                            <p class="spaceEntreInfo, colorTitulos">Género: <span id="clase"></span></p>
                             <p class="spaceEntreInfo, colorTituloAtr"></p>
                         </div>
                         <div class="centrarAtributos">
@@ -41,16 +40,19 @@
             </div>
         </div>
         <div class="infoPj">
-
-            <!-- <h3 class="configH3">Importar/Exportar</h3>
-            <p class="textCfg">Aquí puedes guardar tu personaje, importar uno, o incluso borrarlo si así lo deseas!</p> -->
-
-            <button id="descargarPersonaje">Descargar Personaje</button>
-            
-            <button id="cargarPersonaje">Cargar Personaje</button>
-            <input type="file" id="cargarPersonaje" style="display: none;">
-            
-            <button id="borrarPersonaje">Borrar Personaje</button>
+        <button id="descargarPersonaje">Descargar Personaje</button>
+        <button id="cargarPersonaje">Cargar Personaje</button>
+        <input type="file" id="cargarPersonaje" style="display: none;">
+        <button id="borrarPersonaje">Borrar Personaje</button>
+        </div>
+        <div id="myModal" class="modal" style="display: none;">
+            <div class="modal-content">
+                <p id="alertaBorrarPj">Se perderá toda la información de su personaje. <br>¿Estás seguro que desea continuar?</p>
+                <div>
+                    <button id="confirmarBorrar">Aceptar</button>
+                    <button id="cancelarBorrar">Cancelar</button>
+                </div>
+            </div>
         </div>
 
     </main>
@@ -64,8 +66,8 @@
         </div>
     </footer>
     
-
-    <script src="./../js/personaje.js"></script>
+    <script src="./../js/leyenda.js"></script> 
+    <!-- <script src="./../js/personaje.js"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.5.0/jszip.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.5.0-beta4/html2canvas.min.js"></script>
 </body>

@@ -1,26 +1,36 @@
-// Almacena la información en el Local Storage
-localStorage.setItem('nombrePersonaje', nombrePersonaje);
-localStorage.setItem('razaSeleccionada', seleccion.raza);
-localStorage.setItem('claseSeleccionada', seleccion.clase);
-localStorage.setItem('generoSeleccionado', seleccionGenero);
-localStorage.setItem('totalInteligencia', totalInteligencia);
-localStorage.setItem('totalFuerza', totalFuerza);
-localStorage.setItem('totalAgilidad', totalAgilidad);
+document.getElementById("buttonContinue").addEventListener("click", function() {
+    // Verificar si una variable es una cadena de texto
+    function esCadena(variable) {
+        return typeof variable === 'string' || variable instanceof String;
+    }
 
-//!Recuperar el nombre del personaje del Local Storage
-//const nombrePersonaje = localStorage.getItem('nombrePersonaje');
+    // Convertir una variable a cadena de texto si no lo es
+    function convertirACadena(variable) {
+        if (!esCadena(variable)) {
+            return variable.toString();
+        }
+        return variable;
+    }
 
+    // Almacenar la información en LocalStorage
+    localStorage.setItem('nombrePersonaje', convertirACadena(nombrePersonaje));
+    localStorage.setItem('raza', convertirACadena(seleccion.raza));
+    localStorage.setItem('clase', convertirACadena(seleccion.clase));
+    localStorage.setItem('genero', convertirACadena(seleccionGenero));
+    localStorage.setItem('totalInteligencia', convertirACadena(totalInteligencia));
+    localStorage.setItem('totalFuerza', convertirACadena(totalFuerza));
+    localStorage.setItem('totalAgilidad', convertirACadena(totalAgilidad));
 
-
-// Imprimir la información en la consola
-console.log("Nombre del personaje:", nombrePersonaje);
-console.log("Raza seleccionada:", seleccion.raza);
-console.log("Clase seleccionada:", seleccion.clase);
-console.log("Género seleccionado:", seleccionGenero);
-console.log("Total de inteligencia:", totalInteligencia);
-console.log("Total de fuerza:", totalFuerza);
-console.log("Total de agilidad:", totalAgilidad);
-
+    // Imprimir la información en la consola
+    console.log("Información almacenada en LocalStorage:");
+    console.log("Nombre del personaje:", nombrePersonaje);
+    console.log("Raza:", seleccion.raza);
+    console.log("Clase:", seleccion.clase);
+    console.log("Género:", seleccionGenero);
+    console.log("Total de inteligencia:", totalInteligencia);
+    console.log("Total de fuerza:", totalFuerza);
+    console.log("Total de agilidad:", totalAgilidad);
+});
 
 
 

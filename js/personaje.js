@@ -8,6 +8,17 @@ let inteligencia = localStorage.getItem('inteligencia');
 let fuerza = localStorage.getItem('fuerza');
 let agilidad = localStorage.getItem('agilidad');
 
+localStorage.setItem('nombrePersonaje', nombrePersonaje);
+localStorage.setItem('razaSeleccionada', seleccion.raza);
+localStorage.setItem('claseSeleccionada', seleccion.clase);
+localStorage.setItem('generoSeleccionado', seleccionGenero);
+localStorage.setItem('totalInteligencia', totalInteligencia);
+localStorage.setItem('totalFuerza', totalFuerza);
+localStorage.setItem('totalAgilidad', totalAgilidad);
+
+
+
+
 // Mostrar la información en la página
 //document.getElementById('nombreUsuario').textContent = nombreUsuario; <<<<<<-----   OCULTADO POR EL MOMENTO
 document.getElementById('nickPersonaje').textContent = nickPersonaje;

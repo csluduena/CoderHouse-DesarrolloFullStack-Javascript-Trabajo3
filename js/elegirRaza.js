@@ -85,6 +85,8 @@ opcionesClases.forEach((opcion) => {
 //!Elección de raza y clase.
 
 // Almacena la selección de raza y clase
+
+//! D E C A R A C I O N  RAZA CLASE. (seleccion.raza o seleccion.clase)
 let seleccion = {
     raza: "",
     clase: ""
@@ -106,6 +108,7 @@ function seleccionarRaza(event) {
         const razaSeleccionada = razaNombreElemento.textContent.trim();
         seleccion.raza = razaSeleccionada;
     }
+    console.log("Raza seleccionada:", seleccion.raza)
 }
 
 // Manejar eventos de clic en las razas
@@ -115,38 +118,58 @@ razas.forEach(raza => {
 });
 
 //!Clases
+//! Función para manejar la selección de clase
+document.addEventListener("DOMContentLoaded", function() {
+    const clases = document.querySelectorAll(".clase-pick .clasesTotal");
+
+    clases.forEach(function(clase) {
+        clase.addEventListener("click", function() {
+            const claseSeleccionada = this.getAttribute("id");
+            const nombreClase = this.querySelector(".claseNombre").textContent;
+
+            console.log("Clase seleccionada:", nombreClase);
+
+            seleccion.clase = nombreClase;
+        });
+    });
+});
+
+// //!Consoleando resultados
+// // Función para continuar
+// document.getElementById("continuarBtn").addEventListener("click", function() {
+//     if (seleccion.raza !== "" && seleccion.clase !== "") {
+//         // Aquí puedes realizar acciones adicionales o redireccionar a otra página
+//         console.log("Raza seleccionada:", seleccion.raza);
+//         console.log("Clase seleccionada:", seleccion.clase);
+//     } else {
+//         console.log("Por favor, selecciona una raza y una clase antes de continuar.");
+//     }
+// });
+
+
 // Función para manejar la selección de clase
-function seleccionarClase(event) {
-    // Buscamos el elemento con la clase 'claseNombre' dentro de la opción clickeada
-    const claseNombreElemento = event.currentTarget.querySelector('.claseNombre');
-    
-    // Si encontramos el elemento, usamos su texto como el nombre de la clase
-    if (claseNombreElemento) {
-        const claseSeleccionada = claseNombreElemento.textContent.trim();
-        seleccion.clase = claseSeleccionada;
-        mostrarBotonContinuar();
-    }
-}
+document.addEventListener("DOMContentLoaded", function() {
+    const clases = document.querySelectorAll(".clase-pick .clasesTotal");
 
-// Manejar eventos de clic en las clases
-const elementosClase = document.querySelectorAll('.clase-pick');
-elementosClase.forEach(clase => {
-    clase.addEventListener('click', seleccionarClase);
+    clases.forEach(function(clase) {
+        clase.addEventListener("click", function() {
+            const claseSeleccionada = this.getAttribute("id");
+            const nombreClase = this.querySelector(".claseNombre").textContent;
+
+            //console.log("Clase seleccionada:", nombreClase);
+
+            // Actualizar la selección de clase
+            seleccion.clase = nombreClase;
+
+            // Mostrar el botón de continuar si ambos raza y clase están seleccionados
+            if (seleccion.raza !== "" && seleccion.clase !== "") {
+                mostrarBotonContinuar();
+            }
+        });
+    });
 });
 
-//!continuar
-// Función para continuar
-document.getElementById("continuarBtn").addEventListener("click", function() {
-    if (seleccion.raza !== "" && seleccion.clase !== "") {
-        // Aquí puedes realizar acciones adicionales o redireccionar a otra página
-        console.log("Raza seleccionada:", seleccion.raza);
-        console.log("Clase seleccionada:", seleccion.clase);
-    } else {
-        console.log("Por favor, selecciona una raza y una clase antes de continuar.");
-    }
-});
-
-//!Click Continuar y TODO GENERO.
+//!Click Continuar y TODO ELECCIÓN DE GENERO.
 // Función para continuar
 document.getElementById("continuarBtn").addEventListener("click", function() {
     if (seleccion.raza !== "" && seleccion.clase !== "") {
@@ -168,7 +191,6 @@ document.getElementById("continuarBtn").addEventListener("click", function() {
         console.log("Por favor, selecciona género antes de continuar.");
     }
 });
-
 
 //!ShadowBox para eleccion de genero
 // Variables para almacenar la selección de género
