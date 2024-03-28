@@ -1,4 +1,6 @@
-    //TODO ESTILOS BOTON PREGUNTA TRES (ELEGIR RAZA)
+
+
+//TODO ESTILOS BOTON PREGUNTA TRES (ELEGIR RAZA)
     document.addEventListener('DOMContentLoaded', function() {
         
         let botonElegirRaza = document.querySelector('.botonElegirRaza');

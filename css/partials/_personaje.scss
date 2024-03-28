@@ -9,8 +9,8 @@
     height: 100%;
 }
 
-.tituloLegendCFG { 
-    display:flex;
+.tituloLegendCFG {
+    display: flex;
     justify-content: center;
 }
 
@@ -22,27 +22,27 @@
 }
 
 .configLegend {
-    display:flex;
+    display: flex;
 }
 
 .legend {
     justify-content: center;
     font-family: "pamela";
     font-size: 200px;
-    display:flex;
+    display: flex;
     margin-left: 2rem;
     margin-right: 4rem;
     filter: opacity(50%);
 }
 
 .configBuilder {
-    display:flex;
+    display: flex;
 }
 
 .builder {
     font-family: "pamela";
     font-size: 200px;
-    display:flex;
+    display: flex;
     justify-content: center;
     margin-right: 2rem;
     margin-left: 4rem;
@@ -55,8 +55,9 @@
 
 .tituloMain {
     margin-top: 5px;
+    margin-left: -3rem;
     padding-bottom: 1rem;
-    font-family:"whiteStorm";
+    font-family: "whiteStorm";
     font-size: 140px;
     color: black;
     text-shadow: -3px 0px 2px rgb(230, 230, 230), 0px 2px 2px rgb(221, 221, 221), 0px -1px 2px rgb(23, 207, 244), 2px 0 0 rgb(135, 150, 236);
@@ -87,7 +88,7 @@
 
 .info-personaje {
     margin-top: 1rem;
-    background-size:contain;
+    background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
     min-width: 377px;
@@ -99,41 +100,26 @@
     margin-top: 2rem;
 }
 
-// #descargarPersonaje:hover {
-//     color:white;
-//     background-color: rgb(79, 79, 79);
-// }
-
 #cargarPersonaje {
     cursor: pointer;
 }
 
-// #cargarPersonaje:hover {
-//     color:white;
-//     background-color: rgb(79, 79, 79);
-// }
-
 #borrarPersonaje {
     cursor: pointer;
 }
-
-// #borrarPersonaje:hover {
-//     color:white;
-//     background-color: rgb(79, 79, 79);
-// }
 
 a {
     text-decoration: none;
 }
 
 .cntBtn {
-    display:flex;
+    display: flex;
     justify-content: center;
 }
 
 .botonBackIndex {
-    display:flex;
-    color: black; 
+    display: flex;
+    color: black;
     justify-content: center;
     background-color: #efefef;
     border: 1px solid black;
@@ -148,7 +134,7 @@ a {
 }
 
 .botonBackIndex:hover {
-    color:white;
+    color: white;
     background-color: black;
 }
 
@@ -162,14 +148,17 @@ a {
 }
 
 .colorTitulos {
-    color:rgb(0, 0, 0);
+    color: rgb(0, 0, 0);
     font-size: 20px;
     font-family: robotoRegular;
     // text-shadow: -3px 0px 2px black, 0px 2px 2px black, 0px -1px 2px black, 2px 0 0 black;
     font-weight: bold;
 }
 
-#nickPersonaje, #origen, #genero, #clase {
+#nickPersonaje,
+#origen,
+#genero,
+#clase {
     color: white;
 }
 
@@ -199,7 +188,7 @@ a {
 }
 
 .centrarAtributos {
-    display:flex;
+    display: flex;
     justify-content: center;
     flex-direction: row;
     flex-wrap: wrap;
@@ -207,11 +196,11 @@ a {
 
 .colorTituloAtr {
     margin-top: 1.2rem;
-    color:aqua ;
+    color: aqua;
 }
 
 .colorAtr {
-    display:flex;
+    display: flex;
     flex-direction: column;
     font-size: 20px;
     color: white;
@@ -225,52 +214,51 @@ a {
 
 /* Estilos para el modal */
 .modal {
-    display: none; /* Ocultar el modal por defecto */
-    position: fixed; /* Posición fija para que se mantenga en la misma posición incluso al desplazarse */
-    z-index: 1; /* Ubicar el modal por encima del contenido */
+    display: none;
+    position: fixed;
+    z-index: 1;
     left: 0;
     top: 0;
-    width: 100%; /* Ancho completo */
-    height: 100%; /* Altura completa */
-    overflow: auto; /* Permitir el desplazamiento si el contenido del modal es demasiado grande */
-    background-color: rgba(0, 0, 0, 0.4); /* Fondo oscuro con opacidad */
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
 }
 
-  /* Estilos para el contenido del modal */
+/* Estilos para el contenido del modal */
 .modal-content {
     background-image: url(./../img/gg.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-color: #fefefe; /* Fondo blanco */
-    margin: 20% auto; /* Margen superior e inferior y centrar horizontalmente */
+    background-color: #fefefe;
+    margin: 20% auto;
     padding: 20px;
     border: 1px solid #888;
-    width: 30%; /* Ancho del contenido */
+    width: 40%;
     text-align: center;
-    height: 15%;
+    height: 19%;
     border-radius: 1rem;
     box-shadow: rgb(0 0 0 / 84%) 0px 0px 20px 1227px;
 }
 
-  /* Estilos para los botones dentro del modal */
+/* Estilos para los botones dentro del modal */
 .modal-content button {
-    background-color: rgb(76, 175, 80); /* Color de fondo */
-    color: white; /* Color del texto */
-    padding: 10px 20px; /* Espaciado interno */
-    border: none; /* Sin borde */
-    cursor: pointer; /* Cursor tipo puntero al pasar por encima */
-    margin-right: 10px; /* Margen derecho entre los botones */
+    background-color: rgb(76, 175, 80);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin-right: 10px;
     margin-top: 1rem;
     border-radius: 10px;
-    
 }
 
 
-
-  /* Estilo para el botón de cancelar */
+/* Estilo para el botón de cancelar */
 #cancelarBorrar {
-    background-color: rgb(244, 67, 54); /* Color de fondo rojo */
+    background-color: rgb(244, 67, 54);
+    /* Color de fondo rojo */
     border: 3px solid rgb(136, 26, 18);
 }
 
@@ -284,10 +272,10 @@ a {
 }
 
 #confirmarBorrar:hover {
-    box-shadow: 0px 0px 15px 7px rgb(15, 75, 17); // rgb(76, 175, 80)
+    box-shadow: 0px 0px 15px 7px rgb(15, 75, 17);
 }
 
-  /* Estilos para el texto de la alerta */
+/* Estilos para el texto de la alerta */
 #alertaBorrarPj {
     font-size: 25px;
     text-shadow: -3px 0px 2px #a40eec, 0px 2px 2px #a40eec, 0px -1px 2px #a40eec, 2px 0 0 #a40eec;

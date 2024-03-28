@@ -22,17 +22,64 @@
   justify-content: center; /* Centra horizontalmente el contenido */
 }
 
-.start-buttonCFG {
-  background-image: url(../img/botonStart.gif);
-  width: 984px;
-  height: 472px;
-  justify-content: center;
+.start-button {
+  background-image: url(../img/comenzarW.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  width: 925px;
+  height: 514px;
   cursor: pointer;
-  margin: 0 auto; /* Centra horizontalmente el elemento dentro del contenedor */
+  position: fixed;
+  z-index: 9999;
+  margin-top: 126px;
+  margin-left: -29px;
+  filter: opacity(0.6);
 }
 
-.start-buttonCFG:hover {
-  background-image: url(../img/botonStart2.png);
+.start-buttonCFG {
+  position: fixed;
+  background-image: url(../img/comenzar2.gif);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  width: 880px;
+  height: 360px;
+  cursor: pointer;
+  filter: blur(2px);
+  margin-top: 8rem;
+}
+
+.start-button:hover {
+  position: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  width: 925px;
+  height: 514px;
+  cursor: pointer;
+  /* filter: blur(1.4px); */
+  margin-top: 126px;
+  margin-left: -29px;
+}
+
+.start-button:active {
+  background-image: url(../img/comenzar4.gif);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  width: 878px;
+  height: 514px;
+  cursor: pointer;
+  position: fixed;
+  z-index: 9999;
+  margin-top: 51px;
+  margin-left: -3px;
+  filter: blur(1.4px);
+}
+
+.start-button:hover .start-buttonCFG {
+  display: none;
 }
 
 .bodyIndex img {
@@ -543,7 +590,6 @@ hr {
   align-content: center;
 }
 
-/* Estilos de animación al pasar el mouse */
 .magoElfo:hover, .druidaElfo:hover, .bardoElfo:hover,
 .guerreroEnano:hover, .herreroEnano:hover, .paladinEnano:hover,
 .caballeroHumanos:hover, .picaroHumanos:hover, .clerigoHumanos:hover,
@@ -935,6 +981,7 @@ hr {
 
 .tituloMain {
   margin-top: 5px;
+  margin-left: -3rem;
   padding-bottom: 1rem;
   font-family: "whiteStorm";
   font-size: 140px;
@@ -1033,7 +1080,10 @@ a {
   font-weight: bold;
 }
 
-#nickPersonaje, #origen, #genero, #clase {
+#nickPersonaje,
+#origen,
+#genero,
+#clase {
   color: white;
 }
 
@@ -1089,15 +1139,15 @@ a {
 
 /* Estilos para el modal */
 .modal {
-  display: none; /* Ocultar el modal por defecto */
-  position: fixed; /* Posición fija para que se mantenga en la misma posición incluso al desplazarse */
-  z-index: 1; /* Ubicar el modal por encima del contenido */
+  display: none;
+  position: fixed;
+  z-index: 1;
   left: 0;
   top: 0;
-  width: 100%; /* Ancho completo */
-  height: 100%; /* Altura completa */
-  overflow: auto; /* Permitir el desplazamiento si el contenido del modal es demasiado grande */
-  background-color: rgba(0, 0, 0, 0.4); /* Fondo oscuro con opacidad */
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 /* Estilos para el contenido del modal */
@@ -1106,32 +1156,33 @@ a {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-color: #fefefe; /* Fondo blanco */
-  margin: 20% auto; /* Margen superior e inferior y centrar horizontalmente */
+  background-color: #fefefe;
+  margin: 20% auto;
   padding: 20px;
   border: 1px solid #888;
-  width: 30%; /* Ancho del contenido */
+  width: 40%;
   text-align: center;
-  height: 15%;
+  height: 19%;
   border-radius: 1rem;
   box-shadow: rgba(0, 0, 0, 0.84) 0px 0px 20px 1227px;
 }
 
 /* Estilos para los botones dentro del modal */
 .modal-content button {
-  background-color: rgb(76, 175, 80); /* Color de fondo */
-  color: white; /* Color del texto */
-  padding: 10px 20px; /* Espaciado interno */
-  border: none; /* Sin borde */
-  cursor: pointer; /* Cursor tipo puntero al pasar por encima */
-  margin-right: 10px; /* Margen derecho entre los botones */
+  background-color: rgb(76, 175, 80);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  margin-right: 10px;
   margin-top: 1rem;
   border-radius: 10px;
 }
 
 /* Estilo para el botón de cancelar */
 #cancelarBorrar {
-  background-color: rgb(244, 67, 54); /* Color de fondo rojo */
+  background-color: rgb(244, 67, 54);
+  /* Color de fondo rojo */
   border: 3px solid rgb(136, 26, 18);
 }
 
@@ -1203,7 +1254,6 @@ a {
   width: 155px;
   height: 150px;
   float: left;
-  border: 1px solid black;
   padding: 10px;
   font-size: 24px;
   text-align: center;

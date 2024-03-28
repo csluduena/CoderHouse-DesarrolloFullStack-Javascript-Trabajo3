@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Legend Builder</title>
-    <meta name="description" content="Legend Builder es un emocionante juego de cartas medieval. Crea tu propia leyenda y sumérgete en un mundo de estrategia, aventura y fantasía.">
+    <meta name="description"
+        content="Legend Builder es un emocionante juego de cartas medieval. Crea tu propia leyenda y sumérgete en un mundo de estrategia, aventura y fantasía.">
     <link rel="icon" href="./img/favicon.jpg" type="image/jpeg">
     <link rel="stylesheet" href="./css/styles.css">
-    </head>
-    <body class="bodyIndex"><img src="./img/1bcground12.png" alt="bgnd">
-        
-
+</head>
+<body class="bodyIndex"><img src="./img/1bcground12.png" alt="bgnd">
+    
     <header>
         <div class="tituloLegendCFGIndex">
             <div class="configLegendIndex">
@@ -21,222 +22,215 @@
             </div>
         </div>
         <div class="SBConten">
-            <div class="start-buttonCFG" id="start-button"></div>
+            <div class="start-button" id="start-button"></div>
+            <div class="start-buttonCFG"></div>
+            <div class="start-buttonCFGImg"></div>
         </div>
     </header>
     <main>
-    <!--Main Area-->
-        
-    <div id="content" class="backText centerContent"> <!--(colocar content en id)-->
-
-        <!--! ********************************************************** -->
-        <!--! *******************START DOM OUPUT CODE******************* -->
-        <!--! ********************************************************** -->
-        <hr>
-        <div class="bienvenida">
-            <h1>Bienvenidos a Legend Builder!</h1>
-        </div>
-        <hr>
-        <h2 class="textSolapa">Legend Builder ¡Donde tus personajes cobran vida! Sumérgete en un mundo de fantasía y crea tu propio héroe.<br>Elige su raza, género, clase y atributos. ¡Conviértete en el arquitecto de tu propia leyenda!</h2>
-        <hr>
-        <!--Pregunta Nombre-->
-        <div class="comenzarBtn" id="botonStart"></div>
+        <div id="content" class="backText centerContent"><hr>
+            <div class="bienvenida">
+                <h1>Bienvenidos a Legend Builder!</h1>
+            </div><hr>
+            <h2 class="textSolapa">Legend Builder ¡Donde tus personajes cobran vida! Sumérgete en un mundo de fantasía y
+                crea tu propio héroe.<br>Elige su raza, género, clase y atributos. ¡Conviértete en el arquitecto de tu
+                propia leyenda!
+            </h2><hr>
+        <!--!Pregunta Nombre-->
+            <div class="comenzarBtn" id="botonStart"></div>
             <div class="preguntaUno" style="display:none;">
                 <p class="configTextBase">¿Cómo te llamas?</p>
-                <input class="inputTextStyleIndex" type="text" id="saludoInicialInput" placeholder="Ingresa tu nombre"><br>
+                <input class="inputTextStyleIndex" type="text" id="saludoInicialInput"
+                    placeholder="Ingresa tu nombre"><br>
                 <button class="buttonCFGSend" id="buttonSend1">Siguiente</button>
-            </div>
-        <br><!--Pregunta Nick-->
+            </div><br>
+        <!--!Pregunta Nick-->
             <div class="preguntaDos" style="display:none;">
                 <p class="configTextBase">Un Nick para tu leyenda</p>
                 <input class="inputTextStyleIndex" type="text" id="nickNameInput" placeholder="Ingresa un nick"><br>
                 <button class="buttonCFGSend" id="buttonSend2">Siguiente</button>
-            </div>
-        <br><!--!Pregunta Razas-->
+            </div><br>
+        <!--!Pregunta Razas-->
             <div class="botonElegirRaza" style="display:none;">
                 <p class="btnRazaCfg">Elije una raza</p>
             </div>
-        <br>
-        <!--! Razas -->
-        <div class="razasElegir" id="elegirRazas">
-            <div id="razas">
-                <div class="raza-option opcionElfos flex" id="elfosOption">
-                    <p class="razaNombre">Elfo</p>
-                    <p class="textRaza">Son conocidos por su gracia y conexión con la naturaleza.</p>
-                    
-                </div>
-                <div class="raza-option opcionEnanos flex" id="enanosOption">
-                    <p class="razaNombre">Enano</p>
-                    <p class="textRaza">Son famosos por su resistencia y habilidades de artesanía.</p>
-                </div>
-                <div class="raza-option opcionHumanos flex" id="humanosOption">
-                    <p class="razaNombre">Humano</p>
-                    <p class="textRaza">Son versátiles y ambiciosos, gran diversidad de habilidades.</p>
-                    
-                </div>
-                <div class="raza-option opcionOrcos flex" id="orcosOption">
-                    <p class="razaNombre">Orco</p>
-                    <p class="textRaza">Conocidos por su fuerza bruta y su ferocidad en el combate.</p>
-                    
-                </div>
-            </div>
-        </div>	
-        <!--! Clases -->
-        <div id="clases">
-            <div class="clase-pick" id="elfosClasesPick">
-                <div class="claseElfos" id="cElf1">
-                    <div class="grupoClasesElfo" id="grupoClasesElfos">
-                        <div class="magoElfo elfosClasesPick clasesTotal" id="Mago">
-                            <span class="claseNombre nombreClase">Mago</span>
-                            <span class="descripcion">Usuarios de magia poderosa y destructiva.</span>
-                        </div>
-                        <div class="druidaElfo elfosClasesPick centerMove clasesTotal" id="Druida">
-                            <span class="claseNombre nombreClase1">Druida</span>
-                            <span class="descripcion1">Capaces de manipular la magia de la naturaleza.</span>
-                        </div>
-                        <div class="bardoElfo elfosClasesPick clasesTotal" id="Bardo">
-                            <span class="claseNombre nombreClase2">Bardo</span>
-                            <span class="descripcion2">Artistas talentosos con habilidades mágicas únicas.</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="clase-pick elegirClase" id="enanosClasesPick">
-                <div class="claseEnanos">
-                    <div class="grupoClasesEnano" id="grupoClasesEnanos">
-                        <div class="guerreroEnano enanosClasesPick clasesTotal" id="Guerrero">
-                            <span class="claseNombre nombreClase3">Guerrero</span>
-                            <span class="descripcion3">Combatientes fuertes y resistentes.</span>
-                        </div>
-                        <div class="herreroEnano enanosClasesPick centerMove clasesTotal" id="Herrero">
-                            <span class="claseNombre nombreClase4">Herrero</span>
-                            <span class="descripcion4">Maestros de la creación y mejora de armas y armaduras.</span>
-                        </div>
-                        <div class="paladinEnano enanosClasesPick clasesTotal" id="Paladin">
-                            <span class="claseNombre nombreClase5">Paladin</span>
-                            <span class="descripcion5">Defensores valientes con habilidades de curación.</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="clase-pick elegirClase" id="humanosClasesPick">
-                <div class="claseHumanos">
-                    <div class="grupoClasesHumano humanosClasesPick" id="grupoClasesHumanos">
-                        <div class="caballeroHumanos clasesTotal" id="Caballero">
-                            <span class="claseNombre nombreClase6">Caballero</span>
-                            <span class="descripcion6">Protectores leales, habilidosos en combate cuerpo a cuerpo.</span>
-                        </div>
-                        <div class="picaroHumanos humanosClasesPick centerMove clasesTotal" id="Picaro">
-                            <span class="claseNombre nombreClase7">Picaro</span>
-                            <span class="descripcion7">Maestros del sigilo y la astucia, expertos en trampas y robos.</span>
-                        </div>
-                        <div class="clerigoHumanos humanosClasesPick clasesTotal" id="Clerigo">
-                            <span class="claseNombre nombreClase8">Clerigo</span>
-                            <span class="descripcion8">Sanadores y protectores con habilidades mágicas divinas.</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="clase-pick elegirClase" id="orcosClasesPick">
-                <div class="claseOrcos">
-                    <div class="grupoClasesOrco orcosClasesPick" id="grupoClasesOrcos">
-                        <div class="berserkerOrco clasesTotal" id="Berserker">
-                            <span class="claseNombre nombreClase9">Berserker</span>
-                            <span class="descripcion9">Combatientes salvajes que entran en frenesí en la batalla.</span>
-                        </div>
-                        <div class="chamanOrco orcosClasesPick centerMove clasesTotal" id="Chaman">
-                            <span class="claseNombre nombreClase10">Chaman</span>
-                            <span class="descripcion10">Conectados con los espíritus y capaces de usar magia elemental.</span>
-                        </div>
-                        <div class="cazadorOrco orcosClasesPick clasesTotal" id="Cazador">
-                            <span class="claseNombre nombreClase11">Cazador</span>
-                            <span class="descripcion11">Expertos en rastreo y combate a distancia.</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Aquí irían las clases para Enanos, Humanos y Orcos -->
-        </div>
-        <button id="continuarBtn" class="upCenter">Continuar</button>    
-        <br>
-    <!--! Pregunta genero -->
-        <div class="contentGen">
-            <div class="tituloGenero" id="textoGeneroTitulo" style="display:none;">¡Elije el género de tu Leyenda!</div>
             <br>
-            <div class="textG" id="textGCfg" style="display:none;">
-                <p class="textGeneroCfg hLeft" id:"hTitle">Hombre</p>
-                <div class="justASpace"></div>
-                <p class="textGeneroCfg mRight" id:"mTitle">Mujer</p>
+        <!--! Razas -->
+            <div class="razasElegir" id="elegirRazas">
+                <div id="razas">
+                    <div class="raza-option opcionElfos flex" id="elfosOption">
+                        <p class="razaNombre">Elfo</p>
+                        <p class="textRaza">Son conocidos por su gracia y conexión con la naturaleza.</p>
+                    </div>
+                    <div class="raza-option opcionEnanos flex" id="enanosOption">
+                        <p class="razaNombre">Enano</p>
+                        <p class="textRaza">Son famosos por su resistencia y habilidades de artesanía.</p>
+                    </div>
+                    <div class="raza-option opcionHumanos flex" id="humanosOption">
+                        <p class="razaNombre">Humano</p>
+                        <p class="textRaza">Son versátiles y ambiciosos, gran diversidad de habilidades.</p>
+                    </div>
+                    <div class="raza-option opcionOrcos flex" id="orcosOption">
+                        <p class="razaNombre">Orco</p>
+                        <p class="textRaza">Conocidos por su fuerza bruta y su ferocidad en el combate.</p>
+                    </div>
+                </div>
             </div>
-            <div class="opcionDeGenero" id="generosOpcion" style="display:none;">
-                <div class="leftHombre" id="hombre"></div> 
-                <div class="rightMujer" id="mujer"></div> 
-            </div>    
+        <!--! Clases -->
+            <div id="clases">
+                <div class="clase-pick" id="elfosClasesPick">
+                    <div class="claseElfos" id="cElf1">
+                        <div class="grupoClasesElfo" id="grupoClasesElfos">
+                            <div class="magoElfo elfosClasesPick clasesTotal" id="Mago">
+                                <span class="claseNombre nombreClase">Mago</span>
+                                <span class="descripcion">Usuarios de magia poderosa y destructiva.</span>
+                            </div>
+                            <div class="druidaElfo elfosClasesPick centerMove clasesTotal" id="Druida">
+                                <span class="claseNombre nombreClase1">Druida</span>
+                                <span class="descripcion1">Capaces de manipular la magia de la naturaleza.</span>
+                            </div>
+                            <div class="bardoElfo elfosClasesPick clasesTotal" id="Bardo">
+                                <span class="claseNombre nombreClase2">Bardo</span>
+                                <span class="descripcion2">Artistas talentosos con habilidades mágicas únicas.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="clase-pick elegirClase" id="enanosClasesPick">
+                    <div class="claseEnanos">
+                        <div class="grupoClasesEnano" id="grupoClasesEnanos">
+                            <div class="guerreroEnano enanosClasesPick clasesTotal" id="Guerrero">
+                                <span class="claseNombre nombreClase3">Guerrero</span>
+                                <span class="descripcion3">Combatientes fuertes y resistentes.</span>
+                            </div>
+                            <div class="herreroEnano enanosClasesPick centerMove clasesTotal" id="Herrero">
+                                <span class="claseNombre nombreClase4">Herrero</span>
+                                <span class="descripcion4">Maestros de la creación y mejora de armas y armaduras.</span>
+                            </div>
+                            <div class="paladinEnano enanosClasesPick clasesTotal" id="Paladin">
+                                <span class="claseNombre nombreClase5">Paladin</span>
+                                <span class="descripcion5">Defensores valientes con habilidades de curación.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="clase-pick elegirClase" id="humanosClasesPick">
+                    <div class="claseHumanos">
+                        <div class="grupoClasesHumano humanosClasesPick" id="grupoClasesHumanos">
+                            <div class="caballeroHumanos clasesTotal" id="Caballero">
+                                <span class="claseNombre nombreClase6">Caballero</span>
+                                <span class="descripcion6">Protectores leales, habilidosos en combate cuerpo a
+                                    cuerpo.</span>
+                            </div>
+                            <div class="picaroHumanos humanosClasesPick centerMove clasesTotal" id="Picaro">
+                                <span class="claseNombre nombreClase7">Picaro</span>
+                                <span class="descripcion7">Maestros del sigilo y la astucia, expertos en trampas y
+                                    robos.</span>
+                            </div>
+                            <div class="clerigoHumanos humanosClasesPick clasesTotal" id="Clerigo">
+                                <span class="claseNombre nombreClase8">Clerigo</span>
+                                <span class="descripcion8">Sanadores y protectores con habilidades mágicas
+                                    divinas.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="clase-pick elegirClase" id="orcosClasesPick">
+                    <div class="claseOrcos">
+                        <div class="grupoClasesOrco orcosClasesPick" id="grupoClasesOrcos">
+                            <div class="berserkerOrco clasesTotal" id="Berserker">
+                                <span class="claseNombre nombreClase9">Berserker</span>
+                                <span class="descripcion9">Combatientes salvajes que entran en frenesí en la
+                                    batalla.</span>
+                            </div>
+                            <div class="chamanOrco orcosClasesPick centerMove clasesTotal" id="Chaman">
+                                <span class="claseNombre nombreClase10">Chaman</span>
+                                <span class="descripcion10">Conectados con los espíritus y capaces de usar magia
+                                    elemental.</span>
+                            </div>
+                            <div class="cazadorOrco orcosClasesPick clasesTotal" id="Cazador">
+                                <span class="claseNombre nombreClase11">Cazador</span>
+                                <span class="descripcion11">Expertos en rastreo y combate a distancia.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button id="continuarBtn" class="upCenter">Continuar</button>
+            <br>
+        <!--! Pregunta genero -->
+            <div class="contentGen">
+                <div class="tituloGenero" id="textoGeneroTitulo" style="display:none;">¡Elije el género de tu Leyenda!
+                </div>
+                <br>
+                <div class="textG" id="textGCfg" style="display:none;">
+                    <p class="textGeneroCfg hLeft" id:"hTitle">Hombre</p>
+                    <div class="justASpace"></div>
+                    <p class="textGeneroCfg mRight" id:"mTitle">Mujer</p>
+                </div>
+                <div class="opcionDeGenero" id="generosOpcion" style="display:none;">
+                    <div class="leftHombre" id="hombre"></div>
+                    <div class="rightMujer" id="mujer"></div>
+                </div>
+            </div>
+            <button class="cfgBtn" id="continuarBtn2" type="button" style="display:none;">Continuar</button>
+            <div class="atributosTab" id="tabAtri" style="display:none;"></div>
+        <!--!Muestra parcial del Personaje-->
+            <div class="contenedorParcial" id="contenedorParcialId" style="display:none;">
+                <div class="perfilElegido">
+                    <div class="nickElegido" id="eleccionNick">Nick: </div>
+                    <div class="razaElegida" id="eleccionRaza">Raza: </div>
+                    <div class="claseElegida" id="eleccionClase">Clase: </div>
+                    <div class="generoElegido" id="eleccionGenero">Género: </div>
+                </div>
+                <div class="atributosDelPj" id="AtrPj">
+                    <div class="intBase" id="inteligenciaBase">Inteligencia: </div>
+                    <div class="strBase" id="fuerzaBase">Fuerza: </div>
+                    <div class="agiBase" id="agilidadBase">Agilidad: </div>
+                </div>
+                <div class="textPjsParcial" id="textDoneBase" style="display:none;">
+                    <p>Excelente!<br>Ya tenemos la base de tu personaje.<br>Ahora vamos a tirar los dados para
+                        aumentar<br>esos atributos base!</p>
+                </div>
+                <button class="buttonCFGSend buttonCFGSend2" id="buttonSend3" style="display:none;">Siguiente</button>
+            </div>
+        <!--! Sección de Dados -->
+            <div class="wrapper" id="dadosTirada" style="display:none;">
+                <div class="atributosDelPj">
+                    <div class="intBase" id="inteligenciaBase"></div>
+                    <div class="strBase" id="fuerzaBase"></div>
+                    <div class="agiBase" id="agilidadBase"></div>
+                </div>
+                <div id="resultado1">Tu bonus para Inteligencia es: </div>
+                <div id="resultado2">Tu bonus para Fuerza es: </div>
+                <div id="resultado3">Tu bonus para Agilidad es: </div>
+                <div class="column">
+                    <div id="dice-side-1" class="dice"></div>
+                    <div id="dice-side-2" class="dice"></div>
+                </div>
+                <div class="column">
+                    <button type="button" id="buttonDice" class="dice-roll botonLanzarDados">Lanzar dados</button>
+                    <button type="button" id="buttonContinue" class="upCenter2 btnNextLegend continuarBtn"
+                        style="display: none;">Continuar</button>
+                    <h2 id="status"></h2>
+                </div>
+            </div>
+            <!--! Contenedor Final -->
+            <div class="contenedorFinalClss" id="contenedorFinalIdF" style="display:none;">
+                <div class="msgFinal">
+                    <p class="textFinal">Ahora si! todo listo para conocer a tu leyenda!</p>
+                </div>
+            </div>
+            <button class="cfgBtn cfgBotones botonLanzarDados" id="continuarBtn3" type="button"
+                style="display:none;">Continuar</button>
+
+            <div id="cartaPersonaje"></div>
         </div>
-        <button class="cfgBtn" id="continuarBtn2" type="button" style="display:none;">Continuar</button>
-        <div class="atributosTab" id="tabAtri" style="display:none;"></div>
-    <!--!Muestra parcial del Personaje-->
-        <div class="contenedorParcial" id="contenedorParcialId" style="display:none;">
-            <div class="perfilElegido">
-                <div class="nickElegido" id="eleccionNick">Nick: </div>
-                <div class="razaElegida" id="eleccionRaza">Raza: </div>
-                <div class="claseElegida" id="eleccionClase">Clase: </div>
-                <div class="generoElegido" id="eleccionGenero">Género: </div>
-            </div>
-
-            <div class="atributosDelPj" id="AtrPj">
-                <div class="intBase" id="inteligenciaBase">Inteligencia: </div>
-                <div class="strBase" id="fuerzaBase">Fuerza: </div>
-                <div class="agiBase" id="agilidadBase">Agilidad: </div>
-            </div>
-            <div class="textPjsParcial" id="textDoneBase" style="display:none;">
-                <p>Excelente!<br>Ya tenemos la base de tu personaje.<br>Ahora vamos a tirar los dados para aumentar<br>esos atributos base!</p>
-            </div>
-            <button class="buttonCFGSend buttonCFGSend2" id="buttonSend3" style="display:none;">Siguiente</button>
-        </div>
-        <!-- Sección de Dados -->
-        <div class="wrapper" id="dadosTirada" style="display:none;">
-            <div class="atributosDelPj">
-                <div class="intBase" id="inteligenciaBase"></div>
-                <div class="strBase" id="fuerzaBase"></div>
-                <div class="agiBase" id="agilidadBase"></div>
-            </div>
-            <div id="resultado1">Tu bonus para Inteligencia es: </div>
-            <div id="resultado2">Tu bonus para Fuerza es: </div>
-            <div id="resultado3">Tu bonus para Agilidad es: </div>
-            <div class="column">
-                <div id="dice-side-1" class="dice"></div>
-                <div id="dice-side-2" class="dice"></div>
-            </div>
-            <div class="column">
-                <button type="button" id="buttonDice" class="dice-roll botonLanzarDados">Lanzar dados</button>
-                <button type="button" id="buttonContinue" class="upCenter2 btnNextLegend continuarBtn" style="display: none;">Continuar</button>
-                <h2 id="status"></h2>
-            </div>
-        </div>
-        <!--! Contenedor Final -->
-        <div class="contenedorFinalClss" id="contenedorFinalIdF" style="display:none;">
-            <div class="msgFinal">
-                <p class="textFinal">Ahora si! todo listo para conocer a tu leyenda!</p>
-            </div>
-        </div>
-        <button class="cfgBtn cfgBotones botonLanzarDados" id="continuarBtn3" type="button" style="display:none;">Continuar</button>
-
-
-    <!-- <button class="buttonCFGSend buttonCFGSend2" id="buttonSend3" style="display:none;">Siguiente</button> -->
-        
-
-        <!--! ********************************************************** -->
-        <!--! ********************END DOM OUPUT CODE******************** -->
-        <!--! ********************************************************** -->
-
-        <div id="cartaPersonaje"></div>
-    </div>
     </main>
     <footer>
         <!--Footer Area-->
     </footer>
-    
+
     <!--Script-->
     <script src="./js/welcome.js"></script>
     <script src="./js/preguntas.js"></script>
@@ -246,3 +240,7 @@
     <script src="./js/storage.js"></script>
 </body>
 </html>
+
+<!--! ********************************************************** -->
+<!--! ****************** Legend Builder V2.0 ******************* -->
+<!--! ********************************************************** -->

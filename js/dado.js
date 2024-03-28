@@ -81,12 +81,6 @@ window.addEventListener('DOMContentLoaded', function() {
     });
     
 
-    continueButton.addEventListener('click', function() {
-        // Aquí puedes agregar la lógica para continuar con la siguiente parte de tu aplicación
-        // Por ejemplo, mostrar la siguiente sección o ejecutar alguna otra acción
-        //console.log('Continuar con la siguiente parte de la aplicación');
-    });
-
     function rollDice(diceId) {
         const dice = document.getElementById(diceId);
         const result = Math.floor(Math.random() * 6) + 1;

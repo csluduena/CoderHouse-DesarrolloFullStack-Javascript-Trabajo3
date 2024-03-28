@@ -1,5 +1,5 @@
 #content {
-    display: none;      //! C A M B I A R    A    N O N E
+    display: none;
     text-align: center;
 }
 
@@ -15,17 +15,65 @@
     justify-content: center; /* Centra horizontalmente el contenido */
 }
 
-.start-buttonCFG {
-    background-image: url(../img/botonStart.gif);
-    width: 984px;
-    height: 472px;
-    justify-content: center;
+.start-button {
+	background-image: url(../img/comenzarW.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    width: 925px;
+    height: 514px;
     cursor: pointer;
-    margin: 0 auto; /* Centra horizontalmente el elemento dentro del contenedor */
+    position: fixed;
+    z-index: 9999;
+    margin-top: 126px;
+    margin-left: -29px;
+    filter: opacity(0.6);
 }
 
-.start-buttonCFG:hover {
-    background-image: url(../img/botonStart2.png);
+.start-buttonCFG {
+    position: fixed;
+    background-image: url(../img/comenzar2.gif);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    width: 880px;
+    height: 360px;
+    cursor: pointer;
+    filter: blur(2px);
+    margin-top: 8rem;
+}
+
+.start-button:hover {
+    position: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    width: 925px;
+    height: 514px;
+    cursor: pointer;
+    /* filter: blur(1.4px); */
+    margin-top: 126px;
+    margin-left: -29px;
+}
+
+
+.start-button:active {
+    background-image: url(../img/comenzar4.gif);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    width: 878px;
+    height: 514px;
+    cursor: pointer;
+    position: fixed;
+    z-index: 9999;
+    margin-top: 51px;
+    margin-left: -3px;
+    filter: blur(1.4px);
+}
+
+.start-button:hover .start-buttonCFG {
+    display: none;
 }
 
 .bodyIndex img {
@@ -597,14 +645,14 @@ hr {
     align-content: center;
 }
 
-/* Estilos de animación al pasar el mouse */
-.claseElfos div:hover,
-.claseEnanos div:hover,
-.claseHumanos div:hover,
-.claseOrcos div:hover {
-    //transform: scale(1.1); /* Escala aumentada al pasar el mouse */
+// /* Estilos de animación al pasar el mouse */
+// .claseElfos div:hover,
+// .claseEnanos div:hover,
+// .claseHumanos div:hover,
+// .claseOrcos div:hover {
+//     //transform: scale(1.1); /* Escala aumentada al pasar el mouse */
     
-}
+// }
 
 .magoElfo:hover, .druidaElfo:hover, .bardoElfo:hover,
 .guerreroEnano:hover, .herreroEnano:hover, .paladinEnano:hover,
@@ -922,10 +970,10 @@ hr {
     font-size: 30px;
 }
 
-.valor {
-    // margin-left: 9rem;
-    // text-align: right;
-}
+// .valor {
+//     // margin-left: 9rem;
+//     // text-align: right;
+// }
 
 .textPjsParcial {
     color: white;
