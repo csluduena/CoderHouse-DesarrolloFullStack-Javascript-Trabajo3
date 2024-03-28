@@ -261,6 +261,7 @@ a {
     margin-right: 10px; /* Margen derecho entre los botones */
     margin-top: 1rem;
     border-radius: 10px;
+    
 }
 
 
@@ -268,27 +269,32 @@ a {
   /* Estilo para el botón de cancelar */
 #cancelarBorrar {
     background-color: rgb(244, 67, 54); /* Color de fondo rojo */
+    border: 3px solid rgb(136, 26, 18);
 }
 
 #cancelarBorrar:hover {
-    box-shadow: 0px 0px 7px 2px rgb(246 124 115);
+    box-shadow: 0px 0px 15px 7px rgb(136, 26, 18);
 }
 
+
 #confirmarBorrar {
-    
+    border: 3px solid rgb(15, 75, 17);
 }
 
 #confirmarBorrar:hover {
-    box-shadow: 0px 0px 7px 2px rgb(76, 175, 80)
+    box-shadow: 0px 0px 15px 7px rgb(15, 75, 17); // rgb(76, 175, 80)
 }
 
   /* Estilos para el texto de la alerta */
 #alertaBorrarPj {
     font-size: 25px;
-    text-shadow: -3px 0px 2px black, 0px 2px 2px black, 0px -1px 2px black, 2px 0 0 black;
+    text-shadow: -3px 0px 2px #a40eec, 0px 2px 2px #a40eec, 0px -1px 2px #a40eec, 2px 0 0 #a40eec;
     color: white;
     font-family: "robotoRegular";
-    margin-bottom: 20px; /* Margen inferior */
+    margin-bottom: 20px;
     text-align: center;
     border-radius: 10px;
+    background-color: rgb(0 0 0 / 35%);
+    margin-left: 40px;
+    margin-right: 40px;
 }

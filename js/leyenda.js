@@ -100,11 +100,9 @@ btnConfirmar.onclick = function() {
 
 
 
-
-
-//Descargar el personaje 
+// Descargar el personaje
 document.getElementById('descargarPersonaje').addEventListener('click', function() {
-    // Creamos un objeto con la info del personaje guardada en el JS del index.
+    
     let personaje = {
         //nombreUsuario: localStorage.getItem('nombreUsuario'), No nos interesa
         nickPersonaje: localStorage.getItem('nombrePersonaje'),
@@ -116,7 +114,7 @@ document.getElementById('descargarPersonaje').addEventListener('click', function
         agilidad: localStorage.getItem('totalAgilidad')
     };
 
-    //EL MEME PARA DESCARGAR EL PERSONAJE TANTO FILE PARA BACKUP COMO JPG. 
+    //EL MEME PARA DESCARGAR EL PERSONAJE TANTO FILE PARA BACKUP COMO JPG.
     let zip = new JSZip();
 
     // agregamos el archivo JSON al ZIP
@@ -142,7 +140,6 @@ document.getElementById('descargarPersonaje').addEventListener('click', function
         });
     });
 });
-
 
 
 
