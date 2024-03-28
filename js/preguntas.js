@@ -1,3 +1,11 @@
+// //!Funcion para el focus en los inputs
+// window.onload = function() {
+//     document.getElementById("saludoInicialInput").focus();
+// };
+
+
+
+
 //!PREGUNTAS 1 y 2.
 //almacenar nombre de usuario
 let nombreUsuario = '';

@@ -34,52 +34,11 @@ document.getElementById("buttonContinue").addEventListener("click", function() {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 //! Ir a la página Personaje.HTML
 
 const continueButton = document.getElementById('continuarBtn3');
 
 continueButton.addEventListener('click', function() {
-    window.location.href = '../pages/personaje.html';
+    window.location.href = './pages/personaje.html';
 });
 
