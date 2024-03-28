@@ -429,22 +429,6 @@ hr {
     text-shadow: -2px 2px 2px #ffffff;
 }
 
-// .opcionElfos:hover .razaNombre {
-//     display: block;
-// }
-
-// .opcionEnanos:hover .razaNombre {
-//     display: block;
-// }
-
-// .opcionHumanos:hover .razaNombre {
-//     display: block;
-// }
-
-// .opcionOrcos:hover .razaNombre {
-//     display: block;
-// }
-
 //! ELECCIÓN DE PERSONAJES (LINKS)
 
 .elijeTuClase {
@@ -607,8 +591,6 @@ hr {
     margin-top: -3rem;
 }
 
-//animacion Elegir Clase
-/* Estilos para el contenedor de clases */
 .elegirClase {
     //position: fixed;
     //top: 25%;
@@ -644,15 +626,6 @@ hr {
     flex-direction: column;
     align-content: center;
 }
-
-// /* Estilos de animación al pasar el mouse */
-// .claseElfos div:hover,
-// .claseEnanos div:hover,
-// .claseHumanos div:hover,
-// .claseOrcos div:hover {
-//     //transform: scale(1.1); /* Escala aumentada al pasar el mouse */
-    
-// }
 
 .magoElfo:hover, .druidaElfo:hover, .bardoElfo:hover,
 .guerreroEnano:hover, .herreroEnano:hover, .paladinEnano:hover,
@@ -831,7 +804,6 @@ hr {
     //margin-top: 5rem;
 }
 
-
 #hombre {
     background-image: url(../img/man.png);
     background-size: cover;
@@ -890,7 +862,6 @@ hr {
     margin-left: 3px;
 }
 
-
 .contentGen {
     display:flex;
     flex-direction: column;
@@ -946,7 +917,6 @@ hr {
 
 .perfilElegido {
     color: rgb(250, 156, 172);
-
 }
 
 .atributosDelPj {
@@ -969,11 +939,6 @@ hr {
     text-align: left;
     font-size: 30px;
 }
-
-// .valor {
-//     // margin-left: 9rem;
-//     // text-align: right;
-// }
 
 .textPjsParcial {
     color: white;
@@ -1007,47 +972,3 @@ hr {
 #continuarBtn3 {
     margin-bottom: 15rem;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

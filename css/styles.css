@@ -558,7 +558,6 @@ hr {
   margin-top: -3rem;
 }
 
-/* Estilos para el contenedor de clases */
 .elegirClase {
   z-index: 999; /* Asegura que esté en la parte superior */
 }
