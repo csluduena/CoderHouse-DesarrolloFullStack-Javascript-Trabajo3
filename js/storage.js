@@ -35,7 +35,6 @@ document.getElementById("buttonContinue").addEventListener("click", function() {
 
 
 //! Ir a la página Personaje.HTML
-
 const continueButton = document.getElementById('continuarBtn3');
 
 continueButton.addEventListener('click', function() {

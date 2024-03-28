@@ -40,8 +40,8 @@
             </div>
         </div>
         <div class="infoPj">
-        <button class="cfgBotones colorBTN1" id="descargarPersonaje">Descargar Personaje</button>
-        <button  class="cfgBotones colorBTN2" id="cargarPersonaje">Cargar Personaje</button>
+        <button class="cfgBotones colorBTN1" id="descargarPersonaje">Descargar Personaje (Zip File)</button>
+        <button  class="cfgBotones colorBTN2" id="cargarPersonaje">Cargar Personaje (Json File)</button>
         <input type="file" id="cargarPersonaje" style="display: none;">
         <button  class="cfgBotones colorBTN3" id="borrarPersonaje">Borrar Personaje</button>
         </div>
@@ -54,9 +54,6 @@
                 </div>
             </div>
         </div>
-
-    </main>
-    <footer>
         <div class="cntBtn">
             <a href="../index.html">
                 <div class="cfgBotones colorBTN4">
@@ -64,11 +61,25 @@
                 </div>
             </a>
         </div>
+        <!--! Drag on Screen -->
+        <div id="areaArrastre">
+            Arrastra y suelta aquí el archivo zip para cargar tu personaje.
+        </div>
+    </main>
+    <footer>
+        <div class="copy">
+            <p class="copyright">Web 100% made for Csluduena for FullStack JS course on #CoderHouse ©2024</p>
+        </div>
     </footer>
     
     <script src="./../js/leyenda.js"></script> 
+    <script src="./../js/dragAndDrop.js"></script>
     <!-- <script src="./../js/personaje.js"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.5.0/jszip.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.5.0-beta4/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.5/jszip.min.js"></script>
 </body>
 </html>
+
+
+
