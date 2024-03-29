@@ -309,7 +309,8 @@ hr {
     4px 3px 8px black;
   font-weight: bold;
   color: #9e00ff;
-  font-size: 107px;
+  font-size: 95px;
+  padding: 2rem;
 }
 
 //! Opciones Raza
@@ -575,7 +576,7 @@ hr {
 }
 
 .elegirClase {
-  z-index: 999; 
+  z-index: 999;
 }
 
 .claseElfos,
@@ -1016,7 +1017,7 @@ hr {
   margin-bottom: 15rem;
 }
 
-.lowReso, .footer480p {
+.lowReso,
+.footer480p {
   display: none;
-  
 }

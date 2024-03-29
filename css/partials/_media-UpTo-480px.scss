@@ -1,5 +1,5 @@
-@media screen and (max-width: 480px) {
-  /* Estilos CSS para pantallas con ancho hasta 480px */
+@media screen and (max-width: 767.95px) {
+  //TODO Estilos CSS para pantallas con ancho hasta 480px
   .legend1 {
     font-size: 40px;
     margin-right: -3rem;
@@ -523,9 +523,10 @@
     bottom: -46px;
     text-align: center;
     margin-top: -1.5rem;
-    text-shadow: -3px 0px 2px #000000, 0px 2px 2px #000000, 0px -1px 2px #000000, 2px 0 0 #000000;
+    text-shadow: -3px 0px 2px #000000, 0px 2px 2px #000000, 0px -1px 2px #000000,
+      2px 0 0 #000000;
     font-size: 11px;
-}
+  }
 
   .gitHubLogo {
     font-size: 20px;
@@ -608,13 +609,13 @@
   #descargarPersonaje {
     cursor: pointer;
     margin-top: 1rem;
-}
+  }
 
   .background {
     display: none;
   }
 
   .footer480p {
-    display:flex;
+    display: flex;
   }
 }

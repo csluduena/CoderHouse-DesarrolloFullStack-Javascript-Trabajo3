@@ -1,28 +1,29 @@
-@media (min-width: 768px) and (max-width: 1079px) {
+@media (min-width: 768px) and (max-width: 1023.95px) {
+  //TODO Estilos CSS para pantallas con ancho Desde 480px hasta 767px. Luego viene el main.css común y a partir de 1921p (2k y 4k) utiliza la siguiente queries
 
-#content {
+  #content {
     display: none;
     text-align: center;
   }
-  
+
   .centerContent {
     margin-top: 1rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
   }
-  
+
   .SBConten {
     display: flex;
     justify-content: center;
   }
-  
+
   .start-button {
     background-image: url(../img/comenzarW.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100%;
-    width: 925px;
+    width: 724px;
     height: 514px;
     cursor: pointer;
     position: fixed;
@@ -30,52 +31,57 @@
     margin-top: 46px;
     margin-left: -29px;
     filter: opacity(0.6);
-}
+    margin-left: -21px;
+  }
 
-.start-buttonCFG {
+  .start-buttonCFG {
     position: fixed;
     background-image: url(../img/comenzar2.gif);
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100%;
-    width: 880px;
+    width: 695px;
     height: 360px;
     cursor: pointer;
     filter: blur(2px);
-    margin-top: 3rem;
-}
-
-  .start-button:hover {
-    position: fixed;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 100%;
-    width: 925px;
-    height: 514px;
-    cursor: pointer;
-    margin-top: 126px;
-    margin-left: -29px;
+    margin-top: 4rem;
+    margin-left: 1px;
   }
-  
+
   .start-button:hover {
     background-image: url(../img/comenzar4.gif);
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100%;
-    width: 878px;
+    width: 689px;
     height: 514px;
     cursor: pointer;
     position: fixed;
     z-index: 9999;
-    margin-top: -28px;
-    margin-left: -3px;
+    margin-top: -13px;
+    margin-left: 0px;
     filter: blur(1.4px);
-}
-  
+  }
+
+  .start-button:active {
+    background-image: url(../img/comenzar4.gif);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    width: 696px;
+    height: 514px;
+    cursor: pointer;
+    position: fixed;
+    z-index: 9999;
+    margin-top: -11px;
+    margin-left: 3px;
+    filter: blur(1.4px);
+  }
+
   .start-button:hover .start-buttonCFG {
     display: none;
   }
-  
+
   .bodyIndex img {
     z-index: -1;
     position: fixed;
@@ -86,24 +92,24 @@
     width: 100%;
     height: 100%;
   }
-  
+
   .img {
     filter: blur(5px);
     filter: opacity(80%);
   }
-  
+
   .colorRojo {
     color: #ff0000;
   }
-  
+
   .colorCian {
     color: aqua;
   }
-  
+
   .colorVerde {
     color: rgb(14, 239, 14);
   }
-  
+
   .configAtrI {
     margin-top: 2rem;
     font-size: 28px;
@@ -111,23 +117,23 @@
     text-shadow: -3px 0px 2px #000000, 0px 2px 2px black, 0px -1px 2px black,
       2px 0 0 black;
   }
-  
+
   hr {
     width: 100%;
   }
-  
+
   .otrasConfigs {
     margin-top: 2rem;
     font-size: 26px;
     color: white;
   }
-  
+
   .titulosIndex {
     color: #be2ab6;
     text-shadow: -3px 0px 2px black, 0px 2px 2px black, 0px -1px 2px black,
       2px 0 0 black;
   }
-  
+
   .fila {
     display: flex;
     align-items: center;
@@ -140,14 +146,14 @@
       2px 0 0 black;
     margin-bottom: 18px;
   }
-  
+
   .space {
     margin-right: 10px;
     font-size: 22px;
     display: flex;
     align-items: center;
   }
-  
+
   .titulos {
     display: flex;
     align-items: center;
@@ -158,7 +164,7 @@
     text-shadow: 1px 0px 2px black, 1px -1px 2px black, 0px -1px 2px black,
       2px 0 0 black;
   }
-  
+
   .textoDescriptivo {
     font-family: "Courier New", monospace;
     white-space: pre;
@@ -167,7 +173,7 @@
     text-shadow: -3px 0px 2px black, 0px 2px 2px black, 0px -1px 2px black,
       2px 0 0 black;
   }
-  
+
   .configMensajitoPj {
     font-family: sans-serif;
     color: #f7f7f7;
@@ -183,7 +189,7 @@
     text-shadow: -3px 0px 2px black, 0px 2px 2px black, 0px -1px 2px black,
       2px 0 0 black;
   }
-  
+
   .configTabla {
     background-color: rgb(113 96 212 / 86%);
     display: flex;
@@ -191,64 +197,65 @@
     padding: 3rem;
     border: 4px solid rgba(15, 15, 15, 0.686);
   }
-  
+
   .columna1 {
     width: 10rem;
   }
-  
+
   .tituloLegendCFGIndex {
     display: flex;
     justify-content: center;
     text-shadow: 5px 3px 2px #b852ffc7, -4px 1px 2px rgb(134 38 59),
       -3px -3px 2px rgb(255, 255, 255), 4px -2px 0 rgb(232 101 84);
   }
-  
+
   .configLegendIndex {
     display: flex;
   }
-  
+
   .configBuilderIndex {
     display: flex;
   }
-  
+
   .legend {
     justify-content: center;
     font-family: "pamela";
-    font-size: 100px;
+    font-size: 60px;
     display: flex;
-    margin-left: -10rem;
+    margin-left: -3rem;
     margin-right: -8rem;
     filter: opacity(50%);
-}
-
-.builder {
+  }
+  .builder {
     font-family: "pamela";
-    font-size: 81px;
+    font-size: 60px;
     display: flex;
     justify-content: center;
     margin-right: -16rem;
     margin-left: -8rem;
     filter: opacity(50%);
-}
-  
+  }
+
   //TODO TEST MODIFICAR ALERTAS Y PROMPTS POR PAPITO JUGO AL DOM.
   .bienvenida {
     color: white;
     font-size: 25px;
     margin-bottom: 10px;
     text-shadow: -3px 3px 0px #f2170d;
-}
-  
+  }
+
   .textSolapa {
     margin-top: 2rem;
     color: white;
     font-style: normal;
     margin-bottom: 2rem;
+    margin-right: 3rem;
     text-shadow: -2px 2px 0px #a40df2;
     font-size: 19px;
-}
+    margin-left: 3rem;
+  }
 
-#areaArrastre {
+  #areaArrastre {
     background-color: black;
     filter: opacity(0.5);
     color: white;
@@ -258,11 +265,11 @@
     font-size: 13px;
     box-shadow: rgb(18, 125, 123) 0px 0px 8px 8px;
     position: fixed;
-    left: 80%;
-    bottom: 8%;
+    left: 77%;
+    bottom: 22%;
     width: 18%;
-}
-  
+  }
+
   .configTextBase {
     background-image: url(../img/primerPreg.png);
     background-size: cover;
@@ -279,11 +286,11 @@
       -4px 3px 6px rgba(0, 0, 0, 0.7803921569);
     font-size: 63px;
   }
-  
+
   .configTextBase:hover {
     box-shadow: 2px 2px 4px #f7f7f7;
   }
-  
+
   .inputTextStyleIndex {
     font-family: "TheBlowarRegular";
     margin-top: 2rem;
@@ -292,12 +299,12 @@
     text-align: center;
     letter-spacing: 2px;
   }
-  
+
   .inputSelec {
     color: white;
     cursor: pointer;
   }
-  
+
   //! Botones Index
   .botonElegirRaza {
     background-image: url(../img/btnas.png);
@@ -312,25 +319,25 @@
     margin-top: 6rem;
     box-shadow: 0px 0px 20px 5px rgb(253 0 0);
   }
-  
+
   .botonElegirRaza:hover {
     box-shadow: 0 0 20px 9px rgb(0 255 232);
   }
-  
+
   #elegirRazas {
     position: absolute;
     top: 7rem;
-    left: 50%;
   }
-  
+
   .btnRazaCfg {
-    text-shadow: 1px 0px 6px black, -4px 2px 5px black, -1px -4px 6px black, 4px 3px 8px black;
+    text-shadow: 1px 0px 6px black, -4px 2px 5px black, -1px -4px 6px black,
+      4px 3px 8px black;
     font-weight: bold;
     color: #9e00ff;
     font-size: 91px;
     padding: 1.5rem;
-}
-  
+  }
+
   //! Opciones Raza
   .comenzarBtn {
     background-image: url(../img/startBTN.png);
@@ -341,62 +348,62 @@
     width: 260px;
     height: 239px;
     cursor: pointer;
-}
-  
+  }
+
   .comenzarBtn:hover {
     //transform: scale(1.03);
     background-image: url(../img/startBTNUp.png);
     text-shadow: 0 0 5px 5px rgba(255, 255, 255, 10);
     transition: transform 0.2s ease, box-shadow 0.03s ease;
   }
-  
+
   .opcionElfos {
     background-image: url(../img/elfosImg.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    width: 177px;
-    height: 238px;
+    width: 158px;
+    height: 231px;
     margin-right: 1rem;
     cursor: pointer;
     border-radius: 2rem;
   }
-  
+
   .opcionEnanos {
     background-image: url(../img/enanosImg.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    width: 177px;
-    height: 238px;
+    width: 158px;
+    height: 231px;
     margin-right: 1rem;
     cursor: pointer;
     border-radius: 2rem;
   }
-  
+
   .opcionHumanos {
     background-image: url(../img/humanosImg.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    width: 177px;
-    height: 238px;
+    width: 158px;
+    height: 231px;
     margin-right: 1rem;
     cursor: pointer;
     border-radius: 2rem;
   }
-  
+
   .opcionOrcos {
     background-image: url(../img/orcosImg.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    width: 177px;
-    height: 238px;
+    width: 158px;
+    height: 231px;
     cursor: pointer;
     border-radius: 2rem;
   }
-  
+
   .opcionElfos:hover,
   .opcionEnanos:hover,
   .opcionHumanos:hover,
@@ -405,7 +412,7 @@
     box-shadow: 0 0 20px 5px rgba(255, 255, 255, 3);
     transition: transform 0.3s ease, box-shadow 0.03s ease;
   }
-  
+
   .flex {
     display: flex;
     align-content: stretch;
@@ -416,7 +423,7 @@
     align-content: space-between;
     justify-content: space-around;
   }
-  
+
   .textRaza {
     padding-left: 15px;
     padding-right: 15px;
@@ -430,7 +437,7 @@
     border-bottom-left-radius: 2rem;
     border-bottom-right-radius: 2rem;
   }
-  
+
   .razaNombre {
     color: black;
     font-weight: bold;
@@ -438,7 +445,7 @@
     font-size: 25px;
     letter-spacing: 2px;
   }
-  
+
   .razaNombre .opcionElfos {
     display: flex;
     font-family: "theBlowarRegular";
@@ -455,7 +462,7 @@
     font-size: 44px;
     text-shadow: -2px 2px 2px #ffffff;
   }
-  
+
   //! ELECCIÓN DE PERSONAJES (LINKS)
   .elijeTuClase {
     justify-content: center;
@@ -469,64 +476,64 @@
     cursor: pointer;
     margin-bottom: 5px;
   }
-  
+
   .elijeTuClase:hover {
     box-shadow: 2px 2px 4px #f7f7f7;
   }
-  
+
   .btnEleCla {
     text-shadow: -1px 2px 4px #000000;
     font-weight: bold;
     color: #ff00ea;
     font-size: 40px;
   }
-  
+
   .claseEnanos {
     display: flex;
     flex-direction: column;
     margin: 5px;
   }
-  
+
   .claseHumanos {
     display: flex;
     flex-direction: column;
     margin: 5px;
   }
-  
+
   .claseOrcos {
     display: flex;
     flex-direction: column;
     margin: 5px;
   }
-  
+
   .magoElfo {
     background-image: url(../img/clases/elfoMago.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
   }
-  
+
   .druidaElfo {
     background-image: url(../img/clases/elfoDruida.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
   }
-  
+
   .bardoElfo {
     background-image: url(../img/clases/elfoBardo.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
   }
-  
+
   .guerreroEnano {
     background-image: url(../img/clases/enanoGuerrero.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
   }
-  
+
   .herreroEnano {
     background-image: url(../img/clases/enanoHerrero.jpg);
     background-size: cover;
@@ -534,21 +541,21 @@
     background-position: center;
     margin-top: 20px;
   }
-  
+
   .paladinEnano {
     background-image: url(../img/clases/enanoPaladin.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
   }
-  
+
   .caballeroHumanos {
     background-image: url(../img/clases/humanoCaballero.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
   }
-  
+
   .picaroHumanos {
     background-image: url(../img/clases/humanoPicaro.jpg);
     background-size: cover;
@@ -556,21 +563,21 @@
     background-position: center;
     margin-top: 20px;
   }
-  
+
   .clerigoHumanos {
     background-image: url(../img/clases/humanoClerigo.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
   }
-  
+
   .berserkerOrco {
     background-image: url(../img/clases/orcoBerserker.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
   }
-  
+
   .chamanOrco {
     background-image: url(../img/clases/orcoChaman.jpg);
     background-size: cover;
@@ -578,25 +585,25 @@
     background-position: center;
     margin-top: 20px;
   }
-  
+
   .cazadorOrco {
     background-image: url(../img/clases/orcoCazador.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
   }
-  
+
   .tituloClase {
     font-family: "theBlowarRegular";
     font-size: 25px;
     color: White;
     margin-top: -3rem;
   }
-  
+
   .elegirClase {
-    z-index: 999; 
+    z-index: 999;
   }
-  
+
   .claseElfos,
   .claseEnanos,
   .claseHumanos,
@@ -605,8 +612,11 @@
     justify-content: center;
     gap: 50px;
   }
-  
-  .claseElfos div, .claseEnanos div, .claseHumanos div, .claseOrcos div {
+
+  .claseElfos div,
+  .claseEnanos div,
+  .claseHumanos div,
+  .claseOrcos div {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -618,8 +628,8 @@
     flex-wrap: wrap;
     flex-direction: column;
     align-content: center;
-}
-  
+  }
+
   .magoElfo:hover,
   .druidaElfo:hover,
   .bardoElfo:hover,
@@ -637,7 +647,7 @@
       3px 2px 6px 9px rgba(255, 255, 255, 0.5),
       -3px -2px 6px 9px rgba(255, 255, 255, 0.5);
   }
-  
+
   .magoElfo:focus-visible,
   .druidaElfo:focus-visible,
   .bardoElfo:focus-visible,
@@ -653,7 +663,7 @@
   .elegirClase:focus-visible {
     outline: -webkit-focus-ring-color none 0px;
   }
-  
+
   .magoElfo,
   .druidaElfo,
   .bardoElfo,
@@ -668,7 +678,7 @@
   .cazadorOrco {
     border-radius: 1rem;
   }
-  
+
   //! Estilo para las descripciones de las clases
   .grupoClasesElfo,
   .grupoClasesEnanos,
@@ -676,7 +686,7 @@
   .grupoClasesOrcos {
     position: relative;
   }
-  
+
   .nombreClase,
   .descripcion,
   .nombreClase1,
@@ -712,7 +722,7 @@
     transition: opacity 0.3s ease;
     justify-content: center;
   }
-  
+
   .nombreClase,
   .nombreClase1,
   .nombreClase2,
@@ -731,7 +741,7 @@
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
   }
-  
+
   .descripcion,
   .descripcion1,
   .descripcion2,
@@ -750,7 +760,7 @@
     border-bottom-left-radius: 1rem;
     border-bottom-right-radius: 1rem;
   }
-  
+
   .magoElfo:hover .nombreClase,
   .magoElfo:hover .descripcion,
   .druidaElfo:hover .nombreClase1,
@@ -777,28 +787,28 @@
   .cazadorOrco:hover .descripcion11 {
     opacity: 1;
   }
-  
+
   .botones {
     display: flex;
   }
-  
+
   .raza-option {
     cursor: pointer;
   }
   .clase-pick {
     display: none;
   }
-  
+
   #razasElegir {
     display: flex;
   }
-  
+
   .meme {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
   }
-  
+
   #razas,
   #clases {
     display: flex;
@@ -806,26 +816,38 @@
     flex-wrap: nowrap;
     align-items: center;
   }
-  
+
   #razas {
-    margin-left: -23rem;
+    margin-left: -21rem;
     margin-top: 2.5rem;
-}
-  
+  }
+
   #clases {
     margin-top: 6rem;
   }
-  
+
   .centerMove {
     margin-left: 1rem;
     margin-right: 1rem;
-}
+  }
+
+  .upCenter {
+    margin-bottom: -10rem !important;
+  }
+
+  .upCenter2 {
+    margin-bottom: 3rem !important;
+  }
+
+  .otroBtn {
+    margin-bottom: 3rem !important;
+  }
 
   //TODO COLOCAR LOS BOTONES ACA Y ABAJO AL HOVER.
   #continuarBtn {
     display: none;
     position: fixed;
-    bottom: 0.6rem;
+    bottom: 14.6rem;
     left: 50%;
     transform: translateX(-50%);
     padding: 10px 20px;
@@ -834,12 +856,12 @@
     border: 2px solid #00ffff;
     border-radius: 5px;
     cursor: pointer;
-}
+  }
 
-#continuarBtn2 {
+  #continuarBtn2 {
     display: none;
     position: fixed;
-    bottom: 1rem;
+    bottom: 16rem;
     left: 50%;
     transform: translateX(-50%);
     padding: 10px 20px;
@@ -848,8 +870,23 @@
     border: 2px solid #00ffff;
     border-radius: 5px;
     cursor: pointer;
-}
-  
+  }
+
+  .botonLanzarDados {
+    text-transform: capitalize;
+    position: fixed;
+    bottom: -6rem;
+    margin: 0 auto;
+    margin-bottom: 11rem;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: 2px solid #00ffff;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
   #continuarBtn:hover,
   #continuarBtn2:hover,
   #buttonSend1:hover,
@@ -858,12 +895,12 @@
   #buttonDice:hover {
     box-shadow: 0px 0px 10px 5px #00ffff;
   }
-  
+
   .textG {
     display: flex;
     margin-top: 3rem;
   }
-  
+
   .textGeneroCfg {
     color: white;
     font-weight: bold;
@@ -872,7 +909,7 @@
     letter-spacing: 2px;
     //margin-top: 5rem;
   }
-  
+
   #hombre {
     background-image: url(../img/man.png);
     background-size: cover;
@@ -884,11 +921,11 @@
     cursor: pointer;
     margin-right: 1rem;
   }
-  
+
   #hombre:hover {
     background-image: url(../img/manUp.png);
   }
-  
+
   #mujer {
     background-image: url(../img/woman.png);
     background-size: cover;
@@ -900,11 +937,11 @@
     cursor: pointer;
     margin-left: 1rem;
   }
-  
+
   #mujer:hover {
     background-image: url(../img/womanUp.png);
   }
-  
+
   .tituloGenero {
     color: white;
     font-weight: bold;
@@ -916,33 +953,37 @@
     text-shadow: -1px 2px 4px #000000;
     text-align: center;
   }
-  
+
   .hLeft {
     color: white;
     background-color: transparent;
     margin-left: -0.8rem;
   }
-  
+
   .mRight {
     color: white;
     background-color: transparent;
     margin-left: 3px;
   }
-  
+
   .contentGen {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-  
+
   .justASpace {
     margin-left: 12.5rem;
   }
-  
+
   .cfgBtn {
-    margin-bottom: 4rem;
+    margin-bottom: 31rem !important;
   }
-  
+
+  .cfgBtn2 {
+    margin-bottom: 1rem !important;
+  }
+
   .buttonCFGSend {
     margin-top: 2rem;
     padding: 10px 20px;
@@ -953,19 +994,19 @@
     cursor: pointer;
     border: 2px solid #00ffff;
   }
-  
+
   .buttonCFGSend {
     margin-bottom: -3rem;
   }
-  
+
   .spaceButt {
     margin-bottom: -3rem;
   }
-  
+
   .buttonCFGSend:hover {
     border: 2px solid #e5eded;
   }
-  
+
   //!Clases para Atributos
   .contenedorParcial {
     flex-direction: column;
@@ -977,9 +1018,9 @@
     border: 2px solid #00ffff;
     width: 92%;
     height: 460px;
-}
+  }
 
-.contenedorFinalClss {
+  .contenedorFinalClss {
     flex-direction: column;
     align-items: center;
     margin-top: 3rem;
@@ -987,10 +1028,10 @@
     border-radius: 5rem;
     padding: 5rem;
     border: 2px solid #00ffff;
-    width: 90%;
-    height: 354px;
-}
-  
+    width: 55%;
+    height: 179px;
+  }
+
   .contenedorParcial:hover {
     box-shadow: 0px 0px 10px 5px #00ffff;
   }
@@ -1000,13 +1041,13 @@
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
-}
-  
+  }
+
   .perfilElegido {
     color: rgb(250, 156, 172);
   }
-  
-.atributosDelPj {
+
+  .atributosDelPj {
     margin-right: 1.5rem;
     margin-top: 1rem;
     .intBase {
@@ -1019,7 +1060,7 @@
       color: green;
     }
   }
-  
+
   .nickElegido,
   .razaElegida,
   .claseElegida,
@@ -1031,7 +1072,7 @@
     text-align: left;
     font-size: 30px;
   }
-  
+
   .textPjsParcial {
     color: white;
     font-size: 30px;
@@ -1039,59 +1080,74 @@
     margin-left: 6rem;
     margin-right: 6rem;
   }
-  
+
   #resultado1,
   #resultado2,
   #resultado3 {
     color: white;
     font-size: 30px;
+    margin-bottom: 2rem;
   }
-  
+
   .contenedorFinalClss {
     margin-top: 4rem;
   }
-  
-.textFinal {
+
+  .colorBTN3 {
+    margin-top: 0.5rem;
+    margin-bottom: 0rem;
+  }
+
+  .colorBTN4 {
+    margin-bottom: 15rem !important;
+  }
+
+  .textFinal {
     color: white;
     font-weight: bold;
     font-family: "theBlowarRegular";
-    margin-left: -8rem;
-    margin-right: -8rem;
-    font-size: 28px;
+    margin-left: -5rem;
+    margin-right: -5rem;
+    font-size: 20px;
     letter-spacing: 6px;
-    margin-top: 1rem;
+    margin-top: -1.2rem;
     text-shadow: -1px 2px 4px #000000;
     text-align: center;
-}
-  
-  #continuarBtn3 {
-    margin-bottom: 15rem;
   }
-  
-  .lowReso, .footer480p {
+
+  .cfgBotones {
+    margin-bottom: 1rem;
+  }
+
+  //   #continuarBtn3 {
+  //     margin-bottom: 15rem;
+  //   }
+
+  .lowReso,
+  .footer480p {
     display: none;
   }
-  
 
   .column {
     display: flex;
     justify-content: space-around;
     padding: 6rem;
-    height: 638px;
-    width: 910px;
-}
+    height: 422px;
+    margin: 0 auto;
+    width: 530px;
+  }
 
-.dice:first-child {
-    margin-right: 4rem;
-    margin-left: 1rem;
-}
+  .dice:first-child {
+    margin-right: 0;
+    margin-left: 0;
+  }
 
-.dice:last-child {
-    margin-left: -1rem;
-    margin-right: 10rem;
-}
+  .dice:last-child {
+    margin-right: 0;
+    margin-left: 0;
+  }
 
-.dice {
+  .dice {
     width: 165px;
     height: 157px;
     float: left;
@@ -1103,12 +1159,12 @@
     transition: transform 0.6s;
     transform-style: preserve-3d;
     background-size: cover;
-}
+  }
 
-.btnNextLegend {
+  .btnNextLegend {
     text-transform: capitalize;
     position: fixed;
-    bottom: -32px;
+    margin-bottom: 16rem;
     left: 50%;
     margin-bottom: 11rem;
     transform: translateX(-50%);
@@ -1118,76 +1174,82 @@
     border: 2px solid #00ffff;
     border-radius: 5px;
     cursor: pointer;
-}
+  }
 
-.info-personaje {
+  .info-personaje {
     margin-top: 1rem;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
     min-width: 557px;
     height: 466px;
-}
+  }
 
-.tituloMain {
+  .tituloMain {
     margin-top: -12px;
     margin-left: -1rem;
     padding-bottom: 1rem;
     font-family: "whiteStorm";
     font-size: 104px;
     color: black;
-    text-shadow: -3px 0px 2px rgb(230, 230, 230), 0px 2px 2px rgb(221, 221, 221), 0px -1px 2px rgb(23, 207, 244), 2px 0 0 rgb(135, 150, 236);
+    text-shadow: -3px 0px 2px rgb(230, 230, 230), 0px 2px 2px rgb(221, 221, 221),
+      0px -1px 2px rgb(23, 207, 244), 2px 0 0 rgb(135, 150, 236);
     filter: opacity(80%);
-}
+  }
 
-.alinearInformacion {
+  .alinearInformacion {
     padding-top: 19rem;
-}
+  }
 
-.colorTitulos {
+  .colorTitulos {
     color: rgb(0, 0, 0);
     font-size: 16px;
     font-family: robotoRegular;
     font-weight: bold;
-}
+  }
 
-.colorTituloAtr {
+  .colorTituloAtr {
     margin-top: 0.2rem;
     color: aqua;
-}
+  }
 
-.colorAtr {
+  .colorAtr {
     display: flex;
     flex-direction: column;
     font-size: 14px;
     color: white;
-    text-shadow: -3px 0px 2px black, 0px 2px 2px black, 0px -1px 2px black, 2px 0 0 black;
-}
+    text-shadow: -3px 0px 2px black, 0px 2px 2px black, 0px -1px 2px black,
+      2px 0 0 black;
+  }
 
-#inteligencia {
+  #inteligencia {
     color: cornflowerblue;
     font-weight: bolder;
     font-size: 22px;
-    text-shadow: -3px 0px 2px black, 0px 2px 2px black, 0px -1px 2px black, 2px 0 0 black;
-}
+    text-shadow: -3px 0px 2px black, 0px 2px 2px black, 0px -1px 2px black,
+      2px 0 0 black;
+  }
 
-#fuerza {
+  #fuerza {
     color: red;
     font-weight: bolder;
     font-size: 22px;
-    text-shadow: -3px 0px 2px black, 0px 2px 2px black, 0px -1px 2px black, 2px 0 0 black;
-}
+    text-shadow: -3px 0px 2px black, 0px 2px 2px black, 0px -1px 2px black,
+      2px 0 0 black;
+  }
 
-#agilidad {
+  #agilidad {
     color: green;
     font-weight: bolder;
     font-size: 22px;
-    text-shadow: -3px 0px 2px black, 0px 2px 2px black, 0px -1px 2px black, 2px 0 0 black;
-}
+    text-shadow: -3px 0px 2px black, 0px 2px 2px black, 0px -1px 2px black,
+      2px 0 0 black;
+  }
 
-#alertaBorrarPj {
+  #alertaBorrarPj {
     font-size: 13px;
-    text-shadow: -3px 0px 2px #a40eec, 0px 2px 2px #a40eec, 0px -1px 2px #a40eec, 2px 0 0 #a40eec;
+    text-shadow: -3px 0px 2px #a40eec, 0px 2px 2px #a40eec, 0px -1px 2px #a40eec,
+      2px 0 0 #a40eec;
     color: white;
     font-family: "robotoRegular";
     margin-bottom: 28px;
@@ -1196,9 +1258,9 @@
     background-color: rgba(0, 0, 0, 0.35);
     margin-left: 40px;
     margin-right: 40px;
-}
+  }
 
-.modal-content {
+  .modal-content {
     background-image: url(./../img/gg.png);
     background-position: center;
     background-repeat: no-repeat;
@@ -1212,9 +1274,9 @@
     height: 19%;
     border-radius: 1rem;
     box-shadow: rgba(0, 0, 0, 0.84) 0px 0px 20px 1227px;
-}
+  }
 
-.modal-content button {
+  .modal-content button {
     background-color: rgb(76, 175, 80);
     color: white;
     padding: 6px 9px;
@@ -1223,11 +1285,12 @@
     margin-right: 10px;
     margin-top: 1rem;
     border-radius: 10px;
-}
+  }
 
-#alertaBorrarPj {
+  #alertaBorrarPj {
     font-size: 13px;
-    text-shadow: -3px 0px 2px #a40eec, 0px 2px 2px #a40eec, 0px -1px 2px #a40eec, 2px 0 0 #a40eec;
+    text-shadow: -3px 0px 2px #a40eec, 0px 2px 2px #a40eec, 0px -1px 2px #a40eec,
+      2px 0 0 #a40eec;
     color: white;
     font-family: "robotoRegular";
     margin-bottom: 28px;
@@ -1236,24 +1299,25 @@
     background-color: rgba(0, 0, 0, 0.35);
     margin-left: 40px;
     margin-right: 40px;
-}
+  }
 
-.legend1 {
+  .legend1 {
     justify-content: center;
     font-family: "pamela";
-    font-size: 120px;
+    font-size: 90px;
     display: flex;
     margin-right: 4rem;
     filter: opacity(50%);
-}
+    margin-top: 1rem;
+  }
 
-.builder2 {
+  .builder2 {
     font-family: "pamela";
-    font-size: 120px;
+    font-size: 90px;
     display: flex;
     justify-content: center;
     margin-left: 4rem;
     filter: opacity(50%);
-}
-
+    margin-top: 1rem;
+  }
 }
