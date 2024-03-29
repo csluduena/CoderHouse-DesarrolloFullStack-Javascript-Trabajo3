@@ -929,6 +929,10 @@ hr {
   margin-bottom: 15rem;
 }
 
+.lowReso {
+  display: none;
+}
+
 .webSiteLogo {
   font-size: 20px;
   font-family: sans-serif;
@@ -1454,11 +1458,13 @@ a {
     margin: 10px;
   }
   .textSolapa {
-    margin-top: 8px;
-    margin-bottom: 8px;
+    margin-top: 47px;
+    margin-bottom: 46px;
+    font-style: normal;
     margin-left: 1rem;
-    font-size: 15px;
+    font-size: 18px;
     margin-right: 1rem;
+    text-shadow: -2px 2px 0px #0236ff;
   }
   .comenzarBtn {
     margin-top: 31px;
@@ -1492,11 +1498,11 @@ a {
     padding: 30px;
     width: 250px;
     margin-bottom: 5px;
-    margin-top: 6rem;
+    margin-top: 11rem;
   }
   .btnRazaCfg {
     color: #9e00ff;
-    font-size: 27px;
+    font-size: 31px;
   }
   .opcionElfos {
     width: 123px;
@@ -1671,7 +1677,7 @@ a {
   .nickElegido, .razaElegida, .claseElegida, .generoElegido, .intBase, .strBase, .agiBase {
     width: 100%;
     text-align: left;
-    font-size: 15px;
+    font-size: 20px;
   }
   .contenedorParcial {
     margin-top: 6rem;
@@ -1694,7 +1700,7 @@ a {
   }
   .column {
     padding: 3rem;
-    margin-top: 5rem;
+    margin-top: 6rem;
   }
   .dice {
     width: 86px;
@@ -1716,6 +1722,7 @@ a {
     background-size: 150px 100px;
     border-radius: 5rem;
     padding-left: 0;
+    width: 308px;
     padding-right: 0;
     padding-top: 1px;
     padding-bottom: 1px;
@@ -1736,15 +1743,17 @@ a {
     margin-left: 2rem;
   }
   .info-personaje {
-    margin-top: 1rem;
+    margin-top: -4rem;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    min-width: 197px;
-    height: 395px;
+    min-width: 252px;
+    height: 427px;
+    margin-left: -1rem;
   }
   .alinearInformacion {
-    padding-top: 15.2rem;
+    padding-top: 17.7rem;
+    margin-bottom: -1.5rem;
   }
   .configCompartidaDeInfoDePersonaje {
     text-align: center;
@@ -1753,7 +1762,7 @@ a {
   }
   .colorTitulos {
     color: rgb(0, 0, 0);
-    font-size: 12px;
+    font-size: 15px;
     font-family: robotoRegular;
     font-weight: bold;
   }
@@ -1766,6 +1775,7 @@ a {
     justify-content: center;
     flex-direction: row;
     flex-wrap: wrap;
+    margin-top: 2rem;
   }
   .colorAtr {
     display: flex;
@@ -1795,22 +1805,13 @@ a {
   .legend, .builder, #areaArrastre, .modal {
     display: none;
   }
-  .info-personaje {
-    margin-top: -5rem;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    min-width: 197px;
-    height: 395px;
-    margin-left: -1rem;
-  }
   .copyright {
     right: 0;
     color: white;
-    position: fixed;
+    position: relative;
     margin-left: 0;
     font-weight: bold;
-    bottom: 2.5rem;
+    bottom: -3.7rem;
     text-align: center;
     margin-top: -1.5rem;
     text-shadow: -3px 0px 2px #000000, 0px 2px 2px #000000, 0px -1px 2px #000000, 2px 0 0 #000000;
@@ -1820,17 +1821,67 @@ a {
     font-size: 20px;
     font-family: sans-serif;
     font-weight: bold;
-    position: absolute;
-    bottom: 5px;
+    position: relative;
+    bottom: -67px;
     left: 13px;
   }
   .webSiteLogo {
     font-size: 20px;
     font-family: sans-serif;
     font-weight: bold;
-    position: absolute;
-    bottom: 5px;
-    right: 13px;
+    position: relative;
+    bottom: -67px;
+    right: -13rem;
+  }
+  .tituloMain {
+    margin-top: 5px;
+    margin-left: 0rem;
+    padding-bottom: 1rem;
+    font-family: "whiteStorm";
+    font-size: 101px;
+  }
+  .cntBtn {
+    margin-top: 3.2rem;
+  }
+  .colorBTN2 {
+    margin-bottom: 0rem;
+    margin-top: 0rem;
+  }
+  .colorBTN3 {
+    margin-top: 0.5rem;
+    margin-bottom: -1rem;
+  }
+  .colorBTN4 {
+    margin-top: -1.9rem;
+    margin-bottom: -1rem;
+  }
+  .modal-content {
+    background-image: url(./../img/gg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #fefefe;
+    margin: 20% auto;
+    margin-top: 18rem;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 88%;
+    text-align: center;
+    height: 19%;
+    border-radius: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.84) 0px 0px 20px 1227px;
+  }
+  #alertaBorrarPj {
+    font-size: 17px;
+    text-shadow: -3px 0px 2px #a40eec, 0px 2px 2px #a40eec, 0px -1px 2px #a40eec, 2px 0 0 #a40eec;
+    color: white;
+    font-family: "robotoRegular";
+    margin-bottom: -4px;
+    text-align: center;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.35);
+    margin-left: -9px;
+    margin-right: -9px;
   }
 }
 @font-face {
