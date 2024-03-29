@@ -45,9 +45,15 @@
     }
 
     .bodyIndex img {
-        left: -450px;
-        width: 323%;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
         height: 100%;
+        z-index: -1;
     }
 
     .bienvenida {
@@ -110,52 +116,211 @@
 //!Elección de Razas
 
     .opcionElfos {
-        background-image: url(../img/elfosImg.jpg);
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-        width: 120px;
-        height: 150px;
-        margin-right: 2rem;
-        cursor: pointer;
+        width: 83px;
+        height: 120px;
         border-radius: 2rem;
+        margin-right: 0.6rem;
     }
 
     .opcionEnanos {
-        background-image: url(../img/enanosImg.png);
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-        width: 120px;
-        height: 150px;
-        margin-right: 2rem;
-        cursor: pointer;
+        width: 83px;
+        height: 120px;
+        margin-right: 0.6rem;
         border-radius: 2rem;
     }
 
-    .opcionHumanos {
-        background-image: url(../img/humanosImg.jpg);
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-        width: 120px;
-        height: 150px;
-        margin-right: 2rem;
-        cursor: pointer;
+    .opcionHumanos{
+        width: 83px;
+        height: 120px;
+        margin-right: 0.6rem;
         border-radius: 2rem;
     }
 
     .opcionOrcos {
-        background-image: url(../img/orcosImg.jpg);
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-        width: 120px;
-        height: 150px;
-        cursor: pointer;
+        width: 83px;
+        height: 120px;
         border-radius: 2rem;
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    #elegirRazas {
+        position: absolute;
+        top: 10rem;
+        left: 50%;
+    }
+
+    #razas {
+        margin-left: 0rem;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    #razasElegir {
+        margin-top: 2rem;
+    }
+
+    .razaNombre {
+        font-size: 14px;
+        letter-spacing: 2px;
+    }
+    .textRaza {
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-bottom: 5px;
+        padding-top: 3px;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 2rem;
+        border-bottom-right-radius: 2rem;
+    }
     
+    .flex {
+        font-size: 7px;
+    }
+
+
+
+
+
+
+
+
+
+
+    //!Elección de Clases
+
+    #clases {
+        margin-top: 3rem;
+    }
+    
+    .centerMove {
+        margin-left: 3rem;
+        margin-right: 3rem;
+    }
+    
+    .nombreClase, .descripcion, .nombreClase1, .descripcion1, .nombreClase2, .descripcion2, .nombreClase3, .descripcion3, .nombreClase4, .descripcion4, .nombreClase5, .descripcion5, .nombreClase6, .descripcion6, .nombreClase7, .descripcion7, .nombreClase8, .descripcion8, .nombreClase9, .descripcion9, .nombreClase10, .descripcion10, .nombreClase11, .descripcion11 {
+        display: flex;
+        width: 80px;
+        height: 16px;
+        margin-top: 0rem;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        padding: 0px;
+        text-align: center;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        font-size: 5px;
+        flex-direction: column;
+        align-content: stretch;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .claseElfos div, .claseEnanos div, .claseHumanos div, .claseOrcos div {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 80px;
+        height: 171px;
+        cursor: pointer;
+        margin-top: 4rem;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-content: center;
+    }
+
+    .centerMove {
+        margin-left: 1.2rem;
+        margin-right: 1.2rem;
+    }
+
+    #continuarBtn {
+        display: none;
+        position: fixed;
+        bottom: 16rem;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #fff;
+        border: 2px solid #00ffff;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    #continuarBtn2 {
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #fff;
+        border: 2px solid #00ffff;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+
+
+
+
+
+
+
+
+
+    //!Elección de Género
+
+    .tituloGenero {
+        color: white;
+        font-weight: bold;
+        font-family: "theBlowarRegular";
+        font-size: 22px;
+        letter-spacing: 3px;
+        margin-top: 4rem;
+        text-shadow: -1px 2px 4px #000000;
+        text-align: center;
+    }
+
+
+    #hombre {
+        margin-top: 10px;
+        width: 150px;
+        height: 150px;
+        margin-right: 1rem;
+    }
+
+    #mujer {
+        margin-top: 10px;
+        width: 150px;
+        height: 150px;
+        cursor: pointer;
+        margin-left: 1rem;
+    }
+
+    .justASpace {
+        margin-left: 6.5rem;
+    }
+
+
 
 }
-

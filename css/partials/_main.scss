@@ -296,6 +296,12 @@ hr {
     box-shadow: 0 0 20px 9px rgb(0 255 232);
 }
 
+#elegirRazas {
+    position: absolute;
+    top: 7rem;
+    left: 50%;
+}
+
 .btnRazaCfg {
     text-shadow: 1px 0px 6px black, -4px 2px 5px black, -1px -4px 6px black, 4px 3px 8px black;
     font-weight: bold;
@@ -379,7 +385,6 @@ hr {
 }
 
 .flex {
-    
     display: flex;
     align-content: stretch;
     font-size: 20px;

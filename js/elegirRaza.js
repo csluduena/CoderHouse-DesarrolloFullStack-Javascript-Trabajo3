@@ -11,9 +11,6 @@
         botonElegirRaza.addEventListener('click', function() {
             //Estilos:
             elegirRazas.style.display = 'flex';
-            elegirRazas.style.position = "absolute";
-            elegirRazas.style.top = "7rem";
-            elegirRazas.style.left = "50%";
         });
     });
 
