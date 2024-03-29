@@ -14,17 +14,17 @@ document.getElementById("start-button").addEventListener("click", function () {
   });
 });
 
+//!Utilización de Spread.
 document.addEventListener("DOMContentLoaded", function () {
-  document.getElementById("content").style.display = "none";
-
-  const botonStart = document.getElementById("botonStart");
-
-  botonStart.addEventListener("click", function () {
-    //?Oculta los elementos de bienvenida, texto solapa y HR
-    document.querySelector(".bienvenida").style.display = "none";
-    document.querySelector(".textSolapa").style.display = "none";
-    document.querySelectorAll("hr").forEach((hr) => {
-      hr.style.display = "none";
+    document.getElementById("content").style.display = "none";
+  
+    const botonStart = document.getElementById("botonStart");
+  
+    botonStart.addEventListener("click", function () {
+      // Oculta los elementos de bienvenida, texto solapa y HR usando spread
+      const elementosOcultar = document.querySelectorAll(".bienvenida, .textSolapa, hr");
+      elementosOcultar.forEach((elemento) => {
+        elemento.style.display = "none";
+      });
     });
   });
-});

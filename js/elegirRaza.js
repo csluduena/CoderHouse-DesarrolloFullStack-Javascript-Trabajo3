@@ -184,66 +184,6 @@ let atributosBase = {
   Cazador: [8, 10, 10], //🏹
 };
 
-//! Clases (con Raza y Atributos)
-// let clases = {
-//   Elfo: {
-//     1: {
-//       nombre: "Mago", //🧙‍♂️
-//       atributos: [8, 1, 5], // Atributos: [Inteligencia, Fuerza, Agilidad]
-//     },
-//     2: {
-//       nombre: "Druida", //🌿
-//       atributos: [6, 2, 6], // Atributos: [Inteligencia, Fuerza, Agilidad]
-//     },
-//     3: {
-//       nombre: "Bardo", //🎵
-//       atributos: [10, 1, 7], // Atributos: [Inteligencia, Fuerza, Agilidad]
-//     },
-//   },
-//   Enano: {
-//     1: {
-//       nombre: "Guerrero", //⚔️
-//       atributos: [5, 15, 5], // Atributos: [Inteligencia, Fuerza, Agilidad]
-//     },
-//     2: {
-//       nombre: "Herrero", //🔨
-//       atributos: [3, 18, 3], // Atributos: [Inteligencia, Fuerza, Agilidad]
-//     },
-//     3: {
-//       nombre: "Paladin", //🛡️
-//       atributos: [8, 12, 5], // Atributos: [Inteligencia, Fuerza, Agilidad]
-//     },
-//   },
-//   Humano: {
-//     1: {
-//       nombre: "Caballero", //🏇
-//       atributos: [2, 20, 4], // Atributos: [Inteligencia, Fuerza, Agilidad]
-//     },
-//     2: {
-//       nombre: "Picaro", //🗡️
-//       atributos: [6, 7, 12], // Atributos: [Inteligencia, Fuerza, Agilidad]
-//     },
-//     3: {
-//       nombre: "Clerigo", //✨
-//       atributos: [8, 10, 5], // Atributos: [Inteligencia, Fuerza, Agilidad]
-//     },
-//   },
-//   Orco: {
-//     1: {
-//       nombre: "Berserker", //🪓
-//       atributos: [1, 25, 3], // Atributos: [Inteligencia, Fuerza, Agilidad]
-//     },
-//     2: {
-//       nombre: "Chaman", //🔮
-//       atributos: [10, 8, 5], // Atributos: [Inteligencia, Fuerza, Agilidad]
-//     },
-//     3: {
-//       nombre: "Cazador", //🏹
-//       atributos: [8, 10, 10], // Atributos: [Inteligencia, Fuerza, Agilidad]
-//     },
-//   },
-// };
-
 //!Obtener ATRIBUTOS
 function obtenerAtributosBase() {
   let razaSeleccionada = seleccion.raza;

@@ -16,10 +16,7 @@ document.getElementById("buttonContinue").addEventListener("click", function() {
     localStorage.setItem("raza", convertirACadena(seleccion.raza));
     localStorage.setItem("clase", convertirACadena(seleccion.clase));
     localStorage.setItem("genero", convertirACadena(seleccionGenero));
-    localStorage.setItem(
-      "totalInteligencia",
-      convertirACadena(totalInteligencia)
-    );
+    localStorage.setItem("totalInteligencia", convertirACadena(totalInteligencia));
     localStorage.setItem("totalFuerza", convertirACadena(totalFuerza));
     localStorage.setItem("totalAgilidad", convertirACadena(totalAgilidad));
 

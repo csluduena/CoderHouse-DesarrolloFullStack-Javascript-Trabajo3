@@ -46,18 +46,6 @@
   }
 
   .start-button:hover {
-    position: fixed;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 100%;
-    width: 925px;
-    height: 514px;
-    cursor: pointer;
-    margin-top: 126px;
-    margin-left: -29px;
-  }
-
-  .start-button:active {
     background-image: url(../img/comenzar4.gif);
     background-repeat: no-repeat;
     background-position: center;
@@ -70,7 +58,7 @@
     margin-top: 51px;
     margin-left: -3px;
     filter: blur(1.4px);
-  }
+}
 
   .start-button:hover .start-buttonCFG {
     display: none;
