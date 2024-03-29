@@ -519,14 +519,13 @@
     color: white;
     position: relative;
     margin-left: 0;
-    font-weight: bold;
-    bottom: -3.7rem;
+    /* font-weight: bold; */
+    bottom: -46px;
     text-align: center;
     margin-top: -1.5rem;
-    text-shadow: -3px 0px 2px #000000, 0px 2px 2px #000000, 0px -1px 2px #000000,
-      2px 0 0 #000000;
-    font-size: 13px;
-  }
+    text-shadow: -3px 0px 2px #000000, 0px 2px 2px #000000, 0px -1px 2px #000000, 2px 0 0 #000000;
+    font-size: 11px;
+}
 
   .gitHubLogo {
     font-size: 20px;
@@ -604,5 +603,18 @@
     background-color: rgba(0, 0, 0, 0.35);
     margin-left: -9px;
     margin-right: -9px;
+  }
+
+  #descargarPersonaje {
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+  .background {
+    display: none;
+  }
+
+  .footer480p {
+    display:flex;
   }
 }

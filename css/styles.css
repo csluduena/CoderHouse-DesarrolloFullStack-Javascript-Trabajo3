@@ -995,48 +995,56 @@ hr {
   margin-bottom: 15rem;
 }
 
-.lowReso {
+.lowReso, .footer480p {
   display: none;
 }
 
-.webSiteLogo {
-  font-size: 20px;
-  font-family: sans-serif;
-  font-weight: bold;
+footer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
   position: absolute;
-  bottom: 5px;
-  right: 20px;
-  color: black;
-  text-shadow: -3px 0px 2px #fff, 0px 2px 2px #fff, 0px -1px 2px #fff, 2px 0 0 #fff;
-}
-
-.gitHubLogo {
-  font-size: 20px;
-  font-family: sans-serif;
-  font-weight: bold;
-  position: absolute;
-  bottom: 5px;
-  right: 125px;
-  color: black;
-  text-shadow: -3px 0px 2px #fff, 0px 2px 2px #fff, 0px -1px 2px #fff, 2px 0 0 #fff;
+  align-items: center;
+  bottom: 0px;
+  padding-bottom: 5px;
 }
 
 .contact {
-  right: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
 .copyright {
-  bottom: 44px;
-  right: 51px;
-  color: #000000;
-  filter: brightness(2px);
-  position: fixed;
-  margin-left: 82.4rem;
-  font-weight: bold;
-  text-shadow: -3px 0px 2px #ffffff, 0px 2px 2px #ffffff, 0px -1px 2px #ffffff, 2px 0 0 #ffffff;
-  margin-top: -1.5rem;
+  display: flex;
+  justify-content: center;
+  bottom: 0;
+  right: 100%;
+  color: #ffffff;
+  font-family: Verdana;
   text-align: center;
   z-index: -1;
+  font-size: 11px;
+}
+
+.gitHubLogo, .webSiteLogo {
+  font-size: 15px;
+  font-family: Verdana;
+  font-weight: bold;
+  color: rgb(111, 186, 186);
+  margin: 5px 9px;
+}
+
+.background {
+  background: linear-gradient(to right, rgba(0, 121, 136, 0) 13%, rgb(0, 0, 0) 50%, rgba(0, 121, 136, 0) 82%);
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 5px;
+  justify-content: flex-end;
 }
 
 .bodyIndexp img {
@@ -1095,7 +1103,7 @@ hr {
 }
 
 .tituloMain {
-  margin-top: 5px;
+  margin-top: -21px;
   margin-left: -3rem;
   padding-bottom: 1rem;
   font-family: "whiteStorm";
@@ -1453,20 +1461,2119 @@ a {
   background-color: black;
   filter: opacity(0.5);
   color: white;
-  border: 2px dashed #ccc;
-  padding-right: 61px;
-  padding-left: 61px;
-  padding-top: 75px;
-  padding-bottom: 75px;
-  text-align: center;
-  position: fixed;
-  bottom: 40px;
-  right: 6px;
+  border: 2px dashed rgb(204, 204, 204);
+  padding: 3% 8%;
   text-align: center;
   font-size: 22px;
-  box-shadow: 0 0 8px 8px #9c4545;
+  box-shadow: rgb(18, 125, 123) 0px 0px 8px 8px;
+  position: fixed;
+  left: 72%;
+  bottom: 7%;
+  width: 26%;
 }
 
+@media (min-width: 769px) and (min-width: 1921px) {
+  #content {
+    display: none;
+    text-align: center;
+  }
+  .centerContent {
+    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .SBConten {
+    display: flex;
+    justify-content: center;
+  }
+  .start-button {
+    background-image: url(../img/comenzarW.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    width: 925px;
+    height: 514px;
+    cursor: pointer;
+    position: fixed;
+    z-index: 9999;
+    margin-top: 126px;
+    margin-left: -29px;
+    filter: opacity(0.6);
+  }
+  .start-buttonCFG {
+    position: fixed;
+    background-image: url(../img/comenzar2.gif);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    width: 880px;
+    height: 360px;
+    cursor: pointer;
+    filter: blur(2px);
+    margin-top: 8rem;
+  }
+  .start-button:hover {
+    position: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    width: 925px;
+    height: 514px;
+    cursor: pointer;
+    margin-top: 126px;
+    margin-left: -29px;
+  }
+  .start-button:active {
+    background-image: url(../img/comenzar4.gif);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    width: 878px;
+    height: 514px;
+    cursor: pointer;
+    position: fixed;
+    z-index: 9999;
+    margin-top: 51px;
+    margin-left: -3px;
+    filter: blur(1.4px);
+  }
+  .start-button:hover .start-buttonCFG {
+    display: none;
+  }
+  .bodyIndex img {
+    z-index: -1;
+    position: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .img {
+    filter: blur(5px);
+    filter: opacity(80%);
+  }
+  .colorRojo {
+    color: #ff0000;
+  }
+  .colorCian {
+    color: aqua;
+  }
+  .colorVerde {
+    color: rgb(14, 239, 14);
+  }
+  .configAtrI {
+    margin-top: 2rem;
+    font-size: 28px;
+    font-weight: bold;
+    text-shadow: -3px 0px 2px #000000, 0px 2px 2px black, 0px -1px 2px black, 2px 0 0 black;
+  }
+  hr {
+    width: 100%;
+  }
+  .otrasConfigs {
+    margin-top: 2rem;
+    font-size: 26px;
+    color: white;
+  }
+  .titulosIndex {
+    color: #be2ab6;
+    text-shadow: -3px 0px 2px black, 0px 2px 2px black, 0px -1px 2px black, 2px 0 0 black;
+  }
+  .fila {
+    display: flex;
+    align-items: center;
+    font-size: 22px;
+    margin-left: 2.1rem;
+    margin-top: 10px;
+    color: #00ffff;
+    font-weight: bold;
+    text-shadow: -3px 0px 2px black, 0px 2px 2px black, 0px -1px 2px black, 2px 0 0 black;
+    margin-bottom: 18px;
+  }
+  .space {
+    margin-right: 10px;
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+  }
+  .titulos {
+    display: flex;
+    align-items: center;
+    margin-left: 1.1rem;
+    color: #7407cd;
+    margin-top: -13px;
+    margin-bottom: 10px;
+    text-shadow: 1px 0px 2px black, 1px -1px 2px black, 0px -1px 2px black, 2px 0 0 black;
+  }
+  .textoDescriptivo {
+    font-family: "Courier New", monospace;
+    white-space: pre;
+    color: white;
+    font-size: 22px;
+    text-shadow: -3px 0px 2px black, 0px 2px 2px black, 0px -1px 2px black, 2px 0 0 black;
+  }
+  .configMensajitoPj {
+    font-family: sans-serif;
+    color: #f7f7f7;
+    margin-top: 2rem;
+    width: 16rem;
+    margin-bottom: 2rem;
+    border-radius: 10px;
+    font-size: 16px;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    font-weight: bold;
+    line-height: 2rem;
+    text-shadow: -3px 0px 2px black, 0px 2px 2px black, 0px -1px 2px black, 2px 0 0 black;
+  }
+  .configTabla {
+    background-color: rgba(113, 96, 212, 0.86);
+    display: flex;
+    border-radius: 1rem;
+    padding: 3rem;
+    border: 4px solid rgba(15, 15, 15, 0.686);
+  }
+  .columna1 {
+    width: 10rem;
+  }
+  .tituloLegendCFGIndex {
+    display: flex;
+    justify-content: center;
+    text-shadow: 5px 3px 2px rgba(184, 82, 255, 0.7803921569), -4px 1px 2px rgb(134, 38, 59), -3px -3px 2px rgb(255, 255, 255), 4px -2px 0 rgb(232, 101, 84);
+  }
+  .configLegendIndex {
+    display: flex;
+  }
+  .configBuilderIndex {
+    display: flex;
+  }
+  .legend1 {
+    justify-content: center;
+    font-family: "pamela";
+    font-size: 200px;
+    display: flex;
+    margin-right: 4rem;
+    filter: opacity(50%);
+  }
+  .builder2 {
+    font-family: "pamela";
+    font-size: 200px;
+    display: flex;
+    justify-content: center;
+    margin-left: 4rem;
+    filter: opacity(50%);
+  }
+  .bienvenida {
+    color: white;
+    font-size: 30px;
+    text-shadow: -3px 3px 0px #f2170d;
+  }
+  .textSolapa {
+    margin-top: 2rem;
+    color: white;
+    font-style: italic;
+    margin-bottom: 2rem;
+    text-shadow: -2px 2px 0px #a40df2;
+  }
+  .configTextBase {
+    background-image: url(../img/primerPreg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 30px;
+    width: 700px;
+    border: 2px solid #00ffff;
+    margin-top: 2rem;
+    margin-bottom: 5px;
+    color: white;
+    text-shadow: 5px 3px 2px rgba(0, 0, 0, 0.7803921569), -4px 1px 2px rgba(0, 0, 0, 0.7803921569), -3px -3px 2px rgba(0, 0, 0, 0.7803921569), -4px 3px 6px rgba(0, 0, 0, 0.7803921569);
+    font-size: 63px;
+  }
+  .configTextBase:hover {
+    box-shadow: 2px 2px 4px #f7f7f7;
+  }
+  .inputTextStyleIndex {
+    font-family: "TheBlowarRegular";
+    margin-top: 2rem;
+    font-size: 25px;
+    padding: 1px;
+    text-align: center;
+    letter-spacing: 2px;
+  }
+  .inputSelec {
+    color: white;
+    cursor: pointer;
+  }
+  .botonElegirRaza {
+    background-image: url(../img/btnas.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: 2px solid #00ffff;
+    border-radius: 1rem;
+    padding: 30px;
+    width: 700px;
+    cursor: pointer;
+    margin-bottom: 5px;
+    margin-top: 6rem;
+    box-shadow: 0px 0px 20px 5px rgb(253, 0, 0);
+  }
+  .botonElegirRaza:hover {
+    box-shadow: 0 0 20px 9px rgb(0, 255, 232);
+  }
+  #elegirRazas {
+    position: absolute;
+    top: 7rem;
+    left: 50%;
+  }
+  .btnRazaCfg {
+    text-shadow: 1px 0px 6px black, -4px 2px 5px black, -1px -4px 6px black, 4px 3px 8px black;
+    font-weight: bold;
+    color: #9e00ff;
+    font-size: 107px;
+  }
+  .comenzarBtn {
+    background-image: url(../img/startBTN.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-top: 10px;
+    width: 435px;
+    height: 412px;
+    cursor: pointer;
+  }
+  .comenzarBtn:hover {
+    background-image: url(../img/startBTNUp.png);
+    text-shadow: 0 0 5px 5px rgb(255, 255, 255);
+    transition: transform 0.2s ease, box-shadow 0.03s ease;
+  }
+  .opcionElfos {
+    background-image: url(../img/elfosImg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 320px;
+    height: 350px;
+    margin-right: 2rem;
+    cursor: pointer;
+    border-radius: 2rem;
+  }
+  .opcionEnanos {
+    background-image: url(../img/enanosImg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 320px;
+    height: 350px;
+    margin-right: 2rem;
+    cursor: pointer;
+    border-radius: 2rem;
+  }
+  .opcionHumanos {
+    background-image: url(../img/humanosImg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 320px;
+    height: 350px;
+    margin-right: 2rem;
+    cursor: pointer;
+    border-radius: 2rem;
+  }
+  .opcionOrcos {
+    background-image: url(../img/orcosImg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 320px;
+    height: 350px;
+    cursor: pointer;
+    border-radius: 2rem;
+  }
+  .opcionElfos:hover,
+  .opcionEnanos:hover,
+  .opcionHumanos:hover,
+  .opcionOrcos:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 20px 5px rgb(255, 255, 255);
+    transition: transform 0.3s ease, box-shadow 0.03s ease;
+  }
+  .flex {
+    display: flex;
+    align-content: stretch;
+    font-size: 20px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    align-content: space-between;
+    justify-content: space-around;
+  }
+  .textRaza {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 5px;
+    font-weight: bold;
+    background-color: gray;
+    filter: opacity(80%);
+    text-shadow: -3px -2px 4px rgba(189, 189, 189, 0);
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+  }
+  .razaNombre {
+    color: black;
+    font-weight: bold;
+    font-family: "theBlowarRegular";
+    font-size: 30px;
+    letter-spacing: 2px;
+  }
+  .razaNombre .opcionElfos {
+    display: flex;
+    font-family: "theBlowarRegular";
+    margin-top: -1rem;
+    margin-left: 5rem;
+    color: black;
+    text-align: center;
+    display: none;
+    position: static;
+    top: 8%;
+    left: 50%;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 44px;
+    text-shadow: -2px 2px 2px #ffffff;
+  }
+  .elijeTuClase {
+    justify-content: center;
+    background-image: url(../img/btnCls.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: 2px solid #00ffff;
+    border-radius: 1rem;
+    padding: 30px;
+    width: 400px;
+    cursor: pointer;
+    margin-bottom: 5px;
+  }
+  .elijeTuClase:hover {
+    box-shadow: 2px 2px 4px #f7f7f7;
+  }
+  .btnEleCla {
+    text-shadow: -1px 2px 4px #000000;
+    font-weight: bold;
+    color: #ff00ea;
+    font-size: 40px;
+  }
+  .claseEnanos {
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+  }
+  .claseHumanos {
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+  }
+  .claseOrcos {
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+  }
+  .magoElfo {
+    background-image: url(../img/clases/elfoMago.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .druidaElfo {
+    background-image: url(../img/clases/elfoDruida.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .bardoElfo {
+    background-image: url(../img/clases/elfoBardo.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .guerreroEnano {
+    background-image: url(../img/clases/enanoGuerrero.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .herreroEnano {
+    background-image: url(../img/clases/enanoHerrero.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-top: 20px;
+  }
+  .paladinEnano {
+    background-image: url(../img/clases/enanoPaladin.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .caballeroHumanos {
+    background-image: url(../img/clases/humanoCaballero.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .picaroHumanos {
+    background-image: url(../img/clases/humanoPicaro.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-top: 20px;
+  }
+  .clerigoHumanos {
+    background-image: url(../img/clases/humanoClerigo.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .berserkerOrco {
+    background-image: url(../img/clases/orcoBerserker.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .chamanOrco {
+    background-image: url(../img/clases/orcoChaman.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-top: 20px;
+  }
+  .cazadorOrco {
+    background-image: url(../img/clases/orcoCazador.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .tituloClase {
+    font-family: "theBlowarRegular";
+    font-size: 25px;
+    color: White;
+    margin-top: -3rem;
+  }
+  .elegirClase {
+    z-index: 999;
+  }
+  .claseElfos,
+  .claseEnanos,
+  .claseHumanos,
+  .claseOrcos {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+  }
+  .claseElfos div,
+  .claseEnanos div,
+  .claseHumanos div,
+  .claseOrcos div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 254px;
+    height: 392px;
+    cursor: pointer;
+    margin-top: 5rem;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
+  }
+  .magoElfo:hover,
+  .druidaElfo:hover,
+  .bardoElfo:hover,
+  .guerreroEnano:hover,
+  .herreroEnano:hover,
+  .paladinEnano:hover,
+  .caballeroHumanos:hover,
+  .picaroHumanos:hover,
+  .clerigoHumanos:hover,
+  .berserkerOrco:hover,
+  .chamanOrco:hover,
+  .cazadorOrco:hover {
+    box-shadow: -8px -5px 2px 2222px rgba(0, 0, 0, 0.183), 9px 11px 2px 2222px rgba(0, 0, 0, 0.183), 3px 2px 6px 9px rgba(255, 255, 255, 0.5), -3px -2px 6px 9px rgba(255, 255, 255, 0.5);
+  }
+  .magoElfo:focus-visible,
+  .druidaElfo:focus-visible,
+  .bardoElfo:focus-visible,
+  .guerreroEnano:focus-visible,
+  .herreroEnano:focus-visible,
+  .paladinEnano:focus-visible,
+  .caballeroHumanos:focus-visible,
+  .picaroHumanos:focus-visible,
+  .clerigoHumanos:focus-visible,
+  .berserkerOrco:focus-visible,
+  .chamanOrco:focus-visible,
+  .cazadorOrco:focus-visible,
+  .elegirClase:focus-visible {
+    outline: -webkit-focus-ring-color none 0px;
+  }
+  .magoElfo,
+  .druidaElfo,
+  .bardoElfo,
+  .guerreroEnano,
+  .herreroEnano,
+  .paladinEnano,
+  .caballeroHumanos,
+  .picaroHumanos,
+  .clerigoHumanos,
+  .berserkerOrco,
+  .chamanOrco,
+  .cazadorOrco {
+    border-radius: 1rem;
+  }
+  .grupoClasesElfo,
+  .grupoClasesEnanos,
+  .grupoClasesHumanos,
+  .grupoClasesOrcos {
+    position: relative;
+  }
+  .nombreClase,
+  .descripcion,
+  .nombreClase1,
+  .descripcion1,
+  .nombreClase2,
+  .descripcion2,
+  .nombreClase3,
+  .descripcion3,
+  .nombreClase4,
+  .descripcion4,
+  .nombreClase5,
+  .descripcion5,
+  .nombreClase6,
+  .descripcion6,
+  .nombreClase7,
+  .descripcion7,
+  .nombreClase8,
+  .descripcion8,
+  .nombreClase9,
+  .descripcion9,
+  .nombreClase10,
+  .descripcion10,
+  .nombreClase11,
+  .descripcion11 {
+    display: flex;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 5px;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    justify-content: center;
+  }
+  .nombreClase,
+  .nombreClase1,
+  .nombreClase2,
+  .nombreClase3,
+  .nombreClase4,
+  .nombreClase5,
+  .nombreClase6,
+  .nombreClase7,
+  .nombreClase8,
+  .nombreClase9,
+  .nombreClase10,
+  .nombreClase11 {
+    top: 0;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+  .descripcion,
+  .descripcion1,
+  .descripcion2,
+  .descripcion3,
+  .descripcion4,
+  .descripcion5,
+  .descripcion6,
+  .descripcion7,
+  .descripcion8,
+  .descripcion9,
+  .descripcion10,
+  .descripcion11 {
+    bottom: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+  }
+  .magoElfo:hover .nombreClase,
+  .magoElfo:hover .descripcion,
+  .druidaElfo:hover .nombreClase1,
+  .druidaElfo:hover .descripcion1,
+  .bardoElfo:hover .nombreClase2,
+  .bardoElfo:hover .descripcion2,
+  .guerreroEnano:hover .nombreClase3,
+  .guerreroEnano:hover .descripcion3,
+  .herreroEnano:hover .nombreClase4,
+  .herreroEnano:hover .descripcion4,
+  .paladinEnano:hover .nombreClase5,
+  .paladinEnano:hover .descripcion5,
+  .caballeroHumanos:hover .nombreClase6,
+  .caballeroHumanos:hover .descripcion6,
+  .picaroHumanos:hover .nombreClase7,
+  .picaroHumanos:hover .descripcion7,
+  .clerigoHumanos:hover .nombreClase8,
+  .clerigoHumanos:hover .descripcion8,
+  .berserkerOrco:hover .nombreClase9,
+  .berserkerOrco:hover .descripcion9,
+  .chamanOrco:hover .nombreClase10,
+  .chamanOrco:hover .descripcion10,
+  .cazadorOrco:hover .nombreClase11,
+  .cazadorOrco:hover .descripcion11 {
+    opacity: 1;
+  }
+  .botones {
+    display: flex;
+  }
+  .raza-option {
+    cursor: pointer;
+  }
+  .clase-pick {
+    display: none;
+  }
+  #razasElegir {
+    display: flex;
+  }
+  .meme {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  #razas,
+  #clases {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+  #razas {
+    margin-left: -45rem;
+  }
+  #clases {
+    margin-top: 6rem;
+  }
+  .centerMove {
+    margin-left: 3rem;
+    margin-right: 3rem;
+  }
+  #continuarBtn {
+    display: none;
+    position: fixed;
+    bottom: 21rem;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: 2px solid #00ffff;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  #continuarBtn2 {
+    display: none;
+    position: fixed;
+    bottom: 26rem;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: 2px solid #00ffff;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  #continuarBtn:hover,
+  #continuarBtn2:hover,
+  #buttonSend1:hover,
+  #buttonSend2:hover,
+  #buttonSend3:hover,
+  #buttonDice:hover {
+    box-shadow: 0px 0px 10px 5px #00ffff;
+  }
+  .textG {
+    display: flex;
+    margin-top: 3rem;
+  }
+  .textGeneroCfg {
+    color: white;
+    font-weight: bold;
+    font-family: "theBlowarRegular";
+    font-size: 30px;
+    letter-spacing: 2px;
+  }
+  #hombre {
+    background-image: url(../img/man.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-top: 10px;
+    width: 250px;
+    height: 250px;
+    cursor: pointer;
+    margin-right: 1rem;
+  }
+  #hombre:hover {
+    background-image: url(../img/manUp.png);
+  }
+  #mujer {
+    background-image: url(../img/woman.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-top: 10px;
+    width: 250px;
+    height: 250px;
+    cursor: pointer;
+    margin-left: 1rem;
+  }
+  #mujer:hover {
+    background-image: url(../img/womanUp.png);
+  }
+  .tituloGenero {
+    color: white;
+    font-weight: bold;
+    font-family: "theBlowarRegular";
+    font-size: 30px;
+    letter-spacing: 6px;
+    margin-top: 1rem;
+    text-shadow: -1px 2px 4px #000000;
+    text-align: center;
+  }
+  .hLeft {
+    color: white;
+    background-color: transparent;
+    margin-left: -0.8rem;
+  }
+  .mRight {
+    color: white;
+    background-color: transparent;
+    margin-left: 3px;
+  }
+  .contentGen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .justASpace {
+    margin-left: 12.5rem;
+  }
+  .cfgBtn {
+    margin-bottom: 4rem;
+  }
+  .buttonCFGSend {
+    margin-top: 2rem;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 2px solid #00ffff;
+  }
+  .buttonCFGSend {
+    margin-bottom: -3rem;
+  }
+  .spaceButt {
+    margin-bottom: -3rem;
+  }
+  .buttonCFGSend:hover {
+    border: 2px solid #e5eded;
+  }
+  .contenedorParcial,
+  .contenedorFinalClss {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3rem;
+    background-image: url(../img/bgndStats.jpg);
+    border-radius: 5rem;
+    padding: 5rem;
+    border: 2px solid #00ffff;
+    width: 90%;
+    height: 900px;
+  }
+  .contenedorParcial:hover {
+    box-shadow: 0px 0px 10px 5px #00ffff;
+  }
+  #contenedorParcialId {
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .perfilElegido {
+    color: rgb(250, 156, 172);
+  }
+  .atributosDelPj {
+    margin-right: 1.5rem;
+    margin-top: 3rem;
+  }
+  .atributosDelPj .intBase {
+    color: #00ffff;
+  }
+  .atributosDelPj .strBase {
+    color: red;
+  }
+  .atributosDelPj .agiBase {
+    color: green;
+  }
+  .nickElegido,
+  .razaElegida,
+  .claseElegida,
+  .generoElegido,
+  .intBase,
+  .strBase,
+  .agiBase {
+    width: 100%;
+    text-align: left;
+    font-size: 30px;
+  }
+  .textPjsParcial {
+    color: white;
+    font-size: 30px;
+    margin-top: 2rem;
+    margin-left: 6rem;
+    margin-right: 6rem;
+  }
+  #resultado1,
+  #resultado2,
+  #resultado3 {
+    color: white;
+    font-size: 30px;
+  }
+  .contenedorFinalClss {
+    margin-top: 4rem;
+  }
+  .textFinal {
+    color: white;
+    font-weight: bold;
+    font-family: "theBlowarRegular";
+    margin-left: 24rem;
+    margin-right: 15rem;
+    font-size: 153px;
+    letter-spacing: 6px;
+    margin-top: 3rem;
+    text-shadow: -1px 2px 4px #000000;
+    text-align: center;
+  }
+  #continuarBtn3 {
+    margin-bottom: 15rem;
+  }
+  .lowReso, .footer480p {
+    display: none;
+  }
+  .column {
+    display: flex;
+    justify-content: space-around;
+    padding: 6rem;
+    height: 638px;
+    width: 910px;
+  }
+  .dice:first-child {
+    margin-right: 8rem;
+    margin-left: -5rem;
+  }
+  .dice:last-child {
+    margin-left: 0rem;
+    margin-right: 3rem;
+  }
+  .dice {
+    width: 942px;
+    height: 300px;
+    float: left;
+    padding: 10px;
+    font-size: 24px;
+    text-align: center;
+    margin: 5px;
+    border-radius: 5px;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    background-size: cover;
+  }
+  .info-personaje {
+    margin-top: 1rem;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-width: 557px;
+    height: 840px;
+  }
+  .colorTitulos {
+    color: rgb(0, 0, 0);
+    font-size: 31px;
+    font-family: robotoRegular;
+    font-weight: bold;
+  }
+  #agilidad {
+    color: green;
+    font-weight: bolder;
+    font-size: 34px;
+    text-shadow: -3px 0px 2px black, 0px 2px 2px black, 0px -1px 2px black, 2px 0 0 black;
+  }
+  #fuerza {
+    color: red;
+    font-weight: bolder;
+    font-size: 34px;
+    text-shadow: -3px 0px 2px black, 0px 2px 2px black, 0px -1px 2px black, 2px 0 0 black;
+  }
+  #inteligencia {
+    color: cornflowerblue;
+    font-weight: bolder;
+    font-size: 34px;
+    text-shadow: -3px 0px 2px black, 0px 2px 2px black, 0px -1px 2px black, 2px 0 0 black;
+  }
+  .colorAtr {
+    display: flex;
+    flex-direction: column;
+    font-size: 28px;
+    color: white;
+    text-shadow: -3px 0px 2px black, 0px 2px 2px black, 0px -1px 2px black, 2px 0 0 black;
+  }
+  .alinearInformacion {
+    padding-top: 34rem;
+  }
+  #alertaBorrarPj {
+    font-size: 25px;
+    text-shadow: -3px 0px 2px #a40eec, 0px 2px 2px #a40eec, 0px -1px 2px #a40eec, 2px 0 0 #a40eec;
+    color: white;
+    font-family: "robotoRegular";
+    margin-bottom: 86px;
+    text-align: center;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.35);
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+  .modal-content {
+    background-image: url(./../img/gg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #fefefe;
+    margin: 20% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 40%;
+    text-align: center;
+    height: 19%;
+    border-radius: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.84) 0px 0px 20px 1227px;
+  }
+  #alertaBorrarPj {
+    font-size: 29px;
+    text-shadow: -3px 0px 2px #a40eec, 0px 2px 2px #a40eec, 0px -1px 2px #a40eec, 2px 0 0 #a40eec;
+    color: white;
+    font-family: "robotoRegular";
+    margin-bottom: 86px;
+    text-align: center;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.35);
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1079px) {
+  #content {
+    display: none;
+    text-align: center;
+  }
+  .centerContent {
+    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .SBConten {
+    display: flex;
+    justify-content: center;
+  }
+  .start-button {
+    background-image: url(../img/comenzarW.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    width: 925px;
+    height: 514px;
+    cursor: pointer;
+    position: fixed;
+    z-index: 9999;
+    margin-top: 46px;
+    margin-left: -29px;
+    filter: opacity(0.6);
+  }
+  .start-buttonCFG {
+    position: fixed;
+    background-image: url(../img/comenzar2.gif);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    width: 880px;
+    height: 360px;
+    cursor: pointer;
+    filter: blur(2px);
+    margin-top: 3rem;
+  }
+  .start-button:hover {
+    position: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    width: 925px;
+    height: 514px;
+    cursor: pointer;
+    margin-top: 126px;
+    margin-left: -29px;
+  }
+  .start-button:hover {
+    background-image: url(../img/comenzar4.gif);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    width: 878px;
+    height: 514px;
+    cursor: pointer;
+    position: fixed;
+    z-index: 9999;
+    margin-top: -28px;
+    margin-left: -3px;
+    filter: blur(1.4px);
+  }
+  .start-button:hover .start-buttonCFG {
+    display: none;
+  }
+  .bodyIndex img {
+    z-index: -1;
+    position: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .img {
+    filter: blur(5px);
+    filter: opacity(80%);
+  }
+  .colorRojo {
+    color: #ff0000;
+  }
+  .colorCian {
+    color: aqua;
+  }
+  .colorVerde {
+    color: rgb(14, 239, 14);
+  }
+  .configAtrI {
+    margin-top: 2rem;
+    font-size: 28px;
+    font-weight: bold;
+    text-shadow: -3px 0px 2px #000000, 0px 2px 2px black, 0px -1px 2px black, 2px 0 0 black;
+  }
+  hr {
+    width: 100%;
+  }
+  .otrasConfigs {
+    margin-top: 2rem;
+    font-size: 26px;
+    color: white;
+  }
+  .titulosIndex {
+    color: #be2ab6;
+    text-shadow: -3px 0px 2px black, 0px 2px 2px black, 0px -1px 2px black, 2px 0 0 black;
+  }
+  .fila {
+    display: flex;
+    align-items: center;
+    font-size: 22px;
+    margin-left: 2.1rem;
+    margin-top: 10px;
+    color: #00ffff;
+    font-weight: bold;
+    text-shadow: -3px 0px 2px black, 0px 2px 2px black, 0px -1px 2px black, 2px 0 0 black;
+    margin-bottom: 18px;
+  }
+  .space {
+    margin-right: 10px;
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+  }
+  .titulos {
+    display: flex;
+    align-items: center;
+    margin-left: 1.1rem;
+    color: #7407cd;
+    margin-top: -13px;
+    margin-bottom: 10px;
+    text-shadow: 1px 0px 2px black, 1px -1px 2px black, 0px -1px 2px black, 2px 0 0 black;
+  }
+  .textoDescriptivo {
+    font-family: "Courier New", monospace;
+    white-space: pre;
+    color: white;
+    font-size: 22px;
+    text-shadow: -3px 0px 2px black, 0px 2px 2px black, 0px -1px 2px black, 2px 0 0 black;
+  }
+  .configMensajitoPj {
+    font-family: sans-serif;
+    color: #f7f7f7;
+    margin-top: 2rem;
+    width: 16rem;
+    margin-bottom: 2rem;
+    border-radius: 10px;
+    font-size: 16px;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    font-weight: bold;
+    line-height: 2rem;
+    text-shadow: -3px 0px 2px black, 0px 2px 2px black, 0px -1px 2px black, 2px 0 0 black;
+  }
+  .configTabla {
+    background-color: rgba(113, 96, 212, 0.86);
+    display: flex;
+    border-radius: 1rem;
+    padding: 3rem;
+    border: 4px solid rgba(15, 15, 15, 0.686);
+  }
+  .columna1 {
+    width: 10rem;
+  }
+  .tituloLegendCFGIndex {
+    display: flex;
+    justify-content: center;
+    text-shadow: 5px 3px 2px rgba(184, 82, 255, 0.7803921569), -4px 1px 2px rgb(134, 38, 59), -3px -3px 2px rgb(255, 255, 255), 4px -2px 0 rgb(232, 101, 84);
+  }
+  .configLegendIndex {
+    display: flex;
+  }
+  .configBuilderIndex {
+    display: flex;
+  }
+  .legend {
+    justify-content: center;
+    font-family: "pamela";
+    font-size: 100px;
+    display: flex;
+    margin-left: -10rem;
+    margin-right: -8rem;
+    filter: opacity(50%);
+  }
+  .builder {
+    font-family: "pamela";
+    font-size: 81px;
+    display: flex;
+    justify-content: center;
+    margin-right: -16rem;
+    margin-left: -8rem;
+    filter: opacity(50%);
+  }
+  .bienvenida {
+    color: white;
+    font-size: 25px;
+    margin-bottom: 10px;
+    text-shadow: -3px 3px 0px #f2170d;
+  }
+  .textSolapa {
+    margin-top: 2rem;
+    color: white;
+    font-style: normal;
+    margin-bottom: 2rem;
+    text-shadow: -2px 2px 0px #a40df2;
+    font-size: 19px;
+  }
+  #areaArrastre {
+    background-color: black;
+    filter: opacity(0.5);
+    color: white;
+    border: 2px dashed rgb(204, 204, 204);
+    padding: 4% 3%;
+    text-align: center;
+    font-size: 13px;
+    box-shadow: rgb(18, 125, 123) 0px 0px 8px 8px;
+    position: fixed;
+    left: 80%;
+    bottom: 8%;
+    width: 18%;
+  }
+  .configTextBase {
+    background-image: url(../img/primerPreg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 30px;
+    width: 700px;
+    border: 2px solid #00ffff;
+    margin-top: 2rem;
+    margin-bottom: 5px;
+    color: white;
+    text-shadow: 5px 3px 2px rgba(0, 0, 0, 0.7803921569), -4px 1px 2px rgba(0, 0, 0, 0.7803921569), -3px -3px 2px rgba(0, 0, 0, 0.7803921569), -4px 3px 6px rgba(0, 0, 0, 0.7803921569);
+    font-size: 63px;
+  }
+  .configTextBase:hover {
+    box-shadow: 2px 2px 4px #f7f7f7;
+  }
+  .inputTextStyleIndex {
+    font-family: "TheBlowarRegular";
+    margin-top: 2rem;
+    font-size: 25px;
+    padding: 1px;
+    text-align: center;
+    letter-spacing: 2px;
+  }
+  .inputSelec {
+    color: white;
+    cursor: pointer;
+  }
+  .botonElegirRaza {
+    background-image: url(../img/btnas.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: 2px solid #00ffff;
+    border-radius: 1rem;
+    padding: 30px;
+    width: 700px;
+    cursor: pointer;
+    margin-bottom: 5px;
+    margin-top: 6rem;
+    box-shadow: 0px 0px 20px 5px rgb(253, 0, 0);
+  }
+  .botonElegirRaza:hover {
+    box-shadow: 0 0 20px 9px rgb(0, 255, 232);
+  }
+  #elegirRazas {
+    position: absolute;
+    top: 7rem;
+    left: 50%;
+  }
+  .btnRazaCfg {
+    text-shadow: 1px 0px 6px black, -4px 2px 5px black, -1px -4px 6px black, 4px 3px 8px black;
+    font-weight: bold;
+    color: #9e00ff;
+    font-size: 91px;
+    padding: 1.5rem;
+  }
+  .comenzarBtn {
+    background-image: url(../img/startBTN.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-top: 48px;
+    width: 260px;
+    height: 239px;
+    cursor: pointer;
+  }
+  .comenzarBtn:hover {
+    background-image: url(../img/startBTNUp.png);
+    text-shadow: 0 0 5px 5px rgb(255, 255, 255);
+    transition: transform 0.2s ease, box-shadow 0.03s ease;
+  }
+  .opcionElfos {
+    background-image: url(../img/elfosImg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 177px;
+    height: 238px;
+    margin-right: 1rem;
+    cursor: pointer;
+    border-radius: 2rem;
+  }
+  .opcionEnanos {
+    background-image: url(../img/enanosImg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 177px;
+    height: 238px;
+    margin-right: 1rem;
+    cursor: pointer;
+    border-radius: 2rem;
+  }
+  .opcionHumanos {
+    background-image: url(../img/humanosImg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 177px;
+    height: 238px;
+    margin-right: 1rem;
+    cursor: pointer;
+    border-radius: 2rem;
+  }
+  .opcionOrcos {
+    background-image: url(../img/orcosImg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 177px;
+    height: 238px;
+    cursor: pointer;
+    border-radius: 2rem;
+  }
+  .opcionElfos:hover,
+  .opcionEnanos:hover,
+  .opcionHumanos:hover,
+  .opcionOrcos:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 20px 5px rgb(255, 255, 255);
+    transition: transform 0.3s ease, box-shadow 0.03s ease;
+  }
+  .flex {
+    display: flex;
+    align-content: stretch;
+    font-size: 16px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    align-content: space-between;
+    justify-content: space-around;
+  }
+  .textRaza {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 5px;
+    font-weight: bold;
+    background-color: gray;
+    filter: opacity(80%);
+    text-shadow: -3px -2px 4px rgba(189, 189, 189, 0);
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+  }
+  .razaNombre {
+    color: black;
+    font-weight: bold;
+    font-family: "theBlowarRegular";
+    font-size: 25px;
+    letter-spacing: 2px;
+  }
+  .razaNombre .opcionElfos {
+    display: flex;
+    font-family: "theBlowarRegular";
+    margin-top: -1rem;
+    margin-left: 5rem;
+    color: black;
+    text-align: center;
+    display: none;
+    position: static;
+    top: 8%;
+    left: 50%;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 44px;
+    text-shadow: -2px 2px 2px #ffffff;
+  }
+  .elijeTuClase {
+    justify-content: center;
+    background-image: url(../img/btnCls.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: 2px solid #00ffff;
+    border-radius: 1rem;
+    padding: 30px;
+    width: 400px;
+    cursor: pointer;
+    margin-bottom: 5px;
+  }
+  .elijeTuClase:hover {
+    box-shadow: 2px 2px 4px #f7f7f7;
+  }
+  .btnEleCla {
+    text-shadow: -1px 2px 4px #000000;
+    font-weight: bold;
+    color: #ff00ea;
+    font-size: 40px;
+  }
+  .claseEnanos {
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+  }
+  .claseHumanos {
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+  }
+  .claseOrcos {
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+  }
+  .magoElfo {
+    background-image: url(../img/clases/elfoMago.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .druidaElfo {
+    background-image: url(../img/clases/elfoDruida.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .bardoElfo {
+    background-image: url(../img/clases/elfoBardo.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .guerreroEnano {
+    background-image: url(../img/clases/enanoGuerrero.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .herreroEnano {
+    background-image: url(../img/clases/enanoHerrero.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-top: 20px;
+  }
+  .paladinEnano {
+    background-image: url(../img/clases/enanoPaladin.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .caballeroHumanos {
+    background-image: url(../img/clases/humanoCaballero.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .picaroHumanos {
+    background-image: url(../img/clases/humanoPicaro.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-top: 20px;
+  }
+  .clerigoHumanos {
+    background-image: url(../img/clases/humanoClerigo.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .berserkerOrco {
+    background-image: url(../img/clases/orcoBerserker.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .chamanOrco {
+    background-image: url(../img/clases/orcoChaman.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-top: 20px;
+  }
+  .cazadorOrco {
+    background-image: url(../img/clases/orcoCazador.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .tituloClase {
+    font-family: "theBlowarRegular";
+    font-size: 25px;
+    color: White;
+    margin-top: -3rem;
+  }
+  .elegirClase {
+    z-index: 999;
+  }
+  .claseElfos,
+  .claseEnanos,
+  .claseHumanos,
+  .claseOrcos {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+  }
+  .claseElfos div, .claseEnanos div, .claseHumanos div, .claseOrcos div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 176px;
+    height: 333px;
+    cursor: pointer;
+    margin-top: 5.5rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
+  }
+  .magoElfo:hover,
+  .druidaElfo:hover,
+  .bardoElfo:hover,
+  .guerreroEnano:hover,
+  .herreroEnano:hover,
+  .paladinEnano:hover,
+  .caballeroHumanos:hover,
+  .picaroHumanos:hover,
+  .clerigoHumanos:hover,
+  .berserkerOrco:hover,
+  .chamanOrco:hover,
+  .cazadorOrco:hover {
+    box-shadow: -8px -5px 2px 2222px rgba(0, 0, 0, 0.183), 9px 11px 2px 2222px rgba(0, 0, 0, 0.183), 3px 2px 6px 9px rgba(255, 255, 255, 0.5), -3px -2px 6px 9px rgba(255, 255, 255, 0.5);
+  }
+  .magoElfo:focus-visible,
+  .druidaElfo:focus-visible,
+  .bardoElfo:focus-visible,
+  .guerreroEnano:focus-visible,
+  .herreroEnano:focus-visible,
+  .paladinEnano:focus-visible,
+  .caballeroHumanos:focus-visible,
+  .picaroHumanos:focus-visible,
+  .clerigoHumanos:focus-visible,
+  .berserkerOrco:focus-visible,
+  .chamanOrco:focus-visible,
+  .cazadorOrco:focus-visible,
+  .elegirClase:focus-visible {
+    outline: -webkit-focus-ring-color none 0px;
+  }
+  .magoElfo,
+  .druidaElfo,
+  .bardoElfo,
+  .guerreroEnano,
+  .herreroEnano,
+  .paladinEnano,
+  .caballeroHumanos,
+  .picaroHumanos,
+  .clerigoHumanos,
+  .berserkerOrco,
+  .chamanOrco,
+  .cazadorOrco {
+    border-radius: 1rem;
+  }
+  .grupoClasesElfo,
+  .grupoClasesEnanos,
+  .grupoClasesHumanos,
+  .grupoClasesOrcos {
+    position: relative;
+  }
+  .nombreClase,
+  .descripcion,
+  .nombreClase1,
+  .descripcion1,
+  .nombreClase2,
+  .descripcion2,
+  .nombreClase3,
+  .descripcion3,
+  .nombreClase4,
+  .descripcion4,
+  .nombreClase5,
+  .descripcion5,
+  .nombreClase6,
+  .descripcion6,
+  .nombreClase7,
+  .descripcion7,
+  .nombreClase8,
+  .descripcion8,
+  .nombreClase9,
+  .descripcion9,
+  .nombreClase10,
+  .descripcion10,
+  .nombreClase11,
+  .descripcion11 {
+    display: flex;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 5px;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    justify-content: center;
+  }
+  .nombreClase,
+  .nombreClase1,
+  .nombreClase2,
+  .nombreClase3,
+  .nombreClase4,
+  .nombreClase5,
+  .nombreClase6,
+  .nombreClase7,
+  .nombreClase8,
+  .nombreClase9,
+  .nombreClase10,
+  .nombreClase11 {
+    top: 0;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+  .descripcion,
+  .descripcion1,
+  .descripcion2,
+  .descripcion3,
+  .descripcion4,
+  .descripcion5,
+  .descripcion6,
+  .descripcion7,
+  .descripcion8,
+  .descripcion9,
+  .descripcion10,
+  .descripcion11 {
+    bottom: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+  }
+  .magoElfo:hover .nombreClase,
+  .magoElfo:hover .descripcion,
+  .druidaElfo:hover .nombreClase1,
+  .druidaElfo:hover .descripcion1,
+  .bardoElfo:hover .nombreClase2,
+  .bardoElfo:hover .descripcion2,
+  .guerreroEnano:hover .nombreClase3,
+  .guerreroEnano:hover .descripcion3,
+  .herreroEnano:hover .nombreClase4,
+  .herreroEnano:hover .descripcion4,
+  .paladinEnano:hover .nombreClase5,
+  .paladinEnano:hover .descripcion5,
+  .caballeroHumanos:hover .nombreClase6,
+  .caballeroHumanos:hover .descripcion6,
+  .picaroHumanos:hover .nombreClase7,
+  .picaroHumanos:hover .descripcion7,
+  .clerigoHumanos:hover .nombreClase8,
+  .clerigoHumanos:hover .descripcion8,
+  .berserkerOrco:hover .nombreClase9,
+  .berserkerOrco:hover .descripcion9,
+  .chamanOrco:hover .nombreClase10,
+  .chamanOrco:hover .descripcion10,
+  .cazadorOrco:hover .nombreClase11,
+  .cazadorOrco:hover .descripcion11 {
+    opacity: 1;
+  }
+  .botones {
+    display: flex;
+  }
+  .raza-option {
+    cursor: pointer;
+  }
+  .clase-pick {
+    display: none;
+  }
+  #razasElegir {
+    display: flex;
+  }
+  .meme {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  #razas,
+  #clases {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+  #razas {
+    margin-left: -23rem;
+    margin-top: 2.5rem;
+  }
+  #clases {
+    margin-top: 6rem;
+  }
+  .centerMove {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+  #continuarBtn {
+    display: none;
+    position: fixed;
+    bottom: 0.6rem;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: 2px solid #00ffff;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  #continuarBtn2 {
+    display: none;
+    position: fixed;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: 2px solid #00ffff;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  #continuarBtn:hover,
+  #continuarBtn2:hover,
+  #buttonSend1:hover,
+  #buttonSend2:hover,
+  #buttonSend3:hover,
+  #buttonDice:hover {
+    box-shadow: 0px 0px 10px 5px #00ffff;
+  }
+  .textG {
+    display: flex;
+    margin-top: 3rem;
+  }
+  .textGeneroCfg {
+    color: white;
+    font-weight: bold;
+    font-family: "theBlowarRegular";
+    font-size: 30px;
+    letter-spacing: 2px;
+  }
+  #hombre {
+    background-image: url(../img/man.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-top: 10px;
+    width: 250px;
+    height: 250px;
+    cursor: pointer;
+    margin-right: 1rem;
+  }
+  #hombre:hover {
+    background-image: url(../img/manUp.png);
+  }
+  #mujer {
+    background-image: url(../img/woman.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-top: 10px;
+    width: 250px;
+    height: 250px;
+    cursor: pointer;
+    margin-left: 1rem;
+  }
+  #mujer:hover {
+    background-image: url(../img/womanUp.png);
+  }
+  .tituloGenero {
+    color: white;
+    font-weight: bold;
+    font-family: "theBlowarRegular";
+    font-size: 30px;
+    letter-spacing: 6px;
+    margin-top: 1rem;
+    text-shadow: -1px 2px 4px #000000;
+    text-align: center;
+  }
+  .hLeft {
+    color: white;
+    background-color: transparent;
+    margin-left: -0.8rem;
+  }
+  .mRight {
+    color: white;
+    background-color: transparent;
+    margin-left: 3px;
+  }
+  .contentGen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .justASpace {
+    margin-left: 12.5rem;
+  }
+  .cfgBtn {
+    margin-bottom: 4rem;
+  }
+  .buttonCFGSend {
+    margin-top: 2rem;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 2px solid #00ffff;
+  }
+  .buttonCFGSend {
+    margin-bottom: -3rem;
+  }
+  .spaceButt {
+    margin-bottom: -3rem;
+  }
+  .buttonCFGSend:hover {
+    border: 2px solid #e5eded;
+  }
+  .contenedorParcial {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1rem;
+    background-image: url(../img/bgndStats.jpg);
+    border-radius: 5rem;
+    padding: 5rem;
+    border: 2px solid #00ffff;
+    width: 92%;
+    height: 460px;
+  }
+  .contenedorFinalClss {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3rem;
+    background-image: url(../img/bgndStats.jpg);
+    border-radius: 5rem;
+    padding: 5rem;
+    border: 2px solid #00ffff;
+    width: 90%;
+    height: 354px;
+  }
+  .contenedorParcial:hover {
+    box-shadow: 0px 0px 10px 5px #00ffff;
+  }
+  #contenedorParcialId {
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .perfilElegido {
+    color: rgb(250, 156, 172);
+  }
+  .atributosDelPj {
+    margin-right: 1.5rem;
+    margin-top: 1rem;
+  }
+  .atributosDelPj .intBase {
+    color: #00ffff;
+  }
+  .atributosDelPj .strBase {
+    color: red;
+  }
+  .atributosDelPj .agiBase {
+    color: green;
+  }
+  .nickElegido,
+  .razaElegida,
+  .claseElegida,
+  .generoElegido,
+  .intBase,
+  .strBase,
+  .agiBase {
+    width: 100%;
+    text-align: left;
+    font-size: 30px;
+  }
+  .textPjsParcial {
+    color: white;
+    font-size: 30px;
+    margin-top: 2rem;
+    margin-left: 6rem;
+    margin-right: 6rem;
+  }
+  #resultado1,
+  #resultado2,
+  #resultado3 {
+    color: white;
+    font-size: 30px;
+  }
+  .contenedorFinalClss {
+    margin-top: 4rem;
+  }
+  .textFinal {
+    color: white;
+    font-weight: bold;
+    font-family: "theBlowarRegular";
+    margin-left: -8rem;
+    margin-right: -8rem;
+    font-size: 28px;
+    letter-spacing: 6px;
+    margin-top: 1rem;
+    text-shadow: -1px 2px 4px #000000;
+    text-align: center;
+  }
+  #continuarBtn3 {
+    margin-bottom: 15rem;
+  }
+  .lowReso, .footer480p {
+    display: none;
+  }
+  .column {
+    display: flex;
+    justify-content: space-around;
+    padding: 6rem;
+    height: 638px;
+    width: 910px;
+  }
+  .dice:first-child {
+    margin-right: 4rem;
+    margin-left: 1rem;
+  }
+  .dice:last-child {
+    margin-left: -1rem;
+    margin-right: 10rem;
+  }
+  .dice {
+    width: 165px;
+    height: 157px;
+    float: left;
+    padding: 10px;
+    font-size: 24px;
+    text-align: center;
+    margin: 5px;
+    border-radius: 5px;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    background-size: cover;
+  }
+  .btnNextLegend {
+    text-transform: capitalize;
+    position: fixed;
+    bottom: -32px;
+    left: 50%;
+    margin-bottom: 11rem;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: 2px solid #00ffff;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .info-personaje {
+    margin-top: 1rem;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-width: 557px;
+    height: 466px;
+  }
+  .tituloMain {
+    margin-top: -12px;
+    margin-left: -1rem;
+    padding-bottom: 1rem;
+    font-family: "whiteStorm";
+    font-size: 104px;
+    color: black;
+    text-shadow: -3px 0px 2px rgb(230, 230, 230), 0px 2px 2px rgb(221, 221, 221), 0px -1px 2px rgb(23, 207, 244), 2px 0 0 rgb(135, 150, 236);
+    filter: opacity(80%);
+  }
+  .alinearInformacion {
+    padding-top: 19rem;
+  }
+  .colorTitulos {
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+    font-family: robotoRegular;
+    font-weight: bold;
+  }
+  .colorTituloAtr {
+    margin-top: 0.2rem;
+    color: aqua;
+  }
+  .colorAtr {
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    color: white;
+    text-shadow: -3px 0px 2px black, 0px 2px 2px black, 0px -1px 2px black, 2px 0 0 black;
+  }
+  #inteligencia {
+    color: cornflowerblue;
+    font-weight: bolder;
+    font-size: 22px;
+    text-shadow: -3px 0px 2px black, 0px 2px 2px black, 0px -1px 2px black, 2px 0 0 black;
+  }
+  #fuerza {
+    color: red;
+    font-weight: bolder;
+    font-size: 22px;
+    text-shadow: -3px 0px 2px black, 0px 2px 2px black, 0px -1px 2px black, 2px 0 0 black;
+  }
+  #agilidad {
+    color: green;
+    font-weight: bolder;
+    font-size: 22px;
+    text-shadow: -3px 0px 2px black, 0px 2px 2px black, 0px -1px 2px black, 2px 0 0 black;
+  }
+  #alertaBorrarPj {
+    font-size: 13px;
+    text-shadow: -3px 0px 2px #a40eec, 0px 2px 2px #a40eec, 0px -1px 2px #a40eec, 2px 0 0 #a40eec;
+    color: white;
+    font-family: "robotoRegular";
+    margin-bottom: 28px;
+    text-align: center;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.35);
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+  .modal-content {
+    background-image: url(./../img/gg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #fefefe;
+    margin: 20% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 40%;
+    text-align: center;
+    height: 19%;
+    border-radius: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.84) 0px 0px 20px 1227px;
+  }
+  .modal-content button {
+    background-color: rgb(76, 175, 80);
+    color: white;
+    padding: 6px 9px;
+    border: none;
+    cursor: pointer;
+    margin-right: 10px;
+    margin-top: 1rem;
+    border-radius: 10px;
+  }
+  #alertaBorrarPj {
+    font-size: 13px;
+    text-shadow: -3px 0px 2px #a40eec, 0px 2px 2px #a40eec, 0px -1px 2px #a40eec, 2px 0 0 #a40eec;
+    color: white;
+    font-family: "robotoRegular";
+    margin-bottom: 28px;
+    text-align: center;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.35);
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+  .legend1 {
+    justify-content: center;
+    font-family: "pamela";
+    font-size: 120px;
+    display: flex;
+    margin-right: 4rem;
+    filter: opacity(50%);
+  }
+  .builder2 {
+    font-family: "pamela";
+    font-size: 120px;
+    display: flex;
+    justify-content: center;
+    margin-left: 4rem;
+    filter: opacity(50%);
+  }
+}
 @media screen and (max-width: 480px) {
   /* Estilos CSS para pantallas con ancho hasta 480px */
   .legend1 {
@@ -1912,12 +4019,12 @@ a {
     color: white;
     position: relative;
     margin-left: 0;
-    font-weight: bold;
-    bottom: -3.7rem;
+    /* font-weight: bold; */
+    bottom: -46px;
     text-align: center;
     margin-top: -1.5rem;
     text-shadow: -3px 0px 2px #000000, 0px 2px 2px #000000, 0px -1px 2px #000000, 2px 0 0 #000000;
-    font-size: 13px;
+    font-size: 11px;
   }
   .gitHubLogo {
     font-size: 20px;
@@ -1984,6 +4091,16 @@ a {
     background-color: rgba(0, 0, 0, 0.35);
     margin-left: -9px;
     margin-right: -9px;
+  }
+  #descargarPersonaje {
+    cursor: pointer;
+    margin-top: 1rem;
+  }
+  .background {
+    display: none;
+  }
+  .footer480p {
+    display: flex;
   }
 }
 @font-face {

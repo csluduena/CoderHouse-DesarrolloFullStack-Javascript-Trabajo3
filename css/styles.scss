@@ -7,7 +7,9 @@
 @import "./partials/dados";
 @import "./partials/cfgGeneral";
 //! Media Querys
-@import "./partials/media320-480px";
+@import "./partials/media-Above-1921px"; //
+@import "./partials/media-Above-768px";
+@import "./partials/media-UpTo-480px";
 
 
 @font-face {
