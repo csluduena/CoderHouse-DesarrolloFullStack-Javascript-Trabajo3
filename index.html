@@ -10,8 +10,9 @@
     <link rel="icon" href="./img/favicon.jpg" type="image/jpeg">
     <link rel="stylesheet" href="./css/styles.css">
 </head>
+
 <body class="bodyIndex"><img src="./img/1bcground12.png" alt="bgnd">
-    
+
     <header>
         <div class="tituloLegendCFGIndex">
             <div class="configLegendIndex">
@@ -28,15 +29,18 @@
         </div>
     </header>
     <main>
-        <div id="content" class="backText centerContent"><hr>
+        <div id="content" class="backText centerContent">
+            <hr>
             <div class="bienvenida">
                 <h1>Bienvenidos a Legend Builder!</h1>
-            </div><hr>
+            </div>
+            <hr>
             <h2 class="textSolapa">Legend Builder ¡Donde tus personajes cobran vida! Sumérgete en un mundo de fantasía y
                 crea tu propio héroe.<br>Elige su raza, género, clase y atributos. ¡Conviértete en el arquitecto de tu
                 propia leyenda!
-            </h2><hr>
-        <!--!Pregunta Nombre-->
+            </h2>
+            <hr>
+            <!--!Pregunta Nombre-->
             <div class="comenzarBtn" id="botonStart"></div>
             <div class="preguntaUno" style="display:none;">
                 <p class="configTextBase">¿Cómo te llamas?</p>
@@ -44,18 +48,18 @@
                     placeholder="Ingresa tu nombre"><br>
                 <button class="buttonCFGSend" id="buttonSend1">Siguiente</button>
             </div><br>
-        <!--!Pregunta Nick-->
+            <!--!Pregunta Nick-->
             <div class="preguntaDos" style="display:none;">
                 <p class="configTextBase">Un Nick para tu leyenda</p>
                 <input class="inputTextStyleIndex" type="text" id="nickNameInput" placeholder="Ingresa un nick"><br>
                 <button class="buttonCFGSend" id="buttonSend2">Siguiente</button>
             </div><br>
-        <!--!Pregunta Razas-->
+            <!--!Pregunta Razas-->
             <div class="botonElegirRaza" style="display:none;">
                 <p class="btnRazaCfg">Elije una raza</p>
             </div>
             <br>
-        <!--! Razas -->
+            <!--! Razas -->
             <div class="razasElegir" id="elegirRazas">
                 <div id="razas">
                     <div class="raza-option opcionElfos flex" id="elfosOption">
@@ -76,7 +80,7 @@
                     </div>
                 </div>
             </div>
-        <!--! Clases -->
+            <!--! Clases -->
             <div id="clases">
                 <div class="clase-pick" id="elfosClasesPick">
                     <div class="claseElfos" id="cElf1">
@@ -158,7 +162,7 @@
             </div>
             <button id="continuarBtn" class="upCenter">Continuar</button>
             <br>
-        <!--! Pregunta genero -->
+            <!--! Pregunta genero -->
             <div class="contentGen">
                 <div class="tituloGenero" id="textoGeneroTitulo" style="display:none;">¡Elije el género de tu Leyenda!
                 </div>
@@ -175,7 +179,7 @@
             </div>
             <button class="cfgBtn" id="continuarBtn2" type="button" style="display:none;">Continuar</button>
             <div class="atributosTab" id="tabAtri" style="display:none;"></div>
-        <!--!Muestra parcial del Personaje-->
+            <!--!Muestra parcial del Personaje-->
             <div class="contenedorParcial" id="contenedorParcialId" style="display:none;">
                 <div class="perfilElegido">
                     <div class="nickElegido" id="eleccionNick">Nick: </div>
@@ -194,7 +198,7 @@
                 </div>
                 <button class="buttonCFGSend buttonCFGSend2" id="buttonSend3" style="display:none;">Siguiente</button>
             </div>
-        <!--! Sección de Dados -->
+            <!--! Sección de Dados -->
             <div class="wrapper" id="dadosTirada" style="display:none;">
                 <div class="atributosDelPj">
                     <div class="intBase" id="inteligenciaBase"></div>
@@ -221,7 +225,8 @@
                     <p class="textFinal">Ahora si! todo listo para conocer a tu leyenda!</p>
                 </div>
             </div>
-            <button class="cfgBtn cfgBotones botonLanzarDados" id="continuarBtn3" type="button" style="display:none;">Continuar</button>
+            <button class="cfgBtn cfgBotones botonLanzarDados" id="continuarBtn3" type="button"
+                style="display:none;">Continuar</button>
             <div id="cartaPersonaje"></div>
         </div>
     </main>
@@ -237,6 +242,7 @@
     <script src="./js/dado.js"></script>
     <script src="./js/storage.js"></script>
 </body>
+
 </html>
 
 <!--! ********************************************************** -->

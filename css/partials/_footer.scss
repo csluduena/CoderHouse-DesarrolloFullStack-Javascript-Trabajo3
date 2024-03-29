@@ -6,10 +6,11 @@
     bottom: 5px;
     right: 20px;
     color: black;
-    text-shadow: -3px 0px 2px #fff, 0px 2px 2px #fff, 0px -1px 2px #fff, 2px 0 0 #fff;
-}
-
-.gitHubLogo {
+    text-shadow: -3px 0px 2px #fff, 0px 2px 2px #fff, 0px -1px 2px #fff,
+      2px 0 0 #fff;
+  }
+  
+  .gitHubLogo {
     font-size: 20px;
     font-family: sans-serif;
     font-weight: bold;
@@ -17,19 +18,26 @@
     bottom: 5px;
     right: 125px;
     color: black;
-    text-shadow: -3px 0px 2px #fff, 0px 2px 2px #fff, 0px -1px 2px #fff, 2px 0 0 #fff;
-}
-
-.contact {
-    right:0;
-}
-
-.copyright {
+    text-shadow: -3px 0px 2px #fff, 0px 2px 2px #fff, 0px -1px 2px #fff,
+      2px 0 0 #fff;
+  }
+  
+  .contact {
+    right: 0;
+  }
+  
+  .copyright {
     bottom: 44px;
     right: 51px;
-    color: white;
+    color: #000000;
+    filter: brightness(2px);
     position: fixed;
     margin-left: 82.4rem;
     font-weight: bold;
+    text-shadow: -3px 0px 2px #ffffff, 0px 2px 2px #ffffff, 0px -1px 2px #ffffff,
+      2px 0 0 #ffffff;
     margin-top: -1.5rem;
-}
+    text-align: center;
+    z-index: -1;
+  }
+  

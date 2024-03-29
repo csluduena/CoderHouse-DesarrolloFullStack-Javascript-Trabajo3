@@ -7,25 +7,25 @@
     left: 0;
     width: 100%;
     height: 100%;
-}
-
-.tituloLegendCFG {
+  }
+  
+  .tituloLegendCFG {
     display: flex;
     justify-content: center;
-}
-
-.legendBuilder {
+  }
+  
+  .legendBuilder {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-}
-
-.configLegend {
+  }
+  
+  .configLegend {
     display: flex;
-}
-
-.legend {
+  }
+  
+  .legend {
     justify-content: center;
     font-family: "pamela";
     font-size: 200px;
@@ -33,13 +33,13 @@
     margin-left: 2rem;
     margin-right: 4rem;
     filter: opacity(50%);
-}
-
-.configBuilder {
+  }
+  
+  .configBuilder {
     display: flex;
-}
-
-.builder {
+  }
+  
+  .builder {
     font-family: "pamela";
     font-size: 200px;
     display: flex;
@@ -47,77 +47,80 @@
     margin-right: 2rem;
     margin-left: 4rem;
     filter: opacity(50%);
-}
-
-.inputTextStyle {
+  }
+  
+  .inputTextStyle {
     text-align: center;
-}
-
-.tituloMain {
+  }
+  
+  .tituloMain {
     margin-top: 5px;
     margin-left: -3rem;
     padding-bottom: 1rem;
     font-family: "whiteStorm";
     font-size: 140px;
     color: black;
-    text-shadow: -3px 0px 2px rgb(230, 230, 230), 0px 2px 2px rgb(221, 221, 221), 0px -1px 2px rgb(23, 207, 244), 2px 0 0 rgb(135, 150, 236);
+    text-shadow: -3px 0px 2px rgb(230, 230, 230), 0px 2px 2px rgb(221, 221, 221),
+      0px -1px 2px rgb(23, 207, 244), 2px 0 0 rgb(135, 150, 236);
     filter: opacity(80%);
-}
-
-.infoPj {
+  }
+  
+  .infoPj {
     text-align: center;
     color: black;
     margin-bottom: 10px;
-}
-
-.textCfg {
+  }
+  
+  .textCfg {
     text-align: center;
     color: rgb(255, 255, 255);
     margin-bottom: 10px;
-    text-shadow: -3px 0px 2px rgb(0, 0, 0), 0px 2px 2px rgb(0, 0, 0), 0px -1px 2px rgb(0, 0, 0), 2px 0 0 rgb(0, 0, 0);
+    text-shadow: -3px 0px 2px rgb(0, 0, 0), 0px 2px 2px rgb(0, 0, 0),
+      0px -1px 2px rgb(0, 0, 0), 2px 0 0 rgb(0, 0, 0);
     font-size: 18px;
-}
-
-.configH3 {
+  }
+  
+  .configH3 {
     font-size: 22px;
     text-align: center;
     color: black;
     margin-bottom: 10px;
-    text-shadow: -3px 0px 2px #ffffff, 0px 2px 2px rgb(255, 255, 255), 0px -1px 2px rgb(255, 255, 255), 2px 0 0 rgb(255, 255, 255);
-}
-
-.info-personaje {
+    text-shadow: -3px 0px 2px #ffffff, 0px 2px 2px rgb(255, 255, 255),
+      0px -1px 2px rgb(255, 255, 255), 2px 0 0 rgb(255, 255, 255);
+  }
+  
+  .info-personaje {
     margin-top: 1rem;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
     min-width: 377px;
     height: 627px;
-}
-
-#descargarPersonaje {
+  }
+  
+  #descargarPersonaje {
     cursor: pointer;
     margin-top: 2rem;
-}
-
-#cargarPersonaje {
+  }
+  
+  #cargarPersonaje {
     cursor: pointer;
-}
-
-#borrarPersonaje {
+  }
+  
+  #borrarPersonaje {
     cursor: pointer;
-}
-
-a {
+  }
+  
+  a {
     text-decoration: none;
-}
-
-.cntBtn {
+  }
+  
+  .cntBtn {
     display: flex;
     justify-content: center;
-}
-
-.botonBackIndex {
+  }
+  
+  .botonBackIndex {
     display: flex;
     color: black;
     justify-content: center;
@@ -131,89 +134,92 @@ a {
     width: 12rem;
     font-size: 18px;
     font-weight: bolder;
-}
-
-.botonBackIndex:hover {
+  }
+  
+  .botonBackIndex:hover {
     color: white;
     background-color: black;
-}
-
-.alinearInformacion {
+  }
+  
+  .alinearInformacion {
     padding-top: 26rem;
-}
-
-.spaceInfoTop {
+  }
+  
+  .spaceInfoTop {
     color: white;
-    text-shadow: -3px 0px 2px black, 0px 2px 2px black, 0px -1px 2px black, 2px 0 0 black;
-}
-
-.colorTitulos {
+    text-shadow: -3px 0px 2px black, 0px 2px 2px black, 0px -1px 2px black,
+      2px 0 0 black;
+  }
+  
+  .colorTitulos {
     color: rgb(0, 0, 0);
     font-size: 20px;
     font-family: robotoRegular;
-    // text-shadow: -3px 0px 2px black, 0px 2px 2px black, 0px -1px 2px black, 2px 0 0 black;
     font-weight: bold;
-}
-
-#nickPersonaje,
-#origen,
-#genero,
-#clase {
+  }
+  
+  #nickPersonaje,
+  #origen,
+  #genero,
+  #clase {
     color: white;
-}
-
-#inteligencia {
+  }
+  
+  #inteligencia {
     color: cornflowerblue;
     font-weight: bolder;
     font-size: 22px;
-    text-shadow: -3px 0px 2px black, 0px 2px 2px black, 0px -1px 2px black, 2px 0 0 black;
-}
-
-#fuerza {
+    text-shadow: -3px 0px 2px black, 0px 2px 2px black, 0px -1px 2px black,
+      2px 0 0 black;
+  }
+  
+  #fuerza {
     color: red;
     font-weight: bolder;
     font-size: 22px;
-    text-shadow: -3px 0px 2px black, 0px 2px 2px black, 0px -1px 2px black, 2px 0 0 black;
-}
-
-#agilidad {
+    text-shadow: -3px 0px 2px black, 0px 2px 2px black, 0px -1px 2px black,
+      2px 0 0 black;
+  }
+  
+  #agilidad {
     color: green;
     font-weight: bolder;
     font-size: 22px;
-    text-shadow: -3px 0px 2px black, 0px 2px 2px black, 0px -1px 2px black, 2px 0 0 black;
-}
-
-.spaceInfoBot {
+    text-shadow: -3px 0px 2px black, 0px 2px 2px black, 0px -1px 2px black,
+      2px 0 0 black;
+  }
+  
+  .spaceInfoBot {
     padding-bottom: 1rem;
-}
-
-.centrarAtributos {
+  }
+  
+  .centrarAtributos {
     display: flex;
     justify-content: center;
     flex-direction: row;
     flex-wrap: wrap;
-}
-
-.colorTituloAtr {
+  }
+  
+  .colorTituloAtr {
     margin-top: 1.2rem;
     color: aqua;
-}
-
-.colorAtr {
+  }
+  
+  .colorAtr {
     display: flex;
     flex-direction: column;
     font-size: 20px;
     color: white;
-    text-shadow: -3px 0px 2px black, 0px 2px 2px black, 0px -1px 2px black, 2px 0 0 black;
-}
-
-.configCompartidaDeInfoDePersonaje {
+    text-shadow: -3px 0px 2px black, 0px 2px 2px black, 0px -1px 2px black,
+      2px 0 0 black;
+  }
+  
+  .configCompartidaDeInfoDePersonaje {
     text-align: center;
     margin-top: -3rem;
-}
-
-/* Estilos para el modal */
-.modal {
+  }
+  
+  .modal {
     display: none;
     position: fixed;
     z-index: 1;
@@ -223,10 +229,9 @@ a {
     height: 100%;
     overflow: auto;
     background-color: rgba(0, 0, 0, 0.4);
-}
-
-/* Estilos para el contenido del modal */
-.modal-content {
+  }
+  
+  .modal-content {
     background-image: url(./../img/gg.png);
     background-position: center;
     background-repeat: no-repeat;
@@ -240,10 +245,9 @@ a {
     height: 19%;
     border-radius: 1rem;
     box-shadow: rgb(0 0 0 / 84%) 0px 0px 20px 1227px;
-}
-
-/* Estilos para los botones dentro del modal */
-.modal-content button {
+  }
+  
+  .modal-content button {
     background-color: rgb(76, 175, 80);
     color: white;
     padding: 10px 20px;
@@ -252,33 +256,29 @@ a {
     margin-right: 10px;
     margin-top: 1rem;
     border-radius: 10px;
-}
-
-
-/* Estilo para el botón de cancelar */
-#cancelarBorrar {
+  }
+  
+  #cancelarBorrar {
     background-color: rgb(244, 67, 54);
-    /* Color de fondo rojo */
     border: 3px solid rgb(136, 26, 18);
-}
-
-#cancelarBorrar:hover {
+  }
+  
+  #cancelarBorrar:hover {
     box-shadow: 0px 0px 15px 7px rgb(136, 26, 18);
-}
-
-
-#confirmarBorrar {
+  }
+  
+  #confirmarBorrar {
     border: 3px solid rgb(15, 75, 17);
-}
-
-#confirmarBorrar:hover {
+  }
+  
+  #confirmarBorrar:hover {
     box-shadow: 0px 0px 15px 7px rgb(15, 75, 17);
-}
-
-/* Estilos para el texto de la alerta */
-#alertaBorrarPj {
+  }
+  
+  #alertaBorrarPj {
     font-size: 25px;
-    text-shadow: -3px 0px 2px #a40eec, 0px 2px 2px #a40eec, 0px -1px 2px #a40eec, 2px 0 0 #a40eec;
+    text-shadow: -3px 0px 2px #a40eec, 0px 2px 2px #a40eec, 0px -1px 2px #a40eec,
+      2px 0 0 #a40eec;
     color: white;
     font-family: "robotoRegular";
     margin-bottom: 20px;
@@ -287,4 +287,4 @@ a {
     background-color: rgb(0 0 0 / 35%);
     margin-left: 40px;
     margin-right: 40px;
-}
+  }

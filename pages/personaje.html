@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../css/styles.css">
 </head>
+
 <body class="bodyIndexp"><img src="./../img/3bcground2.png" alt="bgnd">
 
     <header>
-    <!-- Header Area -->
+        <!-- Header Area -->
     </header>
     <main>
         <div class="tituloLegendCFG">
@@ -19,38 +21,40 @@
             <div class="configLegend">
                 <p class="legend">Legend</p>
             </div>
-                <div class="configCompartidaDeInfoDePersonaje">
-                    <div class="info-personaje">
-                        <div class="alinearInformacion">
-                            <p class="spaceInfoTop, colorTitulos">Nombre: <span id="nickPersonaje"></span></p>
-                            <p class="spaceEntreInfo, colorTitulos">Origen: <span id="origen"></span></p>
-                            <p class="spaceEntreInfo, colorTitulos">Clase: <span id="genero"></span></p>
-                            <p class="spaceEntreInfo, colorTitulos">Género: <span id="clase"></span></p>
-                            <p class="spaceEntreInfo, colorTituloAtr"></p>
-                        </div>
-                        <div class="centrarAtributos">
-                            <p class="spaceEntreInfo, colorAtr">INT<span id="inteligencia"></span></p>
-                            &nbsp &nbsp<p class="spaceEntreInfo, colorAtr">STR<span id="fuerza"></span></p>
-                            &nbsp &nbsp<p class="spaceInfoBot, colorAtr">AGI<span id="agilidad"></span></p>
-                        </div>
+            <div class="configCompartidaDeInfoDePersonaje">
+                <div class="info-personaje">
+                    <div class="alinearInformacion">
+                        <p class="spaceInfoTop, colorTitulos">Nombre: <span id="nickPersonaje"></span></p>
+                        <p class="spaceEntreInfo, colorTitulos">Origen: <span id="origen"></span></p>
+                        <p class="spaceEntreInfo, colorTitulos">Genero: <span id="genero"></span></p>
+                        <p class="spaceEntreInfo, colorTitulos">Clase: <span id="clase"></span></p>
+                        <p class="spaceEntreInfo, colorTituloAtr"></p>
+                    </div>
+                    <div class="centrarAtributos">
+                        <p class="spaceEntreInfo, colorAtr">INT<span id="inteligencia"></span></p>
+                        &nbsp &nbsp<p class="spaceEntreInfo, colorAtr">STR<span id="fuerza"></span></p>
+                        &nbsp &nbsp<p class="spaceInfoBot, colorAtr">AGI<span id="agilidad"></span></p>
                     </div>
                 </div>
+            </div>
             <div class="configBuilder">
                 <p class="builder">Builder</p>
             </div>
         </div>
         <div class="infoPj">
-            <button class="cfgBotones colorBTN1 highReso" id="descargarPersonaje">Descargar Personaje (Zip File)</button>
+            <button class="cfgBotones colorBTN1 highReso" id="descargarPersonaje">Descargar Personaje (Zip
+                File)</button>
             <button class="cfgBotones colorBTN1 lowReso" id="descargarPersonaje">Descargar Personaje</button>
-            <button  class="cfgBotones colorBTN2 highReso" id="cargarPersonaje">Cargar Personaje (Json File)</button>
-            <button  class="cfgBotones colorBTN2 lowReso" id="cargarPersonaje">Cargar Personaje</button>
+            <button class="cfgBotones colorBTN2 highReso" id="cargarPersonaje">Cargar Personaje (Json File)</button>
+            <button class="cfgBotones colorBTN2 lowReso" id="cargarPersonaje">Cargar Personaje</button>
             <input type="file" id="cargarPersonaje" style="display: none;">
-            <button  class="cfgBotones colorBTN3 highReso" id="borrarPersonaje">Borrar Personaje</button>
-            <button  class="cfgBotones colorBTN3 lowReso" id="borrarPersonaje">Borrar Personaje</button>
+            <button class="cfgBotones colorBTN3 highReso" id="borrarPersonaje">Borrar Personaje</button>
+            <button class="cfgBotones colorBTN3 lowReso" id="borrarPersonaje">Borrar Personaje</button>
         </div>
         <div id="myModal" class="modal" style="display: none;">
             <div class="modal-content">
-                <p id="alertaBorrarPj">Se perderá toda la información de su personaje. <br>¿Estás seguro que desea continuar?</p>
+                <p id="alertaBorrarPj">Se perderá toda la información de su personaje. <br>¿Estás seguro que desea
+                    continuar?</p>
                 <div>
                     <button id="confirmarBorrar">Aceptar</button>
                     <button id="cancelarBorrar">Cancelar</button>
@@ -71,21 +75,20 @@
     </main>
     <footer>
         <div class="copy">
-            <p class="copyright">© 2024 Csluduena. All content created by me for the Full Stack JavaScript Web Development course at CoderHouse.</p>
+            <p class="copyright">© 2024 Csluduena. All content created by me for the Full Stack JavaScript Web
+                Development course at CoderHouse.</p>
         </div>
         <div class="contact">
             <a href="https://github.com/csluduena" target="_blank" class="gitHubLogo">GitHub</a>
             <a href="https://www.csluduena.com.ar" target="_blank" class="webSiteLogo">Contacto</a>
         </div>
     </footer>
-    
-    <script src="./../js/leyenda.js"></script> 
+
+    <script src="./../js/leyenda.js"></script>
     <script src="./../js/dragAndDrop.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.5.0/jszip.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.5.0-beta4/html2canvas.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.5/jszip.min.js"></script>
 </body>
+
 </html>
-
-
-
