@@ -1,0 +1,161 @@
+@media screen and (max-width: 480px) {
+    /* Estilos CSS para pantallas con ancho hasta 480px */
+    .legend1 {
+        font-size: 40px;
+        margin-right: -3rem;
+        filter: opacity(75%);
+        margin-top: 1rem;
+    }
+    
+    .builder2 {
+        margin-top: 1rem;
+        font-size: 40px;
+        margin-left: 4rem;
+        filter: opacity(80%);
+    }
+
+    .start-button {
+        width: 312px;
+        height: 514px;
+        z-index: 9999;
+        margin-top: 77px;
+        margin-left: -8px;
+        filter: opacity(0.6);
+    }
+    
+    .start-buttonCFG {
+        width: 300px;
+        height: 360px;
+        filter: blur(2px);
+        margin-top: 8rem;
+    }
+    
+    .start-button:hover {
+        width: 300px;
+        height: 514px;
+        margin-top: 126px;
+        margin-left: -29px;
+    }
+
+    .start-button:active {
+        width: 300px;
+        height: 514px;
+        margin-top: 51px;
+        margin-left: -3px;
+    }
+
+    .bodyIndex img {
+        left: -450px;
+        width: 323%;
+        height: 100%;
+    }
+
+    .bienvenida {
+        font-size: 12px;
+        margin: 10px;
+    }
+
+    .textSolapa {
+        margin-top: 8px;
+        margin-bottom: 8px;
+        margin-left: 1rem;
+        font-size: 15px;
+        margin-right: 1rem;
+    }
+
+    .comenzarBtn {
+        margin-top: 31px;
+        width: 219px;
+        height: 209px;
+    }
+
+    .configTextBase {
+        padding: 30px;
+        height: 83px;
+        width: 283px;
+        border: 2px solid #00ffff;
+        margin-top: 2rem;
+        margin-bottom: 5px;
+        padding-bottom: 4rem;
+        font-size: 30px;
+        border-radius: 1rem;
+    }
+
+    .inputTextStyleIndex {
+        font-size: 19px;
+    }
+
+    .configTextBase {
+        margin-top: 2rem;
+        margin-bottom: 5px;
+        padding-bottom: 5rem;
+        padding-top: 1rem;
+        font-size: 30px;
+        border-radius: 1rem;
+    }
+
+    .botonElegirRaza {
+        border-radius: 1rem;
+        padding: 30px;
+        width: 250px;
+        margin-bottom: 5px;
+        margin-top: 6rem;
+    }
+
+    .btnRazaCfg {
+        color: #9e00ff;
+        font-size: 27px;
+    }
+
+//!Elección de Razas
+
+    .opcionElfos {
+        background-image: url(../img/elfosImg.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 120px;
+        height: 150px;
+        margin-right: 2rem;
+        cursor: pointer;
+        border-radius: 2rem;
+    }
+
+    .opcionEnanos {
+        background-image: url(../img/enanosImg.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 120px;
+        height: 150px;
+        margin-right: 2rem;
+        cursor: pointer;
+        border-radius: 2rem;
+    }
+
+    .opcionHumanos {
+        background-image: url(../img/humanosImg.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 120px;
+        height: 150px;
+        margin-right: 2rem;
+        cursor: pointer;
+        border-radius: 2rem;
+    }
+
+    .opcionOrcos {
+        background-image: url(../img/orcosImg.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 120px;
+        height: 150px;
+        cursor: pointer;
+        border-radius: 2rem;
+    }
+    
+
+}
+
