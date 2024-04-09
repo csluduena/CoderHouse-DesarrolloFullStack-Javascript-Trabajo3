@@ -1,4 +1,4 @@
-document.getElementById("buttonContinue").addEventListener("click", function() {
+document.getElementById("buttonContinue").addEventListener("click", function () {
     //?Verificar si una variable es una cadena de texto
     function esCadena(variable) {
         return typeof variable === 'string' || variable instanceof String;
@@ -6,10 +6,10 @@ document.getElementById("buttonContinue").addEventListener("click", function() {
 
     //?Convertir una variable a cadena de texto si no lo es
     function convertirACadena(variable) {
-      if (!esCadena(variable)) {
-        return variable.toString();
-      }
-      return variable;
+        if (!esCadena(variable)) {
+            return variable.toString();
+        }
+        return variable;
     }
 
     localStorage.setItem("nombrePersonaje", convertirACadena(nombrePersonaje));
@@ -28,11 +28,11 @@ document.getElementById("buttonContinue").addEventListener("click", function() {
     console.log("Total de inteligencia:", totalInteligencia);
     console.log("Total de fuerza:", totalFuerza);
     console.log("Total de agilidad:", totalAgilidad);
-  });
+});
 
 //! Ir a la página Personaje.HTML
 const continueButton = document.getElementById("continuarBtn3");
 
 continueButton.addEventListener("click", function () {
-  window.location.href = "./pages/personaje.html";
+    window.location.href = "./pages/personaje.html";
 });

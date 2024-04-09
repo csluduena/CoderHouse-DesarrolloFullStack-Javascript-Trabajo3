@@ -1,54 +1,51 @@
-
 footer {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  align-items: center;
-  bottom: 0px;
-  padding-bottom: 5px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    align-items: center;
+    bottom: 0px;
+    padding-bottom: 5px;
 }
 
 .contact {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
 .copyright {
-  display: flex;
-  justify-content: center;
-  bottom: 0;
-  right: 100%;
-  color: #ffffff;
-  font-family: Verdana;
-  text-align: center;
-  z-index: -1;
-  font-size: 11px;
+    display: flex;
+    justify-content: center;
+    bottom: 0;
+    right: 100%;
+    color: #ffffff;
+    font-family: Verdana;
+    text-align: center;
+    z-index: -1;
+    font-size: 11px;
 }
 
 .gitHubLogo,
 .webSiteLogo {
-  font-size: 15px;
-  font-family: Verdana;
-  font-weight: bold;
-  color: rgb(111 186 186);
-  margin: 5px 9px;
+    font-size: 15px;
+    font-family: Verdana;
+    font-weight: bold;
+    color: rgb(111 186 186);
+    margin: 5px 9px;
 }
 
 .background {
-  background: linear-gradient(
-    to right,
-    rgba(0, 121, 136, 0) 13%,
-    rgb(0, 0, 0) 50%,
-    rgba(0, 121, 136, 0) 82%
-  );
-  width: 100%;
-  position: absolute;
-  bottom: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-bottom: 5px;
-  justify-content: flex-end;
+    background: linear-gradient(to right,
+            rgba(0, 121, 136, 0) 13%,
+            rgb(0, 0, 0) 50%,
+            rgba(0, 121, 136, 0) 82%);
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 5px;
+    justify-content: flex-end;
 }
