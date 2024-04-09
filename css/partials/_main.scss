@@ -25,7 +25,7 @@
   cursor: pointer;
   position: fixed;
   z-index: 9999;
-  margin-top: 126px;
+//   margin-top: 126px;
   margin-left: -29px;
   filter: opacity(0.6);
 }
@@ -40,7 +40,7 @@
   height: 360px;
   cursor: pointer;
   filter: blur(2px);
-  margin-top: 8rem;
+//   margin-top: 8rem;
 }
 
 .start-button:hover {
@@ -53,7 +53,7 @@
     cursor: pointer;
     position: fixed;
     z-index: 9999;
-    margin-top: 51px;
+    margin-top: -75px;
     margin-left: -3px;
     filter: blur(1.4px);
 }
@@ -325,8 +325,8 @@ hr {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  width: 320px;
-  height: 350px;
+  width: 254px;
+  height: 302px;
   margin-right: 2rem;
   cursor: pointer;
   border-radius: 2rem;
@@ -337,8 +337,8 @@ hr {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  width: 320px;
-  height: 350px;
+  width: 254px;
+  height: 302px;
   margin-right: 2rem;
   cursor: pointer;
   border-radius: 2rem;
@@ -349,8 +349,8 @@ hr {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  width: 320px;
-  height: 350px;
+  width: 254px;
+  height: 302px;
   margin-right: 2rem;
   cursor: pointer;
   border-radius: 2rem;
@@ -361,8 +361,8 @@ hr {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  width: 320px;
-  height: 350px;
+  width: 254px;
+  height: 302px;
   cursor: pointer;
   border-radius: 2rem;
 }
@@ -388,17 +388,17 @@ hr {
 }
 
 .textRaza {
-  padding-left: 15px;
-  padding-right: 15px;
-  padding-bottom: 5px;
-  font-weight: bold;
-  background-color: gray;
-  filter: opacity(80%);
-  text-shadow: -3px -2px 4px #bdbdbd00;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
-  border-bottom-left-radius: 2rem;
-  border-bottom-right-radius: 2rem;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 5px;
+    /* font-weight: bold; */
+    background-color: gray;
+    filter: opacity(80%);
+    text-shadow: -3px -2px 4px rgba(189, 189, 189, 0);
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
 }
 
 .razaNombre {
@@ -580,16 +580,17 @@ hr {
 .claseEnanos div,
 .claseHumanos div,
 .claseOrcos div {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 254px;
-  height: 392px;
-  cursor: pointer;
-  margin-top: 5rem;
-  flex-wrap: wrap;
-  flex-direction: column;
-  align-content: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 216px;
+    height: 257px;
+    cursor: pointer;
+    margin-top: 1rem;
+    /* margin-bottom: 6rem; */
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
 }
 
 .magoElfo:hover,
@@ -779,8 +780,11 @@ hr {
   align-items: center;
 }
 
+
+
 #razas {
-  margin-left: -45rem;
+    margin-left: -36rem;
+    margin-top: -4rem;
 }
 
 #clases {
@@ -797,7 +801,7 @@ hr {
 #continuarBtn2 {
   display: none;
   position: fixed;
-  bottom: 20px;
+  bottom: 70px;
   left: 50%;
   transform: translateX(-50%);
   padding: 10px 20px;
@@ -902,14 +906,15 @@ hr {
 }
 
 .buttonCFGSend {
-  margin-top: 2rem;
-  padding: 10px 20px;
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  border: 2px solid #00ffff;
+    margin-top: 2rem;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 2px solid #00ffff;
+	margin-bottom: -3rem;
 }
 
 .buttonCFGSend {

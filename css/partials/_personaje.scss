@@ -28,7 +28,7 @@
 .legend {
   justify-content: center;
   font-family: "pamela";
-  font-size: 200px;
+  font-size: 100px;
   display: flex;
   margin-left: 2rem;
   margin-right: 4rem;
@@ -41,7 +41,7 @@
 
 .builder {
   font-family: "pamela";
-  font-size: 200px;
+  font-size: 100px;
   display: flex;
   justify-content: center;
   margin-right: 2rem;
@@ -54,21 +54,27 @@
 }
 
 .tituloMain {
-  margin-top: -21px;
-  margin-left: -3rem;
-  padding-bottom: 1rem;
-  font-family: "whiteStorm";
-  font-size: 140px;
-  color: black;
-  text-shadow: -3px 0px 2px rgb(230, 230, 230), 0px 2px 2px rgb(221, 221, 221),
-    0px -1px 2px rgb(23, 207, 244), 2px 0 0 rgb(135, 150, 236);
-  filter: opacity(80%);
+    margin-top: -21px;
+    margin-left: -3rem;
+    padding-bottom: 1rem;
+    font-family: "whiteStorm";
+    font-size: 131px;
+    color: black;
+    text-shadow: -3px 0px 2px rgb(230, 230, 230), 0px 2px 2px rgb(221, 221, 221), 0px -1px 2px rgb(23, 207, 244), 2px 0 0 rgb(135, 150, 236);
+    filter: opacity(80%);
 }
 
 .infoPj {
-  text-align: center;
-  color: black;
-  margin-bottom: 10px;
+    text-align: center;
+    color: black;
+    display: flex;
+    margin-bottom: 10px;
+    margin-top: 1rem;
+    align-items: center;
+    justify-content: center;
+}
+.colorBTN2, .highReso {
+    margin: 5px;
 }
 
 .textCfg {
@@ -99,8 +105,7 @@
 }
 
 #descargarPersonaje {
-  cursor: pointer;
-  margin-top: 2rem;
+    cursor: pointer;
 }
 
 #cargarPersonaje {

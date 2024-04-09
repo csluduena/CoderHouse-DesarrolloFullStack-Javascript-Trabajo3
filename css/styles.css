@@ -31,7 +31,6 @@
   cursor: pointer;
   position: fixed;
   z-index: 9999;
-  margin-top: 126px;
   margin-left: -29px;
   filter: opacity(0.6);
 }
@@ -46,7 +45,6 @@
   height: 360px;
   cursor: pointer;
   filter: blur(2px);
-  margin-top: 8rem;
 }
 
 .start-button:hover {
@@ -59,7 +57,7 @@
   cursor: pointer;
   position: fixed;
   z-index: 9999;
-  margin-top: 51px;
+  margin-top: -75px;
   margin-left: -3px;
   filter: blur(1.4px);
 }
@@ -314,8 +312,8 @@ hr {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  width: 320px;
-  height: 350px;
+  width: 254px;
+  height: 302px;
   margin-right: 2rem;
   cursor: pointer;
   border-radius: 2rem;
@@ -326,8 +324,8 @@ hr {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  width: 320px;
-  height: 350px;
+  width: 254px;
+  height: 302px;
   margin-right: 2rem;
   cursor: pointer;
   border-radius: 2rem;
@@ -338,8 +336,8 @@ hr {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  width: 320px;
-  height: 350px;
+  width: 254px;
+  height: 302px;
   margin-right: 2rem;
   cursor: pointer;
   border-radius: 2rem;
@@ -350,8 +348,8 @@ hr {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  width: 320px;
-  height: 350px;
+  width: 254px;
+  height: 302px;
   cursor: pointer;
   border-radius: 2rem;
 }
@@ -380,7 +378,7 @@ hr {
   padding-left: 15px;
   padding-right: 15px;
   padding-bottom: 5px;
-  font-weight: bold;
+  /* font-weight: bold; */
   background-color: gray;
   filter: opacity(80%);
   text-shadow: -3px -2px 4px rgba(189, 189, 189, 0);
@@ -571,10 +569,11 @@ hr {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 254px;
-  height: 392px;
+  width: 216px;
+  height: 257px;
   cursor: pointer;
-  margin-top: 5rem;
+  margin-top: 1rem;
+  /* margin-bottom: 6rem; */
   flex-wrap: wrap;
   flex-direction: column;
   align-content: center;
@@ -764,7 +763,8 @@ hr {
 }
 
 #razas {
-  margin-left: -45rem;
+  margin-left: -36rem;
+  margin-top: -4rem;
 }
 
 #clases {
@@ -780,7 +780,7 @@ hr {
 #continuarBtn2 {
   display: none;
   position: fixed;
-  bottom: 20px;
+  bottom: 70px;
   left: 50%;
   transform: translateX(-50%);
   padding: 10px 20px;
@@ -891,6 +891,7 @@ hr {
   border-radius: 5px;
   cursor: pointer;
   border: 2px solid #00ffff;
+  margin-bottom: -3rem;
 }
 
 .buttonCFGSend {
@@ -1029,8 +1030,8 @@ footer {
 .background {
   background: linear-gradient(to right, rgba(0, 121, 136, 0) 13%, rgb(0, 0, 0) 50%, rgba(0, 121, 136, 0) 82%);
   width: 100%;
-  position: absolute;
-  bottom: 0;
+  position: relative;
+  bottom: -25px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1068,7 +1069,7 @@ footer {
 .legend {
   justify-content: center;
   font-family: "pamela";
-  font-size: 200px;
+  font-size: 100px;
   display: flex;
   margin-left: 2rem;
   margin-right: 4rem;
@@ -1081,7 +1082,7 @@ footer {
 
 .builder {
   font-family: "pamela";
-  font-size: 200px;
+  font-size: 100px;
   display: flex;
   justify-content: center;
   margin-right: 2rem;
@@ -1098,7 +1099,7 @@ footer {
   margin-left: -3rem;
   padding-bottom: 1rem;
   font-family: "whiteStorm";
-  font-size: 140px;
+  font-size: 131px;
   color: black;
   text-shadow: -3px 0px 2px rgb(230, 230, 230), 0px 2px 2px rgb(221, 221, 221), 0px -1px 2px rgb(23, 207, 244), 2px 0 0 rgb(135, 150, 236);
   filter: opacity(80%);
@@ -1107,7 +1108,15 @@ footer {
 .infoPj {
   text-align: center;
   color: black;
+  display: flex;
   margin-bottom: 10px;
+  margin-top: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.colorBTN2, .highReso {
+  margin: 5px;
 }
 
 .textCfg {
@@ -1137,7 +1146,6 @@ footer {
 
 #descargarPersonaje {
   cursor: pointer;
-  margin-top: 2rem;
 }
 
 #cargarPersonaje {
@@ -1383,7 +1391,7 @@ a {
 }
 
 .cfgBotones {
-  padding: 10px 20px;
+  padding: 6px 9px;
   color: #fff;
   border: 2px solid #00ffff;
   border-radius: 5px;
@@ -1463,7 +1471,7 @@ a {
   width: 26%;
 }
 
-@media (min-width: 769px) and (min-width: 1921px) {
+@media (min-width: 1200px) and (min-width: 1921px) {
   #content {
     display: none;
     text-align: center;
@@ -1482,14 +1490,14 @@ a {
     background-image: url(../img/comenzarW.png);
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 100%;
-    width: 925px;
-    height: 514px;
+    background-size: 60%;
+    width: 1932px;
+    height: 579px;
     cursor: pointer;
     position: fixed;
     z-index: 9999;
-    margin-top: 126px;
-    margin-left: -29px;
+    margin-top: 10%;
+    margin-left: -37px;
     filter: opacity(0.6);
   }
   .start-buttonCFG {
@@ -1497,9 +1505,9 @@ a {
     background-image: url(../img/comenzar2.gif);
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 100%;
-    width: 880px;
-    height: 360px;
+    background-size: 57%;
+    width: 1932px;
+    height: 642px;
     cursor: pointer;
     filter: blur(2px);
     margin-top: 8rem;
@@ -1508,18 +1516,15 @@ a {
     background-image: url(../img/comenzar4.gif);
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 100%;
-    width: 878px;
-    height: 514px;
+    background-size: 57%;
+    width: 1932px;
+    height: 903px;
     cursor: pointer;
     position: fixed;
     z-index: 9999;
-    margin-top: 51px;
+    margin-top: 0%;
     margin-left: -3px;
     filter: blur(1.4px);
-  }
-  .start-button:hover .start-buttonCFG {
-    display: none;
   }
   .bodyIndex img {
     z-index: -1;
@@ -1633,14 +1638,14 @@ a {
   .legend1 {
     justify-content: center;
     font-family: "pamela";
-    font-size: 200px;
+    font-size: 100px;
     display: flex;
     margin-right: 4rem;
     filter: opacity(50%);
   }
   .builder2 {
     font-family: "pamela";
-    font-size: 200px;
+    font-size: 100px;
     display: flex;
     justify-content: center;
     margin-left: 4rem;
@@ -2142,7 +2147,7 @@ a {
     margin-left: -45rem;
   }
   #clases {
-    margin-top: 6rem;
+    margin-top: 11rem;
   }
   .centerMove {
     margin-left: 3rem;
@@ -2261,8 +2266,6 @@ a {
     border-radius: 5px;
     cursor: pointer;
     border: 2px solid #00ffff;
-  }
-  .buttonCFGSend {
     margin-bottom: -3rem;
   }
   .spaceButt {
@@ -2463,6 +2466,17 @@ a {
     margin-left: 40px;
     margin-right: 40px;
   }
+  .background {
+    background: linear-gradient(to right, rgba(0, 121, 136, 0) 13%, rgb(0, 0, 0) 50%, rgba(0, 121, 136, 0) 82%);
+    width: 100%;
+    position: relative;
+    bottom: -170px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 5px;
+    justify-content: flex-end;
+  }
 }
 @media (min-width: 768px) and (max-width: 1023.95px) {
   #content {
@@ -2478,6 +2492,9 @@ a {
   .SBConten {
     display: flex;
     justify-content: center;
+  }
+  .colorBTN2, .highReso {
+    margin: 0px;
   }
   .start-button {
     background-image: url(../img/comenzarW.png);
@@ -2691,8 +2708,8 @@ a {
     font-size: 13px;
     box-shadow: rgb(18, 125, 123) 0px 0px 8px 8px;
     position: fixed;
-    left: 77%;
-    bottom: 22%;
+    left: 72%;
+    bottom: 33%;
     width: 18%;
   }
   .configTextBase {
@@ -3325,8 +3342,6 @@ a {
     border-radius: 5px;
     cursor: pointer;
     border: 2px solid #00ffff;
-  }
-  .buttonCFGSend {
     margin-bottom: -3rem;
   }
   .spaceButt {
@@ -3411,7 +3426,7 @@ a {
     margin-top: 4rem;
   }
   .colorBTN3 {
-    margin-top: 0.5rem;
+    /* margin-top: 0.5rem; */
     margin-bottom: 0rem;
   }
   .colorBTN4 {
@@ -3601,6 +3616,17 @@ a {
     margin-left: 4rem;
     filter: opacity(50%);
     margin-top: 1rem;
+  }
+  .background {
+    background: linear-gradient(to right, rgba(0, 121, 136, 0) 13%, rgb(0, 0, 0) 50%, rgba(0, 121, 136, 0) 82%);
+    width: 100%;
+    position: relative;
+    bottom: 210px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 5px;
+    justify-content: flex-end;
   }
 }
 @media screen and (max-width: 767.95px) {
@@ -4122,13 +4148,17 @@ a {
   }
   #descargarPersonaje {
     cursor: pointer;
-    margin-top: 1rem;
+    /* margin-top: 1rem; */
   }
   .background {
     display: none;
   }
   .footer480p {
     display: flex;
+    justify-content: center;
+  }
+  .colorBTN2, .highReso {
+    margin: 0px;
   }
 }
 @font-face {

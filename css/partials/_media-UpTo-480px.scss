@@ -608,8 +608,8 @@
 
   #descargarPersonaje {
     cursor: pointer;
-    margin-top: 1rem;
-  }
+    /* margin-top: 1rem; */
+}
 
   .background {
     display: none;
@@ -617,5 +617,9 @@
 
   .footer480p {
     display: flex;
-  }
+    justify-content: center;
+}
+.colorBTN2, .highReso {
+    margin: 0px;
+}
 }

@@ -18,6 +18,10 @@
     justify-content: center;
   }
 
+  .colorBTN2, .highReso {
+    margin: 0px;
+}
+
   .start-button {
     background-image: url(../img/comenzarW.png);
     background-repeat: no-repeat;
@@ -265,10 +269,10 @@
     font-size: 13px;
     box-shadow: rgb(18, 125, 123) 0px 0px 8px 8px;
     position: fixed;
-    left: 77%;
-    bottom: 22%;
+    left: 72%;
+    bottom: 33%;
     width: 18%;
-  }
+}
 
   .configTextBase {
     background-image: url(../img/primerPreg.png);
@@ -993,9 +997,6 @@
     border-radius: 5px;
     cursor: pointer;
     border: 2px solid #00ffff;
-  }
-
-  .buttonCFGSend {
     margin-bottom: -3rem;
   }
 
@@ -1092,11 +1093,11 @@
   .contenedorFinalClss {
     margin-top: 4rem;
   }
-
+  
   .colorBTN3 {
-    margin-top: 0.5rem;
+    /* margin-top: 0.5rem; */
     margin-bottom: 0rem;
-  }
+}
 
   .colorBTN4 {
     margin-bottom: 15rem !important;
@@ -1320,4 +1321,15 @@
     filter: opacity(50%);
     margin-top: 1rem;
   }
+  .background {
+    background: linear-gradient(to right, rgba(0, 121, 136, 0) 13%, rgb(0, 0, 0) 50%, rgba(0, 121, 136, 0) 82%);
+    width: 100%;
+    position: relative;
+    bottom: 210px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 5px;
+    justify-content: flex-end;
+}
 }
