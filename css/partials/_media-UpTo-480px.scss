@@ -141,7 +141,12 @@
 
     
     #razas {
-        margin-left: 5rem;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: center;
+        margin-left: 0rem;
         position: absolute;
         top: 50%;
         left: 50%;
@@ -235,10 +240,10 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        width: 66px;
+        width: 86px;
         height: 182px;
         cursor: pointer;
-        margin-top: 4rem;
+        margin-top: 3rem;
         flex-wrap: wrap;
         flex-direction: column;
         align-content: center;
@@ -253,7 +258,7 @@
         display: none;
         position: absolute;
         /* bottom: 70px; */
-        margin-bottom: -12%;
+        margin-bottom: -6%;
         left: 50%;
         transform: translateX(-50%);
         padding: 5px 9px;
@@ -267,7 +272,7 @@
     #continuarBtn2 {
         display: none;
         position: fixed;
-        bottom: 12rem;
+        bottom: 6rem;
         left: 50%;
         transform: translateX(-50%);
         padding: 10px 20px;
@@ -333,7 +338,7 @@
     }
 
     .contenedorParcial {
-        margin-top: 6rem;
+        margin-top: 0rem;
         border-radius: 5rem;
         padding-left: 5rem;
         border: 2px solid #00ffff;
@@ -528,6 +533,42 @@
         padding-bottom: 1rem;
         font-family: "whiteStorm";
         font-size: 101px;
+    }
+
+    #continuarBtn3 {
+        position: absolute;
+        margin-bottom: -1rem;
+        margin-left: 27%;
+    }
+
+    .botonLanzarDados {
+        text-transform: capitalize;
+        position: relative;
+        bottom: 10rem;
+        left: 25%;
+        margin-bottom: 11rem;
+        transform: translateX(-50%);
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #fff;
+        border: 2px solid #00ffff;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .btnNextLegend {
+        text-transform: capitalize;
+        position: relative;
+        bottom: 5px;
+        left: 22%;
+        margin-bottom: 8rem;
+        transform: translateX(-50%);
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #fff;
+        border: 2px solid #00ffff;
+        border-radius: 5px;
+        cursor: pointer;
     }
 
     //!botones descargar, cargar y borrar.
