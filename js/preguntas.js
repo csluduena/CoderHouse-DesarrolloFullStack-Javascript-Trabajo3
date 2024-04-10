@@ -46,9 +46,3 @@ document.addEventListener("DOMContentLoaded", function () {
         seleccion.nick = nombrePersonaje;
     });
 });
-
-const test = 0;
-
-if (test = 0) {
-    console.log("el pepe");
-}
