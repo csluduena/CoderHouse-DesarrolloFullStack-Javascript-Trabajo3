@@ -609,13 +609,37 @@
         box-shadow: rgba(0, 0, 0, 0.84) 0px 0px 20px 1227px;
     }
 
+    .modal-content button {
+        background-color: rgb(76, 175, 80);
+        color: white;
+        padding: 3px 11px;
+        border: none;
+        cursor: pointer;
+        margin-right: 10px;
+        margin-top: 0px;
+        border-radius: 10px;
+    }
+
+    // #alertaBorrarPj {
+    //     font-size: 17px;
+    //     text-shadow: -3px 0px 2px #a40eec, 0px 2px 2px #a40eec, 0px -1px 2px #a40eec,
+    //         2px 0 0 #a40eec;
+    //     color: white;
+    //     font-family: "robotoRegular";
+    //     margin-bottom: -4px;
+    //     text-align: center;
+    //     border-radius: 10px;
+    //     background-color: rgba(0, 0, 0, 0.35);
+    //     margin-left: -9px;
+    //     margin-right: -9px;
+    // }
+
     #alertaBorrarPj {
-        font-size: 17px;
-        text-shadow: -3px 0px 2px #a40eec, 0px 2px 2px #a40eec, 0px -1px 2px #a40eec,
-            2px 0 0 #a40eec;
+        font-size: 11px;
+        text-shadow: -3px 0px 2px #a40eec, 0px 2px 2px #a40eec, 0px -1px 2px #a40eec, 2px 0 0 #a40eec;
         color: white;
         font-family: "robotoRegular";
-        margin-bottom: -4px;
+        margin-bottom: 11px;
         text-align: center;
         border-radius: 10px;
         background-color: rgba(0, 0, 0, 0.35);

@@ -1115,20 +1115,6 @@
     padding-top: 34rem;
   }
 
-  #alertaBorrarPj {
-    font-size: 25px;
-    text-shadow: -3px 0px 2px #a40eec, 0px 2px 2px #a40eec, 0px -1px 2px #a40eec,
-      2px 0 0 #a40eec;
-    color: white;
-    font-family: "robotoRegular";
-    margin-bottom: 86px;
-    text-align: center;
-    border-radius: 10px;
-    background-color: rgba(0, 0, 0, 0.35);
-    margin-left: 40px;
-    margin-right: 40px;
-  }
-
   .modal-content {
     background-image: url(./../img/gg.png);
     background-position: center;
@@ -1136,14 +1122,25 @@
     background-size: cover;
     background-color: #fefefe;
     margin: 20% auto;
-    padding: 20px;
+    padding: 27px;
     border: 1px solid #888;
     width: 40%;
     text-align: center;
     height: 19%;
     border-radius: 1rem;
     box-shadow: rgba(0, 0, 0, 0.84) 0px 0px 20px 1227px;
-  }
+}
+
+.modal-content button {
+    background-color: rgb(76, 175, 80);
+    color: white;
+    padding: 6px 19px;
+    border: none;
+    cursor: pointer;
+    margin-right: 10px;
+    margin-top: -11px;
+    border-radius: 10px;
+}
 
   #alertaBorrarPj {
     font-size: 29px;
