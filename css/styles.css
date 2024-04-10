@@ -768,7 +768,7 @@ hr {
 }
 
 #clases {
-  margin-top: 6rem;
+  margin-top: 9%;
 }
 
 .centerMove {
@@ -2493,7 +2493,8 @@ a {
     display: flex;
     justify-content: center;
   }
-  .colorBTN2, .highReso {
+  .colorBTN2,
+  .highReso {
     margin: 0px;
   }
   .start-button {
@@ -3214,8 +3215,8 @@ a {
   }
   #continuarBtn {
     display: none;
-    position: fixed;
-    bottom: 14.6rem;
+    position: absolute;
+    bottom: 11%;
     left: 50%;
     transform: translateX(-50%);
     padding: 10px 20px;
@@ -3227,8 +3228,8 @@ a {
   }
   #continuarBtn2 {
     display: none;
-    position: fixed;
-    bottom: 16rem;
+    position: absolute;
+    bottom: 22%;
     left: 50%;
     transform: translateX(-50%);
     padding: 10px 20px;
@@ -3330,9 +3331,6 @@ a {
   .cfgBtn {
     margin-bottom: 31rem !important;
   }
-  .cfgBtn2 {
-    margin-bottom: 1rem !important;
-  }
   .buttonCFGSend {
     margin-top: 2rem;
     padding: 10px 20px;
@@ -3410,7 +3408,7 @@ a {
   }
   .textPjsParcial {
     color: white;
-    font-size: 30px;
+    font-size: 23px;
     margin-top: 2rem;
     margin-left: 6rem;
     margin-right: 6rem;
@@ -3631,42 +3629,36 @@ a {
 }
 @media screen and (max-width: 767.95px) {
   .legend1 {
-    font-size: 40px;
+    font-size: 26px;
     margin-right: -3rem;
     filter: opacity(75%);
     margin-top: 1rem;
   }
   .builder2 {
     margin-top: 1rem;
-    font-size: 40px;
+    font-size: 26px;
     margin-left: 4rem;
     filter: opacity(80%);
   }
   .start-button {
-    width: 312px;
-    height: 514px;
+    width: 260px;
+    height: 272px;
     z-index: 9999;
-    margin-top: 77px;
+    margin-top: 75px;
     margin-left: -8px;
     filter: opacity(0.6);
   }
   .start-buttonCFG {
-    width: 300px;
-    height: 360px;
+    width: 250px;
+    height: 126px;
     filter: blur(2px);
     margin-top: 8rem;
   }
   .start-button:hover {
-    width: 300px;
-    height: 514px;
-    margin-top: 126px;
-    margin-left: -29px;
-  }
-  .start-button:active {
-    width: 300px;
-    height: 514px;
-    margin-top: 51px;
-    margin-left: -3px;
+    width: 247px;
+    height: 151px;
+    margin-top: 117px;
+    margin-left: -1px;
   }
   .bodyIndex img {
     background-size: contain;
@@ -3680,106 +3672,103 @@ a {
     z-index: -1;
   }
   .bienvenida {
-    font-size: 12px;
+    font-size: 9px;
+    color: white;
     margin: 10px;
+    text-shadow: -2px 1px 0px #f2170d;
   }
   .textSolapa {
-    margin-top: 47px;
-    margin-bottom: 46px;
+    margin-top: 11px;
+    margin-bottom: 11px;
     font-style: normal;
     margin-left: 1rem;
-    font-size: 18px;
+    font-size: 11px;
     margin-right: 1rem;
     text-shadow: -2px 2px 0px #0236ff;
   }
   .comenzarBtn {
     margin-top: 31px;
-    width: 219px;
-    height: 209px;
+    width: 145px;
+    height: 131px;
   }
   .configTextBase {
-    padding: 30px;
-    height: 83px;
-    width: 283px;
-    border: 2px solid #00ffff;
-    margin-top: 2rem;
+    margin-top: 1rem;
     margin-bottom: 5px;
-    padding-bottom: 4rem;
-    font-size: 30px;
+    padding-bottom: 0rem;
+    padding-top: 1rem;
+    font-size: 21px;
     border-radius: 1rem;
+    height: 83px;
+    width: 223px;
+    border: 2px solid #00ffff;
+    text-shadow: 5px 3px 2px rgba(0, 0, 0, 0.7803921569), -4px 1px 2px rgba(0, 0, 0, 0.7803921569), -3px -3px 2px rgba(0, 0, 0, 0.7803921569), -4px 3px 6px rgba(0, 0, 0, 0.7803921569);
   }
   .inputTextStyleIndex {
     font-size: 19px;
   }
-  .configTextBase {
-    margin-top: 2rem;
-    margin-bottom: 5px;
-    padding-bottom: 5rem;
-    padding-top: 1rem;
-    font-size: 30px;
-    border-radius: 1rem;
-  }
   .botonElegirRaza {
     border-radius: 1rem;
-    padding: 30px;
-    width: 250px;
-    margin-bottom: 5px;
-    margin-top: 11rem;
+    padding: 16px;
+    width: 225px;
+    margin-bottom: 34px;
+    margin-top: 7rem;
   }
   .btnRazaCfg {
     color: #9e00ff;
-    font-size: 31px;
+    font-size: 29px;
+    padding: 0px;
   }
   .opcionElfos {
-    width: 123px;
-    height: 132px;
+    width: 100px;
+    height: 120px;
     border-radius: 2rem;
     margin-right: 0.6rem;
   }
   .opcionEnanos {
-    width: 123px;
-    height: 132px;
+    width: 100px;
+    height: 120px;
   }
   .opcionHumanos {
-    width: 123px;
-    height: 132px;
+    width: 100px;
+    height: 120px;
     margin-right: 0.6rem;
     border-radius: 2rem;
   }
   .opcionOrcos {
-    width: 123px;
-    height: 132px;
+    width: 100px;
+    height: 120px;
     border-radius: 2rem;
   }
+  #razas {
+    margin-left: 5rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: -7rem;
+  }
   #elfosOption {
-    margin-right: 1px;
+    margin-right: 0%;
+    margin-left: 4%;
   }
   #enanosOption {
-    margin-right: -6rem;
+    margin-right: -3rem;
     margin-top: 0rem;
-    margin-left: 2rem;
+    margin-left: 13px;
   }
   #humanosOption {
-    margin-top: 19rem;
-    margin-left: -11.4rem;
-    margin-right: 3rem;
+    margin-top: 65%;
+    margin-left: -42%;
+    margin-right: 29px;
   }
   #orcosOption {
-    margin-left: -1rem;
-    margin-top: 19rem;
+    margin-left: -4%;
+    margin-top: 65%;
   }
   #elegirRazas {
     position: absolute;
     top: 12rem;
     left: 50%;
-  }
-  #razas {
-    margin-left: 0rem;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    margin-top: -2rem;
   }
   #razasElegir {
     margin-top: 2rem;
@@ -3802,61 +3791,35 @@ a {
     font-size: 10px;
   }
   #clases {
-    margin-top: 14rem;
+    margin-top: 32%;
   }
   .centerMove {
     margin-left: 3rem;
     margin-right: 3rem;
   }
-  .nombreClase,
-  .descripcion,
-  .nombreClase1,
-  .descripcion1,
-  .nombreClase2,
-  .descripcion2,
-  .nombreClase3,
-  .descripcion3,
-  .nombreClase4,
-  .descripcion4,
-  .nombreClase5,
-  .descripcion5,
-  .nombreClase6,
-  .descripcion6,
-  .nombreClase7,
-  .descripcion7,
-  .nombreClase8,
-  .descripcion8,
-  .nombreClase9,
-  .descripcion9,
-  .nombreClase10,
-  .descripcion10,
-  .nombreClase11,
-  .descripcion11 {
+  .nombreClase, .descripcion, .nombreClase1, .descripcion1, .nombreClase2, .descripcion2, .nombreClase3, .descripcion3, .nombreClase4, .descripcion4, .nombreClase5, .descripcion5, .nombreClase6, .descripcion6, .nombreClase7, .descripcion7, .nombreClase8, .descripcion8, .nombreClase9, .descripcion9, .nombreClase10, .descripcion10, .nombreClase11, .descripcion11 {
     display: flex;
-    width: 102px;
-    height: 41px;
+    width: 66px;
+    height: 25px;
     margin-top: 0rem;
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
-    padding: 14px;
+    /* padding: 0; */
     text-align: center;
     opacity: 0;
     transition: opacity 0.3s ease;
-    font-size: 8px;
+    font-size: 6px;
     flex-direction: column;
     align-content: stretch;
     flex-wrap: wrap;
     justify-content: center;
   }
-  .claseElfos div,
-  .claseEnanos div,
-  .claseHumanos div,
-  .claseOrcos div {
+  .claseElfos div, .claseEnanos div, .claseHumanos div, .claseOrcos div {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 102px;
-    height: 205px;
+    width: 66px;
+    height: 182px;
     cursor: pointer;
     margin-top: 4rem;
     flex-wrap: wrap;
@@ -3869,11 +3832,12 @@ a {
   }
   #continuarBtn {
     display: none;
-    position: fixed;
-    bottom: 3rem;
+    position: absolute;
+    /* bottom: 70px; */
+    margin-bottom: -12%;
     left: 50%;
     transform: translateX(-50%);
-    padding: 10px 20px;
+    padding: 5px 9px;
     background-color: #007bff;
     color: #fff;
     border: 2px solid #00ffff;
@@ -4157,7 +4121,8 @@ a {
     display: flex;
     justify-content: center;
   }
-  .colorBTN2, .highReso {
+  .colorBTN2,
+  .highReso {
     margin: 0px;
   }
 }
