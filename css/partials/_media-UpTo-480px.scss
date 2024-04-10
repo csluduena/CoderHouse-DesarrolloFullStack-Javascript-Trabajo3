@@ -1,621 +1,644 @@
 @media screen and (max-width: 767.95px) {
-  //TODO Estilos CSS para pantallas con ancho hasta 480px
-  .legend1 {
-    font-size: 40px;
-    margin-right: -3rem;
-    filter: opacity(75%);
-    margin-top: 1rem;
-  }
-
-  .builder2 {
-    margin-top: 1rem;
-    font-size: 40px;
-    margin-left: 4rem;
-    filter: opacity(80%);
-  }
-
-  .start-button {
-    width: 312px;
-    height: 514px;
-    z-index: 9999;
-    margin-top: 77px;
-    margin-left: -8px;
-    filter: opacity(0.6);
-  }
-
-  .start-buttonCFG {
-    width: 300px;
-    height: 360px;
-    filter: blur(2px);
-    margin-top: 8rem;
-  }
-
-  .start-button:hover {
-    width: 300px;
-    height: 514px;
-    margin-top: 126px;
-    margin-left: -29px;
-  }
-
-  .start-button:active {
-    width: 300px;
-    height: 514px;
-    margin-top: 51px;
-    margin-left: -3px;
-  }
-
-  .bodyIndex img {
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-  }
-
-  .bienvenida {
-    font-size: 12px;
-    margin: 10px;
-  }
-
-  .textSolapa {
-    margin-top: 47px;
-    margin-bottom: 46px;
-    font-style: normal;
-    margin-left: 1rem;
-    font-size: 18px;
-    margin-right: 1rem;
-    text-shadow: -2px 2px 0px #0236ff;
-  }
-
-  .comenzarBtn {
-    margin-top: 31px;
-    width: 219px;
-    height: 209px;
-  }
-
-  .configTextBase {
-    padding: 30px;
-    height: 83px;
-    width: 283px;
-    border: 2px solid #00ffff;
-    margin-top: 2rem;
-    margin-bottom: 5px;
-    padding-bottom: 4rem;
-    font-size: 30px;
-    border-radius: 1rem;
-  }
-
-  .inputTextStyleIndex {
-    font-size: 19px;
-  }
-
-  .configTextBase {
-    margin-top: 2rem;
-    margin-bottom: 5px;
-    padding-bottom: 5rem;
-    padding-top: 1rem;
-    font-size: 30px;
-    border-radius: 1rem;
-  }
-
-  .botonElegirRaza {
-    border-radius: 1rem;
-    padding: 30px;
-    width: 250px;
-    margin-bottom: 5px;
-    margin-top: 11rem;
-  }
-
-  .btnRazaCfg {
-    color: #9e00ff;
-    font-size: 31px;
-  }
-
-  //!Elección de Razas
-
-  .opcionElfos {
-    width: 123px;
-    height: 132px;
-    border-radius: 2rem;
-    margin-right: 0.6rem;
-  }
-
-  .opcionEnanos {
-    width: 123px;
-    height: 132px;
-  }
-
-  .opcionHumanos {
-    width: 123px;
-    height: 132px;
-    margin-right: 0.6rem;
-    border-radius: 2rem;
-  }
-
-  .opcionOrcos {
-    width: 123px;
-    height: 132px;
-    border-radius: 2rem;
-  }
-
-  #elfosOption {
-    margin-right: 1px;
-  }
-
-  #enanosOption {
-    margin-right: -6rem;
-    margin-top: 0rem;
-    margin-left: 2rem;
-  }
-
-  #humanosOption {
-    margin-top: 19rem;
-    margin-left: -11.4rem;
-    margin-right: 3rem;
-  }
-
-  #orcosOption {
-    margin-left: -1rem;
-    margin-top: 19rem;
-  }
-
-  #elegirRazas {
-    position: absolute;
-    top: 12rem;
-    left: 50%;
-  }
-
-  #razas {
-    margin-left: 0rem;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    margin-top: -2rem;
-  }
-
-  #razasElegir {
-    margin-top: 2rem;
-  }
-
-  .razaNombre {
-    font-size: 14px;
-    letter-spacing: 2px;
-  }
-  .textRaza {
-    padding-left: 15px;
-    padding-right: 15px;
-    padding-bottom: 5px;
-    padding-top: 3px;
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
-    border-bottom-left-radius: 2rem;
-    border-bottom-right-radius: 2rem;
-  }
-
-  .flex {
-    font-size: 10px;
-  }
-
-  //!Elección de Clases
-
-  #clases {
-    margin-top: 14rem;
-  }
-
-  .centerMove {
-    margin-left: 3rem;
-    margin-right: 3rem;
-  }
-
-  .nombreClase,
-  .descripcion,
-  .nombreClase1,
-  .descripcion1,
-  .nombreClase2,
-  .descripcion2,
-  .nombreClase3,
-  .descripcion3,
-  .nombreClase4,
-  .descripcion4,
-  .nombreClase5,
-  .descripcion5,
-  .nombreClase6,
-  .descripcion6,
-  .nombreClase7,
-  .descripcion7,
-  .nombreClase8,
-  .descripcion8,
-  .nombreClase9,
-  .descripcion9,
-  .nombreClase10,
-  .descripcion10,
-  .nombreClase11,
-  .descripcion11 {
-    display: flex;
-    width: 102px;
-    height: 41px;
-    margin-top: 0rem;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    padding: 14px;
-    text-align: center;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    font-size: 8px;
-    flex-direction: column;
-    align-content: stretch;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .claseElfos div,
-  .claseEnanos div,
-  .claseHumanos div,
-  .claseOrcos div {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 102px;
-    height: 205px;
-    cursor: pointer;
-    margin-top: 4rem;
-    flex-wrap: wrap;
-    flex-direction: column;
-    align-content: center;
-  }
-
-  .centerMove {
-    margin-left: 1.2rem;
-    margin-right: 1.2rem;
-  }
-
-  #continuarBtn {
-    display: none;
-    position: fixed;
-    bottom: 3rem;
-    left: 50%;
-    transform: translateX(-50%);
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
-    border: 2px solid #00ffff;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-
-  #continuarBtn2 {
-    display: none;
-    position: fixed;
-    bottom: 12rem;
-    left: 50%;
-    transform: translateX(-50%);
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
-    border: 2px solid #00ffff;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-
-  //!Elección de Género
-
-  .tituloGenero {
-    color: white;
-    font-weight: bold;
-    font-family: "theBlowarRegular";
-    font-size: 22px;
-    letter-spacing: 3px;
-    margin-top: 4rem;
-    text-shadow: -1px 2px 4px #000000;
-    text-align: center;
-  }
-
-  #hombre {
-    margin-top: 10px;
-    width: 150px;
-    height: 150px;
-    margin-right: 1rem;
-  }
-
-  #mujer {
-    margin-top: 10px;
-    width: 150px;
-    height: 150px;
-    cursor: pointer;
-    margin-left: 1rem;
-  }
-
-  .justASpace {
-    margin-left: 6.5rem;
-  }
-
-  //! Parcial
-
-  .textPjsParcial {
-    color: white;
-    font-size: 14px;
-    margin-top: 2rem;
-    margin-left: -7rem;
-    margin-right: -7rem;
-  }
-
-  .nickElegido,
-  .razaElegida,
-  .claseElegida,
-  .generoElegido,
-  .intBase,
-  .strBase,
-  .agiBase {
-    width: 100%;
-    text-align: left;
-    font-size: 20px;
-  }
-
-  .contenedorParcial {
-    margin-top: 6rem;
-    border-radius: 5rem;
-    padding-left: 5rem;
-    border: 2px solid #00ffff;
-    padding-right: 5rem;
-    padding-bottom: 5rem;
-    padding-top: 3rem;
-  }
-
-  #resultado1,
-  #resultado2,
-  #resultado3 {
-    font-size: 14px;
-    margin-top: 10px;
-    margin-left: 45px;
-    margin-right: 45px;
-  }
-
-  .wrapper {
-    width: 333px;
-    margin: 0 auto;
-  }
-
-  .column {
-    padding: 3rem;
-    margin-top: 6rem;
-  }
-
-  .dice {
-    width: 86px;
-    height: 83px;
-    float: left;
-    padding: 10px;
-    font-size: 24px;
-    margin: 5px;
-  }
-
-  .contenedorFinalClss {
-    margin-top: 2rem;
-  }
-
-  .contenedorFinalClss {
-    flex-direction: column;
-    align-items: center;
-    margin-top: 10rem;
-    background-image: url(../img/bgndStats.jpg);
-    background-repeat: inherit;
-    background-size: 150px 100px;
-    border-radius: 5rem;
-    padding-left: 0;
-    width: 308px;
-    padding-right: 0;
-    padding-top: 1px;
-    padding-bottom: 1px;
-    border: 2px solid #00ffff;
-  }
-
-  #contenedorFinalId {
-    width: 308px !important;
-    margin-top: 3rem;
-  }
-
-  .textFinal {
-    font-size: 22px;
-    letter-spacing: 5px;
-    margin-top: 0rem;
-  }
-
-  //! Leyenda final.
-
-  .configCompartidaDeInfoDePersonaje {
-    text-align: center;
-    margin-top: 2rem;
-    margin-left: 2rem;
-  }
-
-  .info-personaje {
-    margin-top: -4rem;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    min-width: 252px;
-    height: 427px;
-    margin-left: -1rem;
-  }
-
-  .alinearInformacion {
-    padding-top: 17.7rem;
-    margin-bottom: -1.5rem;
-  }
-
-  .configCompartidaDeInfoDePersonaje {
-    text-align: center;
-    margin-top: 2rem;
-    margin-left: 2rem;
-  }
-
-  .colorTitulos {
-    color: rgb(0, 0, 0);
-    font-size: 15px;
-    font-family: robotoRegular;
-    font-weight: bold;
-  }
-
-  .colorTituloAtr {
-    margin-top: 6px;
-    color: aqua;
-  }
-
-  .centrarAtributos {
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    flex-wrap: wrap;
-    margin-top: 2rem;
-  }
-
-  .colorAtr {
-    display: flex;
-    flex-direction: column;
-    font-size: 9px;
-    color: white;
-    text-shadow: -3px 0px 2px black, 0px 2px 2px black, 0px -1px 2px black,
-      2px 0 0 black;
-  }
-
-  #inteligencia {
-    color: cornflowerblue;
-    font-weight: bolder;
-    font-size: 18px;
-    text-shadow: -3px 0px 2px black, 0px 2px 2px black, 0px -1px 2px black,
-      2px 0 0 black;
-  }
-
-  #fuerza {
-    color: red;
-    font-weight: bolder;
-    font-size: 18px;
-    text-shadow: -3px 0px 2px black, 0px 2px 2px black, 0px -1px 2px black,
-      2px 0 0 black;
-  }
-
-  #agilidad {
-    color: green;
-    font-weight: bolder;
-    font-size: 18px;
-    text-shadow: -3px 0px 2px black, 0px 2px 2px black, 0px -1px 2px black,
-      2px 0 0 black;
-  }
-
-  .legend,
-  .builder,
-  #areaArrastre,
-  .modal {
-    display: none;
-  }
-
-  .copyright {
-    right: 0;
-    color: white;
-    position: relative;
-    margin-left: 0;
-    /* font-weight: bold; */
-    bottom: -46px;
-    text-align: center;
-    margin-top: -1.5rem;
-    text-shadow: -3px 0px 2px #000000, 0px 2px 2px #000000, 0px -1px 2px #000000,
-      2px 0 0 #000000;
-    font-size: 11px;
-  }
-
-  .gitHubLogo {
-    font-size: 20px;
-    font-family: sans-serif;
-    font-weight: bold;
-    position: relative;
-    bottom: -67px;
-    left: 13px;
-  }
-
-  .webSiteLogo {
-    font-size: 20px;
-    font-family: sans-serif;
-    font-weight: bold;
-    position: relative;
-    bottom: -67px;
-    right: -13rem;
-  }
-
-  .tituloMain {
-    margin-top: 5px;
-    margin-left: 0rem;
-    padding-bottom: 1rem;
-    font-family: "whiteStorm";
-    font-size: 101px;
-  }
-
-  //!botones descargar, cargar y borrar.
-  .cntBtn {
-    margin-top: 3.2rem;
-  }
-
-  .colorBTN2 {
-    margin-bottom: 0rem;
-    margin-top: 0rem;
-  }
-
-  .colorBTN3 {
-    margin-top: 0.5rem;
-    margin-bottom: -1rem;
-  }
-
-  .colorBTN4 {
-    margin-top: -2.6rem;
-    margin-bottom: -1rem;
-  }
-
-  //!Borrar personaje
-  .modal-content {
-    background-image: url(./../img/gg.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-color: #fefefe;
-    margin: 20% auto;
-    margin-top: 18rem;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 88%;
-    text-align: center;
-    height: 19%;
-    border-radius: 1rem;
-    box-shadow: rgba(0, 0, 0, 0.84) 0px 0px 20px 1227px;
-  }
-
-  #alertaBorrarPj {
-    font-size: 17px;
-    text-shadow: -3px 0px 2px #a40eec, 0px 2px 2px #a40eec, 0px -1px 2px #a40eec,
-      2px 0 0 #a40eec;
-    color: white;
-    font-family: "robotoRegular";
-    margin-bottom: -4px;
-    text-align: center;
-    border-radius: 10px;
-    background-color: rgba(0, 0, 0, 0.35);
-    margin-left: -9px;
-    margin-right: -9px;
-  }
-
-  #descargarPersonaje {
-    cursor: pointer;
-    margin-top: 1rem;
-  }
-
-  .background {
-    display: none;
-  }
-
-  .footer480p {
-    display: flex;
-  }
+
+    //TODO Estilos CSS para pantallas con ancho hasta 480px
+    .legend1 {
+        font-size: 26px;
+        margin-right: -3rem;
+        filter: opacity(75%);
+        margin-top: 1rem;
+    }
+
+    .builder2 {
+        margin-top: 1rem;
+        font-size: 26px;
+        margin-left: 4rem;
+        filter: opacity(80%);
+    }
+
+    .start-button {
+        width: 260px;
+        height: 272px;
+        z-index: 9999;
+        margin-top: 75px;
+        margin-left: -8px;
+        filter: opacity(0.6);
+    }
+    
+    .start-buttonCFG {
+        width: 250px;
+        height: 126px;
+        filter: blur(2px);
+        margin-top: 8rem;
+    }
+    
+    .start-button:hover {
+        width: 247px;
+        height: 151px;
+        margin-top: 117px;
+        margin-left: -1px;
+    }
+
+    //   .start-button:active {
+    //     width: 300px;
+    //     height: 514px;
+    //     margin-top: 51px;
+    //     margin-left: -3px;
+    //   }
+
+    .bodyIndex img {
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+    }
+
+    .bienvenida {
+        font-size: 9px;
+        color: white;
+        margin: 10px;
+        text-shadow: -2px 1px 0px #f2170d;
+    }
+
+    .textSolapa {
+        margin-top: 11px;
+        margin-bottom: 11px;
+        font-style: normal;
+        margin-left: 1rem;
+        font-size: 11px;
+        margin-right: 1rem;
+        text-shadow: -2px 2px 0px #0236ff;
+    }
+
+    .comenzarBtn {
+        margin-top: 31px;
+        width: 145px;
+        height: 131px;
+    }
+
+    .configTextBase {
+        margin-top: 1rem;
+        margin-bottom: 5px;
+        padding-bottom: 0rem;
+        padding-top: 1rem;
+        font-size: 21px;
+        border-radius: 1rem;
+
+        height: 83px;
+        width: 223px;
+        border: 2px solid #00ffff;
+        text-shadow: 5px 3px 2px rgba(0, 0, 0, 0.7803921569), -4px 1px 2px rgba(0, 0, 0, 0.7803921569), -3px -3px 2px rgba(0, 0, 0, 0.7803921569), -4px 3px 6px rgba(0, 0, 0, 0.7803921569);
+    }
+
+    .inputTextStyleIndex {
+        font-size: 19px;
+    }
+
+    .botonElegirRaza {
+        border-radius: 1rem;
+        padding: 16px;
+        width: 225px;
+        margin-bottom: 34px;
+        margin-top: 7rem;
+    }
+
+    .btnRazaCfg {
+        color: #9e00ff;
+        font-size: 29px;
+        padding: 0px;
+    }
+
+    //!Elección de Razas
+
+    .opcionElfos {
+    width: 100px;
+    height: 120px;
+        border-radius: 2rem;
+        margin-right: 0.6rem;
+    }
+
+    .opcionEnanos {
+    width: 100px;
+    height: 120px;
+    }
+
+    .opcionHumanos {
+    width: 100px;
+    height: 120px;
+        margin-right: 0.6rem;
+        border-radius: 2rem;
+    }
+
+    .opcionOrcos {
+    width: 100px;
+    height: 120px;
+        border-radius: 2rem;
+    }
+
+    
+    #razas {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: center;
+        margin-left: 0rem;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        margin-top: -7rem;
+    }
+
+    #elfosOption {
+        margin-right: 0%;
+        margin-left: 4%;
+    }
+    
+    #enanosOption {
+        margin-right: -3rem;
+        margin-top: 0rem;
+        margin-left: 13px;
+    }
+    
+    #humanosOption {
+        margin-top: 65%;
+        margin-left: -42%;
+        margin-right: 29px;
+    }
+    
+    #orcosOption {
+        margin-left: -4%;
+        margin-top: 65%;
+    }
+
+    #elegirRazas {
+        position: absolute;
+        top: 12rem;
+        left: 50%;
+    }
+
+
+    #razasElegir {
+        margin-top: 2rem;
+    }
+
+    .razaNombre {
+        font-size: 14px;
+        letter-spacing: 2px;
+    }
+
+    .textRaza {
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-bottom: 5px;
+        padding-top: 3px;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 2rem;
+        border-bottom-right-radius: 2rem;
+    }
+
+    .flex {
+        font-size: 10px;
+    }
+
+    //!Elección de Clases
+
+    #clases {
+        margin-top: 32%;
+    }
+
+    .centerMove {
+        margin-left: 3rem;
+        margin-right: 3rem;
+    }
+
+    .nombreClase, .descripcion, .nombreClase1, .descripcion1, .nombreClase2, .descripcion2, .nombreClase3, .descripcion3, .nombreClase4, .descripcion4, .nombreClase5, .descripcion5, .nombreClase6, .descripcion6, .nombreClase7, .descripcion7, .nombreClase8, .descripcion8, .nombreClase9, .descripcion9, .nombreClase10, .descripcion10, .nombreClase11, .descripcion11 {
+        display: flex;
+        width: 66px;
+        height: 25px;
+        margin-top: 0rem;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        /* padding: 0; */
+        text-align: center;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        font-size: 6px;
+        flex-direction: column;
+        align-content: stretch;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .claseElfos div, .claseEnanos div, .claseHumanos div, .claseOrcos div {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 86px;
+        height: 182px;
+        cursor: pointer;
+        margin-top: 2rem;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-content: center;
+    }
+
+    .centerMove {
+        margin-left: 1.2rem;
+        margin-right: 1.2rem;
+    }
+
+    #continuarBtn {
+        display: none;
+        position: absolute;
+        /* bottom: 70px; */
+        margin-bottom: -6%;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 5px 9px;
+        background-color: #007bff;
+        color: #fff;
+        border: 2px solid #00ffff;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    #continuarBtn2 {
+        display: none;
+        position: fixed;
+        bottom: 4rem;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #fff;
+        border: 2px solid #00ffff;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    //!Elección de Género
+
+    .tituloGenero {
+        color: white;
+        font-weight: bold;
+        font-family: "theBlowarRegular";
+        font-size: 22px;
+        letter-spacing: 3px;
+        margin-top: 4rem;
+        text-shadow: -1px 2px 4px #000000;
+        text-align: center;
+    }
+
+    #hombre {
+        margin-top: 10px;
+        width: 150px;
+        height: 150px;
+        margin-right: 1rem;
+    }
+
+    #mujer {
+        margin-top: 10px;
+        width: 150px;
+        height: 150px;
+        cursor: pointer;
+        margin-left: 1rem;
+    }
+
+    .justASpace {
+        margin-left: 6.5rem;
+    }
+
+    //! Parcial
+
+    .textPjsParcial {
+        color: white;
+        font-size: 14px;
+        margin-top: 2rem;
+        margin-left: -7rem;
+        margin-right: -7rem;
+    }
+
+    .nickElegido,
+    .razaElegida,
+    .claseElegida,
+    .generoElegido,
+    .intBase,
+    .strBase,
+    .agiBase {
+        width: 100%;
+        text-align: left;
+        font-size: 20px;
+    }
+
+    .contenedorParcial {
+        margin-top: 0rem;
+        border-radius: 5rem;
+        padding-left: 5rem;
+        border: 2px solid #00ffff;
+        padding-right: 5rem;
+        padding-bottom: 5rem;
+        padding-top: 3rem;
+    }
+
+    #resultado1,
+    #resultado2,
+    #resultado3 {
+        font-size: 14px;
+        margin-top: 10px;
+        margin-left: 45px;
+        margin-right: 45px;
+    }
+
+    .wrapper {
+        width: 333px;
+        margin: 0 auto;
+    }
+
+    .column {
+        padding: 3rem;
+        margin-top: 6rem;
+    }
+
+    .dice {
+        width: 86px;
+        height: 83px;
+        float: left;
+        padding: 10px;
+        font-size: 24px;
+        margin: 5px;
+    }
+
+    .contenedorFinalClss {
+        margin-top: 2rem;
+    }
+
+    .contenedorFinalClss {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10rem;
+        background-image: url(../img/bgndStats.jpg);
+        background-repeat: inherit;
+        background-size: 150px 100px;
+        border-radius: 5rem;
+        padding-left: 0;
+        width: 308px;
+        padding-right: 0;
+        padding-top: 1px;
+        padding-bottom: 1px;
+        border: 2px solid #00ffff;
+    }
+
+    #contenedorFinalId {
+        width: 308px !important;
+        margin-top: 3rem;
+    }
+
+    .textFinal {
+        font-size: 22px;
+        letter-spacing: 5px;
+        margin-top: 0rem;
+    }
+
+    //! Leyenda final.
+
+    .configCompartidaDeInfoDePersonaje {
+        text-align: center;
+        margin-top: 2rem;
+        margin-left: 2rem;
+    }
+
+    .info-personaje {
+        margin-top: -4rem;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        min-width: 252px;
+        height: 427px;
+        margin-left: -1rem;
+    }
+
+    .alinearInformacion {
+        padding-top: 17.7rem;
+        margin-bottom: -1.5rem;
+    }
+
+    .configCompartidaDeInfoDePersonaje {
+        text-align: center;
+        margin-top: 2rem;
+        margin-left: 2rem;
+    }
+
+    .colorTitulos {
+        color: rgb(0, 0, 0);
+        font-size: 15px;
+        font-family: robotoRegular;
+        font-weight: bold;
+    }
+
+    .colorTituloAtr {
+        margin-top: 6px;
+        color: aqua;
+    }
+
+    .centrarAtributos {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-top: 2rem;
+    }
+
+    .colorAtr {
+        display: flex;
+        flex-direction: column;
+        font-size: 9px;
+        color: white;
+        text-shadow: -3px 0px 2px black, 0px 2px 2px black, 0px -1px 2px black,
+            2px 0 0 black;
+    }
+
+    #inteligencia {
+        color: cornflowerblue;
+        font-weight: bolder;
+        font-size: 18px;
+        text-shadow: -3px 0px 2px black, 0px 2px 2px black, 0px -1px 2px black,
+            2px 0 0 black;
+    }
+
+    #fuerza {
+        color: red;
+        font-weight: bolder;
+        font-size: 18px;
+        text-shadow: -3px 0px 2px black, 0px 2px 2px black, 0px -1px 2px black,
+            2px 0 0 black;
+    }
+
+    #agilidad {
+        color: green;
+        font-weight: bolder;
+        font-size: 18px;
+        text-shadow: -3px 0px 2px black, 0px 2px 2px black, 0px -1px 2px black,
+            2px 0 0 black;
+    }
+
+    .legend,
+    .builder,
+    #areaArrastre,
+    .modal {
+        display: none;
+    }
+
+    .copyright {
+        right: 0;
+        color: white;
+        position: relative;
+        margin-left: 0;
+        /* font-weight: bold; */
+        bottom: -46px;
+        text-align: center;
+        margin-top: -1.5rem;
+        text-shadow: -3px 0px 2px #000000, 0px 2px 2px #000000, 0px -1px 2px #000000,
+            2px 0 0 #000000;
+        font-size: 11px;
+    }
+
+    .gitHubLogo {
+        font-size: 20px;
+        font-family: sans-serif;
+        font-weight: bold;
+        position: relative;
+        bottom: -67px;
+        left: 13px;
+    }
+
+    .webSiteLogo {
+        font-size: 20px;
+        font-family: sans-serif;
+        font-weight: bold;
+        position: relative;
+        bottom: -67px;
+        right: -13rem;
+    }
+
+    .tituloMain {
+        margin-top: 5px;
+        margin-left: 0rem;
+        padding-bottom: 1rem;
+        font-family: "whiteStorm";
+        font-size: 101px;
+    }
+
+    #continuarBtn3 {
+        position: absolute;
+        margin-bottom: -1rem;
+        margin-left: 27%;
+    }
+
+    .botonLanzarDados {
+        text-transform: capitalize;
+        position: relative;
+        bottom: 10rem;
+        left: 25%;
+        margin-bottom: 11rem;
+        transform: translateX(-50%);
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #fff;
+        border: 2px solid #00ffff;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .btnNextLegend {
+        text-transform: capitalize;
+        position: relative;
+        bottom: 5px;
+        left: 22%;
+        margin-bottom: 8rem;
+        transform: translateX(-50%);
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #fff;
+        border: 2px solid #00ffff;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    //!botones descargar, cargar y borrar.
+    .cntBtn {
+        margin-top: 3.2rem;
+    }
+
+    .colorBTN2 {
+        margin-bottom: 0rem;
+        margin-top: 0rem;
+    }
+
+    .colorBTN3 {
+        margin-top: 0.5rem;
+        margin-bottom: -1rem;
+    }
+
+    .colorBTN4 {
+        margin-top: -2.6rem;
+        margin-bottom: -1rem;
+    }
+
+    //!Borrar personaje
+    .modal-content {
+        background-image: url(./../img/gg.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-color: #fefefe;
+        margin: 20% auto;
+        margin-top: 18rem;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 88%;
+        text-align: center;
+        height: 19%;
+        border-radius: 1rem;
+        box-shadow: rgba(0, 0, 0, 0.84) 0px 0px 20px 1227px;
+    }
+
+    #alertaBorrarPj {
+        font-size: 17px;
+        text-shadow: -3px 0px 2px #a40eec, 0px 2px 2px #a40eec, 0px -1px 2px #a40eec,
+            2px 0 0 #a40eec;
+        color: white;
+        font-family: "robotoRegular";
+        margin-bottom: -4px;
+        text-align: center;
+        border-radius: 10px;
+        background-color: rgba(0, 0, 0, 0.35);
+        margin-left: -9px;
+        margin-right: -9px;
+    }
+
+    #descargarPersonaje {
+        cursor: pointer;
+        /* margin-top: 1rem; */
+    }
+
+    .background {
+        display: none;
+    }
+
+    .footer480p {
+        display: flex;
+        justify-content: center;
+    }
+
+    .colorBTN2,
+    .highReso {
+        margin: 0px;
+    }
 }

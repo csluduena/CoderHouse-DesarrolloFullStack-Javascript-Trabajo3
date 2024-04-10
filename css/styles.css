@@ -31,7 +31,6 @@
   cursor: pointer;
   position: fixed;
   z-index: 9999;
-  margin-top: 126px;
   margin-left: -29px;
   filter: opacity(0.6);
 }
@@ -46,7 +45,6 @@
   height: 360px;
   cursor: pointer;
   filter: blur(2px);
-  margin-top: 8rem;
 }
 
 .start-button:hover {
@@ -59,7 +57,7 @@
   cursor: pointer;
   position: fixed;
   z-index: 9999;
-  margin-top: 51px;
+  margin-top: -75px;
   margin-left: -3px;
   filter: blur(1.4px);
 }
@@ -199,7 +197,7 @@ hr {
 .legend1 {
   justify-content: center;
   font-family: "pamela";
-  font-size: 200px;
+  font-size: 160px;
   display: flex;
   margin-right: 4rem;
   filter: opacity(50%);
@@ -207,7 +205,7 @@ hr {
 
 .builder2 {
   font-family: "pamela";
-  font-size: 200px;
+  font-size: 160px;
   display: flex;
   justify-content: center;
   margin-left: 4rem;
@@ -314,8 +312,8 @@ hr {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  width: 320px;
-  height: 350px;
+  width: 254px;
+  height: 302px;
   margin-right: 2rem;
   cursor: pointer;
   border-radius: 2rem;
@@ -326,8 +324,8 @@ hr {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  width: 320px;
-  height: 350px;
+  width: 254px;
+  height: 302px;
   margin-right: 2rem;
   cursor: pointer;
   border-radius: 2rem;
@@ -338,8 +336,8 @@ hr {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  width: 320px;
-  height: 350px;
+  width: 254px;
+  height: 302px;
   margin-right: 2rem;
   cursor: pointer;
   border-radius: 2rem;
@@ -350,8 +348,8 @@ hr {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  width: 320px;
-  height: 350px;
+  width: 254px;
+  height: 302px;
   cursor: pointer;
   border-radius: 2rem;
 }
@@ -380,7 +378,7 @@ hr {
   padding-left: 15px;
   padding-right: 15px;
   padding-bottom: 5px;
-  font-weight: bold;
+  /* font-weight: bold; */
   background-color: gray;
   filter: opacity(80%);
   text-shadow: -3px -2px 4px rgba(189, 189, 189, 0);
@@ -571,10 +569,11 @@ hr {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 254px;
-  height: 392px;
+  width: 216px;
+  height: 257px;
   cursor: pointer;
-  margin-top: 5rem;
+  margin-top: 1rem;
+  /* margin-bottom: 6rem; */
   flex-wrap: wrap;
   flex-direction: column;
   align-content: center;
@@ -764,11 +763,12 @@ hr {
 }
 
 #razas {
-  margin-left: -45rem;
+  margin-left: -36rem;
+  margin-top: -4rem;
 }
 
 #clases {
-  margin-top: 6rem;
+  margin-top: 9%;
 }
 
 .centerMove {
@@ -780,7 +780,7 @@ hr {
 #continuarBtn2 {
   display: none;
   position: fixed;
-  bottom: 20px;
+  bottom: 70px;
   left: 50%;
   transform: translateX(-50%);
   padding: 10px 20px;
@@ -891,6 +891,7 @@ hr {
   border-radius: 5px;
   cursor: pointer;
   border: 2px solid #00ffff;
+  margin-bottom: -3rem;
 }
 
 .buttonCFGSend {
@@ -1029,8 +1030,8 @@ footer {
 .background {
   background: linear-gradient(to right, rgba(0, 121, 136, 0) 13%, rgb(0, 0, 0) 50%, rgba(0, 121, 136, 0) 82%);
   width: 100%;
-  position: absolute;
-  bottom: 0;
+  position: relative;
+  bottom: -25px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1068,7 +1069,7 @@ footer {
 .legend {
   justify-content: center;
   font-family: "pamela";
-  font-size: 200px;
+  font-size: 100px;
   display: flex;
   margin-left: 2rem;
   margin-right: 4rem;
@@ -1081,7 +1082,7 @@ footer {
 
 .builder {
   font-family: "pamela";
-  font-size: 200px;
+  font-size: 100px;
   display: flex;
   justify-content: center;
   margin-right: 2rem;
@@ -1098,7 +1099,7 @@ footer {
   margin-left: -3rem;
   padding-bottom: 1rem;
   font-family: "whiteStorm";
-  font-size: 140px;
+  font-size: 131px;
   color: black;
   text-shadow: -3px 0px 2px rgb(230, 230, 230), 0px 2px 2px rgb(221, 221, 221), 0px -1px 2px rgb(23, 207, 244), 2px 0 0 rgb(135, 150, 236);
   filter: opacity(80%);
@@ -1107,7 +1108,15 @@ footer {
 .infoPj {
   text-align: center;
   color: black;
+  display: flex;
   margin-bottom: 10px;
+  margin-top: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.colorBTN2, .highReso {
+  margin: 5px;
 }
 
 .textCfg {
@@ -1137,7 +1146,6 @@ footer {
 
 #descargarPersonaje {
   cursor: pointer;
-  margin-top: 2rem;
 }
 
 #cargarPersonaje {
@@ -1383,7 +1391,7 @@ a {
 }
 
 .cfgBotones {
-  padding: 10px 20px;
+  padding: 6px 9px;
   color: #fff;
   border: 2px solid #00ffff;
   border-radius: 5px;
@@ -1463,7 +1471,7 @@ a {
   width: 26%;
 }
 
-@media (min-width: 769px) and (min-width: 1921px) {
+@media (min-width: 1200px) and (min-width: 1921px) {
   #content {
     display: none;
     text-align: center;
@@ -1482,14 +1490,14 @@ a {
     background-image: url(../img/comenzarW.png);
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 100%;
-    width: 925px;
-    height: 514px;
+    background-size: 60%;
+    width: 1932px;
+    height: 579px;
     cursor: pointer;
     position: fixed;
     z-index: 9999;
-    margin-top: 126px;
-    margin-left: -29px;
+    margin-top: 10%;
+    margin-left: -37px;
     filter: opacity(0.6);
   }
   .start-buttonCFG {
@@ -1497,9 +1505,9 @@ a {
     background-image: url(../img/comenzar2.gif);
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 100%;
-    width: 880px;
-    height: 360px;
+    background-size: 57%;
+    width: 1932px;
+    height: 642px;
     cursor: pointer;
     filter: blur(2px);
     margin-top: 8rem;
@@ -1508,18 +1516,15 @@ a {
     background-image: url(../img/comenzar4.gif);
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 100%;
-    width: 878px;
-    height: 514px;
+    background-size: 57%;
+    width: 1932px;
+    height: 903px;
     cursor: pointer;
     position: fixed;
     z-index: 9999;
-    margin-top: 51px;
+    margin-top: 0%;
     margin-left: -3px;
     filter: blur(1.4px);
-  }
-  .start-button:hover .start-buttonCFG {
-    display: none;
   }
   .bodyIndex img {
     z-index: -1;
@@ -1633,14 +1638,14 @@ a {
   .legend1 {
     justify-content: center;
     font-family: "pamela";
-    font-size: 200px;
+    font-size: 100px;
     display: flex;
     margin-right: 4rem;
     filter: opacity(50%);
   }
   .builder2 {
     font-family: "pamela";
-    font-size: 200px;
+    font-size: 100px;
     display: flex;
     justify-content: center;
     margin-left: 4rem;
@@ -2142,7 +2147,7 @@ a {
     margin-left: -45rem;
   }
   #clases {
-    margin-top: 6rem;
+    margin-top: 11rem;
   }
   .centerMove {
     margin-left: 3rem;
@@ -2261,8 +2266,6 @@ a {
     border-radius: 5px;
     cursor: pointer;
     border: 2px solid #00ffff;
-  }
-  .buttonCFGSend {
     margin-bottom: -3rem;
   }
   .spaceButt {
@@ -2463,6 +2466,17 @@ a {
     margin-left: 40px;
     margin-right: 40px;
   }
+  .background {
+    background: linear-gradient(to right, rgba(0, 121, 136, 0) 13%, rgb(0, 0, 0) 50%, rgba(0, 121, 136, 0) 82%);
+    width: 100%;
+    position: relative;
+    bottom: -170px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 5px;
+    justify-content: flex-end;
+  }
 }
 @media (min-width: 768px) and (max-width: 1023.95px) {
   #content {
@@ -2478,6 +2492,10 @@ a {
   .SBConten {
     display: flex;
     justify-content: center;
+  }
+  .colorBTN2,
+  .highReso {
+    margin: 0px;
   }
   .start-button {
     background-image: url(../img/comenzarW.png);
@@ -2691,8 +2709,8 @@ a {
     font-size: 13px;
     box-shadow: rgb(18, 125, 123) 0px 0px 8px 8px;
     position: fixed;
-    left: 77%;
-    bottom: 22%;
+    left: 72%;
+    bottom: 33%;
     width: 18%;
   }
   .configTextBase {
@@ -3197,8 +3215,8 @@ a {
   }
   #continuarBtn {
     display: none;
-    position: fixed;
-    bottom: 14.6rem;
+    position: absolute;
+    bottom: 2rem;
     left: 50%;
     transform: translateX(-50%);
     padding: 10px 20px;
@@ -3210,8 +3228,8 @@ a {
   }
   #continuarBtn2 {
     display: none;
-    position: fixed;
-    bottom: 16rem;
+    position: absolute;
+    bottom: 22%;
     left: 50%;
     transform: translateX(-50%);
     padding: 10px 20px;
@@ -3311,10 +3329,7 @@ a {
     margin-left: 12.5rem;
   }
   .cfgBtn {
-    margin-bottom: 31rem !important;
-  }
-  .cfgBtn2 {
-    margin-bottom: 1rem !important;
+    margin-bottom: 31rem;
   }
   .buttonCFGSend {
     margin-top: 2rem;
@@ -3325,8 +3340,6 @@ a {
     border-radius: 5px;
     cursor: pointer;
     border: 2px solid #00ffff;
-  }
-  .buttonCFGSend {
     margin-bottom: -3rem;
   }
   .spaceButt {
@@ -3395,7 +3408,7 @@ a {
   }
   .textPjsParcial {
     color: white;
-    font-size: 30px;
+    font-size: 23px;
     margin-top: 2rem;
     margin-left: 6rem;
     margin-right: 6rem;
@@ -3411,7 +3424,7 @@ a {
     margin-top: 4rem;
   }
   .colorBTN3 {
-    margin-top: 0.5rem;
+    /* margin-top: 0.5rem; */
     margin-bottom: 0rem;
   }
   .colorBTN4 {
@@ -3431,6 +3444,9 @@ a {
   }
   .cfgBotones {
     margin-bottom: 1rem;
+  }
+  #continuarBtn3 {
+    margin-bottom: 21rem;
   }
   .lowReso,
   .footer480p {
@@ -3602,51 +3618,56 @@ a {
     filter: opacity(50%);
     margin-top: 1rem;
   }
+  .background {
+    background: linear-gradient(to right, rgba(0, 121, 136, 0) 13%, rgb(0, 0, 0) 50%, rgba(0, 121, 136, 0) 82%);
+    width: 100%;
+    position: relative;
+    bottom: 210px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 5px;
+    justify-content: flex-end;
+  }
 }
 @media screen and (max-width: 767.95px) {
   .legend1 {
-    font-size: 40px;
+    font-size: 26px;
     margin-right: -3rem;
     filter: opacity(75%);
     margin-top: 1rem;
   }
   .builder2 {
     margin-top: 1rem;
-    font-size: 40px;
+    font-size: 26px;
     margin-left: 4rem;
     filter: opacity(80%);
   }
   .start-button {
-    width: 312px;
-    height: 514px;
+    width: 260px;
+    height: 272px;
     z-index: 9999;
-    margin-top: 77px;
+    margin-top: 75px;
     margin-left: -8px;
     filter: opacity(0.6);
   }
   .start-buttonCFG {
-    width: 300px;
-    height: 360px;
+    width: 250px;
+    height: 126px;
     filter: blur(2px);
     margin-top: 8rem;
   }
   .start-button:hover {
-    width: 300px;
-    height: 514px;
-    margin-top: 126px;
-    margin-left: -29px;
-  }
-  .start-button:active {
-    width: 300px;
-    height: 514px;
-    margin-top: 51px;
-    margin-left: -3px;
+    width: 247px;
+    height: 151px;
+    margin-top: 117px;
+    margin-left: -1px;
   }
   .bodyIndex img {
-    background-size: contain;
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
@@ -3654,106 +3675,108 @@ a {
     z-index: -1;
   }
   .bienvenida {
-    font-size: 12px;
+    font-size: 9px;
+    color: white;
     margin: 10px;
+    text-shadow: -2px 1px 0px #f2170d;
   }
   .textSolapa {
-    margin-top: 47px;
-    margin-bottom: 46px;
+    margin-top: 11px;
+    margin-bottom: 11px;
     font-style: normal;
     margin-left: 1rem;
-    font-size: 18px;
+    font-size: 11px;
     margin-right: 1rem;
     text-shadow: -2px 2px 0px #0236ff;
   }
   .comenzarBtn {
     margin-top: 31px;
-    width: 219px;
-    height: 209px;
+    width: 145px;
+    height: 131px;
   }
   .configTextBase {
-    padding: 30px;
-    height: 83px;
-    width: 283px;
-    border: 2px solid #00ffff;
-    margin-top: 2rem;
+    margin-top: 1rem;
     margin-bottom: 5px;
-    padding-bottom: 4rem;
-    font-size: 30px;
+    padding-bottom: 0rem;
+    padding-top: 1rem;
+    font-size: 21px;
     border-radius: 1rem;
+    height: 83px;
+    width: 223px;
+    border: 2px solid #00ffff;
+    text-shadow: 5px 3px 2px rgba(0, 0, 0, 0.7803921569), -4px 1px 2px rgba(0, 0, 0, 0.7803921569), -3px -3px 2px rgba(0, 0, 0, 0.7803921569), -4px 3px 6px rgba(0, 0, 0, 0.7803921569);
   }
   .inputTextStyleIndex {
     font-size: 19px;
   }
-  .configTextBase {
-    margin-top: 2rem;
-    margin-bottom: 5px;
-    padding-bottom: 5rem;
-    padding-top: 1rem;
-    font-size: 30px;
-    border-radius: 1rem;
-  }
   .botonElegirRaza {
     border-radius: 1rem;
-    padding: 30px;
-    width: 250px;
-    margin-bottom: 5px;
-    margin-top: 11rem;
+    padding: 16px;
+    width: 225px;
+    margin-bottom: 34px;
+    margin-top: 7rem;
   }
   .btnRazaCfg {
     color: #9e00ff;
-    font-size: 31px;
+    font-size: 29px;
+    padding: 0px;
   }
   .opcionElfos {
-    width: 123px;
-    height: 132px;
+    width: 100px;
+    height: 120px;
     border-radius: 2rem;
     margin-right: 0.6rem;
   }
   .opcionEnanos {
-    width: 123px;
-    height: 132px;
+    width: 100px;
+    height: 120px;
   }
   .opcionHumanos {
-    width: 123px;
-    height: 132px;
+    width: 100px;
+    height: 120px;
     margin-right: 0.6rem;
     border-radius: 2rem;
   }
   .opcionOrcos {
-    width: 123px;
-    height: 132px;
+    width: 100px;
+    height: 120px;
     border-radius: 2rem;
   }
-  #elfosOption {
-    margin-right: 1px;
-  }
-  #enanosOption {
-    margin-right: -6rem;
-    margin-top: 0rem;
-    margin-left: 2rem;
-  }
-  #humanosOption {
-    margin-top: 19rem;
-    margin-left: -11.4rem;
-    margin-right: 3rem;
-  }
-  #orcosOption {
-    margin-left: -1rem;
-    margin-top: 19rem;
-  }
-  #elegirRazas {
-    position: absolute;
-    top: 12rem;
-    left: 50%;
-  }
   #razas {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
     margin-left: 0rem;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    margin-top: -2rem;
+    margin-top: -7rem;
+  }
+  #elfosOption {
+    margin-right: 0%;
+    margin-left: 4%;
+  }
+  #enanosOption {
+    margin-right: -3rem;
+    margin-top: 0rem;
+    margin-left: 13px;
+  }
+  #humanosOption {
+    margin-top: 65%;
+    margin-left: -42%;
+    margin-right: 29px;
+  }
+  #orcosOption {
+    margin-left: -4%;
+    margin-top: 65%;
+  }
+  #elegirRazas {
+    position: absolute;
+    top: 12rem;
+    left: 50%;
   }
   #razasElegir {
     margin-top: 2rem;
@@ -3776,63 +3799,37 @@ a {
     font-size: 10px;
   }
   #clases {
-    margin-top: 14rem;
+    margin-top: 32%;
   }
   .centerMove {
     margin-left: 3rem;
     margin-right: 3rem;
   }
-  .nombreClase,
-  .descripcion,
-  .nombreClase1,
-  .descripcion1,
-  .nombreClase2,
-  .descripcion2,
-  .nombreClase3,
-  .descripcion3,
-  .nombreClase4,
-  .descripcion4,
-  .nombreClase5,
-  .descripcion5,
-  .nombreClase6,
-  .descripcion6,
-  .nombreClase7,
-  .descripcion7,
-  .nombreClase8,
-  .descripcion8,
-  .nombreClase9,
-  .descripcion9,
-  .nombreClase10,
-  .descripcion10,
-  .nombreClase11,
-  .descripcion11 {
+  .nombreClase, .descripcion, .nombreClase1, .descripcion1, .nombreClase2, .descripcion2, .nombreClase3, .descripcion3, .nombreClase4, .descripcion4, .nombreClase5, .descripcion5, .nombreClase6, .descripcion6, .nombreClase7, .descripcion7, .nombreClase8, .descripcion8, .nombreClase9, .descripcion9, .nombreClase10, .descripcion10, .nombreClase11, .descripcion11 {
     display: flex;
-    width: 102px;
-    height: 41px;
+    width: 66px;
+    height: 25px;
     margin-top: 0rem;
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
-    padding: 14px;
+    /* padding: 0; */
     text-align: center;
     opacity: 0;
     transition: opacity 0.3s ease;
-    font-size: 8px;
+    font-size: 6px;
     flex-direction: column;
     align-content: stretch;
     flex-wrap: wrap;
     justify-content: center;
   }
-  .claseElfos div,
-  .claseEnanos div,
-  .claseHumanos div,
-  .claseOrcos div {
+  .claseElfos div, .claseEnanos div, .claseHumanos div, .claseOrcos div {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 102px;
-    height: 205px;
+    width: 86px;
+    height: 182px;
     cursor: pointer;
-    margin-top: 4rem;
+    margin-top: 2rem;
     flex-wrap: wrap;
     flex-direction: column;
     align-content: center;
@@ -3843,11 +3840,12 @@ a {
   }
   #continuarBtn {
     display: none;
-    position: fixed;
-    bottom: 3rem;
+    position: absolute;
+    /* bottom: 70px; */
+    margin-bottom: -6%;
     left: 50%;
     transform: translateX(-50%);
-    padding: 10px 20px;
+    padding: 5px 9px;
     background-color: #007bff;
     color: #fff;
     border: 2px solid #00ffff;
@@ -3857,7 +3855,7 @@ a {
   #continuarBtn2 {
     display: none;
     position: fixed;
-    bottom: 12rem;
+    bottom: 4rem;
     left: 50%;
     transform: translateX(-50%);
     padding: 10px 20px;
@@ -3912,7 +3910,7 @@ a {
     font-size: 20px;
   }
   .contenedorParcial {
-    margin-top: 6rem;
+    margin-top: 0rem;
     border-radius: 5rem;
     padding-left: 5rem;
     border: 2px solid #00ffff;
@@ -4077,6 +4075,39 @@ a {
     font-family: "whiteStorm";
     font-size: 101px;
   }
+  #continuarBtn3 {
+    position: absolute;
+    margin-bottom: -1rem;
+    margin-left: 27%;
+  }
+  .botonLanzarDados {
+    text-transform: capitalize;
+    position: relative;
+    bottom: 10rem;
+    left: 25%;
+    margin-bottom: 11rem;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: 2px solid #00ffff;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .btnNextLegend {
+    text-transform: capitalize;
+    position: relative;
+    bottom: 5px;
+    left: 22%;
+    margin-bottom: 8rem;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: 2px solid #00ffff;
+    border-radius: 5px;
+    cursor: pointer;
+  }
   .cntBtn {
     margin-top: 3.2rem;
   }
@@ -4122,13 +4153,18 @@ a {
   }
   #descargarPersonaje {
     cursor: pointer;
-    margin-top: 1rem;
+    /* margin-top: 1rem; */
   }
   .background {
     display: none;
   }
   .footer480p {
     display: flex;
+    justify-content: center;
+  }
+  .colorBTN2,
+  .highReso {
+    margin: 0px;
   }
 }
 @font-face {

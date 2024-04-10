@@ -1,4 +1,4 @@
-@media (min-width: 769px) and (min-width: 1921px) {
+@media (min-width: 1200px) and (min-width: 1921px) {
   //TODO Estilos CSS para pantallas con ancho a partir de 1921p (2k y 4k), antes está el main hasta 769, luego viene 768 hasta 481 y por último 480.
   #content {
     display: none;
@@ -21,48 +21,44 @@
     background-image: url(../img/comenzarW.png);
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 100%;
-    width: 925px;
-    height: 514px;
+    background-size: 60%;
+    width: 1932px;
+    height: 579px;
     cursor: pointer;
     position: fixed;
     z-index: 9999;
-    margin-top: 126px;
-    margin-left: -29px;
+    margin-top: 10%;
+    margin-left: -37px;
     filter: opacity(0.6);
-  }
+}
 
-  .start-buttonCFG {
+.start-buttonCFG {
     position: fixed;
     background-image: url(../img/comenzar2.gif);
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 100%;
-    width: 880px;
-    height: 360px;
+    background-size: 57%;
+    width: 1932px;
+    height: 642px;
     cursor: pointer;
     filter: blur(2px);
     margin-top: 8rem;
-  }
+}
 
-  .start-button:hover {
+.start-button:hover {
     background-image: url(../img/comenzar4.gif);
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 100%;
-    width: 878px;
-    height: 514px;
+    background-size: 57%;
+    width: 1932px;
+    height: 903px;
     cursor: pointer;
     position: fixed;
     z-index: 9999;
-    margin-top: 51px;
+    margin-top: 0%;
     margin-left: -3px;
     filter: blur(1.4px);
 }
-
-  .start-button:hover .start-buttonCFG {
-    display: none;
-  }
 
   .bodyIndex img {
     z-index: -1;
@@ -202,7 +198,7 @@
   .legend1 {
     justify-content: center;
     font-family: "pamela";
-    font-size: 200px;
+    font-size: 100px;
     display: flex;
     //margin-left: 2rem;
     margin-right: 4rem;
@@ -211,7 +207,7 @@
 
   .builder2 {
     font-family: "pamela";
-    font-size: 200px;
+    font-size: 100px;
     display: flex;
     justify-content: center;
     //margin-right: 2rem;
@@ -292,7 +288,7 @@
     position: absolute;
     top: 7rem;
     left: 50%;
-  }
+}
 
   .btnRazaCfg {
     text-shadow: 1px 0px 6px black, -4px 2px 5px black, -1px -4px 6px black,
@@ -786,8 +782,8 @@
   }
 
   #clases {
-    margin-top: 6rem;
-  }
+    margin-top: 11rem;
+}
 
   .centerMove {
     margin-left: 3rem;
@@ -925,11 +921,10 @@
     border-radius: 5px;
     cursor: pointer;
     border: 2px solid #00ffff;
-  }
-
-  .buttonCFGSend {
     margin-bottom: -3rem;
   }
+
+
 
   .spaceButt {
     margin-bottom: -3rem;
@@ -1163,4 +1158,17 @@
     margin-left: 40px;
     margin-right: 40px;
   }
+
+  .background {
+    background: linear-gradient(to right, rgba(0, 121, 136, 0) 13%, rgb(0, 0, 0) 50%, rgba(0, 121, 136, 0) 82%);
+    width: 100%;
+    position: relative;
+    bottom: -170px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 5px;
+    justify-content: flex-end;
+}
+
 }
