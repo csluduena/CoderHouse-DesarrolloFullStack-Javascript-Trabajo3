@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -1009,6 +1010,39 @@ hr {
 .lowReso,
 .footer480p {
   display: none;
+}
+
+.pokePapi {
+  display: Flex;
+  margin-bottom: 2%;
+}
+
+#getPokemonBtn {
+  font-size: 20px;
+  margin-bottom: 1%;
+  cursor: pointer;
+}
+
+.cfgWebcita {
+  font-size: 50px;
+  display: Flex;
+  color: white;
+}
+
+.pokemonInfo {
+  color: white;
+  font-size: 30px;
+}
+
+.image-button {
+  width: 150px; /* Ancho fijo de 150px */
+  height: 150px; /* Alto fijo de 150px */
+  background-image: url("../../img/pika.png"); /* Ruta de la imagen */
+  background-size: 150px 150px; /* Tamaño de la imagen */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  background-position: center; /* Centra la imagen dentro del botón */
+  border: none; /* Elimina el borde del botón */
+  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
 }
 
 footer {
