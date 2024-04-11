@@ -7,6 +7,7 @@
     <title>Configura Tu Leyenda - Legend Builder</title>
     <link rel="icon" href="../img/favicon.jpg" type="image/jpeg">
     <link rel="stylesheet" href="../css/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/triangular.js"></script>
     <!--! S T A R T   S E O -->
     <!-- Metadatos de Open Graph para redes sociales -->
     <meta property="og:title" content="Configura Tu Leyenda - Legend Builder">
@@ -84,6 +85,10 @@
                 </div>
             </a>
         </div>
+        <!--! Graph Stats -->
+        <!-- <div id="myChart" class="radar-chart"></div> -->
+        
+
         <!--! Drag on Screen -->
         <div id="areaArrastre">
             Arrastra y suelta aquí el archivo zip para cargar tu leyenda.
@@ -102,10 +107,28 @@
             <p class="copyright">© 2024 Csluduena. All content created by myself for the Full Stack JavaScript Web
                 Development course at CoderHouse.</p>
         </div>
-
     </footer>
 
+
+
+        
+    <!--! Graph Stats -->
+    <button id="graphStats" class="mostrarStats">Estadísticas</button>
+    <figure class="highcharts-figure">
+        <div id="containerChart" class="floating-chart" style="display: none;"></div>
+        <p class="highcharts-description"></p>
+    </figure>
+
+    <!--? START CHART LIBRARY-->
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/highcharts-more.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+    <!--? END CHART LIBRARY-->
+
     <script src="./../js/leyenda.js"></script>
+    <script src="../js/d3Lib-GraphLegend.js"></script>
     <script src="./../js/dragAndDrop.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.5.0/jszip.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.5.0-beta4/html2canvas.min.js"></script>

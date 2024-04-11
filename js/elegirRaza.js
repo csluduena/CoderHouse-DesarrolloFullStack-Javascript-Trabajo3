@@ -219,3 +219,26 @@ function seleccionarClaseSegunRaza() {
 
     let clasesDisponibles = clases[razaSeleccionada];
 }
+
+//! Almacenar Atributos en localStorage
+function almacenarAtributosBase() {
+    localStorage.setItem('atributosBase', JSON.stringify(atributosBase));
+}
+
+//! Obtener Atributos desde localStorage
+function obtenerAtributosBaseDesdeLocalStorage() {
+    let atributosBaseDesdeLocalStorage = localStorage.getItem('atributosBase');
+    if (atributosBaseDesdeLocalStorage) {
+        return JSON.parse(atributosBaseDesdeLocalStorage);
+    } else {
+        console.log('No se encontraron atributos base en localStorage.');
+        return null;
+    }
+}
+
+// Llama a la función para almacenar los atributos base en localStorage
+almacenarAtributosBase();
+
+// Llama a la función para obtener los atributos base desde localStorage
+let atributosBaseObtenidos = obtenerAtributosBaseDesdeLocalStorage();
+console.log('Atributos base obtenidos desde localStorage:', atributosBaseObtenidos);

@@ -73,10 +73,18 @@
     padding: 3% 8%;
     text-align: center;
     font-size: 22px;
-    //box-shadow: rgb(156, 69, 69) 0px 0px 8px 8px;
-    box-shadow: rgb(18 125 123) 0px 0px 8px 8px;
-    position: fixed;
-    left: 72%;
-    bottom: 7%;
+    box-shadow: rgb(18, 125, 123) 0px 0px 8px 8px;
+    position: relative;
+    right: 6%;
+    margin-top: -15%;
     width: 26%;
+    float: right;
+}
+
+.mostrarStats {
+    font-size: 18px;
+    float: right;
+    margin-right: 16.5%;
+    margin-top: -19%;
+    position: relative;
 }
