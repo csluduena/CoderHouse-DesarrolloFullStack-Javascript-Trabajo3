@@ -291,7 +291,7 @@ hr {
 }
 
 .comenzarBtn {
-  background-image: url(../img/startBTN.png);
+  background-image: url(../../img/single1.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -301,8 +301,29 @@ hr {
   cursor: pointer;
 }
 
+.botonesStartContainer {
+  display: flex;
+}
+
 .comenzarBtn:hover {
-  background-image: url(../img/startBTNUp.png);
+  background-image: url(../img/single1UP.png);
+  text-shadow: 0 0 5px 5px rgb(255, 255, 255);
+  transition: transform 0.2s ease, box-shadow 0.03s ease;
+}
+
+.multiDraftBoton {
+  background-image: url(../../img/multi1.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-top: 10px;
+  width: 435px;
+  height: 412px;
+  cursor: pointer;
+}
+
+.multiDraftBoton:hover {
+  background-image: url(../img/multi1UP.png);
   text-shadow: 0 0 5px 5px rgb(255, 255, 255);
   transition: transform 0.2s ease, box-shadow 0.03s ease;
 }

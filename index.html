@@ -56,7 +56,10 @@
             </h2>
             <hr>
             <!--!Pregunta Nombre-->
-            <div class="comenzarBtn" id="botonStart"></div>
+            <div class="botonesStartContainer">
+                <div class="comenzarBtn" id="botonStart"></div>
+                <div class="multiDraftBoton"></div>
+            </div>
             <div class="preguntaUno" style="display:none;">
                 <p class="configTextBase">¿Cómo te llamas?</p>
                 <input class="inputTextStyleIndex" type="text" id="saludoInicialInput"
@@ -251,6 +254,9 @@
     </footer>
 
     <!--Script-->
+    <script type="module" src="module2.js"></script>
+
+    <script src="./js/d3Lib-GraphLegend.js"></script>
     <script src="./js/welcome.js"></script>
     <script src="./js/preguntas.js"></script>
     <script src="./js/elegirRaza.js"></script>
