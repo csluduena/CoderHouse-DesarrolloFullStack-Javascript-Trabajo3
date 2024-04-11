@@ -1,4 +1,3 @@
-@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -1475,15 +1474,13 @@ a {
 }
 
 .mostrarStats {
-  font-size: 18px;
+  font-size: 20px;
+  padding: 2px;
   float: right;
   margin-right: 16.5%;
-  margin-top: -19%;
+  margin-top: -22%;
   position: relative;
-}
-
-.meme {
-  color: rgba(110, 112, 212, 0.6941176471);
+  cursor: pointer;
 }
 
 .highcharts-figure,
@@ -1526,15 +1523,73 @@ a {
 }
 
 .highcharts-data-table tr:hover {
-  background: #0360d9;
+  background: #bc03d9;
+  color: #178fff;
 }
 
 .floating-chart {
   position: fixed;
   top: 5%;
-  right: 5%;
-  max-width: 30%; /* Ajusta el tamaño máximo del gráfico flotante */
-  z-index: 1000; /* Ajusta el índice z para asegurarse de que esté por encima de otros elementos */
+  right: 4.1%;
+  max-width: 30%;
+  z-index: 1000;
+  padding-right: 3rem;
+  padding-left: 2rem;
+}
+
+.highcharts-axis-labels,
+.highcharts-xaxis-labels,
+.highcharts-radial-axis-labels {
+  font-size: 26px;
+}
+
+.highcharts-contextmenu {
+  color: rgb(222, 42, 186) !important;
+  background-color: rgba(176, 1, 1, 0);
+}
+
+.highcharts-menu {
+  color: white !important;
+  background-color: rgba(88, 10, 10, 0.486) !important;
+}
+
+.highcharts-a11y-proxy-container-after {
+  background-color: black;
+}
+
+.highcharts-a11y-proxy-element,
+.highcharts-no-tooltip {
+  background-color: black;
+  color: rgb(9, 156, 220) !important;
+}
+
+.highcharts-menu-item {
+  color: white !important;
+}
+
+.highcharts-menu-item:hover {
+  color: rgb(255, 43, 43) !important;
+  background-color: rgba(21, 6, 6, 0.486) !important;
+}
+
+.highcharts-background {
+  color: rgb(205, 0, 34) !important;
+}
+
+.highcharts-axis-labels,
+.highcharts-yaxis-labels,
+.highcharts-radial-axis-labels {
+  color: #0aa16f !important;
+  fill: #a00eda !important;
+}
+
+.highcharts-axis-labels text {
+  fill: rgba(160, 14, 218, 0) !important;
+  /* Cambia el color de relleno de los texto dentro del triangulo, los valores que no me interesa. (Ocultado con opacidad) */
+}
+
+.highcharts-plot-background {
+  margin-top: 3rem;
 }
 
 @media (min-width: 1200px) and (min-width: 1921px) {
@@ -2540,6 +2595,11 @@ a {
     align-items: center;
     padding-bottom: 5px;
     justify-content: flex-end;
+  }
+  #containerChart {
+    width: 800px;
+    height: 540px;
+    /* right: -2%; */
   }
 }
 @media (min-width: 768px) and (max-width: 1023.95px) {
