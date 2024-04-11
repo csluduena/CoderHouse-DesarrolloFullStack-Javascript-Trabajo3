@@ -1037,7 +1037,7 @@ hr {
 .image-button {
   width: 150px; /* Ancho fijo de 150px */
   height: 150px; /* Alto fijo de 150px */
-  background-image: url("../../img/pika.png"); /* Ruta de la imagen */
+  background-image: url("./../img/pika.png"); /* Ruta de la imagen */
   background-size: 150px 150px; /* Tamaño de la imagen */
   background-repeat: no-repeat; /* Evita que la imagen se repita */
   background-position: center; /* Centra la imagen dentro del botón */
