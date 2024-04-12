@@ -38,6 +38,8 @@ const pokePapiContainer = document.querySelector('.pokePapi');
 const getPokemonBtn = document.getElementById('getPokemonBtn');
 const borrarrr = document.getElementById('borrarrr');
 
+
+
 // Agregar un event listener para el clic en el botón de inicio
 startButton.addEventListener('click', () => {
     // Ocultar completamente el contenido de la clase pokePapi al hacer clic en el botón de inicio

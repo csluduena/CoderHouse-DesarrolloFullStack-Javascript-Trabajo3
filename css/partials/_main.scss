@@ -187,7 +187,6 @@ hr {
     justify-content: center;
     text-shadow: 5px 3px 2px #b852ffc7, -4px 1px 2px rgb(134 38 59),
         -3px -3px 2px rgb(255, 255, 255), 4px -2px 0 rgb(232 101 84);
-        margin-top: -42%;
 }
 
 .configLegendIndex {
@@ -304,7 +303,7 @@ hr {
 
 //! Opciones Raza
 .comenzarBtn {
-    background-image: url(../../img/single1.png);
+    background-image: url(./../img/single1.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -312,10 +311,6 @@ hr {
     width: 435px;
     height: 412px;
     cursor: pointer;
-}
-
-.botonesStartContainer {
-    display:flex;
 }
 
 .comenzarBtn:hover {
@@ -326,7 +321,7 @@ hr {
 }
 
 .multiDraftBoton {
-    background-image: url(../../img/multi1.png);
+    background-image: url(./../img/multi1.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -812,8 +807,8 @@ hr {
 }
 
 #clases {
-    margin-top: 9%;
-  }
+    margin-top: 18%;
+}
 
 .centerMove {
     margin-left: 3rem;
@@ -821,11 +816,24 @@ hr {
 }
 
 //TODO COLOCAR LOS BOTONES ACA Y ABAJO AL HOVER.
-#continuarBtn,
-#continuarBtn2 {
+#continuarBtn {
     display: none;
     position: fixed;
     bottom: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: 2px solid #00ffff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#continuarBtn2 {
+    display: none;
+    position: fixed;
+    bottom: 36%;
     left: 50%;
     transform: translateX(-50%);
     padding: 10px 20px;
@@ -1042,45 +1050,6 @@ hr {
     display: none;
 }
 
-
-.pokePapi {
-    display: Flex;
-    margin-bottom: 2%; 
+.botonesStartContainer {
+    display: flex;
 }
-
-#getPokemonBtn {
-    font-size: 20px;
-    margin-bottom: 1%;
-    cursor: pointer;
-}
-
-
-.cfgWebcita {
-    font-size: 50px;
-    display: Flex;
-    color: white;
-}
-
-.pokemonInfo {
-    color: white;
-    font-size: 30px;
-}
-
-.image-button {
-    width: 150px; /* Ancho fijo de 150px */
-    height: 150px; /* Alto fijo de 150px */
-    background-image: url('./../img/pika.png'); /* Ruta de la imagen */
-    background-size: 150px 150px; /* Tamaño de la imagen */
-    background-repeat: no-repeat; /* Evita que la imagen se repita */
-    background-position: center; /* Centra la imagen dentro del botón */
-    border: none; /* Elimina el borde del botón */
-    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
-}
-
-
-// <!--Footer Area-->
-//         <div class="pokePapi">
-//             <div class="pokemonInfo" class="cfgWebcita">Olvídate de Leyendas, Toca al Pikachú y busquemos info de Pokemones!!!</div>
-            
-//         </div>
-//         <a class="image-button" id="getPokemonBtn" href="./pages/pokememe.html"></a>
