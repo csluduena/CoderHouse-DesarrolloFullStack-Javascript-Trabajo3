@@ -391,3 +391,20 @@ Highcharts.chart('containerChart', {
         }]
     }
 });
+
+
+// Obtener la ubicación actual
+const currentPage = window.location.pathname;
+
+// Verificar si estamos en la página de inicio
+if (currentPage === "/index.html") {
+    // Mostrar los elementos al principio
+    document.querySelectorAll('.image-button, .pokemonInfo').forEach(element => {
+        element.style.display = 'block';
+    });
+} else {
+    // Ocultar los elementos en otras páginas
+    document.querySelectorAll('.image-button, .pokemonInfo').forEach(element => {
+        element.style.display = 'none';
+    });
+}
