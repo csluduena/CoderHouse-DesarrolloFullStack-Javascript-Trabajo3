@@ -72,7 +72,7 @@ button:hover {
 }
 
 .pkmBgnd {
-    background-image: url(../../img/pokepoke.jpg);
+    background-image: url(./../img/pokepoke.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     flex-direction: column;
@@ -88,7 +88,7 @@ button:hover {
     height: 250px; /* Alto fijo de 150px */
     background-color: rgba(19, 21, 156, 0.833);
     border-radius: 50%;
-    background-image: url(../../img/backIndex.png);
+    background-image: url(./../img/backIndex.png);
     background-size: 150px 150px; /* Tamaño de la imagen */
     background-repeat: no-repeat; /* Evita que la imagen se repita */
     background-position: center; /* Centra la imagen dentro del botón */
