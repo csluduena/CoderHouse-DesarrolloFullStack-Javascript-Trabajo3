@@ -1,4 +1,3 @@
-@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -13,8 +12,8 @@
 .centerContent {
   margin-top: 1rem;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 .SBConten {
@@ -590,7 +589,7 @@ hr {
   width: 216px;
   height: 257px;
   cursor: pointer;
-  margin-top: 1rem;
+  margin-top: -6rem;
   /* margin-bottom: 6rem; */
   flex-wrap: wrap;
   flex-direction: column;
@@ -772,17 +771,17 @@ hr {
   justify-content: space-between;
 }
 
+.centerMove {
+  margin-left: 3rem;
+  margin-right: 3rem;
+}
+
 #razas,
 #clases {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   align-items: center;
-}
-
-#razas {
-  margin-left: -36rem;
-  margin-top: -4rem;
 }
 
 #clases {
@@ -792,6 +791,11 @@ hr {
 .centerMove {
   margin-left: 3rem;
   margin-right: 3rem;
+}
+
+#razas {
+  margin-left: -36rem;
+  margin-top: -4rem;
 }
 
 #continuarBtn {
@@ -810,10 +814,10 @@ hr {
 
 #continuarBtn2 {
   display: none;
-  position: fixed;
-  bottom: 36%;
-  left: 50%;
-  transform: translateX(-50%);
+  /* position: fixed; */
+  /* bottom: 24%; */
+  /* left: 50%; */
+  /* transform: translateX(-50%); */
   padding: 10px 20px;
   background-color: #007bff;
   color: #fff;
@@ -899,6 +903,18 @@ hr {
   margin-left: 3px;
 }
 
+.buttonCFGSend {
+  margin-top: 2rem;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  border: 2px solid #00ffff;
+  margin-bottom: -3rem;
+}
+
 .contentGen {
   display: flex;
   flex-direction: column;
@@ -913,23 +929,11 @@ hr {
   margin-bottom: 4rem;
 }
 
-.buttonCFGSend {
-  margin-top: 2rem;
-  padding: 10px 20px;
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  border: 2px solid #00ffff;
-  margin-bottom: -3rem;
-}
-
-.buttonCFGSend {
-  margin-bottom: -3rem;
-}
-
 .spaceButt {
+  margin-bottom: -3rem;
+}
+
+.buttonCFGSend {
   margin-bottom: -3rem;
 }
 
@@ -1627,92 +1631,33 @@ a {
   margin-top: 3rem;
 }
 
-.pokePapi, #getPokemonBtn {
-  display: none;
-}
-
-.container {
+.sale {
   text-align: center;
-  box-shadow: #333;
+  color: rgb(255, 255, 255);
+  margin-top: 1%;
 }
 
-.black-container {
-  background-color: rgba(0, 0, 0, 0.788);
-  padding: 20px;
-  border-radius: 2rem;
-}
-
-#pokemon-input {
-  margin-bottom: 10px;
-  padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-button {
-  padding: 10px 20px;
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: #0056b3;
-}
-
-#pokemon-info {
-  background-color: #fff;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  padding: 20px;
-  margin-top: 20px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-#pokemon-info h2 {
-  color: #333;
-  margin-bottom: 10px;
-}
-
-#pokemon-info p {
-  margin-bottom: 5px;
-}
-
-#pokemon-info ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-#pokemon-info ul li {
-  margin-bottom: 5px;
-}
-
-.pkmBgnd {
-  background-image: url(./../img/pokepoke.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  align-content: normal;
-  justify-content: center;
-  align-items: center;
-  margin-right: 1rem;
-}
-
-.image-button2 {
-  width: 250px; /* Ancho fijo de 150px */
-  height: 250px; /* Alto fijo de 150px */
-  background-color: rgba(19, 21, 156, 0.833);
-  border-radius: 50%;
-  background-image: url(./../img/backIndex.png);
-  background-size: 150px 150px; /* Tamaño de la imagen */
-  background-repeat: no-repeat; /* Evita que la imagen se repita */
-  background-position: center; /* Centra la imagen dentro del botón */
-  border: none; /* Elimina el borde del botón */
+.titleMain {
   display: flex;
-  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+  justify-content: center;
+  color: rgb(230, 230, 230);
+}
+
+.titulosSet {
+  align-items: center;
+  color: rgb(225, 225, 225);
+}
+
+.titleSubmain {
+  display: flex;
+  justify-content: center;
+  color: rgb(182, 182, 182);
+}
+
+.h3Title {
+  display: flex;
+  justify-content: center;
+  color: rgb(159, 158, 158);
 }
 
 @media (min-width: 1200px) and (min-width: 1921px) {
