@@ -30,20 +30,19 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-// Obtener el botón de inicio
-const startButton = document.getElementById('start-button');
+// // Obtener el botón de inicio
+// const startButton = document.getElementById('start-button');
 
-// Obtener el contenedor de la clase pokePapi
-const pokePapiContainer = document.querySelector('.pokePapi');
-const getPokemonBtn = document.getElementById('getPokemonBtn');
-const borrarrr = document.getElementById('borrarrr');
+// // Obtener el contenedor de la clase pokePapi
+// const pokePapiContainer = document.querySelector('.pokePapi');
+// const getPokemonBtn = document.getElementById('getPokemonBtn');
+// const borrarrr = document.getElementById('borrarrr');
 
+// // Agregar un event listener para el clic en el botón de inicio
+// startButton.addEventListener('click', () => {
+//     // Ocultar completamente el contenido de la clase pokePapi al hacer clic en el botón de inicio
+//     pokePapiContainer.style.display = 'none';
+//     getPokemonBtn.style.display = 'none';
+//     borrarrr.style.display = 'none';
+// });
 
-
-// Agregar un event listener para el clic en el botón de inicio
-startButton.addEventListener('click', () => {
-    // Ocultar completamente el contenido de la clase pokePapi al hacer clic en el botón de inicio
-    pokePapiContainer.style.display = 'none';
-    getPokemonBtn.style.display = 'none';
-    borrarrr.style.display = 'none';
-});

@@ -36,7 +36,6 @@ document.getElementById("agilidad").textContent = agilidad;
 //!guardamos los atributos en una variable global
 
 
-
 //!Alerta borrar personaje
 let btnBorrar = document.getElementById("borrarPersonaje");
 let modal = document.getElementById("myModal");
@@ -238,7 +237,7 @@ let atributosGraph = {
 
 
 let claseSeleccionada = localStorage.getItem('clase');
-let atributosBaseClase = atributosBaseObtenidos[claseSeleccionada];
+let atributosBaseClase = atributosBaseObtenidos ? atributosBaseObtenidos[claseSeleccionada] : null;
 
 
 let dataStatsBase = [
@@ -254,7 +253,28 @@ let dataSerieStatsBase = categorias.map((categoria, index) => {
         name: categoria + ' Base',
         y: dataStatsBase[index]
     };
+    // });
 });
+
+
+if (atributosBaseClase) {
+    let dataStatsBase = [
+        atributosBaseClase[0], // Inteligencia
+        atributosBaseClase[1], // Fuerza
+        atributosBaseClase[2]  // Agilidad
+    ];
+
+    let categorias = ['Inteligencia', 'Fuerza', 'Agilidad'];
+
+    let dataSerieStatsBase = categorias.map((categoria, index) => {
+        return {
+            name: categoria + ' Base',
+            y: dataStatsBase[index]
+        };
+    });
+} else {
+    console.log('No se encontraron atributos base para la clase seleccionada');
+}
 
 Highcharts.chart('containerChart', {
     chart: {
@@ -391,7 +411,6 @@ Highcharts.chart('containerChart', {
         }]
     }
 });
-
 
 // Obtener la ubicación actual
 const currentPage = window.location.pathname;

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -1658,6 +1659,91 @@ a {
   display: flex;
   justify-content: center;
   color: rgb(159, 158, 158);
+}
+
+.generarCartasBtn {
+  /* display: flex; */
+  width: 109px;
+  height: 40px;
+  padding: 9px 19px;
+  background-color: #007bff;
+  color: #fff;
+  border: 2px solid #00ffff;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 47%;
+  margin-top: 3%;
+}
+
+.generarCartasBtn:hover {
+  box-shadow: 0px 0px 10px 5px #00ffff;
+}
+
+/* Estilos para las cartas */
+.carta-personaje {
+  width: 217px;
+  height: 367.6px;
+  margin: 10px;
+  border-radius: 10px;
+  /* Añade bordes redondeados a las cartas */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+  /* Añade una sombra a las cartas */
+  background-size: cover;
+  /* Asegura que la imagen de fondo cubra toda la carta */
+  background-position: center;
+  /* Centra la imagen de fondo */
+  color: white;
+  /* Cambia el color del texto a blanco */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  /* Añade una sombra al texto para mejor legibilidad */
+  padding: 10px;
+  /* Espaciado interno de la carta */
+  margin: 10px;
+  /* Margen entre las cartas */
+  border: 1px solid #ccc;
+  /* Borde de la carta */
+}
+
+/* Estilos para el contenedor de las cartas */
+#organizarCartas {
+  margin-top: 7%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+/* Estilos para el contenido de las cartas */
+.info-personaje {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+  /* Fondo semi-transparente */
+  padding: 10px;
+  border-radius: 5px;
+  /* Bordes redondeados */
+  box-sizing: border-box;
+  /* Incluye el padding en el tamaño total */
+  overflow: hidden;
+  /* Oculta el contenido que desborda */
+}
+
+/* Estilos para los textos dentro de las cartas */
+.colorTitulos {
+  color: #333;
+  /* Color de los títulos */
+  font-weight: bold;
+  /* Texto en negrita */
+  margin: 5px 0;
+  /* Margen superior e inferior */
+}
+
+.colorAtr {
+  color: #666;
+  /* Color de los atributos */
+  margin: 5px 0;
+  /* Margen superior e inferior */
 }
 
 @media (min-width: 1200px) and (min-width: 1921px) {

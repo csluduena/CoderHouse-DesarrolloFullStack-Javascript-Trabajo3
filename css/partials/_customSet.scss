@@ -1,72 +1,304 @@
+.sale {
+    text-align: center;
+    color: rgb(255, 255, 255);
+    margin-top: 1%;
+}
 
-    .sale {
-        text-align: center;
-        color: rgb(255, 255, 255);
-        margin-top: 1%;
-    }
-    .titleMain {
-        display:flex;
-        justify-content: center;
-        color: rgb(230, 230, 230);
-    }   
+.titleMain {
+    display: flex;
+    justify-content: center;
+    color: rgb(230, 230, 230);
+}
 
-    .titulosSet {
-        align-items: center;
-        color: rgb(225, 225, 225);
-    }
-    
-    .titleSubmain {
-        display:flex;    
-        justify-content: center;
-        color: rgb(182, 182, 182);
-    }
+.titulosSet {
+    align-items: center;
+    color: rgb(225, 225, 225);
+}
 
-    .h3Title {
-        display:flex;    
-        justify-content: center;
-        color: rgb(159, 158, 158);
-    }
+.titleSubmain {
+    display: flex;
+    justify-content: center;
+    color: rgb(182, 182, 182);
+}
 
-
+.h3Title {
+    display: flex;
+    justify-content: center;
+    color: rgb(159, 158, 158);
+}
 
 
+.generarCartasBtn {
+    /* display: flex; */
+    width: 109px;
+    height: 40px;
+    padding: 9px 19px;
+    background-color: #007bff;
+    color: #fff;
+    border: 2px solid #00ffff;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 47%;
+    margin-top: 3%;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.generarCartasBtn:hover {
+    box-shadow: 0px 0px 10px 5px #00ffff;
+}
 
 
 
 
 
+/* Estilos para las cartas */
+.carta-personaje {
+    width: 217px;
+    height: 367.6px;
+    margin: 10px;
+    border-radius: 10px;
+    /* Añade bordes redondeados a las cartas */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+    /* Añade una sombra a las cartas */
+    background-size: cover;
+    /* Asegura que la imagen de fondo cubra toda la carta */
+    background-position: center;
+    /* Centra la imagen de fondo */
+    color: white;
+    /* Cambia el color del texto a blanco */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    /* Añade una sombra al texto para mejor legibilidad */
+    padding: 10px;
+    /* Espaciado interno de la carta */
+    margin: 10px;
+    /* Margen entre las cartas */
+    border: 1px solid #ccc;
+    /* Borde de la carta */
+}
+
+/* Estilos para el contenedor de las cartas */
+// #organizarCartas {
+//     display: flex; /* Alinea las cartas en una fila */
+//     justify-content: center; /* Centra las cartas horizontalmente */
+//     flex-wrap: wrap; /* Permite que las cartas se envuelvan a la siguiente línea si no hay suficiente espacio */
+//     padding: 20px;
+// }
+
+#organizarCartas {
+    margin-top: 7%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    ;
+}
 
 
 
+// /* Estilos para las cartas */
+// .carta-personaje {
+//     width: 200px; /* Ancho de cada carta */
+//     height: 300px; /* Altura de cada carta */
+//     background-size: cover; /* Ajusta el tamaño del fondo para cubrir completamente el elemento */
+//     background-position: center; /* Centra el fondo */
+//     margin: 10px; /* Margen entre las cartas */
+//     //display: none; /* Oculta las cartas inicialmente */
+
+//     padding: 10px; /* Espaciado interno de la carta */
+//     border: 1px solid #ccc; /* Borde de la carta */
+// }
+
+/* Estilos para el contenido de las cartas */
+.info-personaje {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    /* Fondo semi-transparente */
+    padding: 10px;
+    border-radius: 5px;
+    /* Bordes redondeados */
+    box-sizing: border-box;
+    /* Incluye el padding en el tamaño total */
+    overflow: hidden;
+    /* Oculta el contenido que desborda */
+}
+
+/* Estilos para los textos dentro de las cartas */
+.colorTitulos {
+    color: #333;
+    /* Color de los títulos */
+    font-weight: bold;
+    /* Texto en negrita */
+    margin: 5px 0;
+    /* Margen superior e inferior */
+}
+
+.colorAtr {
+    color: #666;
+    /* Color de los atributos */
+    margin: 5px 0;
+    /* Margen superior e inferior */
+}
 
 
 
+// body {
+//     background: linear-gradient(-90deg, #7f2ccb, #2a2d43);
+// }
+
+// section {
+//     display: flex;
+//     justify-content: space-between;
+//     flex-direction: row;
+//     flex-wrap: wrap;
+//     margin: 0 50px;
+// }
+
+// p,
+// h2 {
+//     position: relative;
+//     z-index: 101;
+//     padding: 5px;
+//     color: #777;
+// }
+
+// .card {
+//     margin-top: 150px;
+//     transition: 1s;
+//     transform: scale(1, 1);
+//     -webkit-perspective: 1000px;
+//     -webkit-perspective-origin: 90% 90%;
+//     perspective: 1000px;
+//     perspective-origin: 90% 90%;
+//     transform-style: preserve-3d;
+//     backface-visibility: hidden;
+//     transform: translateZ(0);
+// }
+
+// .card:first-child {
+//     z-index: 99;
+// }
+
+// .card.open {
+//     z-index: 100;
+//     transition: 1s;
+// }
+
+// .top-layer,
+// .bottom-layer {
+//     position: relative;
+//     background-color: rgba(51, 51, 51, .98);
+//     width: 150px;
+//     height: 100px;
+//     box-shadow: 5px 5px 5px rgba(0, 0, 0, .5);
+// }
+
+// .top-layer,
+// .top-layer .shape {
+//     z-index: 1;
+// }
+
+// .bottom-layer {
+//     transition: 1s;
+// }
+
+// @keyframes open {
+//     0% {
+//         transform: rotateX(0deg);
+//         margin-top: 0px;
+//     }
+
+//     55% {
+//         transform: rotateX(0deg) rotateY(180deg);
+//         margin-top: 120px;
+//     }
+
+//     100% {
+//         transform: rotateX(180deg) rotateY(180deg);
+//         margin-top: 90px;
+//     }
+// }
+
+// .bottom-layer.open {
+//     animation-name: open;
+//     animation-duration: 2s;
+//     transform: rotateX(180deg) rotateY(180deg);
+//     margin-top: 90px;
+//     z-index: 1000;
+// }
+
+// .shape {
+//     position: absolute;
+//     top: 50px;
+//     background-color: rgba(51, 51, 51, .98);
+//     width: 150px;
+//     height: 100px;
+//     box-shadow: 1px 5px 5px rgba(0, 0, 0, .5);
+//     -ms-transform: skewY(30deg);
+//     -webkit-transform: skewY(30deg);
+//     transform: skewY(30deg);
+// }
+
+// .close {
+//     position: absolute;
+//     top: 5px;
+//     z-index: 1000;
+//     font-size: 4em;
+//     color: #fff;
+//     cursor: pointer;
+// }
+
+// .clear {
+//     clear: both;
+// }
+
+// .circle {
+//     position: relative;
+//     z-index: 102;
+//     top: 30px;
+//     background: #fff;
+//     margin: 0px auto;
+//     border-radius: 100%;
+//     height: 50px;
+//     width: 50px;
+// }
 
 
+// /* Centrar las cartas en la página */
+// .carta-container {
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+// }
 
+// .carta {
+//     width: 200px; /* Ancho deseado de la carta */
+//     height: 300px; /* Altura deseada de la carta */
+//     margin: 0 10px; /* Margen entre cada carta */
+//     background-color: white; /* Color de fondo de la carta */
+//     border: 1px solid black; /* Borde de la carta */
+//     padding: 20px; /* Espaciado interno de la carta */
+//     text-align: center; /* Alineación del contenido dentro de la carta */
+// }
 
+// /* Estilo para la información dentro de cada carta */
+// .carta h2, .carta p {
+//     margin: 5px 0; /* Espacio entre elementos */
+// }
 
+// /* Estilo para las estadísticas */
+// .stats-container {
+//     position: fixed; /* Posición fija para mantenerlo en la pantalla */
+//     top: 50%; /* Ajusta la posición verticalmente */
+//     right: 20px; /* Ajusta la posición horizontalmente */
+//     transform: translateY(-50%); /* Centra verticalmente */
+//     background-color: #fff; /* Color de fondo */
+//     border: 1px solid #ccc; /* Borde */
+//     border-radius: 5px; /* Borde redondeado */
+//     padding: 10px; /* Espacio interno */
+// }
 
-
-
-
-
-
-
+// /* Estilo para la información de las estadísticas */
+// .stats-container h2, .stats-container p {
+//     margin: 5px 0; /* Espacio entre elementos */
+// }
