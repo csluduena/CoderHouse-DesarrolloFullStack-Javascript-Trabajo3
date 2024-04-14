@@ -1704,9 +1704,8 @@ a {
   /* Borde de la carta */
 }
 
-/* Estilos para el contenedor de las cartas */
 #organizarCartas {
-  margin-top: 7%;
+  margin-top: 3%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1714,36 +1713,58 @@ a {
   flex-wrap: nowrap;
 }
 
-/* Estilos para el contenido de las cartas */
-.info-personaje {
-  width: 100%;
-  height: 100%;
-  background-color: rgba(255, 255, 255, 0.8);
-  /* Fondo semi-transparente */
-  padding: 10px;
-  border-radius: 5px;
-  /* Bordes redondeados */
-  box-sizing: border-box;
-  /* Incluye el padding en el tamaño total */
-  overflow: hidden;
-  /* Oculta el contenido que desborda */
+.colorTitulosMulti {
+  text-shadow: 0px -1px 2px #000000, 0px 2px 2px black, 0px -1px 2px black, 2px 0 0 black;
 }
 
-/* Estilos para los textos dentro de las cartas */
-.colorTitulos {
-  color: #333;
-  /* Color de los títulos */
-  font-weight: bold;
-  /* Texto en negrita */
-  margin: 5px 0;
-  /* Margen superior e inferior */
+.centrarAtributosMulti {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 0%;
+  margin-bottom: 8%;
 }
 
-.colorAtr {
-  color: #666;
-  /* Color de los atributos */
-  margin: 5px 0;
-  /* Margen superior e inferior */
+/* Estilos para las cartas */
+.carta-personaje {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.colorAtr1, .colorAtr2, .colorAtr3 {
+  margin-top: 10%;
+}
+
+.colorTitulosMulti {
+  text-shadow: -3px 0px 2px black, 0px 2px 2px black, 0px -1px 2px black, 2px 0 0 black;
+}
+
+.colorAtr1 {
+  display: flex;
+  flex-direction: column;
+  font-size: 9px;
+  color: white;
+  text-shadow: -3px 0px 2px black, 0px 2px 2px black, 0px -1px 2px black, 2px 0 0 black;
+}
+
+.colorAtr2 {
+  display: flex;
+  flex-direction: column;
+  font-size: 9px;
+  color: white;
+  text-shadow: -3px 0px 2px black, 0px 2px 2px black, 0px -1px 2px black, 2px 0 0 black;
+}
+
+.colorAtr3 {
+  display: flex;
+  flex-direction: column;
+  font-size: 9px;
+  color: white;
+  text-shadow: -3px 0px 2px black, 0px 2px 2px black, 0px -1px 2px black, 2px 0 0 black;
 }
 
 @media (min-width: 1200px) and (min-width: 1921px) {
