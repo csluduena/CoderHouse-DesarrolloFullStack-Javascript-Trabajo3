@@ -1700,8 +1700,6 @@ a {
   /* Espaciado interno de la carta */
   margin: 10px;
   /* Margen entre las cartas */
-  border: 1px solid #ccc;
-  /* Borde de la carta */
 }
 
 #organizarCartas {
@@ -1781,10 +1779,10 @@ a {
 }
 
 .card {
-  height: 150px;
-  margin: 0 -25px;
+  height: 384.6px;
+  margin: -322px -25px;
   position: relative;
-  width: 100px;
+  width: 234px;
 }
 .card:after {
   bottom: 0;
@@ -1818,25 +1816,15 @@ a {
   top: 0;
 }
 
-.card-label {
-  font-family: "helvetica neue", helvetica, arial, sans-serif;
-  font-size: 24px;
-  font-weight: bold;
-  letter-spacing: -0.025em;
-  padding: 15px 0 0 15px;
-}
-
 .card:nth-child(1) .card-face {
-  background: linear-gradient(-135deg, hsl(0, 100%, 80%), hsl(0, 90%, 45%));
-  box-shadow: -5px 5px 5px hsla(0, 0%, 0%, 0.15), inset 0 0 0 2px hsla(0, 100%, 80%, 0.75);
+  background: linear-gradient(-135deg); /*hsla($hue, 100%, 80%, 1),
+hsla($hue, 90%, 45%, 1));*/
   transform: translateY(45px) rotate(-28.125deg);
 }
 .card:nth-child(1) .card-face .card-label {
-  color: hsl(0, 100%, 43%);
   text-shadow: -0.025em 0.025em 0 hsl(0, 100%, 75%);
 }
 .card:nth-child(1):hover .card-face {
-  box-shadow: 0 10px 20px hsla(0, 0%, 0%, 0.4), inset 0 0 0 2px hsla(0, 100%, 80%, 0.75);
   transform: translateY(-100px) rotate(0deg) scale(2);
   transition-duration: 0ms;
   z-index: 5;
@@ -1849,16 +1837,14 @@ a {
 }
 
 .card:nth-child(2) .card-face {
-  background: linear-gradient(-135deg, hsl(324, 100%, 80%), hsl(324, 90%, 45%));
-  box-shadow: -5px 5px 5px hsla(0, 0%, 0%, 0.15), inset 0 0 0 2px hsla(324, 100%, 80%, 0.75);
+  background: linear-gradient(-135deg); /*hsla($hue, 100%, 80%, 1),
+hsla($hue, 90%, 45%, 1));*/
   transform: translateY(35px) rotate(-21.875deg);
 }
 .card:nth-child(2) .card-face .card-label {
-  color: hsl(324, 100%, 43%);
   text-shadow: -0.025em 0.025em 0 hsl(324, 100%, 75%);
 }
 .card:nth-child(2):hover .card-face {
-  box-shadow: 0 10px 20px hsla(0, 0%, 0%, 0.4), inset 0 0 0 2px hsla(324, 100%, 80%, 0.75);
   transform: translateY(-100px) rotate(0deg) scale(2);
   transition-duration: 0ms;
   z-index: 5;
@@ -1871,16 +1857,14 @@ a {
 }
 
 .card:nth-child(3) .card-face {
-  background: linear-gradient(-135deg, hsl(288, 100%, 80%), hsl(288, 90%, 45%));
-  box-shadow: -5px 5px 5px hsla(0, 0%, 0%, 0.15), inset 0 0 0 2px hsla(288, 100%, 80%, 0.75);
+  background: linear-gradient(-135deg); /*hsla($hue, 100%, 80%, 1),
+hsla($hue, 90%, 45%, 1));*/
   transform: translateY(25px) rotate(-15.625deg);
 }
 .card:nth-child(3) .card-face .card-label {
-  color: hsl(288, 100%, 43%);
   text-shadow: -0.025em 0.025em 0 hsl(288, 100%, 75%);
 }
 .card:nth-child(3):hover .card-face {
-  box-shadow: 0 10px 20px hsla(0, 0%, 0%, 0.4), inset 0 0 0 2px hsla(288, 100%, 80%, 0.75);
   transform: translateY(-100px) rotate(0deg) scale(2);
   transition-duration: 0ms;
   z-index: 5;
@@ -1893,16 +1877,14 @@ a {
 }
 
 .card:nth-child(4) .card-face {
-  background: linear-gradient(-135deg, hsl(252, 100%, 80%), hsl(252, 90%, 45%));
-  box-shadow: -5px 5px 5px hsla(0, 0%, 0%, 0.15), inset 0 0 0 2px hsla(252, 100%, 80%, 0.75);
+  background: linear-gradient(-135deg); /*hsla($hue, 100%, 80%, 1),
+hsla($hue, 90%, 45%, 1));*/
   transform: translateY(15px) rotate(-9.375deg);
 }
 .card:nth-child(4) .card-face .card-label {
-  color: hsl(252, 100%, 43%);
   text-shadow: -0.025em 0.025em 0 hsl(252, 100%, 75%);
 }
 .card:nth-child(4):hover .card-face {
-  box-shadow: 0 10px 20px hsla(0, 0%, 0%, 0.4), inset 0 0 0 2px hsla(252, 100%, 80%, 0.75);
   transform: translateY(-100px) rotate(0deg) scale(2);
   transition-duration: 0ms;
   z-index: 5;
@@ -1915,16 +1897,14 @@ a {
 }
 
 .card:nth-child(5) .card-face {
-  background: linear-gradient(-135deg, hsl(216, 100%, 80%), hsl(216, 90%, 45%));
-  box-shadow: -5px 5px 5px hsla(0, 0%, 0%, 0.15), inset 0 0 0 2px hsla(216, 100%, 80%, 0.75);
+  background: linear-gradient(-135deg); /*hsla($hue, 100%, 80%, 1),
+hsla($hue, 90%, 45%, 1));*/
   transform: translateY(5px) rotate(-3.125deg);
 }
 .card:nth-child(5) .card-face .card-label {
-  color: hsl(216, 100%, 43%);
   text-shadow: -0.025em 0.025em 0 hsl(216, 100%, 75%);
 }
 .card:nth-child(5):hover .card-face {
-  box-shadow: 0 10px 20px hsla(0, 0%, 0%, 0.4), inset 0 0 0 2px hsla(216, 100%, 80%, 0.75);
   transform: translateY(-100px) rotate(0deg) scale(2);
   transition-duration: 0ms;
   z-index: 5;
@@ -1937,16 +1917,14 @@ a {
 }
 
 .card:nth-child(6) .card-face {
-  background: linear-gradient(-135deg, hsl(180, 100%, 80%), hsl(180, 90%, 45%));
-  box-shadow: -5px 5px 5px hsla(0, 0%, 0%, 0.15), inset 0 0 0 2px hsla(180, 100%, 80%, 0.75);
+  background: linear-gradient(-135deg); /*hsla($hue, 100%, 80%, 1),
+hsla($hue, 90%, 45%, 1));*/
   transform: translateY(5px) rotate(3.125deg);
 }
 .card:nth-child(6) .card-face .card-label {
-  color: hsl(180, 100%, 43%);
   text-shadow: -0.025em 0.025em 0 hsl(180, 100%, 75%);
 }
 .card:nth-child(6):hover .card-face {
-  box-shadow: 0 10px 20px hsla(0, 0%, 0%, 0.4), inset 0 0 0 2px hsla(180, 100%, 80%, 0.75);
   transform: translateY(-100px) rotate(0deg) scale(2);
   transition-duration: 0ms;
   z-index: 5;
@@ -1959,16 +1937,14 @@ a {
 }
 
 .card:nth-child(7) .card-face {
-  background: linear-gradient(-135deg, hsl(144, 100%, 80%), hsl(144, 90%, 45%));
-  box-shadow: -5px 5px 5px hsla(0, 0%, 0%, 0.15), inset 0 0 0 2px hsla(144, 100%, 80%, 0.75);
+  background: linear-gradient(-135deg); /*hsla($hue, 100%, 80%, 1),
+hsla($hue, 90%, 45%, 1));*/
   transform: translateY(15px) rotate(9.375deg);
 }
 .card:nth-child(7) .card-face .card-label {
-  color: hsl(144, 100%, 43%);
   text-shadow: -0.025em 0.025em 0 hsl(144, 100%, 75%);
 }
 .card:nth-child(7):hover .card-face {
-  box-shadow: 0 10px 20px hsla(0, 0%, 0%, 0.4), inset 0 0 0 2px hsla(144, 100%, 80%, 0.75);
   transform: translateY(-100px) rotate(0deg) scale(2);
   transition-duration: 0ms;
   z-index: 5;
@@ -1981,16 +1957,14 @@ a {
 }
 
 .card:nth-child(8) .card-face {
-  background: linear-gradient(-135deg, hsl(108, 100%, 80%), hsl(108, 90%, 45%));
-  box-shadow: -5px 5px 5px hsla(0, 0%, 0%, 0.15), inset 0 0 0 2px hsla(108, 100%, 80%, 0.75);
+  background: linear-gradient(-135deg); /*hsla($hue, 100%, 80%, 1),
+hsla($hue, 90%, 45%, 1));*/
   transform: translateY(25px) rotate(15.625deg);
 }
 .card:nth-child(8) .card-face .card-label {
-  color: hsl(108, 100%, 43%);
   text-shadow: -0.025em 0.025em 0 hsl(108, 100%, 75%);
 }
 .card:nth-child(8):hover .card-face {
-  box-shadow: 0 10px 20px hsla(0, 0%, 0%, 0.4), inset 0 0 0 2px hsla(108, 100%, 80%, 0.75);
   transform: translateY(-100px) rotate(0deg) scale(2);
   transition-duration: 0ms;
   z-index: 5;
@@ -2003,16 +1977,14 @@ a {
 }
 
 .card:nth-child(9) .card-face {
-  background: linear-gradient(-135deg, hsl(72, 100%, 80%), hsl(72, 90%, 45%));
-  box-shadow: -5px 5px 5px hsla(0, 0%, 0%, 0.15), inset 0 0 0 2px hsla(72, 100%, 80%, 0.75);
+  background: linear-gradient(-135deg); /*hsla($hue, 100%, 80%, 1),
+hsla($hue, 90%, 45%, 1));*/
   transform: translateY(35px) rotate(21.875deg);
 }
 .card:nth-child(9) .card-face .card-label {
-  color: hsl(72, 100%, 43%);
   text-shadow: -0.025em 0.025em 0 hsl(72, 100%, 75%);
 }
 .card:nth-child(9):hover .card-face {
-  box-shadow: 0 10px 20px hsla(0, 0%, 0%, 0.4), inset 0 0 0 2px hsla(72, 100%, 80%, 0.75);
   transform: translateY(-100px) rotate(0deg) scale(2);
   transition-duration: 0ms;
   z-index: 5;
@@ -2025,16 +1997,14 @@ a {
 }
 
 .card:nth-child(10) .card-face {
-  background: linear-gradient(-135deg, hsl(36, 100%, 80%), hsl(36, 90%, 45%));
-  box-shadow: -5px 5px 5px hsla(0, 0%, 0%, 0.15), inset 0 0 0 2px hsla(36, 100%, 80%, 0.75);
+  background: linear-gradient(-135deg); /*hsla($hue, 100%, 80%, 1),
+hsla($hue, 90%, 45%, 1));*/
   transform: translateY(45px) rotate(28.125deg);
 }
 .card:nth-child(10) .card-face .card-label {
-  color: hsl(36, 100%, 43%);
   text-shadow: -0.025em 0.025em 0 hsl(36, 100%, 75%);
 }
 .card:nth-child(10):hover .card-face {
-  box-shadow: 0 10px 20px hsla(0, 0%, 0%, 0.4), inset 0 0 0 2px hsla(36, 100%, 80%, 0.75);
   transform: translateY(-100px) rotate(0deg) scale(2);
   transition-duration: 0ms;
   z-index: 5;
