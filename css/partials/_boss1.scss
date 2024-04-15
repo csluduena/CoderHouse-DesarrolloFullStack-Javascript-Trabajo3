@@ -44,73 +44,91 @@
     background-color: #45a049;
 }
 
-.cards {
-    bottom: -116px;
-    display: flex;
-    height: 150px;
-    padding: 0 50px;
-    flex-direction: row;
-    flex-wrap: nowrap;   
-    align-content: normal;
-    justify-content: space-evenly;
-    left: 0;
-    right: 0;
-}
 
 
 
-.card:nth-child(1) .card-face {
-    background: linear-gradient(-135deg);
-    transform: translateY(88px) rotate(0deg);
-}
-.card:nth-child(2) .card-face {
-    background: linear-gradient(-135deg);
-    transform: translateY(88px) rotate(0deg);
-}
-.card:nth-child(3) .card-face {
-    background: linear-gradient(-135deg);
-    transform: translateY(88px) rotate(0deg);
-}
-.card:nth-child(4) .card-face {
-    background: linear-gradient(-135deg);
-    transform: translateY(88px) rotate(0deg);
-}
-.card:nth-child(5) .card-face {
-    background: linear-gradient(-135deg);
-    transform: translateY(88px) rotate(0deg);
-}
-.card:nth-child(6) .card-face {
-    background: linear-gradient(-135deg);
-    transform: translateY(88px) rotate(0deg);
-}
-.card:nth-child(1):hover {
-    margin-top: -21%;
-    width: 50px; /* Ancho deseado */
-    height: auto; /* Altura automática para mantener la proporción */
-}
-.card:nth-child(2):hover {
-    margin-top: -21%;
-}
-.card:nth-child(3):hover {
-    margin-top: -21%;
-}
-.card:nth-child(4):hover {
-    margin-top: -921%;
-}
-.card:nth-child(5):hover {
-    margin-top: -21%;
-}
-.card:nth-child(6):hover {
-    margin-top: -21%;
-}
-.cards:hover-child(1) img {
-    width: 100px; /* Ancho deseado */
-    height: auto; /* Altura automática para mantener la proporción */
-}
 
 
 
 // .cards:hover img:first-child {
-//     width: 100px; /* Ancho deseado */
-//     height: auto; /* Altura automática para mantener la proporción */
+//     width: 100px;
+//     height: auto;
+// }
+
+
+
+// .cards {
+//     bottom: -116px;
+//     display: flex;
+//     height: 150px;
+//     padding: 0 50px;
+//     flex-direction: row;
+//     flex-wrap: nowrap;   
+//     align-content: normal;
+//     justify-content: space-evenly;
+//     left: 0;
+//     right: 0;
+// }
+
+
+
+// .card:nth-child(1) .card-face {
+//     background: linear-gradient(-135deg);
+//     transform: translateY(88px) rotate(0deg);
+// }
+// .card:nth-child(2) .card-face {
+//     background: linear-gradient(-135deg);
+//     transform: translateY(88px) rotate(0deg);
+// }
+// .card:nth-child(3) .card-face {
+//     background: linear-gradient(-135deg);
+//     transform: translateY(88px) rotate(0deg);
+// }
+// .card:nth-child(4) .card-face {
+//     background: linear-gradient(-135deg);
+//     transform: translateY(88px) rotate(0deg);
+// }
+// .card:nth-child(5) .card-face {
+//     background: linear-gradient(-135deg);
+//     transform: translateY(88px) rotate(0deg);
+// }
+// .card:nth-child(6) .card-face {
+//     background: linear-gradient(-135deg);
+//     transform: translateY(88px) rotate(0deg);
+// }
+// .card:nth-child(1):hover {
+//     margin-top: -22%;
+//     width: 217px;
+//     height: 367.6px;
+// }
+// .card:nth-child(2):hover {
+//     margin-top: -22%;
+//     width: 217px;
+//     height: 367.6px;
+// }
+// .card:nth-child(3):hover {
+//     margin-top: -22%;
+//     width: 217px;
+//     height: 367.6px;
+// }
+// .card:nth-child(4):hover {
+//     margin-top: -22%;
+//     width: 217px;
+//     height: 367.6px;
+// }
+// .card:nth-child(5):hover {
+//     margin-top: -22%;
+//     width: 217px;
+//     height: 367.6px;
+// }
+// .card:nth-child(6):hover {
+//     margin-top: -22%;
+//     width: 217px;
+//     height: 367.6px;
+// }
+// .card {
+//     height: 384.6px;
+//     margin: -414px -111px;
+//     position: relative;
+//     width: 195px;
 // }
