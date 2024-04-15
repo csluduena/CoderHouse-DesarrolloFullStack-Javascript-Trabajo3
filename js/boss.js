@@ -147,6 +147,8 @@ startBattleButton.addEventListener('click', () => {
     cardsPlace.style.justifyContent = 'center';
     cardsPlace.style.alignItems = 'center';
 
+    letsGoButton.style.marginTop = '22%';
+    cardsPlace.style.marginTop = '7%';
     // Añade un controlador de eventos de doble clic a cada carta
     cards.forEach((card) => {
         card.addEventListener('dblclick', () => {
@@ -173,5 +175,6 @@ letsGoButton.addEventListener('click', () => {
     battlefield.style.display = 'block';
     boss.style.display = 'block';
 
+    cardsPlace.style.marginTop = '-50%';
     // Aquí puedes agregar el código para iniciar la batalla
 });
