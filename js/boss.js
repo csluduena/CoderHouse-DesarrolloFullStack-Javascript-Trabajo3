@@ -94,9 +94,84 @@ document.getElementById('startBattle').addEventListener('click', function() {
     cards.forEach((card) => {
         card.style.height = '367.6px';
         card.style.width = '217px';
-        card.style.marginTop = '-22%';
+        card.style.marginTop = '-18%';
         cardsContainer.style.height = '156px';
-        cardsContainer.style.gap = '4%';
+        cardsContainer.style.gap = '1%';
         card.querySelector('.card-face').style.transform = 'translateY(88px) rotate(0deg)';
     });
+});
+
+//TODO Drag And Drop de cartas frente al boss.
+// Selecciona todas las cartas
+let cards = document.querySelectorAll('.card');
+
+// Selecciona el lugar de las cartas
+let cardsPlace = document.querySelector('.cardsPlace');
+
+// Selecciona el campo de batalla
+let battlefield = document.querySelector('.battlefield');
+
+// Selecciona el boss
+let boss = document.querySelector('.boss');
+
+// Selecciona los elementos con las clases .h3Title y .titleSubmain
+let h3Title = document.querySelectorAll('.h3Title');
+let titleSubmain = document.querySelectorAll('.titleSubmain');
+
+// Selecciona el botón de inicio de batalla
+let startBattleButton = document.querySelector('#startBattle');
+
+// Selecciona el botón ¡Lets Go!
+let letsGoButton = document.querySelector('.ready');
+
+// Inicialmente, oculta el campo de batalla y el boss
+battlefield.style.display = 'none';
+boss.style.display = 'none';
+
+// Añade un controlador de eventos al botón de inicio de batalla
+startBattleButton.addEventListener('click', () => {
+    // Oculta los elementos con las clases .h3Title y .titleSubmain
+    h3Title.forEach((element) => {
+        element.style.display = 'none';
+    });
+    titleSubmain.forEach((element) => {
+        element.style.display = 'none';
+    });
+
+    // Muestra el botón ¡Lets Go! y deshabilítalo inicialmente
+    letsGoButton.style.display = 'block';
+    letsGoButton.disabled = true;
+
+    // Configura el lugar de las cartas para usar Flexbox
+    cardsPlace.style.display = 'flex';
+    cardsPlace.style.justifyContent = 'center';
+    cardsPlace.style.alignItems = 'center';
+
+    // Añade un controlador de eventos de doble clic a cada carta
+    cards.forEach((card) => {
+        card.addEventListener('dblclick', () => {
+            // Mueve la carta al lugar de las cartas
+            cardsPlace.appendChild(card);
+
+            // Asegúrate de que las cartas se posicionen de izquierda a derecha
+            card.style.display = 'inline-block';
+
+            // Aplica un margin-top de -43% a la carta
+            card.style.marginTop = '-43%';
+
+            // Si todas las cartas están en el lugar de las cartas, habilita el botón ¡Lets Go!
+            if (cardsPlace.childElementCount === 6) {
+                letsGoButton.disabled = false;
+            }
+        });
+    });
+});
+
+// Añade un controlador de eventos al botón ¡Lets Go!
+letsGoButton.addEventListener('click', () => {
+    // Muestra el campo de batalla y el boss
+    battlefield.style.display = 'block';
+    boss.style.display = 'block';
+
+    // Aquí puedes agregar el código para iniciar la batalla
 });

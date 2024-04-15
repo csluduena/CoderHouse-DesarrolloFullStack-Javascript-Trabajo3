@@ -131,7 +131,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
-//! HOLD SHIFT PARA HOVER DE CARTAS.
+//! Presionar y mantener 1 al 6 PARA HOVER DE CARTAS.
 
 // Selecciona todos los elementos con la clase 'card'
 let thecards = document.querySelectorAll('.card');
