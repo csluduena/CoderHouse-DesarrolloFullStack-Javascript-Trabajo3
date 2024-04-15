@@ -11,4 +11,7 @@ const boss1 = {
 
 document.getElementById('startBattle').addEventListener('click', function() {
     document.getElementById('boss').style.display = 'block'; // Mostrar al boss al hacer clic en el botón
+    const chauBoton = document.getElementById('startBattle')
+
+    chauBoton.style.display = 'none';
 })
