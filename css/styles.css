@@ -1632,33 +1632,50 @@ a {
   margin-top: 3rem;
 }
 
+#organizarCartas {
+  display: none; /* Oculta el contenedor de las cartas */
+}
+
 .sale {
   text-align: center;
-  color: rgb(255, 255, 255);
+  color: #E2E6FF;
   margin-top: 1%;
+  text-shadow: 0px -1px 2px #000000, 0px 2px 2px black, 0px -1px 2px black, 2px 0 0 black;
 }
 
 .titleMain {
   display: flex;
   justify-content: center;
-  color: rgb(230, 230, 230);
-}
-
-.titulosSet {
-  align-items: center;
-  color: rgb(225, 225, 225);
+  color: #FFD1DC;
+  text-shadow: 0px -1px 2px #000000, 0px 2px 2px black, 0px -1px 2px black, 2px 0 0 black;
 }
 
 .titleSubmain {
   display: flex;
   justify-content: center;
-  color: rgb(182, 182, 182);
+  color: #D3FFCE;
+  text-shadow: 0px -1px 2px #000000, 0px 2px 2px black, 0px -1px 2px black, 2px 0 0 black;
 }
 
 .h3Title {
   display: flex;
   justify-content: center;
-  color: rgb(159, 158, 158);
+  color: #FFF3B5;
+  text-shadow: 0px -1px 2px #000000, 0px 2px 2px black, 0px -1px 2px black, 2px 0 0 black;
+}
+
+.titulosSet {
+  align-items: center;
+  color: hsl(45, 100%, 99%);
+  text-shadow: 0px -1px 2px #000000, 0px 2px 2px black, 0px -1px 2px black, 2px 0 0 black;
+}
+
+.titleMain,
+.titleSubmain,
+.h3Title {
+  /* Añade un shadow box de color apenas negro */
+  /* Añade un poco de padding para que el texto no esté tan cerca del borde del shadow box */
+  padding: 10px;
 }
 
 .generarCartasBtn {
@@ -1768,7 +1785,7 @@ a {
 }
 
 .cards {
-  bottom: 0;
+  bottom: -116px;
   display: flex;
   height: 150px;
   padding: 0 50px;
@@ -1776,22 +1793,6 @@ a {
   position: fixed;
   left: 0;
   right: 0;
-}
-
-.card {
-  height: 384.6px;
-  margin: -322px -25px;
-  position: relative;
-  width: 234px;
-}
-.card:after {
-  bottom: 0;
-  content: "";
-  left: -60px;
-  position: absolute;
-  right: -60px;
-  top: 0px;
-  z-index: 10;
 }
 
 .card-face {
@@ -1817,9 +1818,8 @@ a {
 }
 
 .card:nth-child(1) .card-face {
-  background: linear-gradient(-135deg); /*hsla($hue, 100%, 80%, 1),
-hsla($hue, 90%, 45%, 1));*/
-  transform: translateY(45px) rotate(-28.125deg);
+  background: linear-gradient(-135deg);
+  transform: translateY(50px) rotate(-50deg);
 }
 .card:nth-child(1) .card-face .card-label {
   text-shadow: -0.025em 0.025em 0 hsl(0, 100%, 75%);
@@ -1837,12 +1837,11 @@ hsla($hue, 90%, 45%, 1));*/
 }
 
 .card:nth-child(2) .card-face {
-  background: linear-gradient(-135deg); /*hsla($hue, 100%, 80%, 1),
-hsla($hue, 90%, 45%, 1));*/
-  transform: translateY(35px) rotate(-21.875deg);
+  background: linear-gradient(-135deg);
+  transform: translateY(30px) rotate(-30deg);
 }
 .card:nth-child(2) .card-face .card-label {
-  text-shadow: -0.025em 0.025em 0 hsl(324, 100%, 75%);
+  text-shadow: -0.025em 0.025em 0 hsl(300, 100%, 75%);
 }
 .card:nth-child(2):hover .card-face {
   transform: translateY(-100px) rotate(0deg) scale(2);
@@ -1857,12 +1856,11 @@ hsla($hue, 90%, 45%, 1));*/
 }
 
 .card:nth-child(3) .card-face {
-  background: linear-gradient(-135deg); /*hsla($hue, 100%, 80%, 1),
-hsla($hue, 90%, 45%, 1));*/
-  transform: translateY(25px) rotate(-15.625deg);
+  background: linear-gradient(-135deg);
+  transform: translateY(10px) rotate(-10deg);
 }
 .card:nth-child(3) .card-face .card-label {
-  text-shadow: -0.025em 0.025em 0 hsl(288, 100%, 75%);
+  text-shadow: -0.025em 0.025em 0 hsl(240, 100%, 75%);
 }
 .card:nth-child(3):hover .card-face {
   transform: translateY(-100px) rotate(0deg) scale(2);
@@ -1877,12 +1875,11 @@ hsla($hue, 90%, 45%, 1));*/
 }
 
 .card:nth-child(4) .card-face {
-  background: linear-gradient(-135deg); /*hsla($hue, 100%, 80%, 1),
-hsla($hue, 90%, 45%, 1));*/
-  transform: translateY(15px) rotate(-9.375deg);
+  background: linear-gradient(-135deg);
+  transform: translateY(10px) rotate(10deg);
 }
 .card:nth-child(4) .card-face .card-label {
-  text-shadow: -0.025em 0.025em 0 hsl(252, 100%, 75%);
+  text-shadow: -0.025em 0.025em 0 hsl(180, 100%, 75%);
 }
 .card:nth-child(4):hover .card-face {
   transform: translateY(-100px) rotate(0deg) scale(2);
@@ -1897,12 +1894,11 @@ hsla($hue, 90%, 45%, 1));*/
 }
 
 .card:nth-child(5) .card-face {
-  background: linear-gradient(-135deg); /*hsla($hue, 100%, 80%, 1),
-hsla($hue, 90%, 45%, 1));*/
-  transform: translateY(5px) rotate(-3.125deg);
+  background: linear-gradient(-135deg);
+  transform: translateY(30px) rotate(30deg);
 }
 .card:nth-child(5) .card-face .card-label {
-  text-shadow: -0.025em 0.025em 0 hsl(216, 100%, 75%);
+  text-shadow: -0.025em 0.025em 0 hsl(120, 100%, 75%);
 }
 .card:nth-child(5):hover .card-face {
   transform: translateY(-100px) rotate(0deg) scale(2);
@@ -1917,12 +1913,11 @@ hsla($hue, 90%, 45%, 1));*/
 }
 
 .card:nth-child(6) .card-face {
-  background: linear-gradient(-135deg); /*hsla($hue, 100%, 80%, 1),
-hsla($hue, 90%, 45%, 1));*/
-  transform: translateY(5px) rotate(3.125deg);
+  background: linear-gradient(-135deg);
+  transform: translateY(50px) rotate(50deg);
 }
 .card:nth-child(6) .card-face .card-label {
-  text-shadow: -0.025em 0.025em 0 hsl(180, 100%, 75%);
+  text-shadow: -0.025em 0.025em 0 hsl(60, 100%, 75%);
 }
 .card:nth-child(6):hover .card-face {
   transform: translateY(-100px) rotate(0deg) scale(2);
@@ -1936,84 +1931,38 @@ hsla($hue, 90%, 45%, 1));*/
   top: -175px;
 }
 
-.card:nth-child(7) .card-face {
-  background: linear-gradient(-135deg); /*hsla($hue, 100%, 80%, 1),
-hsla($hue, 90%, 45%, 1));*/
-  transform: translateY(15px) rotate(9.375deg);
-}
-.card:nth-child(7) .card-face .card-label {
-  text-shadow: -0.025em 0.025em 0 hsl(144, 100%, 75%);
-}
-.card:nth-child(7):hover .card-face {
-  transform: translateY(-100px) rotate(0deg) scale(2);
-  transition-duration: 0ms;
-  z-index: 5;
-}
-.card:nth-child(7):hover .card-face:after {
-  animation: fade 250ms ease-out forwards;
-}
-.card:nth-child(7):hover:after {
-  top: -175px;
+.card:nth-child(1) .card-face {
+  background: linear-gradient(-135deg);
+  transform: translateY(88px) rotate(-38deg);
 }
 
-.card:nth-child(8) .card-face {
-  background: linear-gradient(-135deg); /*hsla($hue, 100%, 80%, 1),
-hsla($hue, 90%, 45%, 1));*/
-  transform: translateY(25px) rotate(15.625deg);
-}
-.card:nth-child(8) .card-face .card-label {
-  text-shadow: -0.025em 0.025em 0 hsl(108, 100%, 75%);
-}
-.card:nth-child(8):hover .card-face {
-  transform: translateY(-100px) rotate(0deg) scale(2);
-  transition-duration: 0ms;
-  z-index: 5;
-}
-.card:nth-child(8):hover .card-face:after {
-  animation: fade 250ms ease-out forwards;
-}
-.card:nth-child(8):hover:after {
-  top: -175px;
+.card:nth-child(6) .card-face {
+  background: linear-gradient(-135deg);
+  transform: translateY(77px) rotate(39deg);
 }
 
-.card:nth-child(9) .card-face {
-  background: linear-gradient(-135deg); /*hsla($hue, 100%, 80%, 1),
-hsla($hue, 90%, 45%, 1));*/
-  transform: translateY(35px) rotate(21.875deg);
-}
-.card:nth-child(9) .card-face .card-label {
-  text-shadow: -0.025em 0.025em 0 hsl(72, 100%, 75%);
-}
-.card:nth-child(9):hover .card-face {
-  transform: translateY(-100px) rotate(0deg) scale(2);
-  transition-duration: 0ms;
-  z-index: 5;
-}
-.card:nth-child(9):hover .card-face:after {
-  animation: fade 250ms ease-out forwards;
-}
-.card:nth-child(9):hover:after {
-  top: -175px;
+.card:nth-child(1):hover {
+  margin-top: -22%;
 }
 
-.card:nth-child(10) .card-face {
-  background: linear-gradient(-135deg); /*hsla($hue, 100%, 80%, 1),
-hsla($hue, 90%, 45%, 1));*/
-  transform: translateY(45px) rotate(28.125deg);
+.card:nth-child(2):hover {
+  margin-top: -22%;
 }
-.card:nth-child(10) .card-face .card-label {
-  text-shadow: -0.025em 0.025em 0 hsl(36, 100%, 75%);
+
+.card:nth-child(3):hover {
+  margin-top: -22%;
 }
-.card:nth-child(10):hover .card-face {
-  transform: translateY(-100px) rotate(0deg) scale(2);
-  transition-duration: 0ms;
-  z-index: 5;
+
+.card:nth-child(4):hover {
+  margin-top: -22%;
 }
-.card:nth-child(10):hover .card-face:after {
-  animation: fade 250ms ease-out forwards;
+
+.card:nth-child(5):hover {
+  margin-top: -22%;
 }
-.card:nth-child(10):hover:after {
-  top: -175px;
+
+.card:nth-child(6):hover {
+  margin-top: -22%;
 }
 
 @keyframes fade {
@@ -2026,6 +1975,100 @@ hsla($hue, 90%, 45%, 1));*/
     transform: scale(1.15);
   }
 }
+.card {
+  /* estilos originales */
+  height: 384.6px;
+  margin: -322px -25px;
+  position: relative;
+  width: 195px;
+}
+
+.card:after {
+  /* estilos originales */
+  bottom: 0;
+  content: "";
+  left: -60px;
+  position: absolute;
+  right: -60px;
+  top: 0px;
+  z-index: 10;
+}
+
+.card:hover .card-face {
+  /* estilos cuando el mouse está encima */
+  transform: translateY(-100px) rotate(0deg) scale(2);
+  transition-duration: 0ms;
+  z-index: 5;
+}
+
+.card:hover:after {
+  top: -175px;
+}
+
+.card:hover {
+  margin-top: -22%;
+}
+
+/* Añade una nueva clase que tenga los mismos estilos que :hover */
+.card.hover-effect .card-face {
+  /* los mismos estilos que .card:hover */
+  transform: translateY(-100px) rotate(0deg) scale(2);
+  transition-duration: 0ms;
+  z-index: 5;
+}
+
+.card.hover-effect:after {
+  top: -175px;
+}
+
+.card.hover-effect {
+  margin-top: -22%;
+}
+
+/* Añade estilos para centrar el modal y los botones */
+.battlefield {
+  width: 800px;
+  height: 400px;
+  border: 2px solid black;
+  position: relative;
+  margin: 0 auto;
+  margin-top: -3px;
+}
+
+.boss {
+  width: 50px;
+  height: 50px;
+  background-color: red;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none; /* Ocultar el boss inicialmente */
+}
+
+.start {
+  display: block;
+  width: 100px;
+  height: 40px;
+  background-color: #4CAF50;
+  color: white;
+  text-align: center;
+  line-height: 40px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.start:hover {
+  background-color: #45a049;
+}
+
 @media (min-width: 1200px) and (min-width: 1921px) {
   #content {
     display: none;

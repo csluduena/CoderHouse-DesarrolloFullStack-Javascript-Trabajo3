@@ -6,24 +6,24 @@
                 "Mago": {
                     "descripcion": "Usuarios de magia poderosa y destructiva.",
                     "atributos": {
-                        "fuerza": 8,
-                        "inteligencia": 1,
+                        "inteligencia": 8,
+                        "fuerza": 1,
                         "agilidad": 5
                     }
                 },
                 "Druida": {
                     "descripcion": "Capaces de manipular la magia de la naturaleza.",
                     "atributos": {
-                        "fuerza": 6,
-                        "inteligencia": 2,
+                        "inteligencia": 6,
+                        "fuerza": 2,
                         "agilidad": 6
                     }
                 },
                 "Bardo": {
                     "descripcion": "Artistas talentosos con habilidades mágicas únicas.",
                     "atributos": {
-                        "fuerza": 10,
-                        "inteligencia": 1,
+                        "inteligencia": 10,
+                        "fuerza": 1,
                         "agilidad": 7
                     }
                 }
@@ -35,24 +35,24 @@
                 "Guerrero": {
                     "descripcion": "Combatientes fuertes y resistentes.",
                     "atributos": {
-                        "fuerza": 5,
-                        "inteligencia": 15,
+                        "inteligencia": 5,
+                        "fuerza": 15,
                         "agilidad": 5
                     }
                 },
                 "Herrero": {
                     "descripcion": "Maestros de la creación y mejora de armas y armaduras.",
                     "atributos": {
-                        "fuerza": 3,
-                        "inteligencia": 18,
+                        "inteligencia": 3,
+                        "fuerza": 18,
                         "agilidad": 3
                     }
                 },
                 "Paladin": {
                     "descripcion": "Defensores valientes con habilidades de curación.",
                     "atributos": {
-                        "fuerza": 8,
-                        "inteligencia": 12,
+                        "inteligencia": 8,
+                        "fuerza": 12,
                         "agilidad": 5
                     }
                 }
@@ -64,24 +64,24 @@
                 "Caballero": {
                     "descripcion": "Protectores leales, habilidosos en combate cuerpo a cuerpo.",
                     "atributos": {
-                        "fuerza": 2,
-                        "inteligencia": 20,
+                        "inteligencia": 2,
+                        "fuerza": 20,
                         "agilidad": 4
                     }
                 },
                 "Picaro": {
                     "descripcion": "Maestros del sigilo y la astucia, expertos en trampas y robos.",
                     "atributos": {
-                        "fuerza": 6,
-                        "inteligencia": 7,
+                        "inteligencia": 6,
+                        "fuerza": 7,
                         "agilidad": 12
                     }
                 },
                 "Clerigo": {
                     "descripcion": "Sanadores y protectores con habilidades mágicas divinas.",
                     "atributos": {
-                        "fuerza": 8,
-                        "inteligencia": 10,
+                        "inteligencia": 8,
+                        "fuerza": 10,
                         "agilidad": 5
                     }
                 }
@@ -93,24 +93,24 @@
                 "Berserker": {
                     "descripcion": "Conectados con los espíritus y capaces de usar magia elemental.",
                     "atributos": {
-                        "fuerza": 1,
-                        "inteligencia": 25,
+                        "inteligencia": 1,
+                        "fuerza": 25,
                         "agilidad": 3
                     }
                 },
                 "Chaman": {
                     "descripcion": "Conectados con los espíritus y capaces de usar magia elemental.",
                     "atributos": {
-                        "fuerza": 10,
-                        "inteligencia": 8,
+                        "inteligencia": 10,
+                        "fuerza": 8,
                         "agilidad": 5
                     }
                 },
                 "Cazador": {
                     "descripcion": "Expertos en rastreo y combate a distancia.",
                     "atributos": {
-                        "fuerza": 8,
-                        "inteligencia": 10,
+                        "inteligencia": 8,
+                        "fuerza": 10,
                         "agilidad": 10
                     }
                 }

@@ -1,32 +1,50 @@
+#organizarCartas {
+    display: none; /* Oculta el contenedor de las cartas */
+}
+
 .sale {
     text-align: center;
-    color: rgb(255, 255, 255);
+    color: #E2E6FF;
     margin-top: 1%;
+    text-shadow: 0px -1px 2px #000000, 0px 2px 2px black, 0px -1px 2px black, 2px 0 0 black;
 }
 
 .titleMain {
     display: flex;
     justify-content: center;
-    color: rgb(230, 230, 230);
-}
-
-.titulosSet {
-    align-items: center;
-    color: rgb(225, 225, 225);
+    color: #FFD1DC;
+    text-shadow: 0px -1px 2px #000000, 0px 2px 2px black, 0px -1px 2px black, 2px 0 0 black;
 }
 
 .titleSubmain {
     display: flex;
     justify-content: center;
-    color: rgb(182, 182, 182);
+    color: #D3FFCE;
+    text-shadow: 0px -1px 2px #000000, 0px 2px 2px black, 0px -1px 2px black, 2px 0 0 black;
 }
 
 .h3Title {
     display: flex;
     justify-content: center;
-    color: rgb(159, 158, 158);
+    color: #FFF3B5;
+    text-shadow: 0px -1px 2px #000000, 0px 2px 2px black, 0px -1px 2px black, 2px 0 0 black;
+
 }
 
+.titulosSet {
+    align-items: center;
+    color: hsl(45, 100%, 99%);
+    text-shadow: 0px -1px 2px #000000, 0px 2px 2px black, 0px -1px 2px black, 2px 0 0 black;
+}
+
+.titleMain,
+.titleSubmain,
+.h3Title {
+    /* Añade un shadow box de color apenas negro */
+    // box-shadow: 15px -3px 14px 0px rgb(138 103 71);
+    /* Añade un poco de padding para que el texto no esté tan cerca del borde del shadow box */
+    padding: 10px;
+}
 
 .generarCartasBtn {
     /* display: flex; */
@@ -45,7 +63,6 @@
 .generarCartasBtn:hover {
     box-shadow: 0px 0px 10px 5px #00ffff;
 }
-
 
 /* Estilos para las cartas */
 .carta-personaje {
@@ -69,7 +86,6 @@
     margin: 10px;
     /* Margen entre las cartas */
 }
-
 
 #organizarCartas {
     margin-top: 3%;
@@ -103,7 +119,6 @@
     justify-content: flex-end;
 }
 
-
 .colorAtr1,
 .colorAtr2,
 .colorAtr3 {
@@ -114,7 +129,6 @@
     text-shadow: -3px 0px 2px black, 0px 2px 2px black, 0px -1px 2px black, 2px 0 0 black;
 }
 
-
 .colorAtr1 {
     display: flex;
     flex-direction: column;
@@ -122,7 +136,6 @@
     color: white;
     text-shadow: -3px 0px 2px black, 0px 2px 2px black, 0px -1px 2px black, 2px 0 0 black;
 }
-
 
 .colorAtr2 {
     display: flex;
@@ -132,8 +145,6 @@
     text-shadow: -3px 0px 2px black, 0px 2px 2px black, 0px -1px 2px black, 2px 0 0 black;
 }
 
-
-
 .colorAtr3 {
     display: flex;
     flex-direction: column;
@@ -142,34 +153,10 @@
     text-shadow: -3px 0px 2px black, 0px 2px 2px black, 0px -1px 2px black, 2px 0 0 black;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 //*------------------------------------------------------------
 
-
-// html,
-// body {
-//     height: 100%;
-// }
-
-// body {
-//     background: radial-gradient(#333, #111);
-//     overflow: hidden;
-// }
-
 .cards {
-    bottom: 0;
+    bottom: -116px;
     display: flex;
     height: 150px;
     padding: 0 50px;
@@ -177,26 +164,6 @@
     position: fixed;
     left: 0;
     right: 0;
-}
-
-.card {
-    height: 384.6px;
-	margin: -322px -25px;
-    position: relative;
-    width: 234px;
-
-
-    &:after {
-        // uncomment background below to see hit areas
-        //background: rgba(255, 0, 0, 0.15);
-        bottom: 0;
-        content: '';
-        left: -60px;
-        position: absolute;
-        right: -60px;
-        top: 0px;
-        z-index: 10
-    }
 }
 
 .card-face {
@@ -230,12 +197,12 @@
 //     padding: 15px 0 0 15px;
 // }
 
-$total: 10;
+$total: 6; // Cambiado a 6 para ajustarse al número de cartas
 
 @for $i from 0 through ($total - 1) {
     $hue: (
         $i / $total) * -360;
-    $rotationRange: 50;
+    $rotationRange: 80; // Aumentado el rango de rotación
     $rotation: (
         $i - ($total - 1) / 2) / ($total - 2) * $rotationRange;
     $offsetRange: 80;
@@ -244,21 +211,16 @@ $total: 10;
 
 .card:nth-child(#{$i + 1}) {
     .card-face {
-        background: linear-gradient(-135deg); /*hsla($hue, 100%, 80%, 1),
-                hsla($hue, 90%, 45%, 1));*/
-        
-            //inset 0 0 0 2px hsla($hue, 100%, 80%, 0.75);
+        background: linear-gradient(-135deg);
         transform: translateY($offset * 1px) rotate($rotation * 1deg);
 
         .card-label {
-            // color: hsla($hue, 100%, 43%, 1);
             text-shadow: -0.025em 0.025em 0 hsla($hue, 100%, 75%, 1);
         }
     }
 
     &:hover {
         .card-face {
-            
             transform: translateY(-100px) rotate(0deg) scale(2);
             transition-duration: 0ms;
             z-index: 5;
@@ -275,6 +237,40 @@ $total: 10;
 }
 }
 
+.card:nth-child(1) .card-face {
+    background: linear-gradient(-135deg);
+    transform: translateY(88px) rotate(-38deg);
+}
+
+.card:nth-child(6) .card-face {
+    background: linear-gradient(-135deg);
+    transform: translateY(77px) rotate(39deg);
+}
+
+.card:nth-child(1):hover {
+    margin-top: -22%;
+}
+
+.card:nth-child(2):hover {
+    margin-top: -22%;
+}
+
+.card:nth-child(3):hover {
+    margin-top: -22%;
+}
+
+.card:nth-child(4):hover {
+    margin-top: -22%;
+}
+
+.card:nth-child(5):hover {
+    margin-top: -22%;
+}
+
+.card:nth-child(6):hover {
+    margin-top: -22%;
+}
+
 @keyframes fade {
     0% {
         opacity: 0.9;
@@ -286,3 +282,75 @@ $total: 10;
         transform: scale(1.15);
     }
 }
+
+//*------------------------------------------------------------
+
+//TODO UTILIZAR TECLAS 1 A 6 PARA LAS CARTAS. 
+
+.card {
+    /* estilos originales */
+    height: 384.6px;
+    margin: -322px -25px;
+    position: relative;
+    width: 195px;
+}
+
+.card:after {
+    /* estilos originales */
+    bottom: 0;
+    content: '';
+    left: -60px;
+    position: absolute;
+    right: -60px;
+    top: 0px;
+    z-index: 10;
+}
+
+.card:hover .card-face {
+    /* estilos cuando el mouse está encima */
+    transform: translateY(-100px) rotate(0deg) scale(2);
+    transition-duration: 0ms;
+    z-index: 5;
+}
+
+.card:hover:after {
+    top: -175px;
+}
+
+.card:hover {
+    margin-top: -22%;
+}
+
+/* Añade una nueva clase que tenga los mismos estilos que :hover */
+.card.hover-effect .card-face {
+    /* los mismos estilos que .card:hover */
+    transform: translateY(-100px) rotate(0deg) scale(2);
+    transition-duration: 0ms;
+    z-index: 5;
+}
+
+.card.hover-effect:after {
+    top: -175px;
+}
+
+.card.hover-effect {
+    margin-top: -22%;
+}
+
+//*------------------------------------------------------------
+
+//TODO LO SIGUIENTE NO SALIÓ , SERÁ PARA LA PRÓXIMA VEZ.
+/* Añade estilos para centrar el modal y los botones */
+// #audioPermissionModal {
+//     position: fixed;
+//     left: 50%;
+//     top: 50%;
+//     transform: translate(-50%, -50%);
+//     padding: 20px;
+//     background: #fff;
+//     border: 1px solid #ccc;
+// }
+
+// #audioPermissionModal button {
+//     margin: 0 10px;
+// }

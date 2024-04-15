@@ -23,20 +23,11 @@
             <h3 class="h3Title">6 cartas random, Elfos, Humanos, Enanos y Orcos de todas las clases, convinados y listos
                 para defender tu causa!</h3>
 
-            <button class="generarCartasBtn" id="getCards">
-                Genenerar
-            </button>
-
-            <!-- <div id="organizarCartas">
-                <div class="card-label carta-personaje carta" id="carta1"></div>
-                <div class="card-label carta-personaje carta" id="carta2"></div>
-                <div class="card-label carta-personaje carta" id="carta3"></div>
-                <div class="card-label carta-personaje carta" id="carta4"></div>
-                <div class="card-label carta-personaje carta" id="carta5"></div>
-                <div class="card-label carta-personaje carta" id="carta6"></div>
-            </div> -->
-
-
+                
+            <div class="battlefield">
+                <div class="boss" id="boss"></div>
+            </div>
+            <button class="start" id="startBattle">Start Battle</button>
 
 
             <div id="organizarCartas">
@@ -74,24 +65,6 @@
                 </div>
             </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         </main>
 
         <footer>
@@ -100,122 +73,8 @@
 
         <!--Script-->
         <script src="./../js/multidraft.js"></script>
+        <script src="./../js/boss.js"></script>
         <script src="./../js/storage.js"></script>
-        <!-- <script>
-            document.addEventListener("DOMContentLoaded", function() {
-                document.querySelector(".generarCartasBtn").addEventListener("click", function() {
-                    document.getElementById("getCards").click(); // Simula un click en el botón para generar las cartas
-                });
-            });
-        </script> -->
+        
 </body>
-
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- 
-
-
-
-            <div class="close">&times;</div>
-            <div class="clear"></div>
-
-            <section>
-                <div class="card">
-                    <div class="top-layer">
-                        <div class="circle"></div>
-                        <div class="shape">
-                        </div>
-                    </div>
-                    <div class="bottom-layer">
-                        <div class="shape">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="top-layer">
-                        <div class="shape"></div>
-                    </div>
-                    <div class="bottom-layer">
-                        <div class="shape"></div>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="top-layer">
-                        <div class="shape"></div>
-                    </div>
-                    <div class="bottom-layer">
-                        <div class="shape"></div>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="top-layer">
-                        <div class="shape"></div>
-                    </div>
-                    <div class="bottom-layer">
-                        <div class="shape"></div>
-                    </div>
-                </div>
-            </section> -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- <div class="cards">
-                <div class="card">
-                    <div class="card-face">
-                        <div class="card-label">1</div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-face">
-                        <div class="card-label">2</div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-face">
-                        <div class="card-label">3</div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-face">
-                        <div class="card-label">4</div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-face">
-                        <div class="card-label">5</div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-face">
-                        <div class="card-label">6</div>
-                    </div>
-                </div>
-                <!-- Repite esta estructura para los números restantes 
-    </div>-->
