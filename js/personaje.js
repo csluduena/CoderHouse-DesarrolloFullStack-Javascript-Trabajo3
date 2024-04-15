@@ -98,4 +98,4 @@ const generoArchivo = genero ? (genero === "Hombre" ? "Hombre" : "Mujer") : "";
 const nombreArchivo = razaArchivo && claseArchivo && generoArchivo ? `${razaArchivo}_${claseArchivo}_${generoArchivo}.png` : "cartaVacia.png";
 
 // Asignamos el fondo al div .info-personaje
-document.querySelector(".info-personaje").style.backgroundImage = `url('../../img/cartas/${nombreArchivo}')`;
+document.querySelector(".info-personaje").style.backgroundImage = `url('./../img/cartas/${nombreArchivo}')`;
