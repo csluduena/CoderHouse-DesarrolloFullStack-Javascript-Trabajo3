@@ -168,7 +168,7 @@ hr {
 
 /* Estilo para el enlace al pasar el ratón */
 .homer:hover {
-  background-color: #f0f0f0;
+  box-shadow: 0px 0px 4px 1px rgba(251, 251, 251, 0.921);
 }
 
 .configMensajitoPj {
