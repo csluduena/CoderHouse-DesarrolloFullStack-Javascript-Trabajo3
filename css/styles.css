@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Roboto:100);
 * {
   margin: 0;
   padding: 0;
@@ -2020,12 +2021,10 @@ a {
   margin-top: -15%;
 }
 
-/* Añade estilos para centrar el modal y los botones */
 .modal-damage-battle {
   position: fixed;
-  bottom: 38%;
-  left: 50%; /* Centrar horizontalmente */
-  transform: translateX(-50%); /* Desplazar a la izquierda la mitad de su ancho */
+  bottom: 3%;
+  right: 3%; /* Centrar horizontalmente */
   background-color: rgba(0, 0, 0, 0.7);
   color: white;
   padding: 10px;
@@ -2036,6 +2035,24 @@ a {
   align-items: center; /* Alinear el contenido verticalmente */
 }
 
+.modal-oscuro {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+  z-index: 1000;
+}
+
+/* Añade estilos para centrar el modal y los botones */
 .battlefield {
   width: 800px;
   height: 400px;
@@ -2077,6 +2094,11 @@ a {
   flex-direction: column;
 }
 
+.start:hover {
+  box-shadow: -2px -2px 4px rgba(141, 241, 20, 0.8705882353), -3px 2px 4px rgba(141, 241, 20, 0.8705882353), 3px -1px 4px rgba(141, 241, 20, 0.8705882353), 2px 2px 4px rgba(141, 241, 20, 0.8705882353);
+  background-color: #45a049;
+}
+
 .ready {
   display: flex;
   width: 100px;
@@ -2098,7 +2120,8 @@ a {
   flex-direction: column;
 }
 
-.start:hover {
+.ready:hover {
+  box-shadow: -2px -2px 4px rgba(141, 241, 20, 0.8705882353), -3px 2px 4px rgba(141, 241, 20, 0.8705882353), 3px -1px 4px rgba(141, 241, 20, 0.8705882353), 2px 2px 4px rgba(141, 241, 20, 0.8705882353);
   background-color: #45a049;
 }
 
@@ -2125,6 +2148,91 @@ a {
 .card-attacking {
   box-shadow: 0 0 40px rgb(252, 88, 12);
   transition: box-shadow 0.3s ease;
+}
+
+.modal-victoria {
+  text-shadow: 2px -1px 2px #ffffff, -1px 1px 0px #ffffff, 0px -1px 1px #ffffff, 1px 1px 2px #ffffff;
+  background-image: url(../../img/victoria.jpg);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+  align-items: center;
+  border: 3px solid #007bff;
+}
+
+#bossContinue {
+  padding: 4px 9px;
+  background-color: #007bff;
+  color: #fff;
+  border: 2px solid #00ffff;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 6%;
+}
+
+#bossContinue:hover {
+  box-shadow: 0px 0px 10px 5px #00ffff;
+  cursor: pointer;
+}
+
+body:-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  background: #000000;
+  font-family: "HelveticaNeue-Light", Roboto;
+  color: #fff;
+}
+
+.content {
+  position: fixed;
+  left: 50%;
+  margin-left: -250px;
+  top: 50px;
+  width: 500px;
+}
+
+.intro {
+  width: 100%;
+  text-align: center;
+  font-size: 40px;
+  margin: 0px 0 20px;
+  margin-top: -5%;
+}
+
+.text {
+  font-size: 20px;
+  padding-left: 2%;
+  height: 27px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.credit {
+  margin-top: 14px;
+  font-size: 14px;
+  font-style: italic;
+}
+
+.arrow {
+  text-align: center;
+  margin-top: 80px;
+  font-size: 46px;
+  backface-visibility: hidden;
+}
+
+#qrCode {
+  bottom: 11%;
+  right: 11%;
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background-size: cover;
+  background-image: url(../../img/certificadoDesarrolloWeb.png);
 }
 
 @media (min-width: 1200px) and (min-width: 1921px) {

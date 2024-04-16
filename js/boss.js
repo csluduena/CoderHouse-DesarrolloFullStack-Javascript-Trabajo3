@@ -8,18 +8,27 @@ let boss1 = {
     debilidad: 'Una de Soda Stereo'
 };
 
+// Boss2 Stats
+let boss2 = {
+    FirstName: "Avaf G.",
+    alias: "The Crazy Tutor",
+    ataque: 12,
+    vida: 149,
+    agilidad: 30,
+    debilidad: 'Adicto a las Chipá'
+};
+
+
 
 document.getElementById('startBattle').addEventListener('click', function() {
-    document.getElementById('boss').style.display = 'block'; // Mostrar al boss al hacer clic en el botón
+    document.getElementById('boss').style.display = 'block';
     const chauBoton = document.getElementById('startBattle')
 
     chauBoton.style.display = 'none';
 })
 
-// Selecciona el contenedor de las cartas
 let cardsContainer = document.querySelector('.cards');
 
-// Aplica los estilos al contenedor de las cartas
 cardsContainer.style.display = 'flex';
 cardsContainer.style.height = '150px';
 cardsContainer.style.padding = '0 50px';
@@ -29,17 +38,14 @@ cardsContainer.style.left = '0';
 cardsContainer.style.right = '0';
 
 document.getElementById('startBattle').addEventListener('click', function() {
-    // Muestra al boss al hacer clic en el botón
+
     document.getElementById('boss').style.display = 'block'; 
 
-    // Oculta el botón
     const chauBoton = document.getElementById('startBattle');
     chauBoton.style.display = 'none';
 
-    // Selecciona todas las cartas
     let cards = document.querySelectorAll('.card');
 
-    // Aplica los cambios a cada carta
     cards.forEach((card) => {
         card.style.height = '367.6px';
         card.style.width = '217px';
@@ -50,37 +56,25 @@ document.getElementById('startBattle').addEventListener('click', function() {
     });
 });
 
-
-//TODO Drag And Drop de cartas frente al boss.
-// Selecciona todas las cartas
 let cards = document.querySelectorAll('.card');
 
-// Selecciona el lugar de las cartas
 let cardsPlace = document.querySelector('.cardsPlace');
 
-// Selecciona el campo de batalla
 let battlefield = document.querySelector('.battlefield');
 
-// Selecciona el boss
 let boss = document.querySelector('.boss');
 
-// Selecciona los elementos con las clases .h3Title y .titleSubmain
 let h3Title = document.querySelectorAll('.h3Title');
 let titleSubmain = document.querySelectorAll('.titleSubmain');
 
-// Selecciona el botón de inicio de batalla
 let startBattleButton = document.querySelector('#startBattle');
 
-// Selecciona el botón ¡Lets Go!
 let letsGoButton = document.querySelector('.ready');
 
-// Inicialmente, oculta el campo de batalla y el boss
 battlefield.style.display = 'none';
 boss.style.display = 'none';
 
-// Añade un controlador de eventos al botón de inicio de batalla
 startBattleButton.addEventListener('click', () => {
-    // Oculta los elementos con las clases .h3Title y .titleSubmain
     h3Title.forEach((element) => {
         element.style.display = 'none';
     });
@@ -88,44 +82,42 @@ startBattleButton.addEventListener('click', () => {
         element.style.display = 'none';
     });
 
-    // Muestra el botón ¡Lets Go! y deshabilítalo inicialmente
     letsGoButton.style.display = 'block';
     letsGoButton.disabled = true;
 
-    // Configura el lugar de las cartas para usar Flexbox
     cardsPlace.style.display = 'flex';
     cardsPlace.style.justifyContent = 'center';
     cardsPlace.style.alignItems = 'center';
 
     letsGoButton.style.marginTop = '22%';
     cardsPlace.style.marginTop = '7%';
-    // Añade un controlador de eventos de clic a cada carta
+
+    // Aquí se activa la posibilidad de hacer clic en las cartas
     cards.forEach((card) => {
-        card.addEventListener('click', () => {
-            // Mueve la carta al lugar de las cartas
-            cardsPlace.appendChild(card);
-
-            // Asegúrate de que las cartas se posicionen de izquierda a derecha
-            card.style.display = 'inline-block';
-
-            // Aplica un margin-top de -43% a la carta
-            card.style.marginTop = '-43%';
-
-            // Si todas las cartas están en el lugar de las cartas, habilita el botón ¡Lets Go!
-            if (cardsPlace.childElementCount === 6) {
-                letsGoButton.disabled = false;
-            }
-        });
+        card.addEventListener('click', cardClickHandler);
     });
 });
 
-// Añade un controlador de eventos al botón ¡Lets Go!
+function cardClickHandler() {
+    cardsPlace.appendChild(this);
+    this.style.display = 'inline-block';
+    this.style.marginTop = '-43%';
+
+    if (cardsPlace.childElementCount === 6) {
+        letsGoButton.disabled = false;
+    }
+}
+
+// Añade un controlador de eventos al botón '¡Lets Go!'
 letsGoButton.addEventListener('click', () => {
-    // Muestra el campo de batalla y el boss
     battlefield.style.display = 'block';
     boss.style.display = 'block';
 
-    cardsPlace.style.marginTop = '6%';
+    cardsPlace.style.marginTop = '4%';
     letsGoButton.style.display = 'none';
-    // Aquí puedes agregar el código para iniciar la batalla
+
+    // Aquí se desactiva la posibilidad de hacer clic en las cartas
+    cards.forEach((card) => {
+        card.removeEventListener('click', cardClickHandler);
+    });
 });

@@ -12,6 +12,7 @@
 
 let cartasAleatorias = []; // Declarar cartasAleatorias globalmente
 let cartasOrdenadas = [];
+let nombreBoss = boss1.FirstName;
 document.addEventListener("DOMContentLoaded", function () {
 
     // Recuperar los datos del almacenamiento local
@@ -21,7 +22,6 @@ document.addEventListener("DOMContentLoaded", function () {
     console.log(data);
     //console.log(data.raza.Elfo.descripcion); // Acceder a la descripción de los Elfos
     //console.log(data.raza.Elfo.clases.Mago.descripcion); // Acceder a la descripción de la clase Mago para los Elfos
-
 
 
     if (window.location.pathname.includes("/multidraft.html")) {
@@ -103,7 +103,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 // Insertar la información de la carta en el elemento HTML
                 div.innerHTML = infoCarta;
                 div.addEventListener('click', () => {
-                    // Añade la carta a cartasOrdenadas
+                    // Anade la carta a cartasOrdenadas
                     cartasOrdenadas.push(carta);
                 });
             });
@@ -118,17 +118,17 @@ document.addEventListener("DOMContentLoaded", function () {
 // Selecciona todos los elementos con la clase 'card'
 let thecards = document.querySelectorAll('.card');
 
-// Añade un controlador de eventos para cuando se presiona una tecla
+// Anade un controlador de eventos para cuando se presiona una tecla
 window.addEventListener('keydown', (event) => {
     // Comprueba si la tecla presionada es un número entre 1 y 6
     let key = event.key;
     if (key >= '1' && key <= '6') {
-        // Añade la clase 'hover-effect' al elemento correspondiente
+        // Anade la clase 'hover-effect' al elemento correspondiente
         thecards[key - 1].classList.add('hover-effect');
     }
 });
 
-// Añade un controlador de eventos para cuando se suelta una tecla
+// Anade un controlador de eventos para cuando se suelta una tecla
 window.addEventListener('keyup', (event) => {
     // Comprueba si la tecla soltada es un número entre 1 y 6
     let key = event.key;
@@ -141,11 +141,11 @@ window.addEventListener('keyup', (event) => {
 
 //!Boss Stats
 
-let boss1Ataque = boss1.ataque; 
-let boss1Vida = boss1.vida; 
+let boss1Ataque = boss1.ataque;
+let boss1Vida = boss1.vida;
 
 console.log(`Vida del jefe: ${boss1Vida}`);
-console.log(`Daño del jefe: ${boss1Ataque}`);
+console.log(`Dano del jefe: ${boss1Ataque}`);
 
 document.getElementById('boss-name').textContent = 'Nombre: ' + boss1.FirstName;
 document.getElementById('boss-alias').textContent = 'Alias: ' + boss1.alias;
@@ -154,21 +154,22 @@ document.getElementById('boss-attack').textContent = 'Ataque: ' + boss1Ataque;
 document.getElementById('boss-agility').textContent = 'Agilidad: ' + boss1.agilidad;
 document.getElementById('boss-debilidad').innerHTML = 'Debilidad: <br>' + boss1.debilidad;
 
-// Función para calcular el daño de una carta
+
+// Función para calcular el dano de una carta
 function calcularDanio(carta) {
     let inteligencia = carta.atributos.inteligencia;
     let fuerza = carta.atributos.fuerza;
     let agilidad = carta.atributos.agilidad;
 
-    return inteligencia + fuerza + agilidad; // Daño basado en la suma de los atributos
+    return inteligencia + fuerza + agilidad; // Dano basado en la suma de los atributos
 }
 
 // Función para iniciar la batalla
 function iniciarBatalla() {
-    // Iterar sobre las cartas aleatorias y calcular el daño para cada una
+    // Iterar sobre las cartas aleatorias y calcular el dano para cada una
     for (let i = 0; i < cartasAleatorias.length; i++) {
         // Programa el ataque de la carta después de un retraso
-        setTimeout(function() {
+        setTimeout(function () {
             realizarAtaque(cartasAleatorias[i], boss1);
 
             // Si la vida del jefe es 0 o menos, imprime "RIP BOSS"
@@ -180,82 +181,75 @@ function iniciarBatalla() {
 }
 
 
-
-
-
-
-
-
-// Función para mostrar un modal con la información del daño
+// Función para mostrar un modal con la información del dano
 function mostrarModal(vidaInicial, danio, vidaRestante) {
     // Crear el elemento modal
     let modal = document.createElement('div');
     modal.classList.add('modal-damage-battle'); // Clase única para evitar conflictos
-    modal.textContent = `${vidaInicial} Salud - ${danio} daño = ${vidaRestante} Puntos de salud`;
+    modal.textContent = `${vidaInicial} Salud - ${danio} dano = ${vidaRestante} Puntos de salud`;
 
-    // Estilos para el modal (ajustados para centrar)
-    // modal.style.position = 'fixed';
-    // modal.style.bottom = '10px';
-    // modal.style.right = '10px';
-    // modal.style.height = '367.6px';
-    // modal.style.width = '217px';
-    // modal.style.marginTop = '-18%';
-    // modal.style.backgroundColor = 'rgba(0, 0, 0, 0.7)';
-    // modal.style.color = 'white';
-    // modal.style.padding = '10px';
-    // modal.style.borderRadius = '5px';
-    // modal.style.zIndex = '1000';
-    // modal.style.display = 'flex';
-    // modal.style.flexDirection = 'column';
-    // modal.style.justifyContent = 'center';
-    // modal.style.alignItems = 'center';
-
-    // Añadir el modal al cuerpo del documento
+    // Anadir el modal al cuerpo del documento
     document.body.appendChild(modal);
 
     // Establecer un temporizador para eliminar el modal después de 3 segundos
-    setTimeout(function() {
+    setTimeout(function () {
         document.body.removeChild(modal);
     }, 3000);
 }
 
+// Función para actualizar y mostrar el dano y la vida restante del boss
+function actualizarYMostrarDanoVida(boss, dano) {
+    // Calcula la vida restante después del dano
+    boss.vida -= dano;
 
+    // Crea o selecciona el elemento para mostrar la información del dano
+    let infoDanoVida = document.getElementById('infoDanoVida') || document.createElement('div');
+    infoDanoVida.id = 'infoDanoVida';
+    infoDanoVida.textContent = `${nombreBoss} recibe ${dano} de daño | Vida Restante: ${boss.vida}`;
 
+    // Estilos para el elemento de información
+    infoDanoVida.style.position = 'absolute';
+    infoDanoVida.style.bottom = '10px';
+    infoDanoVida.style.left = '50%';
+    infoDanoVida.style.transform = 'translateX(-50%)';
+    infoDanoVida.style.backgroundColor = 'rgba(0, 0, 0, 0.7)';
+    infoDanoVida.style.color = 'white';
+    infoDanoVida.style.padding = '5px';
+    infoDanoVida.style.borderRadius = '5px';
 
+    // Anade el elemento de información al contenedor del battlefield
+    battlefield.appendChild(infoDanoVida);
+}
 
-
-
-
-
-
-
-// Función para realizar un ataque
+// Modifica la función realizarAtaque para incluir la llamada a actualizarYMostrarDanoVida
 function realizarAtaque(carta, boss) {
-    // Busca el elemento HTML de la carta
     const cartaElement = document.querySelector(`#${carta.id}`);
 
-    // Asegúrate de que el elemento existe antes de intentar acceder a su propiedad 'classList'
-    if (cartaElement) {
-        // Agrega la clase 'card-attacking' para iniciar la animación
+    if (cartaElement && boss.vida > 0) { // Verifica que el boss aún tenga vida
         cartaElement.classList.add('card-attacking');
 
-        // Calcula el daño
         const danio = calcularDanio(carta);
-
-         // Guarda la vida inicial del jefe antes del daño
         let vidaInicial = boss.vida;
+        let vidaRestante = vidaInicial - danio;
 
-        // Aplica el daño al jefe
-        boss.vida -= danio;
+        // Asegúrate de que la vida no sea negativa
+        vidaRestante = vidaRestante < 0 ? 0 : vidaRestante;
+        boss.vida = vidaRestante;
 
-        // Muestra el modal con la información del daño
-        mostrarModal(vidaInicial, danio, boss.vida);
+        mostrarModal(vidaInicial, danio, vidaRestante);
 
-        // Imprime la vida del jefe
         console.log(`Vida del jefe después del ataque de ${carta.nombre}: ${boss.vida}`);
 
-        // Quita la clase 'card-attacking' después de 3 segundos para terminar la animación
-        setTimeout(function() {
+        // Llama a la función para actualizar y mostrar el daño y la vida restante
+        actualizarYMostrarDanoVida(boss, danio);
+
+        // Si la vida del boss llega a 0, muestra el mensaje de victoria y detiene los ataques
+        if (boss.vida <= 0) {
+            mostrarMensajeVictoria(boss.FirstName);
+            return; // Detiene la ejecución adicional de la función
+        }
+
+        setTimeout(function () {
             cartaElement.classList.remove('card-attacking');
         }, 3000);
     } else {
@@ -263,136 +257,39 @@ function realizarAtaque(carta, boss) {
     }
 }
 
+// Función para mostrar el mensaje de victoria
+function mostrarMensajeVictoria(nombreBoss) {
+    let modalVictoria = document.createElement('div');
+    modalVictoria.classList.add('modal-victoria');
+    modalVictoria.innerHTML = `
+        <p>Felicidades, tus héroes han derrotado a ${nombreBoss}</p>
+        <button id="bossContinue">Continuar</button>
+    `;
+
+    // Estilos para el modal de victoria
+    modalVictoria.style.position = 'fixed';
+    modalVictoria.style.top = '50%';
+    modalVictoria.style.left = '50%';
+    modalVictoria.style.transform = 'translate(-50%, -50%)';
+    modalVictoria.style.backgroundColor = 'white';
+    modalVictoria.style.padding = '20px';
+    modalVictoria.style.borderRadius = '10px';
+    modalVictoria.style.zIndex = '1001';
+
+    // Añade el modal de victoria al cuerpo del documento
+    document.body.appendChild(modalVictoria);
+
+    // Añade un evento al botón para redirigir a la página de créditos
+    document.getElementById('bossContinue').addEventListener('click', function () {
+        window.location.href = '/pages/credits.html';
+    });
+}
+
 // Obtén el botón con la clase 'ready'
 let botonReady = document.querySelector('.ready');
 
-// Añade un event listener al botón para el evento de clic
+// Anade un event listener al botón para el evento de clic
 botonReady.addEventListener('click', iniciarBatalla);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// function calcularDanio(carta) {
-//     let inteligencia = carta.atributos.inteligencia;
-//     let fuerza = carta.atributos.fuerza;
-//     let agilidad = carta.atributos.agilidad;
-
-//     console.log(inteligencia + fuerza + agilidad); // Imprime la suma de los atributos
-// }
-
-// // Iterar sobre las cartas aleatorias y calcular el daño para cada una
-// cartasAleatorias.forEach(carta => {
-//     // Calcular el daño de la carta actual
-//     const danio = calcularDanio(carta);
-//     console.log(`El daño de ${carta.nombre} es: ${danio}`);
-// });
-// calcularDanio(carta);
-
-// // Ejemplo de cómo utilizar la función para calcular el daño de una carta específica:
-// // Suponiendo que quieres calcular el daño de la primera carta en el arreglo
-// const primerCarta = cartasAleatorias[0];
-// const danioPrimerCarta = calcularDanio(primerCarta);
-// console.log(`El daño de ${primerCarta.nombre} es: ${danioPrimerCarta}`);
-
-
-// function atacarBoss(carta, boss) {
-//     let danio = calcularDanio(carta);
-//     boss.vida -= danio;
-
-
-
-
-
-// document.getElementById('startBattle').addEventListener('click', function() {
-//     // Aquí asumimos que 'cartas' es un array con tus objetos de cartas
-//     for (let carta of cartas) {
-//         atacarBoss(carta, boss1);
-//     }
-// });
-
-
-
-//     // Comprueba si el boss ha sido derrotado
-//     if (boss.vida <= 0) {
-//         console.log('¡El boss ha sido derrotado!');
-//     } else {
-//         console.log(`El boss tiene ${boss.vida} puntos de vida restantes.`);
-//     }
-// }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -422,7 +319,7 @@ botonReady.addEventListener('click', iniciarBatalla);
 //     // Crea un contexto de audio
 //     let audioContext = new (window.AudioContext || window.webkitAudioContext)();
 
-//     // Añade un controlador de eventos para cuando se presiona una tecla
+//     // Anade un controlador de eventos para cuando se presiona una tecla
 //     window.addEventListener('keydown', (event) => {
 //         // Comprueba si se ha presionado la tecla Shift y una tecla numérica
 //         if (event.shiftKey && tones[event.key]) {
@@ -436,7 +333,7 @@ botonReady.addEventListener('click', iniciarBatalla);
 //         }
 //     });
 
-//     // Añade un controlador de eventos para cuando se suelta una tecla
+//     // Anade un controlador de eventos para cuando se suelta una tecla
 // window.addEventListener('keyup', (event) => {
 //     // Comprueba si se ha soltado la tecla Shift y una tecla numérica
 //     if (event.shiftKey && tones[event.key]) {
@@ -451,7 +348,7 @@ botonReady.addEventListener('click', iniciarBatalla);
 // });
 
 
-//     // Añade un controlador de eventos para cuando se suelta una tecla
+//     // Anade un controlador de eventos para cuando se suelta una tecla
 //     window.addEventListener('keyup', (event) => {
 //         // Comprueba si se ha soltado la tecla Shift y una tecla numérica
 //         if (event.ctrlKey && tones[event.key]) {
