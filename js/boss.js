@@ -1,11 +1,10 @@
-const boss1 = {
+let boss1 = {
     FirstName: "Notsag",
     alias: "BadTutor",
     type: "Boss",
-    ataque: 1,
-    vida: 1000,
-    agilidad: 500
-
+    ataque: 26,
+    vida: 99,
+    agilidad: 10
 };
 
 
@@ -15,57 +14,6 @@ document.getElementById('startBattle').addEventListener('click', function() {
 
     chauBoton.style.display = 'none';
 })
-
-
-
-// document.getElementById('startBattle').addEventListener('click', function() {
-//     // Muestra al boss al hacer clic en el botón
-//     document.getElementById('boss').style.display = 'block'; 
-
-//     // Oculta el botón
-//     const chauBoton = document.getElementById('startBattle');
-//     chauBoton.style.display = 'none';
-
-//     // Selecciona todas las cartas
-//     let cards = document.querySelectorAll('.card');
-
-//     // Aplica los cambios a cada carta
-//     cards.forEach((card) => {
-//         card.style.height = '367.6px';
-//         card.style.width = '217px';
-//         card.style.marginTop = '-22%';
-//             card.querySelector('.card-face').style.transform = 'translateY(88px) rotate(0deg)';
-//         });
-//     });
-
-// document.getElementById('startBattle').addEventListener('click', function() {
-//     // Muestra al boss al hacer clic en el botón
-//     document.getElementById('boss').style.display = 'block'; 
-
-//     // Oculta el botón
-//     const chauBoton = document.getElementById('startBattle');
-//     chauBoton.style.display = 'none';
-
-//     // Selecciona el contenedor de las cartas
-//     let cardsContainer = document.querySelector('.cards');
-
-//     // Aplica los estilos al contenedor de las cartas
-//     cardsContainer.style.display = 'flex';
-//     cardsContainer.style.flexDirection = 'row';
-//     cardsContainer.style.flexWrap = 'nowrap';
-//     cardsContainer.style.justifyContent = 'space-evenly';
-
-//     // Selecciona todas las cartas
-//     let cards = document.querySelectorAll('.card');
-
-//     // Aplica los cambios a cada carta
-//     cards.forEach((card) => {
-//         card.style.height = '367.6px';
-//         card.style.width = '217px';
-//         card.style.marginTop = '-22%';
-//         card.querySelector('.card-face').style.transform = 'translateY(88px) rotate(0deg)';
-//     });
-// });
 
 // Selecciona el contenedor de las cartas
 let cardsContainer = document.querySelector('.cards');
@@ -100,6 +48,7 @@ document.getElementById('startBattle').addEventListener('click', function() {
         card.querySelector('.card-face').style.transform = 'translateY(88px) rotate(0deg)';
     });
 });
+
 
 //TODO Drag And Drop de cartas frente al boss.
 // Selecciona todas las cartas
@@ -149,9 +98,9 @@ startBattleButton.addEventListener('click', () => {
 
     letsGoButton.style.marginTop = '22%';
     cardsPlace.style.marginTop = '7%';
-    // Añade un controlador de eventos de doble clic a cada carta
+    // Añade un controlador de eventos de clic a cada carta
     cards.forEach((card) => {
-        card.addEventListener('dblclick', () => {
+        card.addEventListener('click', () => {
             // Mueve la carta al lugar de las cartas
             cardsPlace.appendChild(card);
 
@@ -175,6 +124,7 @@ letsGoButton.addEventListener('click', () => {
     battlefield.style.display = 'block';
     boss.style.display = 'block';
 
-    cardsPlace.style.marginTop = '-50%';
+    cardsPlace.style.marginTop = '6%';
+    letsGoButton.style.display = 'none';
     // Aquí puedes agregar el código para iniciar la batalla
 });

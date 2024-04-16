@@ -1,41 +1,3 @@
-// Obtener el objeto 'info' desde localStorage y convertirlo a objeto JavaScript
-const info = JSON.parse(localStorage.getItem('info'));
-
-//TODO CONTINUAMOS CON EL CÓDIGO.
-// Convertir todo el código relacionado con 'info' a cadena de texto
-const codigoString = `
-// Obtener el objeto 'info' desde localStorage y convertirlo a objeto JavaScript
-const info = ${JSON.stringify(info, null, 2)};
-
-// Aquí va el resto del código relacionado con 'info'...
-
-`;
-
-// Imprimir el código como cadena de texto en la consola
-//console.log(codigoString);
-
-// Editar el código en cadena
-let codigoEditado = codigoString.replace(/Humanos/g, 'Humano').replace(/Orcos/g, 'Orco');
-
-// Imprimir el código editado en la consola
-//console.log(codigoEditado);
-
-// Convertir el código editado nuevamente a JSON (temporal)
-let infoEditado;
-try {
-    infoEditado = JSON.parse(codigoEditado.match(/(?<=const info = )\{[\s\S]*\}/)[0]);
-    console.log("Todo está OK Seba.");
-} catch (error) {
-    console.log("Lo siento, se rompió acá");
-}
-
-
-/* Ejemplo para revisar info en la consola:
-
-console.log(info.raza.Enano.clases.Herrero.atributos);
- */
-
-
 //? ********************************************************************************
 //TODO Vamos a dividir el siguiente proceso en pasos para facilitar la implementación:
 
@@ -48,13 +10,24 @@ console.log(info.raza.Enano.clases.Herrero.atributos);
 //? ********************************************************************************
 
 
-
+let cartasAleatorias = []; // Declarar cartasAleatorias globalmente
 document.addEventListener("DOMContentLoaded", function () {
+
+    // Recuperar los datos del almacenamiento local
+    const data = JSON.parse(localStorage.getItem('data'));
+
+    // Ahora puedes acceder a los datos como lo harías normalmente con un objeto JavaScript
+    console.log(data);
+    //console.log(data.raza.Elfo.descripcion); // Acceder a la descripción de los Elfos
+    //console.log(data.raza.Elfo.clases.Mago.descripcion); // Acceder a la descripción de la clase Mago para los Elfos
+
+
+
     if (window.location.pathname.includes("/multidraft.html")) {
         //? Paso 1: Obtener una muestra aleatoria de 6 cartas
-        const razas = Object.keys(infoEditado.raza); // Obtener todas las razas disponibles
+        const razas = Object.keys(data.raza); // Obtener todas las razas disponibles
         const contenedorCartas = document.querySelectorAll('.carta-personaje.carta');
-        let cartasAleatorias = [];
+
 
         while (cartasAleatorias.length < 6) {
             const razaAleatoria = razas[Math.floor(Math.random() * razas.length)]; // Seleccionar una raza aleatoria
@@ -63,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         //? Paso 2: Asignar una clase aleatoria para cada carta
         cartasAleatorias.forEach(carta => {
-            const clasesRaza = Object.keys(infoEditado.raza[carta.raza].clases); // Obtener todas las clases disponibles para la raza
+            const clasesRaza = Object.keys(data.raza[carta.raza].clases); // Obtener todas las clases disponibles para la raza
             const claseAleatoria = clasesRaza[Math.floor(Math.random() * clasesRaza.length)]; // Seleccionar una clase aleatoria
             carta.clase = claseAleatoria;
         });
@@ -78,7 +51,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         //? Paso 4: Asignar atributos base aleatorios para cada carta
         cartasAleatorias.forEach(carta => {
-            const atributosBase = infoEditado.raza[carta.raza].clases[carta.clase].atributos;
+            const atributosBase = data.raza[carta.raza].clases[carta.clase].atributos;
 
             // Aplicar una ligera variación aleatoria a cada atributo base
             const atributosAleatorios = {
@@ -155,6 +128,177 @@ window.addEventListener('keyup', (event) => {
         thecards[key - 1].classList.remove('hover-effect');
     }
 });
+
+
+//! Fight Logic.
+
+// Obtén el botón con la clase 'start'
+let botonStart = document.querySelector('.start');
+
+// Añade un event listener al botón para el evento de clic
+botonStart.addEventListener('click', function() {
+    // Aquí va la lógica de la pelea
+
+    // Función para calcular el daño de una carta
+    function calcularDanio(carta) {
+        let inteligencia = carta.atributos.inteligencia;
+        let fuerza = carta.atributos.fuerza;
+        let agilidad = carta.atributos.agilidad;
+
+        return inteligencia + fuerza + agilidad; // Devuelve la suma de los atributos
+    }
+
+    // Iterar sobre las cartas aleatorias y calcular el daño para cada una
+    for (let i = 0; i < cartasAleatorias.length; i++) {
+        // Calcular el daño de la carta actual
+        const danio = calcularDanio(cartasAleatorias[i]);
+        console.log(`El daño de ${cartasAleatorias[i].nombre} es: ${danio}`);
+    }
+});
+
+//!Boss Stats
+// En main.js
+
+let boss1Ataque = boss1.ataque; 
+let boss1Vida = boss1.vida; 
+
+console.log(`Vida del jefe: ${boss1Ataque}`);
+console.log(`Daño del jefe: ${boss1Vida}`);
+
+document.getElementById('boss-name').textContent = 'Nombre: ' + boss1.FirstName;
+document.getElementById('boss-alias').textContent = 'Alias: ' + boss1.alias;
+document.getElementById('boss-life').textContent = 'Vida: ' + boss1Vida;
+document.getElementById('boss-attack').textContent = 'Ataque: ' + boss1Ataque;
+document.getElementById('boss-agility').textContent = 'Agilidad: ' + boss1.agilidad;
+
+
+// Calcular la vida y el daño del jefe utilizando las cartas aleatorias
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// function calcularDanio(carta) {
+//     let inteligencia = carta.atributos.inteligencia;
+//     let fuerza = carta.atributos.fuerza;
+//     let agilidad = carta.atributos.agilidad;
+
+//     console.log(inteligencia + fuerza + agilidad); // Imprime la suma de los atributos
+// }
+
+// // Iterar sobre las cartas aleatorias y calcular el daño para cada una
+// cartasAleatorias.forEach(carta => {
+//     // Calcular el daño de la carta actual
+//     const danio = calcularDanio(carta);
+//     console.log(`El daño de ${carta.nombre} es: ${danio}`);
+// });
+// calcularDanio(carta);
+
+// // Ejemplo de cómo utilizar la función para calcular el daño de una carta específica:
+// // Suponiendo que quieres calcular el daño de la primera carta en el arreglo
+// const primerCarta = cartasAleatorias[0];
+// const danioPrimerCarta = calcularDanio(primerCarta);
+// console.log(`El daño de ${primerCarta.nombre} es: ${danioPrimerCarta}`);
+
+
+// function atacarBoss(carta, boss) {
+//     let danio = calcularDanio(carta);
+//     boss.vida -= danio;
+
+
+
+
+
+// document.getElementById('startBattle').addEventListener('click', function() {
+//     // Aquí asumimos que 'cartas' es un array con tus objetos de cartas
+//     for (let carta of cartas) {
+//         atacarBoss(carta, boss1);
+//     }
+// });
+
+
+
+//     // Comprueba si el boss ha sido derrotado
+//     if (boss.vida <= 0) {
+//         console.log('¡El boss ha sido derrotado!');
+//     } else {
+//         console.log(`El boss tiene ${boss.vida} puntos de vida restantes.`);
+//     }
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

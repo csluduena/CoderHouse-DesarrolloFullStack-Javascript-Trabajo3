@@ -1,0 +1,120 @@
+{
+    "raza": {
+        "Elfo": {
+            "descripcion": "Seres de gracia y conexión con la naturaleza.",
+            "clases": {
+                "Mago": {
+                    "descripcion": "Usuarios de magia poderosa y destructiva.",
+                    "atributos": {
+                        "inteligencia": 8,
+                        "fuerza": 1,
+                        "agilidad": 5
+                    }
+                },
+                "Druida": {
+                    "descripcion": "Capaces de manipular la magia de la naturaleza.",
+                    "atributos": {
+                        "inteligencia": 6,
+                        "fuerza": 2,
+                        "agilidad": 6
+                    }
+                },
+                "Bardo": {
+                    "descripcion": "Artistas talentosos con habilidades mágicas únicas.",
+                    "atributos": {
+                        "inteligencia": 10,
+                        "fuerza": 1,
+                        "agilidad": 7
+                    }
+                }
+            }
+        },
+        "Enano": {
+            "descripcion": "Gran resistencia y habilidades de artesanía.",
+            "clases": {
+                "Guerrero": {
+                    "descripcion": "Combatientes fuertes y resistentes.",
+                    "atributos": {
+                        "inteligencia": 5,
+                        "fuerza": 15,
+                        "agilidad": 5
+                    }
+                },
+                "Herrero": {
+                    "descripcion": "Maestros de la creación y mejora de armas y armaduras.",
+                    "atributos": {
+                        "inteligencia": 3,
+                        "fuerza": 18,
+                        "agilidad": 3
+                    }
+                },
+                "Paladin": {
+                    "descripcion": "Defensores valientes con habilidades de curación.",
+                    "atributos": {
+                        "inteligencia": 8,
+                        "fuerza": 12,
+                        "agilidad": 5
+                    }
+                }
+            }
+        },
+        "Humano": {
+            "descripcion": "Ambiciosos, gran diversidad de habilidades.",
+            "clases": {
+                "Caballero": {
+                    "descripcion": "Protectores leales, habilidosos en combate cuerpo a cuerpo.",
+                    "atributos": {
+                        "inteligencia": 2,
+                        "fuerza": 20,
+                        "agilidad": 4
+                    }
+                },
+                "Picaro": {
+                    "descripcion": "Maestros del sigilo y la astucia, expertos en trampas y robos.",
+                    "atributos": {
+                        "inteligencia": 6,
+                        "fuerza": 7,
+                        "agilidad": 12
+                    }
+                },
+                "Clerigo": {
+                    "descripcion": "Sanadores y protectores con habilidades mágicas divinas.",
+                    "atributos": {
+                        "inteligencia": 8,
+                        "fuerza": 10,
+                        "agilidad": 5
+                    }
+                }
+            }
+        },
+        "Orco": {
+            "descripcion": "Combatientes salvajes que entran en frenesí en la batalla.",
+            "clases": {
+                "Berserker": {
+                    "descripcion": "Conectados con los espíritus y capaces de usar magia elemental.",
+                    "atributos": {
+                        "inteligencia": 1,
+                        "fuerza": 25,
+                        "agilidad": 3
+                    }
+                },
+                "Chaman": {
+                    "descripcion": "Conectados con los espíritus y capaces de usar magia elemental.",
+                    "atributos": {
+                        "inteligencia": 10,
+                        "fuerza": 8,
+                        "agilidad": 5
+                    }
+                },
+                "Cazador": {
+                    "descripcion": "Expertos en rastreo y combate a distancia.",
+                    "atributos": {
+                        "inteligencia": 8,
+                        "fuerza": 10,
+                        "agilidad": 10
+                    }
+                }
+            }
+        }
+    }
+}
