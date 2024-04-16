@@ -64,8 +64,3 @@ multiDraftBotones.forEach(boton => {
         });
     });
 });
-
-
-
-
-
