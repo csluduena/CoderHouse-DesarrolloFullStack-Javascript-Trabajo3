@@ -256,7 +256,7 @@ function mostrarMensajeVictoria(nombreBoss) {
     document.body.appendChild(modalVictoria);
 
     document.getElementById('bossContinue').addEventListener('click', function () {
-        window.location.href = './credits.html';
+        window.location.href = '../pages/credits.html';
     });
 }
 

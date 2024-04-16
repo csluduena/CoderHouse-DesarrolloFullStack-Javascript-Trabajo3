@@ -55,5 +55,18 @@ body {
     width: 100px;
     height: 100px;
     background-size: cover;
-    background-image: url(./../img/certificadoDesarrolloWeb.png);
+    /* background-image: url(./../img/certificadoDesarrolloWeb.png); */
+}
+
+.home {
+    position: fixed;
+    bottom: 3%;
+    left: 3%;
+    /* Estilos adicionales */
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
