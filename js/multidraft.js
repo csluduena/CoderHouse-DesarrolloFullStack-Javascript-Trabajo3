@@ -11,6 +11,7 @@
 
 
 let cartasAleatorias = []; // Declarar cartasAleatorias globalmente
+let cartasOrdenadas = [];
 document.addEventListener("DOMContentLoaded", function () {
 
     // Recuperar los datos del almacenamiento local
@@ -72,7 +73,9 @@ document.addEventListener("DOMContentLoaded", function () {
             // Iterar sobre cada div y asignar la información de las cartas generadas
             contenedorCartas.forEach((div, index) => {
                 const carta = cartasAleatorias[index]; // Obtener la carta correspondiente
-                // Asignar un nombre basado en el género de la carta
+                // Asignar un identificador único basado en el índice de la carta
+                carta.id = `carta${index + 1}`;
+                // Asignar un nombre temporal basado en el género de la carta
                 if (carta.genero === "Hombre") {
                     carta.nombre = "SebaHero";
                 } else if (carta.genero === "Mujer") {
@@ -97,6 +100,10 @@ document.addEventListener("DOMContentLoaded", function () {
                 `;
                 // Insertar la información de la carta en el elemento HTML
                 div.innerHTML = infoCarta;
+                div.addEventListener('click', () => {
+                    // Añade la carta a cartasOrdenadas
+                    cartasOrdenadas.push(carta);
+                });
             });
         } else {
             console.log("No se encontraron suficientes divs para mostrar las cartas.");
@@ -130,34 +137,7 @@ window.addEventListener('keyup', (event) => {
 });
 
 
-//! Fight Logic.
-
-// Obtén el botón con la clase 'start'
-let botonStart = document.querySelector('.start');
-
-// Añade un event listener al botón para el evento de clic
-botonStart.addEventListener('click', function() {
-    // Aquí va la lógica de la pelea
-
-    // Función para calcular el daño de una carta
-    function calcularDanio(carta) {
-        let inteligencia = carta.atributos.inteligencia;
-        let fuerza = carta.atributos.fuerza;
-        let agilidad = carta.atributos.agilidad;
-
-        return inteligencia + fuerza + agilidad; // Devuelve la suma de los atributos
-    }
-
-    // Iterar sobre las cartas aleatorias y calcular el daño para cada una
-    for (let i = 0; i < cartasAleatorias.length; i++) {
-        // Calcular el daño de la carta actual
-        const danio = calcularDanio(cartasAleatorias[i]);
-        console.log(`El daño de ${cartasAleatorias[i].nombre} es: ${danio}`);
-    }
-});
-
 //!Boss Stats
-// En main.js
 
 let boss1Ataque = boss1.ataque; 
 let boss1Vida = boss1.vida; 
@@ -171,12 +151,64 @@ document.getElementById('boss-life').textContent = 'Vida: ' + boss1Vida;
 document.getElementById('boss-attack').textContent = 'Ataque: ' + boss1Ataque;
 document.getElementById('boss-agility').textContent = 'Agilidad: ' + boss1.agilidad;
 
+// Función para calcular el daño de una carta
+function calcularDanio(carta) {
+    let inteligencia = carta.atributos.inteligencia;
+    let fuerza = carta.atributos.fuerza;
+    let agilidad = carta.atributos.agilidad;
 
-// Calcular la vida y el daño del jefe utilizando las cartas aleatorias
+    return inteligencia + fuerza + agilidad; // Daño basado en la suma de los atributos
+}
 
+// Función para realizar un ataque
+function realizarAtaque(carta, boss) {
+    // Busca el elemento HTML de la carta
+    const cartaElement = document.querySelector(`#${carta.id}`);
 
+    // Asegúrate de que el elemento existe antes de intentar acceder a su propiedad 'classList'
+    if (cartaElement) {
+        // Agrega la clase 'card-attacking' para iniciar la animación
+        cartaElement.classList.add('card-attacking');
 
+        // Calcula el daño
+        const danio = calcularDanio(carta);
 
+        // Aplica el daño al jefe
+        boss.vida -= danio;
+
+        // Imprime la vida del jefe
+        console.log(`Vida del jefe después del ataque de ${carta.nombre}: ${boss.vida}`);
+
+        // Quita la clase 'card-attacking' después de 3 segundos para terminar la animación
+        setTimeout(function() {
+            cartaElement.classList.remove('card-attacking');
+        }, 3000);
+    } else {
+        console.log(`No se encontró el elemento HTML para la carta ${carta.nombre}`);
+    }
+}
+
+// Función para iniciar la batalla
+function iniciarBatalla() {
+    // Iterar sobre las cartas aleatorias y calcular el daño para cada una
+    for (let i = 0; i < cartasAleatorias.length; i++) {
+        // Programa el ataque de la carta después de un retraso
+        setTimeout(function() {
+            realizarAtaque(cartasAleatorias[i], boss1);
+
+            // Si la vida del jefe es 0 o menos, imprime "RIP BOSS"
+            if (boss1.vida <= 0) {
+                console.log('RIP BOSS');
+            }
+        }, i * 3000); // El retraso es 'i' veces 3 segundos, por lo que cada carta atacará 3 segundos después de la anterior
+    }
+}
+
+// Obtén el botón con la clase 'ready'
+let botonReady = document.querySelector('.ready');
+
+// Añade un event listener al botón para el evento de clic
+botonReady.addEventListener('click', iniciarBatalla);
 
 
 
