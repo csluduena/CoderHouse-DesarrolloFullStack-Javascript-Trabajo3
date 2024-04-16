@@ -2257,15 +2257,19 @@ body {
 
 .home {
   position: fixed;
-  bottom: 3%;
-  left: 3%;
-  /* Estilos adicionales */
-  background-color: #4CAF50;
-  color: white;
-  padding: 15px 20px;
-  border: none;
+  bottom: 1%;
+  left: 61%;
+  background-color: #000000;
+  padding: 0px 1px;
+  border: 1px solid #ffffff;
   border-radius: 5px;
-  cursor: pointer;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 17px;
+}
+
+.home:hover {
+  box-shadow: 0px 0px 2px 2px #00f3ff;
 }
 
 @media (min-width: 1200px) and (min-width: 1921px) {
