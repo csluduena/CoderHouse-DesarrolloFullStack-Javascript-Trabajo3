@@ -154,6 +154,23 @@ hr {
         2px 0 0 black;
 }
 
+.homer {
+    position: fixed;
+    bottom: 1%;
+    left: 1%;
+    background-color: #000000;
+    padding: 4px 5px;
+    border: 2px solid #000000;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+/* Estilo para el enlace al pasar el ratón */
+.homer:hover {
+    background-color: #f0f0f0;
+}
+
 .configMensajitoPj {
     font-family: sans-serif;
     color: #f7f7f7;
@@ -937,6 +954,8 @@ hr {
     background-color: transparent;
     margin-left: -0.8rem;
 }
+
+
 
 .mRight {
     color: white;

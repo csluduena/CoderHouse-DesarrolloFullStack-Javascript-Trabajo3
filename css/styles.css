@@ -154,6 +154,23 @@ hr {
   text-shadow: -3px 0px 2px black, 0px 2px 2px black, 0px -1px 2px black, 2px 0 0 black;
 }
 
+.homer {
+  position: fixed;
+  bottom: 1%;
+  left: 1%;
+  background-color: #000000;
+  padding: 4px 5px;
+  border: 2px solid #000000;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+/* Estilo para el enlace al pasar el ratón */
+.homer:hover {
+  background-color: #f0f0f0;
+}
+
 .configMensajitoPj {
   font-family: sans-serif;
   color: #f7f7f7;
@@ -2235,7 +2252,20 @@ body {
   width: 100px;
   height: 100px;
   background-size: cover;
-  background-image: url(./../img/certificadoDesarrolloWeb.png);
+  /* background-image: url(./../img/certificadoDesarrolloWeb.png); */
+}
+
+.home {
+  position: fixed;
+  bottom: 3%;
+  left: 3%;
+  /* Estilos adicionales */
+  background-color: #4CAF50;
+  color: white;
+  padding: 15px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 @media (min-width: 1200px) and (min-width: 1921px) {
@@ -4609,7 +4639,30 @@ body {
     margin-left: 3rem;
     margin-right: 3rem;
   }
-  .nombreClase, .descripcion, .nombreClase1, .descripcion1, .nombreClase2, .descripcion2, .nombreClase3, .descripcion3, .nombreClase4, .descripcion4, .nombreClase5, .descripcion5, .nombreClase6, .descripcion6, .nombreClase7, .descripcion7, .nombreClase8, .descripcion8, .nombreClase9, .descripcion9, .nombreClase10, .descripcion10, .nombreClase11, .descripcion11 {
+  .nombreClase,
+  .descripcion,
+  .nombreClase1,
+  .descripcion1,
+  .nombreClase2,
+  .descripcion2,
+  .nombreClase3,
+  .descripcion3,
+  .nombreClase4,
+  .descripcion4,
+  .nombreClase5,
+  .descripcion5,
+  .nombreClase6,
+  .descripcion6,
+  .nombreClase7,
+  .descripcion7,
+  .nombreClase8,
+  .descripcion8,
+  .nombreClase9,
+  .descripcion9,
+  .nombreClase10,
+  .descripcion10,
+  .nombreClase11,
+  .descripcion11 {
     display: flex;
     width: 66px;
     height: 25px;
@@ -4626,7 +4679,10 @@ body {
     flex-wrap: wrap;
     justify-content: center;
   }
-  .claseElfos div, .claseEnanos div, .claseHumanos div, .claseOrcos div {
+  .claseElfos div,
+  .claseEnanos div,
+  .claseHumanos div,
+  .claseOrcos div {
     display: flex;
     justify-content: space-between;
     align-items: center;
