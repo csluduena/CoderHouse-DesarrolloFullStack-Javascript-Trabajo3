@@ -82,7 +82,9 @@ document.addEventListener("DOMContentLoaded", function () {
                     carta.nombre = "RossWenn";
                 }
                 // Generar el nombre del archivo de la carta
-                const nombreArchivo = `${carta.raza}_${carta.clase}_${carta.genero}.png`;
+                //!Convierte la raza, clase y género a formato de nombre de archivo
+                const razaArchivo = carta.raza ? carta.raza.toLowerCase() : "";
+                const nombreArchivo = `${razaArchivo}_${carta.clase}_${carta.genero}.png`;
                 // Asignar el fondo de la imagen de la carta
                 div.style.backgroundImage = `url('./../img/cartas/${nombreArchivo}')`;
                 // Formatear la información de la carta como texto
