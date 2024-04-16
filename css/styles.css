@@ -2231,7 +2231,7 @@ body {
   width: 100px;
   height: 100px;
   background-size: cover;
-  background-image: url(../../img/certificadoDesarrolloWeb.png);
+  background-image: url(./../img/certificadoDesarrolloWeb.png);
 }
 
 @media (min-width: 1200px) and (min-width: 1921px) {
