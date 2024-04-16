@@ -1,10 +1,11 @@
 let boss1 = {
-    FirstName: "Notsag",
-    alias: "BadTutor",
+    FirstName: "Carpisaurio",
+    alias: "TheProfe",
     type: "Boss",
     ataque: 26,
     vida: 99,
-    agilidad: 10
+    agilidad: 10,
+    debilidad: 'Cualquier Tema de Soda Stereo'
 };
 
 

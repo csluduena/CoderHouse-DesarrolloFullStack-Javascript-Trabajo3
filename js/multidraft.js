@@ -144,14 +144,15 @@ window.addEventListener('keyup', (event) => {
 let boss1Ataque = boss1.ataque; 
 let boss1Vida = boss1.vida; 
 
-console.log(`Vida del jefe: ${boss1Ataque}`);
-console.log(`Daño del jefe: ${boss1Vida}`);
+console.log(`Vida del jefe: ${boss1Vida}`);
+console.log(`Daño del jefe: ${boss1Ataque}`);
 
 document.getElementById('boss-name').textContent = 'Nombre: ' + boss1.FirstName;
 document.getElementById('boss-alias').textContent = 'Alias: ' + boss1.alias;
 document.getElementById('boss-life').textContent = 'Vida: ' + boss1Vida;
 document.getElementById('boss-attack').textContent = 'Ataque: ' + boss1Ataque;
 document.getElementById('boss-agility').textContent = 'Agilidad: ' + boss1.agilidad;
+document.getElementById('boss-debilidad').innerHTML = 'Debilidad: <br>' + boss1.debilidad;
 
 // Función para calcular el daño de una carta
 function calcularDanio(carta) {
@@ -160,34 +161,6 @@ function calcularDanio(carta) {
     let agilidad = carta.atributos.agilidad;
 
     return inteligencia + fuerza + agilidad; // Daño basado en la suma de los atributos
-}
-
-// Función para realizar un ataque
-function realizarAtaque(carta, boss) {
-    // Busca el elemento HTML de la carta
-    const cartaElement = document.querySelector(`#${carta.id}`);
-
-    // Asegúrate de que el elemento existe antes de intentar acceder a su propiedad 'classList'
-    if (cartaElement) {
-        // Agrega la clase 'card-attacking' para iniciar la animación
-        cartaElement.classList.add('card-attacking');
-
-        // Calcula el daño
-        const danio = calcularDanio(carta);
-
-        // Aplica el daño al jefe
-        boss.vida -= danio;
-
-        // Imprime la vida del jefe
-        console.log(`Vida del jefe después del ataque de ${carta.nombre}: ${boss.vida}`);
-
-        // Quita la clase 'card-attacking' después de 3 segundos para terminar la animación
-        setTimeout(function() {
-            cartaElement.classList.remove('card-attacking');
-        }, 3000);
-    } else {
-        console.log(`No se encontró el elemento HTML para la carta ${carta.nombre}`);
-    }
 }
 
 // Función para iniciar la batalla
@@ -203,6 +176,90 @@ function iniciarBatalla() {
                 console.log('RIP BOSS');
             }
         }, i * 3000); // El retraso es 'i' veces 3 segundos, por lo que cada carta atacará 3 segundos después de la anterior
+    }
+}
+
+
+
+
+
+
+
+
+// Función para mostrar un modal con la información del daño
+function mostrarModal(vidaInicial, danio, vidaRestante) {
+    // Crear el elemento modal
+    let modal = document.createElement('div');
+    modal.classList.add('modal-damage-battle'); // Clase única para evitar conflictos
+    modal.textContent = `${vidaInicial} Salud - ${danio} daño = ${vidaRestante} Puntos de salud`;
+
+    // Estilos para el modal (ajustados para centrar)
+    // modal.style.position = 'fixed';
+    // modal.style.bottom = '10px';
+    // modal.style.right = '10px';
+    // modal.style.height = '367.6px';
+    // modal.style.width = '217px';
+    // modal.style.marginTop = '-18%';
+    // modal.style.backgroundColor = 'rgba(0, 0, 0, 0.7)';
+    // modal.style.color = 'white';
+    // modal.style.padding = '10px';
+    // modal.style.borderRadius = '5px';
+    // modal.style.zIndex = '1000';
+    // modal.style.display = 'flex';
+    // modal.style.flexDirection = 'column';
+    // modal.style.justifyContent = 'center';
+    // modal.style.alignItems = 'center';
+
+    // Añadir el modal al cuerpo del documento
+    document.body.appendChild(modal);
+
+    // Establecer un temporizador para eliminar el modal después de 3 segundos
+    setTimeout(function() {
+        document.body.removeChild(modal);
+    }, 3000);
+}
+
+
+
+
+
+
+
+
+
+
+
+// Función para realizar un ataque
+function realizarAtaque(carta, boss) {
+    // Busca el elemento HTML de la carta
+    const cartaElement = document.querySelector(`#${carta.id}`);
+
+    // Asegúrate de que el elemento existe antes de intentar acceder a su propiedad 'classList'
+    if (cartaElement) {
+        // Agrega la clase 'card-attacking' para iniciar la animación
+        cartaElement.classList.add('card-attacking');
+
+        // Calcula el daño
+        const danio = calcularDanio(carta);
+
+         // Guarda la vida inicial del jefe antes del daño
+        let vidaInicial = boss.vida;
+
+        // Aplica el daño al jefe
+        boss.vida -= danio;
+
+        // Muestra el modal con la información del daño
+        mostrarModal(vidaInicial, danio, boss.vida);
+
+        // Imprime la vida del jefe
+        console.log(`Vida del jefe después del ataque de ${carta.nombre}: ${boss.vida}`);
+
+        // Quita la clase 'card-attacking' después de 3 segundos para terminar la animación
+        setTimeout(function() {
+            cartaElement.classList.remove('card-attacking');
+        }, 3000);
+    } else {
+        console.log(`No se encontró el elemento HTML para la carta ${carta.nombre}`);
     }
 }
 
