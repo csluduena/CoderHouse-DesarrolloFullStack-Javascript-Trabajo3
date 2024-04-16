@@ -281,7 +281,7 @@ function mostrarMensajeVictoria(nombreBoss) {
 
     // Añade un evento al botón para redirigir a la página de créditos
     document.getElementById('bossContinue').addEventListener('click', function () {
-        window.location.href = '/pages/credits.html';
+        window.location.href = './pages/credits.html';
     });
 }
 
