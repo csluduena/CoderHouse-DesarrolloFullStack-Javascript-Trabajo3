@@ -5,7 +5,7 @@ let boss1 = {
     ataque: 26,
     vida: 99,
     agilidad: 10,
-    debilidad: 'Cualquier Tema de Soda Stereo'
+    debilidad: 'Una de Soda Stereo'
 };
 
 
