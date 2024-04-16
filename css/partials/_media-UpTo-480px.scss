@@ -23,14 +23,14 @@
         margin-left: -8px;
         filter: opacity(0.6);
     }
-    
+
     .start-buttonCFG {
         width: 250px;
         height: 126px;
         filter: blur(2px);
         margin-top: 8rem;
     }
-    
+
     .start-button:hover {
         width: 247px;
         height: 151px;
@@ -115,31 +115,31 @@
     //!Elección de Razas
 
     .opcionElfos {
-    width: 100px;
-    height: 120px;
+        width: 100px;
+        height: 120px;
         border-radius: 2rem;
         margin-right: 0.6rem;
     }
 
     .opcionEnanos {
-    width: 100px;
-    height: 120px;
+        width: 100px;
+        height: 120px;
     }
 
     .opcionHumanos {
-    width: 100px;
-    height: 120px;
+        width: 100px;
+        height: 120px;
         margin-right: 0.6rem;
         border-radius: 2rem;
     }
 
     .opcionOrcos {
-    width: 100px;
-    height: 120px;
+        width: 100px;
+        height: 120px;
         border-radius: 2rem;
     }
 
-    
+
     #razas {
         display: flex;
         flex-direction: row;
@@ -158,19 +158,19 @@
         margin-right: 0%;
         margin-left: 4%;
     }
-    
+
     #enanosOption {
         margin-right: -3rem;
         margin-top: 0rem;
         margin-left: 13px;
     }
-    
+
     #humanosOption {
         margin-top: 65%;
         margin-left: -42%;
         margin-right: 29px;
     }
-    
+
     #orcosOption {
         margin-left: -4%;
         margin-top: 65%;
@@ -218,7 +218,30 @@
         margin-right: 3rem;
     }
 
-    .nombreClase, .descripcion, .nombreClase1, .descripcion1, .nombreClase2, .descripcion2, .nombreClase3, .descripcion3, .nombreClase4, .descripcion4, .nombreClase5, .descripcion5, .nombreClase6, .descripcion6, .nombreClase7, .descripcion7, .nombreClase8, .descripcion8, .nombreClase9, .descripcion9, .nombreClase10, .descripcion10, .nombreClase11, .descripcion11 {
+    .nombreClase,
+    .descripcion,
+    .nombreClase1,
+    .descripcion1,
+    .nombreClase2,
+    .descripcion2,
+    .nombreClase3,
+    .descripcion3,
+    .nombreClase4,
+    .descripcion4,
+    .nombreClase5,
+    .descripcion5,
+    .nombreClase6,
+    .descripcion6,
+    .nombreClase7,
+    .descripcion7,
+    .nombreClase8,
+    .descripcion8,
+    .nombreClase9,
+    .descripcion9,
+    .nombreClase10,
+    .descripcion10,
+    .nombreClase11,
+    .descripcion11 {
         display: flex;
         width: 66px;
         height: 25px;
@@ -236,7 +259,10 @@
         justify-content: center;
     }
 
-    .claseElfos div, .claseEnanos div, .claseHumanos div, .claseOrcos div {
+    .claseElfos div,
+    .claseEnanos div,
+    .claseHumanos div,
+    .claseOrcos div {
         display: flex;
         justify-content: space-between;
         align-items: center;

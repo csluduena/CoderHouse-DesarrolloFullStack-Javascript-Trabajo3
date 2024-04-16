@@ -18,8 +18,6 @@ let boss2 = {
     debilidad: 'Adicto a las Chipá'
 };
 
-
-
 document.getElementById('startBattle').addEventListener('click', function() {
     document.getElementById('boss').style.display = 'block';
     const chauBoton = document.getElementById('startBattle')
@@ -108,7 +106,6 @@ function cardClickHandler() {
     }
 }
 
-// Añade un controlador de eventos al botón '¡Lets Go!'
 letsGoButton.addEventListener('click', () => {
     battlefield.style.display = 'block';
     boss.style.display = 'block';
@@ -116,7 +113,6 @@ letsGoButton.addEventListener('click', () => {
     cardsPlace.style.marginTop = '4%';
     letsGoButton.style.display = 'none';
 
-    // Aquí se desactiva la posibilidad de hacer clic en las cartas
     cards.forEach((card) => {
         card.removeEventListener('click', cardClickHandler);
     });

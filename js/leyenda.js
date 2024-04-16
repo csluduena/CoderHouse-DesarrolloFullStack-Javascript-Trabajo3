@@ -34,8 +34,6 @@ document.getElementById("fuerza").textContent = fuerza;
 document.getElementById("agilidad").textContent = agilidad;
 
 //!guardamos los atributos en una variable global
-
-
 //!Alerta borrar personaje
 let btnBorrar = document.getElementById("borrarPersonaje");
 let modal = document.getElementById("myModal");
@@ -193,7 +191,6 @@ document.querySelector(
 
 
 //! COMIENZO CÓDIGO DEL CHART TRIANGULAR.
-
 let btnMostrarStats = document.getElementById("graphStats");
 
 function toggleChartVisibility() {
@@ -213,7 +210,7 @@ document.addEventListener("click", function (event) {
     }
 });
 
-//  atributos
+//  Atributos
 //! Obtener Atributos desde localStorage
 function obtenerAtributosBaseDesdeLocalStorage() {
     let atributosBaseDesdeLocalStorage = localStorage.getItem('atributosBase');
@@ -282,7 +279,7 @@ Highcharts.chart('containerChart', {
         type: 'line',
         backgroundColor: '#000000af',
         borderRadius: '25px',
-        marginTop: 115 // Margen superior de 20 píxeles
+        marginTop: 115
     },
     title: {
         text: 'ESTADISTICAS DE LA LEYENDA',
@@ -412,17 +409,13 @@ Highcharts.chart('containerChart', {
     }
 });
 
-// Obtener la ubicación actual
 const currentPage = window.location.pathname;
 
-// Verificar si estamos en la página de inicio
 if (currentPage === "/index.html") {
-    // Mostrar los elementos al principio
     document.querySelectorAll('.image-button, .pokemonInfo').forEach(element => {
         element.style.display = 'block';
     });
 } else {
-    // Ocultar los elementos en otras páginas
     document.querySelectorAll('.image-button, .pokemonInfo').forEach(element => {
         element.style.display = 'none';
     });

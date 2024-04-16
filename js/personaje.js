@@ -10,7 +10,7 @@ const {
     agilidad
 } = localStorage;
 
-// Usamos el operador lógico OR (||) para asignar valores por defecto en caso de que no haya datos en el LocalStorage
+// operadores lógicos
 const {
     nombreUsuario: nombreUsuarioValor,
     nickPersonaje: nickPersonajeValor,

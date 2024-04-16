@@ -1,4 +1,4 @@
-@media (min-width: 768px) and (max-width: 1023.95px) {
+@media (min-width: 768px) and (max-width: 1024px) {
     //TODO Estilos CSS para pantallas con ancho Desde 480px hasta 767px. Luego viene el main.css común y a partir de 1921p (2k y 4k) utiliza la siguiente queries
 
     #content {
@@ -271,9 +271,20 @@
         font-size: 13px;
         box-shadow: rgb(18, 125, 123) 0px 0px 8px 8px;
         position: fixed;
-        left: 72%;
-        bottom: 46%;
-        width: 18%;
+        left: 70%;
+        bottom: 37%;
+        width: 22%;
+    }
+
+
+    .mostrarStats {
+        font-size: 20px;
+        padding: 2px;
+        float: right;
+        margin-right: 13.5%;
+        margin-top: -56%;
+        position: relative;
+        cursor: pointer;
     }
 
     .configTextBase {
@@ -347,6 +358,16 @@
     //! Opciones Raza
     .comenzarBtn {
         background-image: url(../img/startBTN.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        margin-top: 48px;
+        width: 260px;
+        height: 239px;
+        cursor: pointer;
+    }
+
+    .multiDraftBoton {
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
@@ -1339,5 +1360,22 @@
         align-items: center;
         padding-bottom: 5px;
         justify-content: flex-end;
+    }
+
+    .cards {
+        bottom: 1%;
+    }
+
+    .cardsPlace {
+        background-color: rgba(0, 0, 0, 0.2509803922);
+        width: 856px;
+        height: 107px;
+        /* border: 2px solid black; */
+        position: relative;
+        margin: 0 auto;
+        margin-top: -156px;
+        gap: 4%;
+        /* padding-right: 0px; */
+        /* padding-left: 1px; */
     }
 }

@@ -1,5 +1,4 @@
-document.addEventListener("DOMContentLoaded", function() {
-    // Verificar si el botón existe antes de agregarle el event listener
+document.addEventListener("DOMContentLoaded", function () {
     const buttonContinue = document.getElementById("buttonContinue");
     if (buttonContinue) {
         buttonContinue.addEventListener("click", function () {
@@ -8,7 +7,6 @@ document.addEventListener("DOMContentLoaded", function() {
                 return typeof variable === 'string' || variable instanceof String;
             }
 
-            // Convertir una variable a cadena de texto si no lo es
             function convertirACadena(variable) {
                 if (!esCadena(variable)) {
                     return variable.toString();
@@ -43,7 +41,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
-//! Descripción Técnica del código: 
+//! Descripción Técnica del código:
 
 //?     Tenemos un objeto JavaScript anidado. Rescripción de la estructura:
 
@@ -51,7 +49,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 //!?    "juegoInfo.razas" es un objeto que contiene las diferentes razas como propiedades. Cada propiedad es a su vez un objeto que representa //!? una raza.
 
-//!?    Dentro de cada objeto de raza ("juegoInfo.razas.Elfo", "juegoInfo.razas.Enano", etc.), hay una propiedad llamada clases, que es otro 
+//!?    Dentro de cada objeto de raza ("juegoInfo.razas.Elfo", "juegoInfo.razas.Enano", etc.), hay una propiedad llamada clases, que es otro
 
 //!?    objeto. Este objeto contiene las diferentes clases disponibles para esa raza.
 

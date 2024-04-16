@@ -148,7 +148,6 @@ function activarContinuar() {
 }
 
 //!CAMBIO DE COLOR PARA EL TEXTO DE HOMBRE
-
 hombre.addEventListener("click", function () {
     document.querySelector(".hLeft").style.color = "#0015ff";
 
@@ -236,40 +235,7 @@ function obtenerAtributosBaseDesdeLocalStorage() {
     }
 }
 
-// Llama a la función para almacenar los atributos base en localStorage
 almacenarAtributosBase();
 
-// Llama a la función para obtener los atributos base desde localStorage
 let atributosBaseObtenidos = obtenerAtributosBaseDesdeLocalStorage();
 console.log('Atributos base obtenidos desde localStorage:', atributosBaseObtenidos);
-
-
-// //Declarar y Almacenar razas en localStorage
-
-// // Razas
-// let razaInfo = {
-//     Elfo: { descripcion: "Seres de gracia y conexión con la naturaleza." },
-//     Enano: { descripcion: "Gran resistencia y habilidades de artesanía." },
-//     Humano: { descripcion: "Ambiciosos, gran diversidad de habilidades." },
-//     Orco: { descripcion: "Fuertes, gran ferocidad en el combate." }
-// };
-
-// // Clases
-// let claseInfo = {
-//     Mago: { descripcion: "Usuarios de magia poderosa y destructiva." },
-//     Druida: { descripcion: "Capaces de manipular la magia de la naturaleza." },
-//     Bardo: { descripcion: "Artistas talentosos con habilidades mágicas únicas." },
-//     Guerrero: { descripcion: "Combatientes fuertes y resistentes." },
-//     Herrero: { descripcion: "Maestros de la creación y mejora de armas y armaduras." },
-//     Paladin: { descripcion: "Defensores valientes con habilidades de curación." },
-//     Caballero: { descripcion: "Protectores leales, habilidosos en combate cuerpo a cuerpo." },
-//     Picaro: { descripcion: "Maestros del sigilo y la astucia, expertos en trampas y robos." },
-//     Clerigo: { descripcion: "Sanadores y protectores con habilidades mágicas divinas." },
-//     Berserker: { descripcion: "Combatientes salvajes que entran en frenesí en la batalla." },
-//     Chaman: { descripcion: "Conectados con los espíritus y capaces de usar magia elemental." },
-//     Cazador: { descripcion: "Expertos en rastreo y combate a distancia." }
-// };
-
-// // Almacenar en localStorage
-// localStorage.setItem('razaInfo', JSON.stringify(razaInfo));
-// localStorage.setItem('claseInfo', JSON.stringify(claseInfo));

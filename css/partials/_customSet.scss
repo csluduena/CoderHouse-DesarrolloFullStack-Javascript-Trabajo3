@@ -1,5 +1,6 @@
 #organizarCartas {
-    display: none; /* Oculta el contenedor de las cartas */
+    display: none;
+    /* Oculta el contenedor de las cartas */
 }
 
 .sale {
@@ -374,16 +375,19 @@ $total: 6; // Cambiado a 6 para ajustarse al número de cartas
 .modal-damage-battle {
     position: fixed;
     bottom: 3%;
-    right: 3%; /* Centrar horizontalmente */
+    right: 3%;
+    /* Centrar horizontalmente */
     //transform: translateX(-50%); /* Desplazar a la izquierda la mitad de su ancho */
-    background-color: rgba(0,0,0,0.7);
+    background-color: rgba(0, 0, 0, 0.7);
     color: white;
     padding: 10px;
     border-radius: 5px;
     z-index: 1000;
     display: flex;
-    justify-content: center; /* Alinear el contenido horizontalmente */
-    align-items: center; /* Alinear el contenido verticalmente */
+    justify-content: center;
+    /* Alinear el contenido horizontalmente */
+    align-items: center;
+    /* Alinear el contenido verticalmente */
 }
 
 // Añade este estilo en tu CSS para el modal oscuro y el texto en blanco

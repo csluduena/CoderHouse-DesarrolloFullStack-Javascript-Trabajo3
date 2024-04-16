@@ -1633,7 +1633,8 @@ a {
 }
 
 #organizarCartas {
-  display: none; /* Oculta el contenedor de las cartas */
+  display: none;
+  /* Oculta el contenedor de las cartas */
 }
 
 .sale {
@@ -2023,15 +2024,18 @@ a {
 .modal-damage-battle {
   position: fixed;
   bottom: 3%;
-  right: 3%; /* Centrar horizontalmente */
+  right: 3%;
+  /* Centrar horizontalmente */
   background-color: rgba(0, 0, 0, 0.7);
   color: white;
   padding: 10px;
   border-radius: 5px;
   z-index: 1000;
   display: flex;
-  justify-content: center; /* Alinear el contenido horizontalmente */
-  align-items: center; /* Alinear el contenido verticalmente */
+  justify-content: center;
+  /* Alinear el contenido horizontalmente */
+  align-items: center;
+  /* Alinear el contenido verticalmente */
 }
 
 .modal-oscuro {
@@ -3244,7 +3248,7 @@ body {
     /* right: -2%; */
   }
 }
-@media (min-width: 768px) and (max-width: 1023.95px) {
+@media (min-width: 768px) and (max-width: 1024px) {
   #content {
     display: none;
     text-align: center;
@@ -3475,9 +3479,18 @@ body {
     font-size: 13px;
     box-shadow: rgb(18, 125, 123) 0px 0px 8px 8px;
     position: fixed;
-    left: 72%;
-    bottom: 46%;
-    width: 18%;
+    left: 70%;
+    bottom: 37%;
+    width: 22%;
+  }
+  .mostrarStats {
+    font-size: 20px;
+    padding: 2px;
+    float: right;
+    margin-right: 13.5%;
+    margin-top: -56%;
+    position: relative;
+    cursor: pointer;
   }
   .configTextBase {
     background-image: url(../img/primerPreg.png);
@@ -3536,6 +3549,15 @@ body {
   }
   .comenzarBtn {
     background-image: url(../img/startBTN.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-top: 48px;
+    width: 260px;
+    height: 239px;
+    cursor: pointer;
+  }
+  .multiDraftBoton {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -4395,6 +4417,21 @@ body {
     align-items: center;
     padding-bottom: 5px;
     justify-content: flex-end;
+  }
+  .cards {
+    bottom: 1%;
+  }
+  .cardsPlace {
+    background-color: rgba(0, 0, 0, 0.2509803922);
+    width: 856px;
+    height: 107px;
+    /* border: 2px solid black; */
+    position: relative;
+    margin: 0 auto;
+    margin-top: -156px;
+    gap: 4%;
+    /* padding-right: 0px; */
+    /* padding-left: 1px; */
   }
 }
 @media screen and (max-width: 767.95px) {

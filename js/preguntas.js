@@ -3,8 +3,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const preguntaUno = document.querySelector(".preguntaUno");
     const saludoInicialInput = document.getElementById("saludoInicialInput");
 
-    
-
     comenzarBtn.addEventListener("click", function () {
         comenzarBtn.style.display = "none";
         preguntaUno.style.display = "block";
@@ -49,25 +47,18 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-
-// Obtener el botón de inicio
 const botonStart = document.getElementById('botonStart');
 
-// Obtener todos los elementos con la clase "multiDraftBoton"
 const multiDraftBotones = document.querySelectorAll('.multiDraftBoton');
 
-// Agregar un event listener para el clic en el botón de inicio
 botonStart.addEventListener('click', () => {
-    // Ocultar los elementos con la clase "multiDraftBoton"
     multiDraftBotones.forEach(boton => {
         boton.style.display = 'none';
     });
 });
 
-// Agregar event listeners para el clic en cada elemento con la clase "multiDraftBoton"
 multiDraftBotones.forEach(boton => {
     boton.addEventListener('click', () => {
-        // Ocultar los elementos con la clase "multiDraftBoton"
         multiDraftBotones.forEach(boton => {
             boton.style.display = 'none';
         });

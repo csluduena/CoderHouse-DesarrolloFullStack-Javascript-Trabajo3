@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,24 +8,17 @@
     <link rel="stylesheet" href="../css/styles.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
-
 <body>
     <div class="bodyIndex"><img src="../img/fondoSet.png" alt="bgnd1">
         <header>
             <h1 class="sale">Bienvenidos al draft de cartas en grupo!</h1>
         </header>
-
         <main>
-
             <h1 class="titleMain">Es hora de armar tus fuerzas!</h1>
             <h2 class="titleSubmain">Los CarpiWarriors aquí están!</h2>
             <h3 class="h3Title">6 cartas random, Elfos, Humanos, Enanos y Orcos de todas las clases, convinados y listos
                 para defender tu causa!</h3>
-
-                
-
             <button class="start" id="startBattle">Start Battle</button>
-
             <div class="battlefield" style="display: none;">
                 <div class="boss" id="boss"></div>
                 <!-- Contenedor para la información del boss -->
@@ -40,15 +32,9 @@
                     <p id="boss-debilidad"></p>
                 </div>
             </div>
-
-
             <div class="cardsPlace" style="display: none;">
-
                 <button class="ready" style="display: none">¡Lets Go!</button>
-
             </div>
-
-
             <div id="organizarCartas">
                 <div class='cards'>
                     <div class='card'>
@@ -83,9 +69,7 @@
                     </div>
                 </div>
             </div>
-
         </main>
-
         <footer>
             <!--Footer Area-->
         </footer>
@@ -213,7 +197,6 @@
                     }
                 }
             };
-
             // Paso 1: Realizar el fetch del archivo JSON
             // Fetch y almacenamiento de los datos del JSON en localStorage
             fetch('./../data.json')
@@ -224,14 +207,10 @@
                 })
                 .catch(error => console.error('Error al cargar los datos:', error));
         </script>
-
-
         <!--Script-->
         <script src="./../js/boss.js"></script>
         <script src="./../js/multidraft.js"></script>
         <script src="./../js/fightLogic.js"></script>
         <script src="./../js/storage.js"></script>
-
 </body>
-
 </html>
