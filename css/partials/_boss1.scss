@@ -123,3 +123,15 @@
     box-shadow: 0px 0px 10px 5px #00ffff;
     cursor: pointer;
 }
+
+.card-damage {
+    width: 100%;
+    text-align: center; /* Centra horizontalmente el texto */
+}
+
+.card-damage::before {
+    content: ''; /* Crea un espacio en blanco antes del texto para centrarlo verticalmente */
+    display: inline-block;
+    height: 100%; /* Establece la altura del espacio en blanco */
+    vertical-align: middle; /* Centra verticalmente el contenido */
+}

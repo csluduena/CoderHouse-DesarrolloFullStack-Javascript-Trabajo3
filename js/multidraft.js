@@ -157,12 +157,15 @@ function calcularDanio(carta) {
 
 // Función para iniciar la batalla
 function iniciarBatalla() {
+    let cartasRestantes = cartasAleatorias.length;
+
     for (let i = 0; i < cartasAleatorias.length; i++) {
         setTimeout(function () {
             realizarAtaque(cartasAleatorias[i], boss1);
 
-            // Si la vida del jefe es 0 o menos, imprime "RIP BOSS"
-            if (boss1.vida <= 0) {
+            cartasRestantes--;
+
+            if (cartasRestantes === 0 && boss1.vida <= 0) {
                 console.log('RIP BOSS');
             }
         }, i * 3000);
@@ -201,13 +204,20 @@ function actualizarYMostrarDanoVida(boss, dano) {
     battlefield.appendChild(infoDanoVida);
 }
 
+let bossDerrotado = false; // Variable de estado para verificar si el jefe ya ha sido derrotado
+
 function realizarAtaque(carta, boss) {
+    if (bossDerrotado) return; // Si el jefe ya ha sido derrotado, salir de la función
+
     const cartaElement = document.querySelector(`#${carta.id}`);
 
     if (cartaElement && boss.vida > 0) { // Verifica que el boss aún tenga vida
         cartaElement.classList.add('card-attacking');
 
-        const danio = calcularDanio(carta);
+        const danio = calcularDanio(carta); 
+        const damageContainer = document.getElementById(`damage-${carta.id}`);
+        damageContainer.textContent = `Daño: ${danio}`;
+
         let vidaInicial = boss.vida;
         let vidaRestante = vidaInicial - danio;
 
@@ -216,24 +226,29 @@ function realizarAtaque(carta, boss) {
 
         mostrarModal(vidaInicial, danio, vidaRestante);
 
+        console.log(`${carta.nombre} ha hecho ${danio} de daño.`);
         console.log(`Vida del jefe después del ataque de ${carta.nombre}: ${boss.vida}`);
 
-        // Llama a la función para actualizar y mostrar el daño y la vida restante
         actualizarYMostrarDanoVida(boss, danio);
 
-        // Si la vida del boss llega a 0, muestra el mensaje de victoria y detiene los ataques
         if (boss.vida <= 0) {
+            bossDerrotado = true;
             mostrarMensajeVictoria(boss.FirstName);
             return;
         }
 
-        setTimeout(function () {
+        setTimeout(() => {
+            damageContainer.textContent = '';
+        }, 3000);
+
+        setTimeout(() => {
             cartaElement.classList.remove('card-attacking');
         }, 3000);
     } else {
         console.log(`No se encontró el elemento HTML para la carta ${carta.nombre}`);
     }
 }
+
 
 // Mostrar el mensaje de victoria
 function mostrarMensajeVictoria(nombreBoss) {
