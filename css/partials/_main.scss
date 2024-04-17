@@ -1004,11 +1004,14 @@ hr {
 }
 
 //!Clases para Atributos
+.contenedorParcial{
+    margin-top: -4%;
+}
+
 .contenedorParcial,
 .contenedorFinalClss {
     flex-direction: column;
     align-items: center;
-    margin-top: 0rem;
     background-image: url(../img/bgndStats.jpg);
     border-radius: 5rem;
     padding: 5rem;
@@ -1058,6 +1061,17 @@ hr {
     margin-top: 2rem;
     margin-left: 6rem;
     margin-right: 6rem;
+}
+#resultado1 {
+    margin-top: -7%;
+}
+
+#resultado2 {
+    margin-top: 0%;
+}
+
+#resultado3 {
+    margin-top: 0%;
 }
 
 #resultado1,

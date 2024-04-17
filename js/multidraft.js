@@ -14,30 +14,27 @@ let cartasOrdenadas = [];
 let nombreBoss = boss1.FirstName;
 document.addEventListener("DOMContentLoaded", function () {
 
-    // Recuperar los datos del almacenamiento local
+    // Recuperar datos del almacenamiento local
     const data = JSON.parse(localStorage.getItem('data'));
 
-    // Ahora puedes acceder a los datos como lo harías normalmente con un objeto JavaScript
     console.log(data);
     //console.log(data.raza.Elfo.descripcion); // Acceder a la descripción de los Elfos
     //console.log(data.raza.Elfo.clases.Mago.descripcion); // Acceder a la descripción de la clase Mago para los Elfos
 
-
     if (window.location.pathname.includes("/multidraft.html")) {
         //? Paso 1: Obtener una muestra aleatoria de 6 cartas
-        const razas = Object.keys(data.raza); // Obtener todas las razas disponibles
+        const razas = Object.keys(data.raza);
         const contenedorCartas = document.querySelectorAll('.carta-personaje.carta');
 
-
         while (cartasAleatorias.length < 6) {
-            const razaAleatoria = razas[Math.floor(Math.random() * razas.length)]; // Seleccionar una raza aleatoria
+            const razaAleatoria = razas[Math.floor(Math.random() * razas.length)];
             cartasAleatorias.push({ raza: razaAleatoria });
         }
 
         //? Paso 2: Asignar una clase aleatoria para cada carta
         cartasAleatorias.forEach(carta => {
-            const clasesRaza = Object.keys(data.raza[carta.raza].clases); // Obtener todas las clases disponibles para la raza
-            const claseAleatoria = clasesRaza[Math.floor(Math.random() * clasesRaza.length)]; // Seleccionar una clase aleatoria
+            const clasesRaza = Object.keys(data.raza[carta.raza].clases);
+            const claseAleatoria = clasesRaza[Math.floor(Math.random() * clasesRaza.length)];
             carta.clase = claseAleatoria;
         });
 
@@ -45,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const generos = ["Hombre", "Mujer"];
 
         cartasAleatorias.forEach(carta => {
-            const generoAleatorio = generos[Math.floor(Math.random() * generos.length)]; // Seleccionar un género aleatorio
+            const generoAleatorio = generos[Math.floor(Math.random() * generos.length)];
             carta.genero = generoAleatorio;
         });
 
@@ -60,32 +57,25 @@ document.addEventListener("DOMContentLoaded", function () {
                 agilidad: atributosBase.agilidad //+ Math.floor(Math.random() * 3) - 1 // Variación de -1 a +1
             };
 
-            // Asignar los atributos aleatorios a la carta
             carta.atributos = atributosAleatorios;
         });
 
         console.log("Cartas con razas, clases, géneros y atributos base asignados:", cartasAleatorias);
 
-        // Verificar si se encontraron suficientes divs
         if (contenedorCartas.length >= 6) {
-            // Iterar sobre cada div y asignar la información de las cartas generadas
             contenedorCartas.forEach((div, index) => {
-                const carta = cartasAleatorias[index]; // Obtener la carta correspondiente
-                // Asignar un identificador único basado en el índice de la carta
+                const carta = cartasAleatorias[index];
                 carta.id = `carta${index + 1}`;
-                // Asignar un nombre temporal basado en el género de la carta
                 if (carta.genero === "Hombre") {
                     carta.nombre = "SebaHero";
                 } else if (carta.genero === "Mujer") {
                     carta.nombre = "RossWenn";
                 }
-                // Generar el nombre del archivo de la carta
+
                 //!Convierte la raza, clase y género a formato de nombre de archivo
                 const razaArchivo = carta.raza ? carta.raza.toLowerCase() : "";
                 const nombreArchivo = `${razaArchivo}_${carta.clase}_${carta.genero}.png`;
-                // Asignar el fondo de la imagen de la carta
                 div.style.backgroundImage = `url('./../img/cartas/${nombreArchivo}')`;
-                // Formatear la información de la carta como texto
                 const infoCarta = `
                     <p class="spaceEntreInfoMulti, colorTitulosMulti">Nombre: ${carta.nombre}</p>
                     <p class="spaceEntreInfoMulti, colorTitulosMulti">Origen: ${carta.raza}</p>
@@ -113,21 +103,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
 let thecards = document.querySelectorAll('.card');
 
-// Anade un controlador de eventos para cuando se presiona una tecla
 window.addEventListener('keydown', (event) => {
-    // Comprueba si la tecla presionada es un número entre 1 y 6
     let key = event.key;
     if (key >= '1' && key <= '6') {
-        // Anade la clase 'hover-effect' al elemento correspondiente
         thecards[key - 1].classList.add('hover-effect');
     }
 });
 
 window.addEventListener('keyup', (event) => {
-    // Comprueba si la tecla soltada es un número entre 1 y 6
     let key = event.key;
     if (key >= '1' && key <= '6') {
-        // Elimina la clase 'hover-effect' del elemento correspondiente
         thecards[key - 1].classList.remove('hover-effect');
     }
 });
@@ -146,16 +131,16 @@ document.getElementById('boss-attack').textContent = 'Ataque: ' + boss1Ataque;
 document.getElementById('boss-agility').textContent = 'Agilidad: ' + boss1.agilidad;
 document.getElementById('boss-debilidad').innerHTML = 'Debilidad: <br>' + boss1.debilidad;
 
-// Función para calcular el daño de una carta
+// calcular el daño de una carta
 function calcularDanio(carta) {
     let inteligencia = carta.atributos.inteligencia;
     let fuerza = carta.atributos.fuerza;
     let agilidad = carta.atributos.agilidad;
 
-    return inteligencia + fuerza + agilidad; // Daño basado en la suma de los atributos
+    return inteligencia + fuerza + agilidad; //daño basado en la suma de los atributos
 }
 
-// Función para iniciar la batalla
+// Iniciar la batalla
 function iniciarBatalla() {
     let cartasRestantes = cartasAleatorias.length;
 
@@ -205,42 +190,17 @@ function actualizarYMostrarDanoVida(vidaInicial, danio, vidaRestante, nombreBoss
     document.body.appendChild(infoDanoVida);
 }
 
-// Función para mostrar el modal de daño recibido por el jefe y actualizar la información de la interfaz de usuario
-// function actualizarYMostrarDanoVida(boss, danio) {
-//     // Calcula la vida restante después del daño
-//     boss.vida -= danio;
-
-//     // Mostrar el modal con la información de daño
-//     mostrarModal(boss.vida + danio, danio, boss.vida);
-
-//     // Mostrar la información de daño en la interfaz de usuario
-//     let infoDanoVida = document.getElementById('infoDanoVida') || document.createElement('div');
-//     infoDanoVida.id = 'infoDanoVida';
-//     infoDanoVida.textContent = `${nombreBoss} recibe ${danio} de daño | Vida Restante: ${boss.vida}`;
-
-//     infoDanoVida.style.position = 'absolute';
-//     infoDanoVida.style.bottom = '10px';
-//     infoDanoVida.style.left = '50%';
-//     infoDanoVida.style.transform = 'translateX(-50%)';
-//     infoDanoVida.style.backgroundColor = 'rgba(0, 0, 0, 0.7)';
-//     infoDanoVida.style.color = 'white';
-//     infoDanoVida.style.padding = '5px';
-//     infoDanoVida.style.borderRadius = '5px';
-
-//     battlefield.appendChild(infoDanoVida);
-// }
-
-let bossDerrotado = false; // Variable de estado para verificar si el jefe ya ha sido derrotado
+let bossDerrotado = false;
 
 function realizarAtaque(carta, boss) {
-    if (bossDerrotado) return; // Si el jefe ya ha sido derrotado, salir de la función
+    if (bossDerrotado) return;
 
     const cartaElement = document.querySelector(`#${carta.id}`);
 
-    if (cartaElement && boss.vida > 0) { // Verifica que el boss aún tenga vida
+    if (cartaElement && boss.vida > 0) {
         cartaElement.classList.add('card-attacking');
 
-        const danio = calcularDanio(carta); 
+        const danio = calcularDanio(carta);
         const damageContainer = document.getElementById(`damage-${carta.id}`);
         damageContainer.textContent = `Daño: ${danio}`;
 
@@ -275,8 +235,6 @@ function realizarAtaque(carta, boss) {
     }
 }
 
-
-// Mostrar el mensaje de victoria
 function mostrarMensajeVictoria(nombreBoss) {
     let modalVictoria = document.createElement('div');
     modalVictoria.classList.add('modal-victoria');
