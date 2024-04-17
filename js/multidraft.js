@@ -172,10 +172,11 @@ function iniciarBatalla() {
     }
 }
 
+// Función para mostrar el modal con información de daño
 function mostrarModal(vidaInicial, danio, vidaRestante) {
     let modal = document.createElement('div');
     modal.classList.add('modal-damage-battle');
-    modal.textContent = `${vidaInicial} Salud - ${danio} dano = ${vidaRestante} Puntos de salud`;
+    modal.textContent = `${vidaInicial} Salud - ${danio} daño = ${vidaRestante} Puntos de salud`;
 
     document.body.appendChild(modal);
 
@@ -184,16 +185,16 @@ function mostrarModal(vidaInicial, danio, vidaRestante) {
     }, 3000);
 }
 
-function actualizarYMostrarDanoVida(boss, dano) {
-    // Calcula la vida restante después del daño
-    boss.vida -= dano;
+function actualizarYMostrarDanoVida(vidaInicial, danio, vidaRestante, nombreBoss) {
+    // Mostrar el modal con la información de daño
+    mostrarModal(vidaInicial, danio, vidaRestante);
 
+    // Mostrar la información de daño en la interfaz de usuario
     let infoDanoVida = document.getElementById('infoDanoVida') || document.createElement('div');
     infoDanoVida.id = 'infoDanoVida';
-    infoDanoVida.textContent = `${nombreBoss} recibe ${dano} de daño | Vida Restante: ${boss.vida}`;
+    infoDanoVida.textContent = `${nombreBoss} recibe ${danio} de daño | Vida Restante: ${vidaRestante}`;
 
     infoDanoVida.style.position = 'absolute';
-    infoDanoVida.style.bottom = '10px';
     infoDanoVida.style.left = '50%';
     infoDanoVida.style.transform = 'translateX(-50%)';
     infoDanoVida.style.backgroundColor = 'rgba(0, 0, 0, 0.7)';
@@ -201,8 +202,33 @@ function actualizarYMostrarDanoVida(boss, dano) {
     infoDanoVida.style.padding = '5px';
     infoDanoVida.style.borderRadius = '5px';
 
-    battlefield.appendChild(infoDanoVida);
+    document.body.appendChild(infoDanoVida);
 }
+
+// Función para mostrar el modal de daño recibido por el jefe y actualizar la información de la interfaz de usuario
+// function actualizarYMostrarDanoVida(boss, danio) {
+//     // Calcula la vida restante después del daño
+//     boss.vida -= danio;
+
+//     // Mostrar el modal con la información de daño
+//     mostrarModal(boss.vida + danio, danio, boss.vida);
+
+//     // Mostrar la información de daño en la interfaz de usuario
+//     let infoDanoVida = document.getElementById('infoDanoVida') || document.createElement('div');
+//     infoDanoVida.id = 'infoDanoVida';
+//     infoDanoVida.textContent = `${nombreBoss} recibe ${danio} de daño | Vida Restante: ${boss.vida}`;
+
+//     infoDanoVida.style.position = 'absolute';
+//     infoDanoVida.style.bottom = '10px';
+//     infoDanoVida.style.left = '50%';
+//     infoDanoVida.style.transform = 'translateX(-50%)';
+//     infoDanoVida.style.backgroundColor = 'rgba(0, 0, 0, 0.7)';
+//     infoDanoVida.style.color = 'white';
+//     infoDanoVida.style.padding = '5px';
+//     infoDanoVida.style.borderRadius = '5px';
+
+//     battlefield.appendChild(infoDanoVida);
+// }
 
 let bossDerrotado = false; // Variable de estado para verificar si el jefe ya ha sido derrotado
 
@@ -229,7 +255,7 @@ function realizarAtaque(carta, boss) {
         console.log(`${carta.nombre} ha hecho ${danio} de daño.`);
         console.log(`Vida del jefe después del ataque de ${carta.nombre}: ${boss.vida}`);
 
-        actualizarYMostrarDanoVida(boss, danio);
+        actualizarYMostrarDanoVida(vidaInicial, danio, vidaRestante, boss.FirstName);
 
         if (boss.vida <= 0) {
             bossDerrotado = true;

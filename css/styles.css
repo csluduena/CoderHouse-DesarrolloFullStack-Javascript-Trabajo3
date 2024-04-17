@@ -2217,6 +2217,10 @@ a {
   vertical-align: middle; /* Centra verticalmente el contenido */
 }
 
+#infoDanoVida {
+  margin-top: -25%;
+}
+
 body:-webkit-scrollbar {
   display: none;
 }
