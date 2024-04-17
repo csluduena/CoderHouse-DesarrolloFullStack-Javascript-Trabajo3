@@ -68,21 +68,25 @@ let titleSubmain = document.querySelectorAll('.titleSubmain');
 let startBattleButton = document.querySelector('#startBattle');
 
 let letsGoButton = document.querySelector('.ready');
+let preparar = document.querySelector('.prepararHeroes');
 
 battlefield.style.display = 'none';
 boss.style.display = 'none';
 
+
 startBattleButton.addEventListener('click', () => {
+    
     h3Title.forEach((element) => {
         element.style.display = 'none';
     });
     titleSubmain.forEach((element) => {
         element.style.display = 'none';
     });
-
+    preparar.style.display = 'flex';
     letsGoButton.style.display = 'block';
     letsGoButton.disabled = true;
 
+    
     cardsPlace.style.display = 'flex';
     cardsPlace.style.justifyContent = 'center';
     cardsPlace.style.alignItems = 'center';
@@ -109,10 +113,11 @@ function cardClickHandler() {
 letsGoButton.addEventListener('click', () => {
     battlefield.style.display = 'block';
     boss.style.display = 'block';
+    
 
     cardsPlace.style.marginTop = '4%';
     letsGoButton.style.display = 'none';
-
+    preparar.style.display = 'none';
     cards.forEach((card) => {
         card.removeEventListener('click', cardClickHandler);
     });

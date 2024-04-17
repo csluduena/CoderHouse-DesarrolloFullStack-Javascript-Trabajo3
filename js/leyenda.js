@@ -194,7 +194,7 @@ document.querySelector(
 let btnMostrarStats = document.getElementById("graphStats");
 
 function toggleChartVisibility() {
-    var chartContainer = document.getElementById("containerChart");
+    let chartContainer = document.getElementById("containerChart");
     chartContainer.style.display = chartContainer.style.display === "none" ? "block" : "none";
 }
 
@@ -203,8 +203,8 @@ document.getElementById("graphStats").addEventListener("click", function () {
 });
 
 document.addEventListener("click", function (event) {
-    var chartContainer = document.getElementById("containerChart");
-    var button = document.getElementById("graphStats");
+    let chartContainer = document.getElementById("containerChart");
+    let button = document.getElementById("graphStats");
     if (event.target !== chartContainer && event.target !== button && !chartContainer.contains(event.target)) {
         chartContainer.style.display = "none";
     }

@@ -2072,6 +2072,13 @@ a {
   z-index: 1000;
 }
 
+.prepararHeroes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7803921569), -1px 1px 2px rgba(0, 0, 0, 0.7803921569), 1px -1px 2px rgba(0, 0, 0, 0.7803921569), -1px -1px 2px rgba(0, 0, 0, 0.7803921569);
+}
+
 /* Añade estilos para centrar el modal y los botones */
 .battlefield {
   width: 800px;

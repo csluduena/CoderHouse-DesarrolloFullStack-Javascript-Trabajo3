@@ -409,6 +409,13 @@ $total: 6; // Cambiado a 6 para ajustarse al número de cartas
     z-index: 1000;
 }
 
+.prepararHeroes {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7803921569), -1px 1px 2px rgba(0, 0, 0, 0.7803921569), 1px -1px 2px rgba(0, 0, 0, 0.7803921569), -1px -1px 2px rgba(0, 0, 0, 0.7803921569);
+}
+
 
 //TODO LO SIGUIENTE NO SALIÓ , SERÁ PARA LA PRÓXIMA VEZ.
 /* Añade estilos para centrar el modal y los botones */
