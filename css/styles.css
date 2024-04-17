@@ -2253,7 +2253,7 @@ body {
 }
 
 #qrCode {
-  bottom: 11%;
+  bottom: 19%;
   right: 11%;
   position: absolute;
   width: 100px;
@@ -2264,8 +2264,8 @@ body {
 
 .home {
   position: fixed;
-  bottom: 1%;
-  left: 61%;
+  bottom: 15%;
+  left: 58%;
   background-color: #000000;
   padding: 0px 1px;
   border: 1px solid #ffffff;
