@@ -190,8 +190,247 @@ document.querySelector(
 ).style.backgroundImage = `url('./../img/cartas/${nombreArchivo}')`;
 
 
+// //! COMIENZO CÓDIGO DEL CHART TRIANGULAR.
+
+// let btnMostrarStats = document.getElementById("graphStats");
+
+
+// function toggleChartVisibility() {
+//     let chartContainer = document.getElementById("containerChart");
+//     chartContainer.style.display = chartContainer.style.display === "none" ? "block" : "none";
+// }
+
+// document.getElementById("graphStats").addEventListener("click", function () {
+//     toggleChartVisibility();
+// });
+
+// document.addEventListener("click", function (event) {
+//     let chartContainer = document.getElementById("containerChart");
+//     let button = document.getElementById("graphStats");
+//     if (event.target !== chartContainer && event.target !== button && !chartContainer.contains(event.target)) {
+//         chartContainer.style.display = "none";
+//     }
+// });
+
+// //  Atributos
+// //! Obtener Atributos desde localStorage
+// function obtenerAtributosBaseDesdeLocalStorage() {
+//     let atributosBaseDesdeLocalStorage = localStorage.getItem('atributosBase');
+//     if (atributosBaseDesdeLocalStorage) {
+//         return JSON.parse(atributosBaseDesdeLocalStorage);
+//     } else {
+//         console.log('No se encontraron atributos base en localStorage.');
+//         return null;
+//     }
+// }
+
+// let atributosBaseObtenidos = obtenerAtributosBaseDesdeLocalStorage();
+// console.log('Atributos base obtenidos desde localStorage:', atributosBaseObtenidos);
+
+
+// let atributosGraph = {
+//     Inteligencia: Number(inteligencia),
+//     Fuerza: Number(fuerza),
+//     Agilidad: Number(agilidad)
+// };
+
+
+// let claseSeleccionada = localStorage.getItem('clase');
+// let atributosBaseClase = atributosBaseObtenidos ? atributosBaseObtenidos[claseSeleccionada] : null;
+
+
+// let dataStatsBase = [
+//     atributosBaseClase[0], // Inteligencia
+//     atributosBaseClase[1], // Fuerza
+//     atributosBaseClase[2]  // Agilidad
+// ];
+
+// let categorias = ['Inteligencia', 'Fuerza', 'Agilidad'];
+
+// let dataSerieStatsBase = categorias.map((categoria, index) => {
+//     return {
+//         name: categoria + ' Base',
+//         y: dataStatsBase[index]
+//     };
+//     // });
+// });
+
+
+// if (atributosBaseClase) {
+//     let dataStatsBase = [
+//         atributosBaseClase[0], // Inteligencia
+//         atributosBaseClase[1], // Fuerza
+//         atributosBaseClase[2]  // Agilidad
+//     ];
+
+//     let categorias = ['Inteligencia', 'Fuerza', 'Agilidad'];
+
+//     let dataSerieStatsBase = categorias.map((categoria, index) => {
+//         return {
+//             name: categoria + ' Base',
+//             y: dataStatsBase[index]
+//         };
+//     });
+// } else {
+//     console.log('No se encontraron atributos base para la clase seleccionada');
+// }
+
+// Highcharts.chart('containerChart', {
+//     chart: {
+//         polar: true,
+//         type: 'line',
+//         backgroundColor: '#000000af',
+//         borderRadius: '25px',
+//         marginTop: 115
+//     },
+//     title: {
+//         text: 'ESTADISTICAS DE LA LEYENDA',
+//         x: 0,
+//         align: 'center',
+//         textAlign: 'center',
+//         style: {
+//             color: '#FFFFFF',
+//             fontSize: '21px'
+//         }
+//     },
+//     subtitle: {
+//         align: 'center',
+//         textAlign: 'center',
+//         text: 'Raza: ' + raza + ' | Clase: ' + clase,
+//         x: 0,
+//         style: {
+//             fontWeight: 'bold'
+//         },
+//         style: {
+//             color: '#9ef7ff',
+//             fontSize: '18px'
+//         }
+//     },
+//     pane: {
+//         size: '80%'
+//     },
+//     xAxis: {
+//         categories: Object.keys(atributosGraph),
+//         tickmarkPlacement: 'on',
+//         lineWidth: 0,
+//         labels: {
+//             style: {
+//                 fontSize: '20px' // Tamaño de fuente para el texto del eje X
+//             },
+//             formatter: function () {
+//                 switch (this.value) {
+//                     case 'Inteligencia':
+//                         return '<span style="color: #178fff;">' + this.value + '</span>';
+//                     case 'Fuerza':
+//                         return '<span style="color: #b00b0b;">' + this.value + '</span>';
+//                     case 'Agilidad':
+//                         return '<span style="color: #10b00b;">' + this.value + '</span>';
+//                     default:
+//                         return this.value;
+//                 }
+//             }
+//         }
+//     },
+
+//     yAxis: {
+//         gridLineInterpolation: 'polygon',
+//         lineWidth: 0,
+//         min: 0
+//     },
+//     tooltip: {
+//         formatter: function () {
+//             let color;
+//             switch (this.point.category) {
+//                 case 'Inteligencia':
+//                     color = '#178fff';
+//                     break;
+//                 case 'Fuerza':
+//                     color = '#b00b0b';
+//                     break;
+//                 case 'Agilidad':
+//                     color = '#10b00b';
+//                     break;
+//                 default:
+//                     color = this.series.color;
+//                     break;
+//             }
+//             return '<span style="color:' + color + '"><b>' + this.point.category + ': ' + this.point.y.toFixed(0) + '</b></span>';
+//         }
+//     },
+//     legend: {
+//         align: 'right',
+//         verticalAlign: 'middle',
+//         layout: 'vertical'
+//     },
+//     series: [{
+//         name: '<span style="color: white;">Atributos Final de ' + raza + " " + clase + '</span>',
+//         data: [{
+//             name: '<span style="color: white;">Inteligencia</span>',
+//             y: atributosGraph.Inteligencia,
+//             color: '#178fff'
+//         }, {
+//             name: '<span style="color: white;">Fuerza</span>',
+//             y: atributosGraph.Fuerza,
+//             color: '#b00b0b'
+//         }, {
+//             name: '<span style="color: white;">Agilidad</span>',
+//             y: atributosGraph.Agilidad,
+//             color: '#10b00b'
+//         }],
+//         pointPlacement: 'on',
+//         marker: {
+//             symbol: 'circle',
+//             radius: 5
+//         }
+//     }, {
+//         name: '<span style="color: white;">Atributos Base de ' + raza + " " + clase + '</span>',
+//         data: dataSerieStatsBase,
+//         pointPlacement: 'on',
+//         marker: {
+//             symbol: 'circle',
+//             radius: 3
+//         },
+//         color: 'rgba(255,0,0,0.5)' // Color de la serie para los stats base
+//     }],
+//     responsive: {
+//         rules: [{
+//             condition: {
+//                 maxWidth: 500
+//             },
+//             chartOptions: {
+//                 legend: {
+//                     align: 'center',
+//                     verticalAlign: 'bottom',
+//                     layout: 'horizontal'
+//                 },
+//                 pane: {
+//                     size: '100%'
+//                 }
+//             }
+//         }]
+//     }
+// });
+
+
+
+// const currentPage = window.location.pathname;
+
+// if (currentPage === "/index.html") {
+//     document.querySelectorAll('.image-button, .pokemonInfo').forEach(element => {
+//         element.style.display = 'block';
+//     });
+// } else {
+//     document.querySelectorAll('.image-button, .pokemonInfo').forEach(element => {
+//         element.style.display = 'none';
+//     });
+// }
+
+
+
 //! COMIENZO CÓDIGO DEL CHART TRIANGULAR.
+
 let btnMostrarStats = document.getElementById("graphStats");
+
 
 function toggleChartVisibility() {
     let chartContainer = document.getElementById("containerChart");
@@ -403,11 +642,37 @@ Highcharts.chart('containerChart', {
                 },
                 pane: {
                     size: '100%'
+                },
+                title: {
+                    style: {
+                        fontSize: '18px' // Tamaño de fuente para el título
+                    }
+                },
+                subtitle: {
+                    style: {
+                        fontSize: '14px' // Tamaño de fuente para el subtítulo
+                    }
+                },
+                xAxis: {
+                    labels: {
+                        style: {
+                            fontSize: '14px' // Tamaño de fuente para el eje X
+                        }
+                    }
+                },
+                yAxis: {
+                    labels: {
+                        style: {
+                            fontSize: '14px' // Tamaño de fuente para el eje Y
+                        }
+                    }
                 }
             }
         }]
     }
 });
+
+
 
 const currentPage = window.location.pathname;
 
