@@ -2310,6 +2310,18 @@ body {
   box-shadow: 0px 0px 2px 2px #00f3ff;
 }
 
+.imgScroll {
+  background-image: url(./../img/image_processing20210906-24567-2747zx.gif);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100px;
+  height: 86px;
+  position: fixed;
+  top: 9%;
+  right: 32%;
+  z-index: 9999;
+}
+
 @media (min-width: 1200px) and (min-width: 1921px) {
   #content {
     display: none;
