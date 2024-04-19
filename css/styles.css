@@ -4562,7 +4562,6 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
@@ -5137,11 +5136,11 @@ body {
     text-align: center;
     color: #E2E6FF;
     margin-top: 1%;
-    font-size: 18px;
+    font-size: 16px;
     text-shadow: 0px -1px 2px #000000, 0px 2px 2px black, 0px -1px 2px black, 2px 0 0 black;
   }
   .titleMain {
-    font-size: 18px;
+    font-size: 14px;
   }
   .cardsPlace {
     background-color: rgba(0, 0, 0, 0.2509803922);
@@ -5159,7 +5158,7 @@ body {
     font-size: 18px;
   }
   .h3Title {
-    font-size: 18px;
+    font-size: 12px;
     text-align: center;
   }
   .colorAtr1, .colorAtr2, .colorAtr3 {
@@ -5175,7 +5174,7 @@ body {
     width: 160px;
     margin-right: 42px;
     bottom: 12px;
-    margin-left: -26px;
+    margin-left: -15%;
     margin-top: -20%;
   }
   .cards {
@@ -5188,7 +5187,7 @@ body {
     right: 0px;
     gap: 1%;
     bottom: 0px;
-    transform: scale(0.7);
+    transform: scale(0.57);
   }
   .carta-personaje {
     width: 90px;
@@ -5205,14 +5204,17 @@ body {
     font-size: 5px;
   }
   .homer {
-    bottom: 95%;
+    bottom: 1%;
     left: 1%;
     background-color: #000000;
-    padding: 4px 5px;
-    border: 2px solid #000000;
+    padding: 0px 0px;
+    border: 2px solid #ffffff;
     border-radius: 5px;
+    font-size: 14px;
     text-decoration: none;
     color: #ffffff;
+    padding-left: 2px;
+    padding-right: 2px;
   }
   .card-face {
     bottom: 0;
@@ -5235,18 +5237,18 @@ body {
   }
   .ready {
     display: flex;
-    width: 103px;
-    height: 40px;
+    margin-top: 21% !important;
+    width: 73px;
+    height: 33px;
     background-color: #4CAF50;
     color: white;
     text-align: center;
-    line-height: 40px;
-    font-size: 16px;
+    line-height: 34px;
+    font-size: 14px;
     border-radius: 5px;
     border: none;
     cursor: pointer;
-    position: absolute;
-    top: 100%;
+    position: fixed;
     left: 49%;
     transform: translateX(-50%);
     flex-wrap: wrap;
@@ -5255,11 +5257,27 @@ body {
   }
   .battlefield {
     width: 94%;
-    height: 17em;
+    height: 14em;
     border: 2px solid black;
     position: relative;
     margin: 30px auto;
     margin-top: 0px;
+  }
+  style attribute {
+    display: flex;
+    font-size: 17px;
+    margin-top: 0.5%;
+    color: rgb(168, 112, 43);
+  }
+  #bossContinue {
+    padding: 1px 2px;
+    background-color: #007bff;
+    color: #fff;
+    border: 2px solid #00ffff;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 11px;
+    margin-top: 6%;
   }
   #boss-info {
     color: white;
@@ -5269,20 +5287,21 @@ body {
     font-size: 12px;
   }
   .modal-victoria {
-    position: fixed;
+    position: absolute !important;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: white;
-    padding: 19px;
-    text-align: center;
-    border-radius: 9px;
+    font-size: 10px;
+    padding: 3px;
+    border-radius: 10px;
     z-index: 1001;
   }
   .card-damage {
-    font-size: 12px;
+    font-size: 9px;
     text-align: center;
-    margin-left: 12%;
+    margin-left: 8%;
+    margin-top: -247%;
   }
   .modal-damage-battle {
     font-size: 11px;
@@ -5326,14 +5345,14 @@ body {
   .intro {
     width: 100%;
     text-align: center;
-    font-size: 33px;
+    font-size: 26px;
     margin: 0px 0 20px;
     margin-top: -5%;
   }
   .text {
-    font-size: 16px;
-    padding-left: 14%;
-    height: 27px;
+    font-size: 12px;
+    padding-left: 23%;
+    height: 15px;
     white-space: nowrap;
     overflow: hidden;
     display: flex;
@@ -5344,8 +5363,8 @@ body {
   }
   .cardsPlace {
     background-color: rgba(0, 0, 0, 0.2509803922);
-    width: 422px !important;
-    height: 203px !important;
+    width: 261px !important;
+    height: 107px !important;
     /* border: 2px solid black; */
     position: relative;
     margin: 0 auto;
@@ -5355,16 +5374,16 @@ body {
     /* padding-left: 1px; */
   }
   #qrCode {
-    bottom: 21%;
-    right: 11%;
+    bottom: 15%;
+    right: 22%;
     position: absolute;
     width: 100px;
     height: 100px;
   }
   .home {
     position: fixed;
-    bottom: 8%;
-    left: 76%;
+    bottom: 4%;
+    left: 71%;
     background-color: #000000;
     padding: 0px 1px;
     border: 1px solid #ffffff;
@@ -5374,10 +5393,7 @@ body {
     font-size: 17px;
   }
   .modal-damage-battle {
-    margin-bottom: 1%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: none;
   }
 }
 @font-face {
