@@ -546,12 +546,12 @@
     .copyright {
         right: 0;
         color: white;
-        position: absolute;
+        position: relative;
         margin-left: 0;
         /* font-weight: bold; */
         margin-bottom: 1%;
         text-align: center;
-        /* margin-top: -1.5rem; */
+        margin-top: 9%;
         text-shadow: -3px 0px 2px #000000, 0px 2px 2px #000000, 0px -1px 2px #000000, 2px 0 0 #000000;
         font-size: 11px;
     }
@@ -830,6 +830,7 @@
         color: #ffffff;
         padding-left: 2px;
         padding-right: 2px;
+        z-index: 9999;
     }
 
     .card-face {
@@ -872,9 +873,12 @@
         flex-wrap: wrap;
         align-content: center;
         flex-direction: column;
+        z-index: 9999;
     }
     
     .battlefield {
+        background-image: url(./../img/boss1.png);
+        background-size: cover;
         width: 94%;
         height: 14em;
         border: 2px solid black;
@@ -916,7 +920,8 @@
         transform: translate(-50%, -50%);
         background-color: white;
         font-size: 10px;
-        padding: 3px;
+        padding: 6px;
+        text-align: center;
         border-radius: 10px;
         z-index: 1001;
     }
