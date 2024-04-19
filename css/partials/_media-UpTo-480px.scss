@@ -582,6 +582,10 @@
         font-size: 54px;
 }
 
+        #infoDanoVida {
+            margin-top: -57%;
+        }
+
     #continuarBtn3 {
         /* text-transform: capitalize; */
         /* position: relative; */
@@ -744,8 +748,8 @@
 
     .cardsPlace {
         background-color: rgba(0, 0, 0, 0.2509803922);
-        width: 434px;
-        height: 174px;
+        width: 0px !important;
+        height: 174px !important;
         /* border: 2px solid black; */
         position: relative;
         margin: 0 auto;
@@ -774,20 +778,20 @@
     }
 
     .card {
-        height: 156.6px;
+        height: 245.6px;
         margin: -205px -11px;
         position: relative;
         width: 160px;
         margin-right: 42px;
-        bottom: 0px;
+        bottom: 12px;
         margin-left: -26px;
         margin-top: -20%;
     }
 
     .cards {
         display: flex;
-        height: 156px;
-        padding: 0px 50px;
+        height: 167px;
+        padding: 0px 0px;
         justify-content: center;
         position: absolute;
         //position: fixed;
@@ -795,6 +799,7 @@
         right: 0px;
         gap: 1%;
         bottom: 0px;
+        transform: scale(0.7);
     }
 
 
@@ -818,7 +823,7 @@
 
     .homer {
         //position: fixed;
-        bottom: 1%;
+        bottom: 95%;
         left: 1%;
         background-color: #000000;
         padding: 4px 5px;
@@ -862,7 +867,7 @@
         border: none;
         cursor: pointer;
         position: absolute;
-        top: 104%;
+        top: 100%;
         left: 49%;
         transform: translateX(-50%);
         flex-wrap: wrap;
@@ -971,6 +976,23 @@
         justify-content: flex-start;
     }
 
+    .prepararHeroes {
+        margin-top: 28.5% !important;
+    }
+
+    .cardsPlace {
+        background-color: rgba(0, 0, 0, 0.2509803922);
+        width: 422px !important;
+        height: 203px !important;
+        /* border: 2px solid black; */
+        position: relative;
+        margin: 0 auto;
+        margin-top: -156px;
+        /* gap: 4%; */
+        /* padding-right: 0px; */
+        /* padding-left: 1px; */
+    }
+
     #qrCode {
         bottom: 21%;
         right: 11%;
@@ -991,4 +1013,12 @@
         color: #ffffff;
         font-size: 17px;
     }
+
+    .modal-damage-battle {
+        margin-bottom: 1%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
 }
