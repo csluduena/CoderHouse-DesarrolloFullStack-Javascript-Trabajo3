@@ -83,9 +83,9 @@ document.addEventListener("DOMContentLoaded", function () {
                     <p class="spaceEntreInfoMulti, colorTitulosMulti">Clase: ${carta.clase}</p>
                     <p class="spaceEntreInfoMulti, colorTituloAtrMulti"></p>
                     <div class="centrarAtributosMulti">
-                        <p class="spaceEntreInfoMulti, colorAtr1">INT <br><span style="color: cornflowerblue; font-size: 18px;">${carta.atributos.inteligencia}</span></p>
-                        &nbsp;&nbsp;<p class="spaceEntreInfoMulti, colorAtr2">STR <br><span style="color: red; font-size: 18px;">${carta.atributos.fuerza}</span></p>
-                        &nbsp;&nbsp;<p class="spaceInfoBotMulti, colorAtr3">AGI <br><span style="color: green; font-size: 18px;">${carta.atributos.agilidad}</span></p>
+                        <p class="spaceEntreInfoMulti, colorAtr1">INT <br><span class="txtSize" style="color: cornflowerblue; font-size: 18px;">${carta.atributos.inteligencia}</span></p>
+                        &nbsp;&nbsp;<p class="spaceEntreInfoMulti, colorAtr2">STR <br><span class="txtSize" style="color: red; font-size: 18px;">${carta.atributos.fuerza}</span></p>
+                        &nbsp;&nbsp;<p class="spaceInfoBotMulti, colorAtr3">AGI <br><span class="txtSize" style="color: green; font-size: 18px;">${carta.atributos.agilidad}</span></p>
                     </div>
                 `;
                 div.innerHTML = infoCarta;

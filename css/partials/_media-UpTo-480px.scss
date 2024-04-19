@@ -546,14 +546,13 @@
     .copyright {
         right: 0;
         color: white;
-        position: relative;
+        position: absolute;
         margin-left: 0;
         /* font-weight: bold; */
-        bottom: -46px;
+        margin-bottom: 1%;
         text-align: center;
-        margin-top: -1.5rem;
-        text-shadow: -3px 0px 2px #000000, 0px 2px 2px #000000, 0px -1px 2px #000000,
-            2px 0 0 #000000;
+        /* margin-top: -1.5rem; */
+        text-shadow: -3px 0px 2px #000000, 0px 2px 2px #000000, 0px -1px 2px #000000, 2px 0 0 #000000;
         font-size: 11px;
     }
 
@@ -726,5 +725,270 @@
 
     #graphStats {
         display: none; 
+    }
+
+    //TODO MULTIDRAFT
+
+    
+    .sale {
+        text-align: center;
+        color: #E2E6FF;
+        margin-top: 1%;
+        font-size: 18px;
+        text-shadow: 0px -1px 2px #000000, 0px 2px 2px black, 0px -1px 2px black, 2px 0 0 black;
+    }
+
+    .titleMain {
+        font-size: 18px;
+    }
+
+    .cardsPlace {
+        background-color: rgba(0, 0, 0, 0.2509803922);
+        width: 434px;
+        height: 174px;
+        /* border: 2px solid black; */
+        position: relative;
+        margin: 0 auto;
+        margin-top: -156px;
+        gap: 4%;
+        /* padding-right: 0px; */
+        /* padding-left: 1px; */
+    }
+
+    .titleSubmain {
+        font-size: 18px;
+    }
+
+    .h3Title {
+        font-size: 18px;
+        text-align: center;
+    }
+
+    
+    .colorAtr1, .colorAtr2, .colorAtr3 {
+        font-size: 6px;
+    }
+
+    .txtSize {
+        font-size: 10px !important;
+    }
+
+    .card {
+        height: 156.6px;
+        margin: -205px -11px;
+        position: relative;
+        width: 160px;
+        margin-right: 42px;
+        bottom: 0px;
+        margin-left: -26px;
+        margin-top: -20%;
+    }
+
+    .cards {
+        display: flex;
+        height: 156px;
+        padding: 0px 50px;
+        justify-content: center;
+        position: absolute;
+        //position: fixed;
+        left: 33px;
+        right: 0px;
+        gap: 1%;
+        bottom: 0px;
+    }
+
+
+
+
+
+    .carta-personaje {
+        width: 90px;
+        height: 150.6px;
+        bottom: 0px;
+        margin: 10px;
+        border-radius: 10px;
+        /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.15); */
+        background-size: cover;
+        background-position: center;
+        color: white;
+        /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); */
+        padding: 10px;
+        font-size: 5px;
+    }
+
+    .homer {
+        //position: fixed;
+        bottom: 1%;
+        left: 1%;
+        background-color: #000000;
+        padding: 4px 5px;
+        border: 2px solid #000000;
+        border-radius: 5px;
+        text-decoration: none;
+        color: #ffffff;
+    }
+
+    .card-face {
+        bottom: 0;
+        content: "";
+        left: 0;
+        pointer-events: none;
+        position: absolute;
+        right: -38px;
+        top: 0;
+        transition: 800ms cubic-bezier(0.19, 1, 0.22, 1) transform;
+    }
+    
+    .card:after {
+        bottom: 0;
+        content: "";
+        left: -60px;
+        position: absolute;
+        right: -60px;
+        top: 0px;
+        z-index: 10;
+    }
+
+    .ready {
+        display: flex;
+        width: 103px;
+        height: 40px;
+        background-color: #4CAF50;
+        color: white;
+        text-align: center;
+        line-height: 40px;
+        font-size: 16px;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+        position: absolute;
+        top: 104%;
+        left: 49%;
+        transform: translateX(-50%);
+        flex-wrap: wrap;
+        align-content: center;
+        flex-direction: column;
+    }
+    
+    .battlefield {
+        width: 94%;
+        height: 17em;
+        border: 2px solid black;
+        position: relative;
+        margin: 30px auto;
+        margin-top: 0px;
+    }
+
+    #boss-info {
+        color: white;
+        text-shadow: 2px -2px 2px #000000, -1px 3px 2px #000000, 2px -1px 20px #000000, 2px 0 0 #000000;
+        margin-left: 1%;
+        margin-top: 1%;
+        font-size: 12px;
+    }
+
+    .modal-victoria {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: white;
+        padding: 19px;
+        text-align: center;
+        border-radius: 9px;
+        z-index: 1001;
+    }
+
+    .card-damage {
+        font-size: 12px;
+        text-align: center;
+        margin-left: 12%;
+    }
+
+    .modal-damage-battle {
+        font-size: 11px;
+    }
+
+    .infoB {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: rgba(0, 0, 0, 0.7);
+        color: white;
+        padding: 5px;
+        font-size: 10px;
+        border-radius: 5px;
+        margin-top: -51%;
+    }
+    
+    .card.hover-effect .card-face {
+        /* los mismos estilos que .card:hover */
+        transform: translateY(-100px) rotate(0deg) scale(2.2);
+        transition-duration: 0ms;
+        z-index: 5;
+        margin-top: 0%;
+    }
+    
+    .card:nth-child(1):hover {
+        margin-top: 9%;
+    }
+    
+    .card:nth-child(2):hover {
+        margin-top: 9%;
+    }
+    
+    .card:nth-child(3):hover {
+        margin-top: 9%;
+    }
+    
+    .card:nth-child(4):hover {
+        margin-top: 9%;
+    }
+    
+    .card:nth-child(5):hover {
+        margin-top: 9%;
+    }
+    
+    .card:nth-child(6):hover {
+        margin-top: 9%;
+    }
+
+    .intro {
+        width: 100%;
+        text-align: center;
+        font-size: 33px;
+        margin: 0px 0 20px;
+        margin-top: -5%;
+    }
+
+    .text {
+        font-size: 16px;
+        padding-left: 14%;
+        height: 27px;
+        white-space: nowrap;
+        overflow: hidden;
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    #qrCode {
+        bottom: 21%;
+        right: 11%;
+        position: absolute;
+        width: 100px;
+        height: 100px;
+    }
+
+    .home {
+        position: fixed;
+        bottom: 8%;
+        left: 76%;
+        background-color: #000000;
+        padding: 0px 1px;
+        border: 1px solid #ffffff;
+        border-radius: 5px;
+        text-decoration: none;
+        color: #ffffff;
+        font-size: 17px;
     }
 }
