@@ -1,45 +1,43 @@
-//TODO ESTILOS BOTON PREGUNTA TRES (ELEGIR RAZA)
-document.addEventListener("DOMContentLoaded", function () {
-    let botonElegirRaza = document.querySelector(".botonElegirRaza");
-
-    let elegirRazas = document.getElementById("elegirRazas");
+// TODO ESTILOS BOTON PREGUNTA TRES (ELEGIR RAZA)
+document.addEventListener("DOMContentLoaded", () => {
+    const botonElegirRaza = document.querySelector(".botonElegirRaza");
+    const elegirRazas = document.getElementById("elegirRazas");
 
     elegirRazas.style.display = "none";
-    botonElegirRaza.addEventListener("click", function () {
-        //Estilos:
+    botonElegirRaza.addEventListener("click", () => {
+        // Estilos:
         elegirRazas.style.display = "flex";
     });
 });
 
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", () => {
     const razas = document.querySelectorAll(".raza-option");
 
-    razas.forEach(function (raza) {
-        raza.addEventListener("click", function () {
-            const razaSeleccionada = this.id.replace("Option", "");
+    razas.forEach((raza) => {
+        raza.addEventListener("click", () => {
+            const razaSeleccionada = raza.id.replace("Option", "");
             const clases = document.querySelectorAll(".clase-pick");
 
-            clases.forEach(function (clase) {
+            clases.forEach((clase) => {
                 clase.style.display = "none";
             });
 
-            document.getElementById(razaSeleccionada + "ClasesPick").style.display =
-                "block";
+            document.getElementById(razaSeleccionada + "ClasesPick").style.display = "block";
         });
     });
 });
 
 const botonElegirRaza = document.querySelector(".botonElegirRaza");
 
-document.addEventListener("DOMContentLoaded", function () {
-    botonElegirRaza.addEventListener("click", function () {
+document.addEventListener("DOMContentLoaded", () => {
+    botonElegirRaza.addEventListener("click", () => {
         botonElegirRaza.style.display = "none";
     });
 });
 
-//!ShadowBox para eleccion de raza
-document.addEventListener("DOMContentLoaded", function () {
-    let opciones = document.querySelectorAll(".raza-option");
+//! ShadowBox para eleccion de raza
+document.addEventListener("DOMContentLoaded", () => {
+    const opciones = document.querySelectorAll(".raza-option");
 
     opciones.forEach((opcion) => {
         opcion.addEventListener("click", (event) => {
@@ -52,8 +50,8 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-//!ShadowBox para eleccion de Clase
-let opcionesClases = document.querySelectorAll(".clasesTotal");
+//! ShadowBox para eleccion de Clase
+const opcionesClases = document.querySelectorAll(".clasesTotal");
 
 opcionesClases.forEach((opcion) => {
     opcion.addEventListener("click", (event) => {
@@ -65,9 +63,9 @@ opcionesClases.forEach((opcion) => {
     });
 });
 
-//!Elección de raza y clase.
+//! Elección de raza y clase.
 //! D E C L A R A C I O N   R A Z A   C L A S E. (seleccion.raza o seleccion.clase)
-let seleccion = {
+const seleccion = {
     raza: "",
     clase: "",
 };
@@ -76,7 +74,7 @@ function mostrarBotonContinuar() {
     document.getElementById("continuarBtn").style.display = "block";
 }
 
-//!Razas
+//! Razas
 function seleccionarRaza(event) {
     const razaNombreElemento = event.currentTarget.querySelector(".razaNombre");
 
@@ -84,7 +82,7 @@ function seleccionarRaza(event) {
         const razaSeleccionada = razaNombreElemento.textContent.trim();
         seleccion.raza = razaSeleccionada;
     }
-    console.log("Raza seleccionada:", seleccion.raza);
+    // console.log("Raza seleccionada:", seleccion.raza);
 }
 
 const razas = document.querySelectorAll(".raza-option");
@@ -92,17 +90,17 @@ razas.forEach((raza) => {
     raza.addEventListener("click", seleccionarRaza);
 });
 
-//!Clases
+//! Clases
 //! Manejar la selección de clase y Consoleando las elecciones.
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", () => {
     const clases = document.querySelectorAll(".clase-pick .clasesTotal");
 
-    clases.forEach(function (clase) {
-        clase.addEventListener("click", function () {
-            const claseSeleccionada = this.getAttribute("id");
-            const nombreClase = this.querySelector(".claseNombre").textContent;
+    clases.forEach((clase) => {
+        clase.addEventListener("click", () => {
+            const claseSeleccionada = clase.getAttribute("id");
+            const nombreClase = clase.querySelector(".claseNombre").textContent;
 
-            console.log("Clase seleccionada:", nombreClase);
+            // console.log("Clase seleccionada:", nombreClase);
 
             seleccion.clase = nombreClase;
 
@@ -113,8 +111,8 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-//!Click Continuar y TODO ELECCIÓN DE GENERO.
-document.getElementById("continuarBtn").addEventListener("click", function () {
+//! Click Continuar y TODO ELECCIÓN DE GENERO.
+document.getElementById("continuarBtn").addEventListener("click", () => {
     if (seleccion.raza !== "" && seleccion.clase !== "") {
         document.getElementById("elegirRazas").style.display = "none";
         document.getElementById("clases").style.display = "none";
@@ -128,11 +126,11 @@ document.getElementById("continuarBtn").addEventListener("click", function () {
         textogenerin.style.display = "flex";
         tituloGenero.style.display = "block";
     } else {
-        console.log("Por favor, selecciona género antes de continuar.");
+        // console.log("Por favor, selecciona género antes de continuar.");
     }
 });
 
-//!ShadowBox para eleccion de genero
+//! ShadowBox para eleccion de genero
 let seleccionGenero = "";
 
 const hombre = document.getElementById("hombre");
@@ -140,102 +138,88 @@ const mujer = document.getElementById("mujer");
 const continuarBtn = document.getElementById("continuarBtn2");
 
 function activarContinuar() {
-    if (seleccionGenero !== "") {
-        continuarBtn.style.display = "block";
-    } else {
-        continuarBtn.style.display = "none";
-    }
+    continuarBtn.style.display = seleccionGenero !== "" ? "block" : "none";
 }
 
-//!CAMBIO DE COLOR PARA EL TEXTO DE HOMBRE
-hombre.addEventListener("click", function () {
+//! CAMBIO DE COLOR PARA EL TEXTO DE HOMBRE
+hombre.addEventListener("click", () => {
     document.querySelector(".hLeft").style.color = "#0015ff";
 
     document.querySelector(".mRight").style.color = "white";
     seleccionGenero = "Hombre";
-    console.log("Género seleccionado:", seleccionGenero);
+    // console.log("Género seleccionado:", seleccionGenero);
     activarContinuar();
 });
 
-//!CAMBIO DE COLOR PARA EL TEXTO DE MUJER
-mujer.addEventListener("click", function () {
+//! CAMBIO DE COLOR PARA EL TEXTO DE MUJER
+mujer.addEventListener("click", () => {
     document.querySelector(".mRight").style.color = "#d500ff";
     document.querySelector(".hLeft").style.color = "white";
     seleccionGenero = "Mujer";
-    console.log("Género seleccionado:", seleccionGenero);
+    // console.log("Género seleccionado:", seleccionGenero);
     activarContinuar();
 });
 
-//!Declarar Atributos
+//! Declarar Atributos
 // Definir los atributos base para cada clase
-let atributosBase = {
-    Mago: [8, 1, 5], //🧙‍♂️
-    Druida: [6, 2, 6], //🌿
-    Bardo: [10, 1, 7], //🎵
-    Guerrero: [5, 15, 5], //⚔️
-    Herrero: [3, 18, 3], //🔨
-    Paladin: [8, 12, 5], //🛡️
-    Caballero: [2, 20, 4], //🏇
-    Picaro: [6, 7, 12], //🗡️
-    Clerigo: [8, 10, 5], //✨
-    Berserker: [1, 25, 3], //🪓
-    Chaman: [10, 8, 5], //🔮
-    Cazador: [8, 10, 10], //🏹
+const atributosBase = {
+    Mago: [8, 1, 5], // 🧙‍♂️
+    Druida: [6, 2, 6], // 🌿
+    Bardo: [10, 1, 7], // 🎵
+    Guerrero: [5, 15, 5], // ⚔️
+    Herrero: [3, 18, 3], // 🔨
+    Paladin: [8, 12, 5], // 🛡️
+    Caballero: [2, 20, 4], // 🏇
+    Picaro: [6, 7, 12], // 🗡️
+    Clerigo: [8, 10, 5], // ✨
+    Berserker: [1, 25, 3], // 🪓
+    Chaman: [10, 8, 5], // 🔮
+    Cazador: [8, 10, 10], // 🏹
 };
 
-//!Obtener ATRIBUTOS
+//! Obtener ATRIBUTOS
 function obtenerAtributosBase() {
-    let razaSeleccionada = seleccion.raza;
-    let claseSeleccionada = seleccion.clase;
+    const razaSeleccionada = seleccion.raza;
+    const claseSeleccionada = seleccion.clase;
 
-    let atributos = atributosBase[claseSeleccionada];
+    const atributos = atributosBase[claseSeleccionada];
 
-    console.log(
-        "Atributos base para la clase",
-        claseSeleccionada + ":",
-        atributos
-    );
+    // console.log("Atributos base para la clase", claseSeleccionada + ":", atributos);
 }
 
-//!CONTINAR A ATRIBUTOS
-document.getElementById("continuarBtn2").addEventListener("click", function () {
+//! CONTINUAR A ATRIBUTOS
+document.getElementById("continuarBtn2").addEventListener("click", () => {
     if (seleccion.raza !== "" && seleccion.clase !== "") {
         document.querySelector(".contentGen").style.display = "none";
 
         const atributosTab = document.getElementById("tabAtri");
         const continuarBtn2 = document.getElementById("continuarBtn2");
-        const activarResumenParcial = document.getElementById(
-            "contenedorParcialId"
-        );
+        const activarResumenParcial = document.getElementById("contenedorParcialId");
+
         contenedorParcialId.style.display = "flex";
         atributosTab.style.display = "block";
         continuarBtn2.style.display = "none";
     }
 });
 
-function seleccionarClaseSegunRaza() {
-    let razaSeleccionada = seleccion.raza;
-
-    let clasesDisponibles = clases[razaSeleccionada];
-}
-
 //! Almacenar Atributos en localStorage
 function almacenarAtributosBase() {
-    localStorage.setItem('atributosBase', JSON.stringify(atributosBase));
+    localStorage.setItem("atributosBase", JSON.stringify(atributosBase));
 }
 
 //! Obtener Atributos desde localStorage
 function obtenerAtributosBaseDesdeLocalStorage() {
-    let atributosBaseDesdeLocalStorage = localStorage.getItem('atributosBase');
+    const atributosBaseDesdeLocalStorage = localStorage.getItem("atributosBase");
     if (atributosBaseDesdeLocalStorage) {
         return JSON.parse(atributosBaseDesdeLocalStorage);
     } else {
-        console.log('No se encontraron atributos base en localStorage.');
+        // console.log("No se encontraron atributos base en localStorage.");
         return null;
     }
 }
 
 almacenarAtributosBase();
 
-let atributosBaseObtenidos = obtenerAtributosBaseDesdeLocalStorage();
-console.log('Atributos base obtenidos desde localStorage:', atributosBaseObtenidos);
+const atributosBaseObtenidos = obtenerAtributosBaseDesdeLocalStorage();
+// console.log("Atributos base obtenidos desde localStorage:", atributosBaseObtenidos);
+

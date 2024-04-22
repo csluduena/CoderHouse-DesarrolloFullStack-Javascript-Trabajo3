@@ -1,30 +1,32 @@
-//!recuperamos la info en LocalStorage
-let nombrePersonaje = localStorage.getItem("nombrePersonaje");
-let raza = localStorage.getItem("raza");
-let clase = localStorage.getItem("clase");
-let genero = localStorage.getItem("genero");
-let inteligencia = localStorage.getItem("totalInteligencia");
-let fuerza = localStorage.getItem("totalFuerza");
-let agilidad = localStorage.getItem("totalAgilidad");
+//! recuperamos la info en LocalStorage
+const {
+    nombrePersonaje,
+    raza,
+    clase,
+    genero,
+    totalInteligencia: inteligencia,
+    totalFuerza: fuerza,
+    totalAgilidad: agilidad
+} = localStorage;
 
-console.log("Nombre del personaje:", nombrePersonaje);
-console.log("Raza:", raza);
-console.log("Clase:", clase);
-console.log("Género:", genero);
-console.log("Total de inteligencia:", inteligencia);
-console.log("Total de fuerza:", fuerza);
-console.log("Total de agilidad:", agilidad);
+// console.log("Nombre del personaje:", nombrePersonaje);
+// console.log("Raza:", raza);
+// console.log("Clase:", clase);
+// console.log("Género:", genero);
+// console.log("Total de inteligencia:", inteligencia);
+// console.log("Total de fuerza:", fuerza);
+// console.log("Total de agilidad:", agilidad);
 
 //! Creamos la variable global 'atributos' para almacenar la información de los atributos
 const atributos = {
-    inteligencia: inteligencia,
-    fuerza: fuerza,
-    agilidad: agilidad
+    inteligencia,
+    fuerza,
+    agilidad
 };
 
-console.log("Atributos:", atributos);
+// console.log("Atributos:", atributos);
 
-//!Mostramos la info en la página
+//! Mostramos la info en la página
 document.getElementById("nickPersonaje").textContent = nombrePersonaje;
 document.getElementById("origen").textContent = raza;
 document.getElementById("genero").textContent = genero;
@@ -33,11 +35,11 @@ document.getElementById("inteligencia").textContent = inteligencia;
 document.getElementById("fuerza").textContent = fuerza;
 document.getElementById("agilidad").textContent = agilidad;
 
-//!guardamos los atributos en una variable global
-//!Alerta borrar personaje
-let btnBorrar = document.getElementById("borrarPersonaje");
-let modal = document.getElementById("myModal");
-let btnCancelar = document.getElementById("cancelarBorrar");
+//! guardamos los atributos en una variable global
+//! Alerta borrar personaje
+const btnBorrar = document.getElementById("borrarPersonaje");
+const modal = document.getElementById("myModal");
+const btnCancelar = document.getElementById("cancelarBorrar");
 
 btnBorrar.onclick = function () {
     modal.style.display = "block";
@@ -47,23 +49,17 @@ btnCancelar.onclick = function () {
     modal.style.display = "none";
 };
 
-//!Cerrar ventana al hacer clic fuera
+//! Cerrar ventana al hacer clic fuera
 window.onclick = function (event) {
     if (event.target == modal) {
         modal.style.display = "none";
     }
 };
 
-let btnConfirmar = document.getElementById("confirmarBorrar");
+const btnConfirmar = document.getElementById("confirmarBorrar");
 
 btnConfirmar.onclick = function () {
-    localStorage.removeItem("nombrePersonaje");
-    localStorage.removeItem("raza");
-    localStorage.removeItem("clase");
-    localStorage.removeItem("genero");
-    localStorage.removeItem("totalInteligencia");
-    localStorage.removeItem("totalFuerza");
-    localStorage.removeItem("totalAgilidad");
+    localStorage.clear();
 
     document.querySelector(
         ".info-personaje"
@@ -74,70 +70,48 @@ btnConfirmar.onclick = function () {
     location.reload();
 };
 
-//!Descargar el personaje
+//! Descargar el personaje
 document
     .getElementById("descargarPersonaje")
     .addEventListener("click", function () {
-        let personaje = {
+        const personaje = {
             nickPersonaje: nombrePersonaje,
             origen: raza,
-            clase: clase,
-            genero: genero,
-            inteligencia: inteligencia,
-            fuerza: fuerza,
-            agilidad: agilidad,
+            clase,
+            genero,
+            inteligencia,
+            fuerza,
+            agilidad,
         };
 
         //TODO CARGA DE PJ DRAG AND DROP
-        let zip = new JSZip();
+        const zip = new JSZip();
 
         //? agregamos el archivo JSON al ZIP
-        let jsonStr = JSON.stringify(personaje);
+        const jsonStr = JSON.stringify(personaje);
         zip.file(
-            personaje.nickPersonaje +
-            "-" +
-            personaje.origen +
-            "-" +
-            personaje.clase +
-            "-" +
-            personaje.genero +
-            ".json",
+            `${personaje.nickPersonaje}-${personaje.origen}-${personaje.clase}-${personaje.genero}.json`,
             jsonStr
         );
 
         //? Usamos la cosa de html2canvas para crear una imagen de la página (Aunque solo elegimos el elemento de la carta)
-        let elementoCarta = document.querySelector(".info-personaje");
+        const elementoCarta = document.querySelector(".info-personaje");
 
         html2canvas(elementoCarta).then(function (canvas) {
-            let imgData = canvas.toDataURL("image/png");
-            let imgData64 = imgData.split(",")[1];
+            const imgData = canvas.toDataURL("image/png");
+            const imgData64 = imgData.split(",")[1];
 
             //? agregamos la imagen al ZIP
             zip.file(
-                personaje.nickPersonaje +
-                "-" +
-                personaje.origen +
-                "-" +
-                personaje.clase +
-                "-" +
-                personaje.genero +
-                ".png",
+                `${personaje.nickPersonaje}-${personaje.origen}-${personaje.clase}-${personaje.genero}.png`,
                 imgData64,
                 { base64: true }
             );
 
             //?  Generar el archivo ZIP y descargarlo
             zip.generateAsync({ type: "blob" }).then(function (content) {
-                let link = document.createElement("a");
-                link.download =
-                    personaje.nickPersonaje +
-                    "-" +
-                    personaje.origen +
-                    "-" +
-                    personaje.clase +
-                    "-" +
-                    personaje.genero +
-                    ".zip"; //CFG nombre del archivo
+                const link = document.createElement("a");
+                link.download = `${personaje.nickPersonaje}-${personaje.origen}-${personaje.clase}-${personaje.genero}.zip`; //CFG nombre del archivo
                 link.href = URL.createObjectURL(content);
                 link.click();
             });
@@ -148,22 +122,18 @@ document
 document
     .getElementById("cargarPersonaje")
     .addEventListener("click", function () {
-        let input = document.createElement("input");
+        const input = document.createElement("input");
         input.type = "file";
         input.onchange = (e) => {
-            let file = e.target.files[0];
+            const file = e.target.files[0];
             if (file) {
-                let reader = new FileReader();
+                const reader = new FileReader();
                 reader.onload = function (e) {
-                    let personaje = JSON.parse(e.target.result);
+                    const personaje = JSON.parse(e.target.result);
 
-                    localStorage.setItem("nombrePersonaje", personaje.nickPersonaje);
-                    localStorage.setItem("raza", personaje.origen);
-                    localStorage.setItem("clase", personaje.clase);
-                    localStorage.setItem("genero", personaje.genero);
-                    localStorage.setItem("totalInteligencia", personaje.inteligencia);
-                    localStorage.setItem("totalFuerza", personaje.fuerza);
-                    localStorage.setItem("totalAgilidad", personaje.agilidad);
+                    for (const key in personaje) {
+                        localStorage.setItem(key, personaje[key]);
+                    }
 
                     location.reload();
                 };
@@ -173,9 +143,9 @@ document
         input.click();
     });
 
-let razaArchivo = raza ? raza.toLowerCase() : "";
-let claseArchivo = clase ? clase.replace(" ", " ") : "";
-let generoArchivo = genero ? (genero === "Hombre" ? "Hombre" : "Mujer") : "";
+const razaArchivo = raza ? raza.toLowerCase() : "";
+const claseArchivo = clase ? clase.replace(" ", " ") : "";
+const generoArchivo = genero ? (genero === "Hombre" ? "Hombre" : "Mujer") : "";
 
 let nombreArchivo;
 if (razaArchivo && claseArchivo && generoArchivo) {
@@ -184,256 +154,18 @@ if (razaArchivo && claseArchivo && generoArchivo) {
     nombreArchivo = "cartaVacia.png";
 }
 
-//!Asignación de carta acorde al PJ.
+//! Asignación de carta acorde al PJ.
 document.querySelector(
     ".info-personaje"
 ).style.backgroundImage = `url('./../img/cartas/${nombreArchivo}')`;
 
 
-// //! COMIENZO CÓDIGO DEL CHART TRIANGULAR.
-
-// let btnMostrarStats = document.getElementById("graphStats");
-
-
-// function toggleChartVisibility() {
-//     let chartContainer = document.getElementById("containerChart");
-//     chartContainer.style.display = chartContainer.style.display === "none" ? "block" : "none";
-// }
-
-// document.getElementById("graphStats").addEventListener("click", function () {
-//     toggleChartVisibility();
-// });
-
-// document.addEventListener("click", function (event) {
-//     let chartContainer = document.getElementById("containerChart");
-//     let button = document.getElementById("graphStats");
-//     if (event.target !== chartContainer && event.target !== button && !chartContainer.contains(event.target)) {
-//         chartContainer.style.display = "none";
-//     }
-// });
-
-// //  Atributos
-// //! Obtener Atributos desde localStorage
-// function obtenerAtributosBaseDesdeLocalStorage() {
-//     let atributosBaseDesdeLocalStorage = localStorage.getItem('atributosBase');
-//     if (atributosBaseDesdeLocalStorage) {
-//         return JSON.parse(atributosBaseDesdeLocalStorage);
-//     } else {
-//         console.log('No se encontraron atributos base en localStorage.');
-//         return null;
-//     }
-// }
-
-// let atributosBaseObtenidos = obtenerAtributosBaseDesdeLocalStorage();
-// console.log('Atributos base obtenidos desde localStorage:', atributosBaseObtenidos);
-
-
-// let atributosGraph = {
-//     Inteligencia: Number(inteligencia),
-//     Fuerza: Number(fuerza),
-//     Agilidad: Number(agilidad)
-// };
-
-
-// let claseSeleccionada = localStorage.getItem('clase');
-// let atributosBaseClase = atributosBaseObtenidos ? atributosBaseObtenidos[claseSeleccionada] : null;
-
-
-// let dataStatsBase = [
-//     atributosBaseClase[0], // Inteligencia
-//     atributosBaseClase[1], // Fuerza
-//     atributosBaseClase[2]  // Agilidad
-// ];
-
-// let categorias = ['Inteligencia', 'Fuerza', 'Agilidad'];
-
-// let dataSerieStatsBase = categorias.map((categoria, index) => {
-//     return {
-//         name: categoria + ' Base',
-//         y: dataStatsBase[index]
-//     };
-//     // });
-// });
-
-
-// if (atributosBaseClase) {
-//     let dataStatsBase = [
-//         atributosBaseClase[0], // Inteligencia
-//         atributosBaseClase[1], // Fuerza
-//         atributosBaseClase[2]  // Agilidad
-//     ];
-
-//     let categorias = ['Inteligencia', 'Fuerza', 'Agilidad'];
-
-//     let dataSerieStatsBase = categorias.map((categoria, index) => {
-//         return {
-//             name: categoria + ' Base',
-//             y: dataStatsBase[index]
-//         };
-//     });
-// } else {
-//     console.log('No se encontraron atributos base para la clase seleccionada');
-// }
-
-// Highcharts.chart('containerChart', {
-//     chart: {
-//         polar: true,
-//         type: 'line',
-//         backgroundColor: '#000000af',
-//         borderRadius: '25px',
-//         marginTop: 115
-//     },
-//     title: {
-//         text: 'ESTADISTICAS DE LA LEYENDA',
-//         x: 0,
-//         align: 'center',
-//         textAlign: 'center',
-//         style: {
-//             color: '#FFFFFF',
-//             fontSize: '21px'
-//         }
-//     },
-//     subtitle: {
-//         align: 'center',
-//         textAlign: 'center',
-//         text: 'Raza: ' + raza + ' | Clase: ' + clase,
-//         x: 0,
-//         style: {
-//             fontWeight: 'bold'
-//         },
-//         style: {
-//             color: '#9ef7ff',
-//             fontSize: '18px'
-//         }
-//     },
-//     pane: {
-//         size: '80%'
-//     },
-//     xAxis: {
-//         categories: Object.keys(atributosGraph),
-//         tickmarkPlacement: 'on',
-//         lineWidth: 0,
-//         labels: {
-//             style: {
-//                 fontSize: '20px' // Tamaño de fuente para el texto del eje X
-//             },
-//             formatter: function () {
-//                 switch (this.value) {
-//                     case 'Inteligencia':
-//                         return '<span style="color: #178fff;">' + this.value + '</span>';
-//                     case 'Fuerza':
-//                         return '<span style="color: #b00b0b;">' + this.value + '</span>';
-//                     case 'Agilidad':
-//                         return '<span style="color: #10b00b;">' + this.value + '</span>';
-//                     default:
-//                         return this.value;
-//                 }
-//             }
-//         }
-//     },
-
-//     yAxis: {
-//         gridLineInterpolation: 'polygon',
-//         lineWidth: 0,
-//         min: 0
-//     },
-//     tooltip: {
-//         formatter: function () {
-//             let color;
-//             switch (this.point.category) {
-//                 case 'Inteligencia':
-//                     color = '#178fff';
-//                     break;
-//                 case 'Fuerza':
-//                     color = '#b00b0b';
-//                     break;
-//                 case 'Agilidad':
-//                     color = '#10b00b';
-//                     break;
-//                 default:
-//                     color = this.series.color;
-//                     break;
-//             }
-//             return '<span style="color:' + color + '"><b>' + this.point.category + ': ' + this.point.y.toFixed(0) + '</b></span>';
-//         }
-//     },
-//     legend: {
-//         align: 'right',
-//         verticalAlign: 'middle',
-//         layout: 'vertical'
-//     },
-//     series: [{
-//         name: '<span style="color: white;">Atributos Final de ' + raza + " " + clase + '</span>',
-//         data: [{
-//             name: '<span style="color: white;">Inteligencia</span>',
-//             y: atributosGraph.Inteligencia,
-//             color: '#178fff'
-//         }, {
-//             name: '<span style="color: white;">Fuerza</span>',
-//             y: atributosGraph.Fuerza,
-//             color: '#b00b0b'
-//         }, {
-//             name: '<span style="color: white;">Agilidad</span>',
-//             y: atributosGraph.Agilidad,
-//             color: '#10b00b'
-//         }],
-//         pointPlacement: 'on',
-//         marker: {
-//             symbol: 'circle',
-//             radius: 5
-//         }
-//     }, {
-//         name: '<span style="color: white;">Atributos Base de ' + raza + " " + clase + '</span>',
-//         data: dataSerieStatsBase,
-//         pointPlacement: 'on',
-//         marker: {
-//             symbol: 'circle',
-//             radius: 3
-//         },
-//         color: 'rgba(255,0,0,0.5)' // Color de la serie para los stats base
-//     }],
-//     responsive: {
-//         rules: [{
-//             condition: {
-//                 maxWidth: 500
-//             },
-//             chartOptions: {
-//                 legend: {
-//                     align: 'center',
-//                     verticalAlign: 'bottom',
-//                     layout: 'horizontal'
-//                 },
-//                 pane: {
-//                     size: '100%'
-//                 }
-//             }
-//         }]
-//     }
-// });
-
-
-
-// const currentPage = window.location.pathname;
-
-// if (currentPage === "/index.html") {
-//     document.querySelectorAll('.image-button, .pokemonInfo').forEach(element => {
-//         element.style.display = 'block';
-//     });
-// } else {
-//     document.querySelectorAll('.image-button, .pokemonInfo').forEach(element => {
-//         element.style.display = 'none';
-//     });
-// }
-
-
-
 //! COMIENZO CÓDIGO DEL CHART TRIANGULAR.
 
-let btnMostrarStats = document.getElementById("graphStats");
-
+const btnMostrarStats = document.getElementById("graphStats");
 
 function toggleChartVisibility() {
-    let chartContainer = document.getElementById("containerChart");
+    const chartContainer = document.getElementById("containerChart");
     chartContainer.style.display = chartContainer.style.display === "none" ? "block" : "none";
 }
 
@@ -442,8 +174,8 @@ document.getElementById("graphStats").addEventListener("click", function () {
 });
 
 document.addEventListener("click", function (event) {
-    let chartContainer = document.getElementById("containerChart");
-    let button = document.getElementById("graphStats");
+    const chartContainer = document.getElementById("containerChart");
+    const button = document.getElementById("graphStats");
     if (event.target !== chartContainer && event.target !== button && !chartContainer.contains(event.target)) {
         chartContainer.style.display = "none";
     }
@@ -452,64 +184,51 @@ document.addEventListener("click", function (event) {
 //  Atributos
 //! Obtener Atributos desde localStorage
 function obtenerAtributosBaseDesdeLocalStorage() {
-    let atributosBaseDesdeLocalStorage = localStorage.getItem('atributosBase');
+    const atributosBaseDesdeLocalStorage = localStorage.getItem('atributosBase');
     if (atributosBaseDesdeLocalStorage) {
         return JSON.parse(atributosBaseDesdeLocalStorage);
     } else {
-        console.log('No se encontraron atributos base en localStorage.');
+        //console.log('No se encontraron atributos base en localStorage.');
         return null;
     }
 }
 
-let atributosBaseObtenidos = obtenerAtributosBaseDesdeLocalStorage();
-console.log('Atributos base obtenidos desde localStorage:', atributosBaseObtenidos);
+const atributosBaseObtenidos = obtenerAtributosBaseDesdeLocalStorage();
+//console.log('Atributos base obtenidos desde localStorage:', atributosBaseObtenidos);
 
 
-let atributosGraph = {
+const atributosGraph = {
     Inteligencia: Number(inteligencia),
     Fuerza: Number(fuerza),
     Agilidad: Number(agilidad)
 };
 
 
-let claseSeleccionada = localStorage.getItem('clase');
-let atributosBaseClase = atributosBaseObtenidos ? atributosBaseObtenidos[claseSeleccionada] : null;
+const claseSeleccionada = localStorage.getItem('clase');
+const atributosBaseClase = atributosBaseObtenidos ? atributosBaseObtenidos[claseSeleccionada] : null;
 
 
-let dataStatsBase = [
-    atributosBaseClase[0], // Inteligencia
-    atributosBaseClase[1], // Fuerza
-    atributosBaseClase[2]  // Agilidad
-];
-
-let categorias = ['Inteligencia', 'Fuerza', 'Agilidad'];
-
-let dataSerieStatsBase = categorias.map((categoria, index) => {
-    return {
-        name: categoria + ' Base',
-        y: dataStatsBase[index]
-    };
-    // });
-});
-
-
+let dataStatsBase;
+let dataSerieStatsBase;
 if (atributosBaseClase) {
-    let dataStatsBase = [
+    dataStatsBase = [
         atributosBaseClase[0], // Inteligencia
         atributosBaseClase[1], // Fuerza
         atributosBaseClase[2]  // Agilidad
     ];
 
-    let categorias = ['Inteligencia', 'Fuerza', 'Agilidad'];
+    const categorias = ['Inteligencia', 'Fuerza', 'Agilidad'];
 
-    let dataSerieStatsBase = categorias.map((categoria, index) => {
+    dataSerieStatsBase = categorias.map((categoria, index) => {
         return {
             name: categoria + ' Base',
             y: dataStatsBase[index]
         };
     });
 } else {
-    console.log('No se encontraron atributos base para la clase seleccionada');
+    //console.log('No se encontraron atributos base para la clase seleccionada');
+    dataStatsBase = [];
+    dataSerieStatsBase = [];
 }
 
 Highcharts.chart('containerChart', {
@@ -533,7 +252,7 @@ Highcharts.chart('containerChart', {
     subtitle: {
         align: 'center',
         textAlign: 'center',
-        text: 'Raza: ' + raza + ' | Clase: ' + clase,
+        text: `Raza: ${raza} | Clase: ${clase}`,
         x: 0,
         style: {
             fontWeight: 'bold'
@@ -600,7 +319,7 @@ Highcharts.chart('containerChart', {
         layout: 'vertical'
     },
     series: [{
-        name: '<span style="color: white;">Atributos Final de ' + raza + " " + clase + '</span>',
+        name: `<span style="color: white;">Atributos Final de ${raza} ${clase}</span>`,
         data: [{
             name: '<span style="color: white;">Inteligencia</span>',
             y: atributosGraph.Inteligencia,
@@ -620,7 +339,7 @@ Highcharts.chart('containerChart', {
             radius: 5
         }
     }, {
-        name: '<span style="color: white;">Atributos Base de ' + raza + " " + clase + '</span>',
+        name: `<span style="color: white;">Atributos Base de ${raza} ${clase}</span>`,
         data: dataSerieStatsBase,
         pointPlacement: 'on',
         marker: {
@@ -671,17 +390,3 @@ Highcharts.chart('containerChart', {
         }]
     }
 });
-
-
-
-const currentPage = window.location.pathname;
-
-if (currentPage === "/index.html") {
-    document.querySelectorAll('.image-button, .pokemonInfo').forEach(element => {
-        element.style.display = 'block';
-    });
-} else {
-    document.querySelectorAll('.image-button, .pokemonInfo').forEach(element => {
-        element.style.display = 'none';
-    });
-}

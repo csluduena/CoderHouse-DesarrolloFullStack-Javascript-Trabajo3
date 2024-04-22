@@ -1,13 +1,12 @@
-//? ********************************************************************************
-//TODO Vamos a dividir el siguiente proceso en pasos para facilitar la implementación:
-
-//TODO    1- Obtener una muestra aleatoria de 6 cartas.
-//TODO    2- Para cada carta, seleccionar aleatoriamente una raza.
-//TODO    3- Una vez seleccionada la raza, seleccionar aleatoriamente una clase de esa raza.
-//TODO    4- Seleccionar aleatoriamente un género para la carta.
-//TODO    5- Asignar el atributo base correspondiente a la clase seleccionada.
-//TODO    6- Mostrar la información de las 6 cartas generadas en la consola.
-//? ********************************************************************************
+const boss1 = {
+    FirstName: "Carpisaurio",
+    alias: "TheProfe",
+    type: "Boss",
+    ataque: 26,
+    vida: 99,
+    agilidad: 10,
+    debilidad: 'Una de Soda Stereo'
+};
 
 let cartasAleatorias = []; // Declarar cartasAleatorias globalmente
 let cartasOrdenadas = [];
@@ -17,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Recuperar datos del almacenamiento local
     const data = JSON.parse(localStorage.getItem('data'));
 
-    console.log(data);
+    //console.log(data);
     //console.log(data.raza.Elfo.descripcion); // Acceder a la descripción de los Elfos
     //console.log(data.raza.Elfo.clases.Mago.descripcion); // Acceder a la descripción de la clase Mago para los Elfos
 
@@ -52,15 +51,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
             // Aplicar una ligera variación aleatoria a cada atributo base
             const atributosAleatorios = {
-                inteligencia: atributosBase.fuerza,// + Math.floor(Math.random() * 3) - 1,  Variación de -1 a +1
-                fuerza: atributosBase.inteligencia, //+ Math.floor(Math.random() * 3) - 1, // Variación de -1 a +1
-                agilidad: atributosBase.agilidad //+ Math.floor(Math.random() * 3) - 1 // Variación de -1 a +1
+                inteligencia: atributosBase.inteligencia, // Asignar inteligencia correctamente
+                fuerza: atributosBase.fuerza, // Asignar fuerza correctamente
+                agilidad: atributosBase.agilidad // Asignar agilidad correctamente
             };
 
             carta.atributos = atributosAleatorios;
         });
 
-        console.log("Cartas con razas, clases, géneros y atributos base asignados:", cartasAleatorias);
+        //console.log("Cartas con razas, clases, géneros y atributos base asignados:", cartasAleatorias);
 
         if (contenedorCartas.length >= 6) {
             contenedorCartas.forEach((div, index) => {
@@ -93,8 +92,6 @@ document.addEventListener("DOMContentLoaded", function () {
                     cartasOrdenadas.push(carta);
                 });
             });
-        } else {
-            console.log("No se encontraron suficientes divs para mostrar las cartas.");
         }
     }
 });
@@ -121,15 +118,30 @@ window.addEventListener('keyup', (event) => {
 let boss1Ataque = boss1.ataque;
 let boss1Vida = boss1.vida;
 
-console.log(`Vida del jefe: ${boss1Vida}`);
-console.log(`Dano del jefe: ${boss1Ataque}`);
+//console.log(`Vida del jefe: ${boss1Vida}`);
+//console.log(`Dano del jefe: ${boss1Ataque}`);
 
-document.getElementById('boss-name').textContent = 'Nombre: ' + boss1.FirstName;
-document.getElementById('boss-alias').textContent = 'Alias: ' + boss1.alias;
-document.getElementById('boss-life').textContent = 'Vida: ' + boss1Vida;
-document.getElementById('boss-attack').textContent = 'Ataque: ' + boss1Ataque;
-document.getElementById('boss-agility').textContent = 'Agilidad: ' + boss1.agilidad;
-document.getElementById('boss-debilidad').innerHTML = 'Debilidad: <br>' + boss1.debilidad;
+const bossElements = [
+    { id: 'boss-name', textContent: 'Nombre: ' + boss1.FirstName },
+    { id: 'boss-alias', textContent: 'Alias: ' + boss1.alias },
+    { id: 'boss-life', textContent: 'Vida: ' + boss1Vida },
+    { id: 'boss-attack', textContent: 'Ataque: ' + boss1Ataque },
+    { id: 'boss-agility', textContent: 'Agilidad: ' + boss1.agilidad },
+    { id: 'boss-debilidad', innerHTML: 'Debilidad: <br>' + boss1.debilidad }
+];
+
+for (const bossElement of bossElements) {
+    const element = document.getElementById(bossElement.id);
+    if (element !== null) {
+        if ('textContent' in bossElement) {
+            element.textContent = bossElement.textContent;
+        }
+        if ('innerHTML' in bossElement) {
+            element.innerHTML = bossElement.innerHTML;
+        }
+    }
+}
+
 
 // calcular el daño de una carta
 function calcularDanio(carta) {
@@ -151,7 +163,7 @@ function iniciarBatalla() {
             cartasRestantes--;
 
             if (cartasRestantes === 0 && boss1.vida <= 0) {
-                console.log('RIP BOSS');
+                //console.log('RIP BOSS');
             }
         }, i * 3000);
     }
@@ -212,8 +224,8 @@ function realizarAtaque(carta, boss) {
 
         mostrarModal(vidaInicial, danio, vidaRestante);
 
-        console.log(`${carta.nombre} ha hecho ${danio} de daño.`);
-        console.log(`Vida del jefe después del ataque de ${carta.nombre}: ${boss.vida}`);
+        //console.log(`${carta.nombre} ha hecho ${danio} de daño.`);
+        //console.log(`Vida del jefe después del ataque de ${carta.nombre}: ${boss.vida}`);
 
         actualizarYMostrarDanoVida(vidaInicial, danio, vidaRestante, boss.FirstName);
 
@@ -231,7 +243,7 @@ function realizarAtaque(carta, boss) {
             cartaElement.classList.remove('card-attacking');
         }, 3000);
     } else {
-        console.log(`No se encontró el elemento HTML para la carta ${carta.nombre}`);
+        //console.log(`No se encontró el elemento HTML para la carta ${carta.nombre}`);
     }
 }
 
@@ -260,86 +272,6 @@ function mostrarMensajeVictoria(nombreBoss) {
 }
 
 let botonReady = document.querySelector('.ready');
-
-botonReady.addEventListener('click', iniciarBatalla);
-
-
-
-
-//TODO LO SIGUIENTE NO SALIÓ , SERÁ PARA LA PRÓXIMA VEZ.
-
-// // Crea un objeto con los tonos y sus correspondientes frecuencias
-// let tones = {
-//     '1': 261.63, // Frecuencia de C
-//     '2': 293.66, // Frecuencia de D
-//     '3': 329.63, // Frecuencia de E
-//     '4': 349.23, // Frecuencia de F
-//     '5': 392.00, // Frecuencia de G
-//     '6': 440.00  // Frecuencia de A
-// };
-
-// // Crea un objeto para almacenar los osciladores
-// let oscillators = {};
-
-// // Muestra el modal al cargar la página
-// window.addEventListener('DOMContentLoaded', (event) => {
-//     document.getElementById('audioPermissionModal').style.display = 'block';
-// });
-
-// // Maneja el clic en el botón "Aceptar"
-// document.getElementById('acceptButton').addEventListener('click', () => {
-//     // Crea un contexto de audio
-//     let audioContext = new (window.AudioContext || window.webkitAudioContext)();
-
-//     // Anade un controlador de eventos para cuando se presiona una tecla
-//     window.addEventListener('keydown', (event) => {
-//         // Comprueba si se ha presionado la tecla Shift y una tecla numérica
-//         if (event.shiftKey && tones[event.key]) {
-//             // Crea un oscilador con la frecuencia correspondiente
-//             let oscillator = audioContext.createOscillator();
-//             oscillator.frequency.value = tones[event.key];
-//             oscillator.connect(audioContext.destination);
-//             oscillator.start();
-//             // Almacena el oscilador
-//             oscillators[event.key] = oscillator;
-//         }
-//     });
-
-//     // Anade un controlador de eventos para cuando se suelta una tecla
-// window.addEventListener('keyup', (event) => {
-//     // Comprueba si se ha soltado la tecla Shift y una tecla numérica
-//     if (event.shiftKey && tones[event.key]) {
-//         // Comprueba si existe un oscilador para esta tecla
-//         if (oscillators[event.key]) {
-//             // Detiene el oscilador correspondiente
-//             oscillators[event.key].stop();
-//             // Elimina el oscilador
-//             delete oscillators[event.key];
-//         }
-//     }
-// });
-
-
-//     // Anade un controlador de eventos para cuando se suelta una tecla
-//     window.addEventListener('keyup', (event) => {
-//         // Comprueba si se ha soltado la tecla Shift y una tecla numérica
-//         if (event.ctrlKey && tones[event.key]) {
-//             // Detiene el oscilador correspondiente
-//             oscillators[event.key].stop();
-//             // Elimina el oscilador
-//             delete oscillators[event.key];
-//         }
-//     });
-
-//     // Oculta el modal
-//     document.getElementById('audioPermissionModal').style.display = 'none';
-// });
-
-// // Maneja el clic en el botón "Rechazar"
-// document.getElementById('declineButton').addEventListener('click', () => {
-//     // Aquí puedes desactivar la reproducción de sonido
-//     // ...
-
-//     // Oculta el modal
-//     document.getElementById('audioPermissionModal').style.display = 'none';
-// });
+if (botonReady !== null) {
+    botonReady.addEventListener('click', iniciarBatalla);
+}

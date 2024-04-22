@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     buttonSend1.addEventListener("click", function () {
         nombreUsuario = saludoInicialInput.value;
-        console.log("Nombre del usuario:", nombreUsuario);
+        //console.log("Nombre del usuario:", nombreUsuario);
 
         preguntaUno.style.display = "none";
         preguntaDos.style.display = "block";
@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     buttonSend2.addEventListener("click", function () {
         nombrePersonaje = nickNameInput.value;
-        console.log("Nombre del personaje:", nombrePersonaje);
+        //console.log("Nombre del personaje:", nombrePersonaje);
 
         preguntaDos.style.display = "none";
         botonElegirRaza.style.display = "block";

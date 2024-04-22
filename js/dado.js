@@ -2,7 +2,7 @@ const tete = document.getElementById("buttonSend3");
 const tiradaDeDados = document.getElementById("dadosTirada");
 const contenedorInfoPj = document.getElementById("contenedorParcialId");
 
-buttonSend3.addEventListener("click", function () {
+tete.addEventListener("click", function () {
     tete.style.display = "none";
     tiradaDeDados.style.display = "block";
     contenedorInfoPj.style.display = "none";
@@ -50,9 +50,9 @@ window.addEventListener("DOMContentLoaded", function () {
             const result1 = rollDice("dice-side-1");
             const result2 = rollDice("dice-side-2");
 
-            console.log("Resultado del primer dado:", result1);
-            console.log("Resultado del segundo dado:", result2);
-            console.log("Resultado total:", result1 + result2);
+            //console.log("Resultado del primer dado:", result1);
+            //console.log("Resultado del segundo dado:", result2);
+            //console.log("Resultado total:", result1 + result2);
 
             if (tiradasRealizadas === 1) {
                 totalInteligencia =
@@ -114,7 +114,7 @@ window.addEventListener("DOMContentLoaded", function () {
 
         const diceImage = diceImages[result];
 
-        dice.style.backgroundImage = "url('" + diceImage + "')";
+        dice.style.backgroundImage = `url('${diceImage}')`;
 
         dice.style.animation = "rotate 0.6s ease-in-out";
 

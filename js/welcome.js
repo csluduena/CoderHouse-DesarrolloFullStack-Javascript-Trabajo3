@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     botonStart.addEventListener("click", function () {
         // Oculta los elementos de bienvenida, texto solapa y HR usando spread
-        const elementosOcultar = document.querySelectorAll(".bienvenida, .textSolapa, hr");
+        const elementosOcultar = [...document.querySelectorAll(".bienvenida, .textSolapa, hr")];
         elementosOcultar.forEach((elemento) => {
             elemento.style.display = "none";
         });

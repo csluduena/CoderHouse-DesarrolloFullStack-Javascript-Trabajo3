@@ -1,15 +1,7 @@
-let boss1 = {
-    FirstName: "Carpisaurio",
-    alias: "TheProfe",
-    type: "Boss",
-    ataque: 26,
-    vida: 99,
-    agilidad: 10,
-    debilidad: 'Una de Soda Stereo'
-};
+
 
 // Boss2 Stats
-let boss2 = {
+const boss2 = {
     FirstName: "Avaf G.",
     alias: "The Crazy Tutor",
     ataque: 12,
@@ -18,31 +10,20 @@ let boss2 = {
     debilidad: 'Adicto a las Chipá'
 };
 
-document.getElementById('startBattle').addEventListener('click', function() {
+const startBattleButton = document.getElementById('startBattle');
+const cardsContainer = document.querySelector('.cards');
+const cards = document.querySelectorAll('.card');
+const cardsPlace = document.querySelector('.cardsPlace');
+const battlefield = document.querySelector('.battlefield');
+const bossElement = document.querySelector('.boss');
+const h3Title = document.querySelectorAll('.h3Title');
+const titleSubmain = document.querySelectorAll('.titleSubmain');
+const letsGoButton = document.querySelector('.ready');
+const preparar = document.querySelector('.prepararHeroes');
+
+startBattleButton.addEventListener('click', () => {
     document.getElementById('boss').style.display = 'block';
-    const chauBoton = document.getElementById('startBattle')
-
-    chauBoton.style.display = 'none';
-})
-
-let cardsContainer = document.querySelector('.cards');
-
-cardsContainer.style.display = 'flex';
-cardsContainer.style.height = '150px';
-cardsContainer.style.padding = '0 50px';
-cardsContainer.style.justifyContent = 'center';
-cardsContainer.style.position = 'fixed';
-cardsContainer.style.left = '0';
-cardsContainer.style.right = '0';
-
-document.getElementById('startBattle').addEventListener('click', function() {
-
-    document.getElementById('boss').style.display = 'block'; 
-
-    const chauBoton = document.getElementById('startBattle');
-    chauBoton.style.display = 'none';
-
-    let cards = document.querySelectorAll('.card');
+    startBattleButton.style.display = 'none';
 
     cards.forEach((card) => {
         card.style.height = '367.6px';
@@ -54,28 +35,13 @@ document.getElementById('startBattle').addEventListener('click', function() {
     });
 });
 
-let cards = document.querySelectorAll('.card');
+startBattleButton.addEventListener('click', () => {
+    document.getElementById('boss').style.display = 'block'; 
 
-let cardsPlace = document.querySelector('.cardsPlace');
-
-let battlefield = document.querySelector('.battlefield');
-
-let boss = document.querySelector('.boss');
-
-let h3Title = document.querySelectorAll('.h3Title');
-let titleSubmain = document.querySelectorAll('.titleSubmain');
-
-let startBattleButton = document.querySelector('#startBattle');
-
-let letsGoButton = document.querySelector('.ready');
-let preparar = document.querySelector('.prepararHeroes');
-
-battlefield.style.display = 'none';
-boss.style.display = 'none';
-
+    startBattleButton.style.display = 'none';
+});
 
 startBattleButton.addEventListener('click', () => {
-    
     h3Title.forEach((element) => {
         element.style.display = 'none';
     });
@@ -86,7 +52,6 @@ startBattleButton.addEventListener('click', () => {
     letsGoButton.style.display = 'block';
     letsGoButton.disabled = true;
 
-    
     cardsPlace.style.display = 'flex';
     cardsPlace.style.justifyContent = 'center';
     cardsPlace.style.alignItems = 'center';
@@ -94,7 +59,6 @@ startBattleButton.addEventListener('click', () => {
     letsGoButton.style.marginTop = '22%';
     cardsPlace.style.marginTop = '7%';
 
-    // Aquí se activa la posibilidad de hacer clic en las cartas
     cards.forEach((card) => {
         card.addEventListener('click', cardClickHandler);
     });
@@ -112,12 +76,12 @@ function cardClickHandler() {
 
 letsGoButton.addEventListener('click', () => {
     battlefield.style.display = 'block';
-    boss.style.display = 'block';
-    
+    bossElement.style.display = 'block';
 
     cardsPlace.style.marginTop = '4%';
     letsGoButton.style.display = 'none';
     preparar.style.display = 'none';
+
     cards.forEach((card) => {
         card.removeEventListener('click', cardClickHandler);
     });

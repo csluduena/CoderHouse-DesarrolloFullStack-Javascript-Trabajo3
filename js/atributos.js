@@ -8,46 +8,24 @@ const agilidadBase = document.getElementById("agilidadBase");
 
 //!Mostrar los datos del personaje elegido
 function mostrarDatosPersonaje() {
-    const nickElegido = document.getElementById("eleccionNick");
-    const razaElegida = document.getElementById("eleccionRaza");
-    const claseElegida = document.getElementById("eleccionClase");
-    const generoElegido = document.getElementById("eleccionGenero");
-    const inteligenciaBase = document.getElementById("inteligenciaBase");
-    const fuerzaBase = document.getElementById("fuerzaBase");
-    const agilidadBase = document.getElementById("agilidadBase");
-
-    //!Obtenemos la info acorde a lo ingresado por el user
+    //!Obtenemos la info acorde a lo ingresado por el usuario
     nickElegido.innerHTML =
-        "Nick: <span class='valor' style='color: white'>" +
-        seleccion.nick +
-        "</span>";
+        `Nick: <span class='valor' style='color: white'>${seleccion.nick}</span>`;
     razaElegida.innerHTML =
-        "Raza: <span class='valor' style='color: white'>" +
-        seleccion.raza +
-        "</span>";
+        `Raza: <span class='valor' style='color: white'>${seleccion.raza}</span>`;
     claseElegida.innerHTML =
-        "Clase: <span class='valor' style='color: white'>" +
-        seleccion.clase +
-        "</span>";
+        `Clase: <span class='valor' style='color: white'>${seleccion.clase}</span>`;
     generoElegido.innerHTML =
-        "Género: <span class='valor' style='color: white'>" +
-        seleccionGenero +
-        "</span>";
+        `Género: <span class='valor' style='color: white'>${seleccionGenero}</span>`;
 
-    const atributosClase = atributosBase[seleccion.clase];
+    const [inteligencia, fuerza, agilidad] = atributosBase[seleccion.clase];
 
     inteligenciaBase.innerHTML =
-        "Inteligencia: <span class='valor' style='color: white'>" +
-        atributosClase[0] +
-        "</span>";
+        `Inteligencia: <span class='valor' style='color: white'>${inteligencia}</span>`;
     fuerzaBase.innerHTML =
-        "Fuerza: <span class='valor' style='color: white'>" +
-        atributosClase[1] +
-        "</span>";
+        `Fuerza: <span class='valor' style='color: white'>${fuerza}</span>`;
     agilidadBase.innerHTML =
-        "Agilidad: <span class='valor' style='color: white'>" +
-        atributosClase[2] +
-        "</span>";
+        `Agilidad: <span class='valor' style='color: white'>${agilidad}</span>`;
 }
 
 //! En la sección de "Género", al "Continuar" mostramos los datos del personaje
