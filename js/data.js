@@ -1,6 +1,6 @@
 
 //TODO Single Mode
-fetch('./../info.json')
+fetch('./CoderHouse-DesarrolloFullStack-Javascript-Trabajo3/info.json')
     .then(response => response.json())
     .then(data => {
         localStorage.setItem('info', JSON.stringify(data));
@@ -10,7 +10,7 @@ fetch('./../info.json')
 
 
 //TODO MultiDraft
-fetch('./../data.json')
+fetch('./CoderHouse-DesarrolloFullStack-Javascript-Trabajo3/data.json')
     .then(response => response.json())
     .then(data => {
         // Almacenar los datos en localStorage
